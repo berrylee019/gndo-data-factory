@@ -5,3 +5,7 @@ beautifulsoup4
 playwright
 python-dotenv
 pydantic
+openai
+chromadb
+neo4j
+langchain
