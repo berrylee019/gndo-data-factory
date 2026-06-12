@@ -1,5 +1,5 @@
 def main():
-    print("APR1400 Agent")
+    print("Running APR1400 Agent")
 
 
 if __name__ == "__main__":
