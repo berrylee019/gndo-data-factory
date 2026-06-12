@@ -1,7 +1,17 @@
-from agents.nrc_agent import run_nrc_agent
-from agents.ap1000_agent import run_ap1000_agent
-from agents.apr1400_agent import run_apr1400_agent
+from agents.nrc_agent import main as run_nrc
+from agents.ap1000_agent import main as run_ap1000
+from agents.apr1400_agent import main as run_apr1400
 
-run_nrc_agent()
-run_ap1000_agent()
-run_apr1400_agent()
+
+def main():
+    print("Starting GNDO Data Factory")
+
+    run_nrc()
+    run_ap1000()
+    run_apr1400()
+
+    print("All agents completed")
+
+
+if __name__ == "__main__":
+    main()
