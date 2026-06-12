@@ -30,7 +30,7 @@ jobs:
 
       - name: Run NRC Agent
         run: |
-          python agents/nrc_agent.py
+          python run_all_agents.py
 
       - name: Commit Updated Data
         run: |
