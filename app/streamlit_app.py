@@ -1,51 +1,101 @@
 import streamlit as st
 import json
+import pandas as pd
+from pathlib import Path
 
-st.title("GNDO Data Factory")
+st.set_page_config(
+    page_title="GNDO Data Factory",
+    layout="wide"
+)
 
-def load_data(path):
+st.title("☢️ GNDO Document Explorer")
 
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
+def load_json(path):
 
-    except:
+    if not Path(path).exists():
         return []
 
-nrc = load_data(
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+nrc = load_json(
     "storage/metadata/nrc_data.json"
 )
 
-ap1000 = load_data(
+ap1000 = load_json(
     "storage/metadata/ap1000_data.json"
 )
 
-apr1400 = load_data(
+apr1400 = load_json(
     "storage/metadata/apr1400_data.json"
 )
 
-col1, col2, col3 = st.columns(3)
+all_docs = nrc + ap1000 + apr1400
+df = pd.DataFrame(all_docs)
 
-col1.metric(
-    "NRC Documents",
+if df.empty:
+    st.warning("No documents found.")
+    st.stop()
+c1, c2, c3 = st.columns(3)
+
+c1.metric(
+    "NRC",
     len(nrc)
 )
 
-col2.metric(
-    "AP1000 Documents",
+c2.metric(
+    "AP1000",
     len(ap1000)
 )
 
-col3.metric(
-    "APR1400 Documents",
+c3.metric(
+    "APR1400",
     len(apr1400)
 )
+st.subheader("Search")
 
-st.subheader("Latest NRC Data")
-st.json(nrc)
+search_term = st.text_input(
+    "Search documents"
+)
+selected_sources = st.multiselect(
+    "Source Filter",
+    options=df["source"].unique(),
+    default=df["source"].unique()
+)
+filtered_df = df[
+    df["source"].isin(selected_sources)
+]
 
-st.subheader("Latest AP1000 Data")
-st.json(ap1000)
+if search_term:
 
-st.subheader("Latest APR1400 Data")
-st.json(apr1400)
+    filtered_df = filtered_df[
+        filtered_df["title"]
+        .str.contains(
+            search_term,
+            case=False,
+            na=False
+        )
+    ]
+st.subheader("Documents")
+
+st.dataframe(
+    filtered_df,
+    use_container_width=True
+)
+for _, row in filtered_df.iterrows():
+
+    with st.expander(row["title"]):
+
+        st.write(
+            f"Source: {row['source']}"
+        )
+
+        st.write(
+            f"Category: {row.get('category','')}"
+        )
+
+        if row.get("url"):
+
+            st.link_button(
+                "Open Document",
+                row["url"]
+            )
