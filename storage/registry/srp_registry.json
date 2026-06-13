@@ -1,1 +1,102 @@
-
+[
+  {
+    "doc_id":"SRP-CH01",
+    "title":"Introduction and Interfaces",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH02",
+    "title":"Site Characteristics",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH03",
+    "title":"Design of Structures, Components, Equipment and Systems",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH04",
+    "title":"Reactor",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH05",
+    "title":"Reactor Coolant System",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH06",
+    "title":"Engineered Safety Features",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH07",
+    "title":"Instrumentation and Controls",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH08",
+    "title":"Electric Power",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH09",
+    "title":"Auxiliary Systems",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH10",
+    "title":"Steam and Power Conversion System",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH11",
+    "title":"Radioactive Waste Management",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH12",
+    "title":"Radiation Protection",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH13",
+    "title":"Conduct of Operations",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH14",
+    "title":"Initial Test Program",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH15",
+    "title":"Accident Analyses",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH16",
+    "title":"Technical Specifications",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH17",
+    "title":"Quality Assurance",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH18",
+    "title":"Human Factors Engineering",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CH19",
+    "title":"Probabilistic Risk Assessment",
+    "category":"SRP"
+  },
+  {
+    "doc_id":"SRP-CYBER",
+    "title":"Cyber Security Review Guidance",
+    "category":"SRP"
+  }
+]
