@@ -18,7 +18,10 @@ jobs:
 
       - name: Checkout Repository
         uses: actions/checkout@v4
-
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -49,6 +52,6 @@ jobs:
 
           git diff --staged --quiet || git commit -m "Auto update GNDO metadata"
 
-          git pull --rebase origin main || true
+          git pull --rebase origin main
           
-          git push origin HEAD:main
+          git push origin main
