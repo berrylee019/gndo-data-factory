@@ -3,6 +3,7 @@ from pydantic import BaseModel
 class NuclearDocument(BaseModel):
     title: str
     source: str
+    category: str
     reactor: str
     document_type: str
     year: int | None = None
