@@ -17,19 +17,23 @@ def load_json(path):
 
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
-nrc = load_json(
-    "storage/metadata/nrc_data.json"
+nureg = load_json(
+    "storage/metadata/nureg_data.json"
 )
 
-ap1000 = load_json(
-    "storage/metadata/ap1000_data.json"
+rg = load_json(
+    "storage/metadata/rg_data.json"
 )
 
-apr1400 = load_json(
-    "storage/metadata/apr1400_data.json"
+srp = load_json(
+    "storage/metadata/srp_data.json"
 )
 
-all_docs = nrc + ap1000 + apr1400
+cfr = load_json(
+    "storage/metadata/cfr_data.json"
+)
+
+nrc = nureg + rg + srp + cfr
 df = pd.DataFrame(all_docs)
 
 if df.empty:
@@ -61,8 +65,15 @@ selected_sources = st.multiselect(
     options=df["source"].unique(),
     default=df["source"].unique()
 )
+selected_categories = st.multiselect(
+    "Category Filter",
+    options=df["category"].unique(),
+    default=df["category"].unique()
+)
 filtered_df = df[
-    df["source"].isin(selected_sources)
+    (df["source"].isin(selected_sources)
+    &
+    (df["category"].isin(selected_categories))
 ]
 
 if search_term:
