@@ -1,9 +1,182 @@
 [
   {
-    "doc_id":"NUREG-0800",
-    "title":"Standard Review Plan",
-    "source":"NRC",
-    "category":"NUREG",
-    "url":"https://..."
+    "doc_id": "SRP-CH01",
+    "title": "Introduction and Interfaces",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481036"
+  },
+  {
+    "doc_id": "SRP-CH02",
+    "title": "Site Characteristics",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481046"
+  },
+  {
+    "doc_id": "SRP-CH03",
+    "title": "Design of Structures, Components, Equipment and Systems",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481048"
+  },
+  {
+    "doc_id": "SRP-CH04",
+    "title": "Reactor",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481049"
+  },
+  {
+    "doc_id": "SRP-CH05",
+    "title": "Reactor Coolant System",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481050"
+  },
+  {
+    "doc_id": "SRP-CH06",
+    "title": "Engineered Safety Features",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481051"
+  },
+  {
+    "doc_id": "SRP-CH07",
+    "title": "Instrumentation and Controls",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481052"
+  },
+  {
+    "doc_id": "SRP-CH08",
+    "title": "Electric Power",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481055"
+  },
+  {
+    "doc_id": "SRP-CH09",
+    "title": "Auxiliary Systems",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481057"
+  },
+  {
+    "doc_id": "SRP-CH10",
+    "title": "Steam and Power Conversion System",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481059"
+  },
+  {
+    "doc_id": "SRP-CH11",
+    "title": "Radioactive Waste Management",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481060"
+  },
+  {
+    "doc_id": "SRP-CH12",
+    "title": "Radiation Protection",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481061"
+  },
+  {
+    "doc_id": "SRP-CH13",
+    "title": "Conduct of Operations",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481062"
+  },
+  {
+    "doc_id": "SRP-CH14",
+    "title": "Initial Test Program",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481063"
+  },
+  {
+    "doc_id": "SRP-CH15",
+    "title": "Accident Analyses",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481063"
+  },
+  {
+    "doc_id": "SRP-CH16",
+    "title": "Technical Specifications",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481064"
+  },
+  {
+    "doc_id": "SRP-CH17",
+    "title": "Quality Assurance",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481065"
+  },
+  {
+    "doc_id": "SRP-CH18",
+    "title": "Human Factors Engineering",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481066"
+  },
+  {
+    "doc_id": "SRP-CH19",
+    "title": "Probabilistic Risk Assessment",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481068"
+  },
+  {
+    "doc_id": "SRP-CYBER",
+    "title": "Cyber Security Review Guidance",
+    "source": "NRC",
+    "category": "SRP",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:25:08.481069"
   }
 ]
