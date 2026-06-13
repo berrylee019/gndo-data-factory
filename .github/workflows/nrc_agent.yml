@@ -43,6 +43,10 @@ jobs:
           
           python agents/nrc_registry_agent.py
 
+          python agents/ap1000_agent.py
+
+          python agents/apr1400_agent.py
+
       - name: Commit Updated Data
         run: |
           git config --local user.email "action@github.com"
