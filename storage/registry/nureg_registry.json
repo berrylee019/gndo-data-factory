@@ -2,61 +2,201 @@
   {
     "doc_id": "NUREG-0800",
     "title": "Standard Review Plan for the Review of Safety Analysis Reports for Nuclear Power Plants",
-    "category": "SRP",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/sr0800/"
+    "category": "Licensing"
   },
   {
     "doc_id": "NUREG-0711",
     "title": "Human Factors Engineering Program Review Model",
-    "category": "Human Factors",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/sr0711/"
+    "category": "Human Factors"
   },
   {
     "doc_id": "NUREG-0700",
     "title": "Human-System Interface Design Review Guidelines",
-    "category": "Human Factors",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/sr0700/"
+    "category": "Human Factors"
   },
   {
     "doc_id": "NUREG-0654",
     "title": "Criteria for Preparation and Evaluation of Radiological Emergency Response Plans",
-    "category": "Emergency Planning",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/sr0654/"
+    "category": "Emergency Planning"
+  },
+  {
+    "doc_id": "NUREG-0396",
+    "title": "Planning Basis for the Development of State and Local Government Radiological Emergency Response Plans",
+    "category": "Emergency Planning"
   },
   {
     "doc_id": "NUREG-1465",
     "title": "Accident Source Terms",
-    "category": "Severe Accident",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/sr1465/"
-  },
-  {
-    "doc_id": "NUREG-1801",
-    "title": "Generic Aging Lessons Learned Report",
-    "category": "Aging Management",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/"
-  },
-  {
-    "doc_id": "NUREG-1800",
-    "title": "Standard Review Plan for License Renewal",
-    "category": "Aging Management",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/"
-  },
-  {
-    "doc_id": "NUREG-1855",
-    "title": "Guidance on Treatment of Uncertainties",
-    "category": "PRA",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/"
+    "category": "Severe Accident"
   },
   {
     "doc_id": "NUREG-1935",
     "title": "Severe Accident Risks",
-    "category": "Severe Accident",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/"
+    "category": "Severe Accident"
+  },
+  {
+    "doc_id": "NUREG-2161",
+    "title": "Consequence Study of a Beyond-Design-Basis Earthquake",
+    "category": "Severe Accident"
+  },
+  {
+    "doc_id": "NUREG-1150",
+    "title": "Severe Accident Risks: An Assessment",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "NUREG-1855",
+    "title": "Guidance on Treatment of Uncertainties",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "NUREG-1792",
+    "title": "Good Practices for Implementing Human Reliability Analysis",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "NUREG-2201",
+    "title": "Guidance for Risk-Informed Decision Making",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "NUREG-1801",
+    "title": "Generic Aging Lessons Learned Report",
+    "category": "Aging Management"
+  },
+  {
+    "doc_id": "NUREG-1800",
+    "title": "Standard Review Plan for Review of License Renewal Applications",
+    "category": "Aging Management"
+  },
+  {
+    "doc_id": "NUREG-2191",
+    "title": "Generic Aging Lessons Learned for Subsequent License Renewal",
+    "category": "Aging Management"
   },
   {
     "doc_id": "NUREG-1437",
     "title": "Generic Environmental Impact Statement",
-    "category": "Environmental",
-    "url": "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/"
+    "category": "Environmental"
+  },
+  {
+    "doc_id": "NUREG-1555",
+    "title": "Environmental Standard Review Plan",
+    "category": "Environmental"
+  },
+  {
+    "doc_id": "NUREG-1748",
+    "title": "Environmental Review Guidance",
+    "category": "Environmental"
+  },
+  {
+    "doc_id": "NUREG-2150",
+    "title": "Cyber Security Review Guidance",
+    "category": "Cybersecurity"
+  },
+  {
+    "doc_id": "NUREG-6847",
+    "title": "Cyber Security Self-Assessment Guide",
+    "category": "Cybersecurity"
+  },
+  {
+    "doc_id": "NUREG-6850",
+    "title": "Fire PRA Methodology",
+    "category": "Cybersecurity"
+  },
+  {
+    "doc_id": "NUREG-1536",
+    "title": "Standard Review Plan for Research Reactors",
+    "category": "Licensing"
+  },
+  {
+    "doc_id": "NUREG-1537",
+    "title": "Guidelines for Preparing and Reviewing Applications for Licensing",
+    "category": "Licensing"
+  },
+  {
+    "doc_id": "NUREG-0800-CH03",
+    "title": "SRP Chapter 3 Design of Structures",
+    "category": "Containment"
+  },
+  {
+    "doc_id": "NUREG-0800-CH06",
+    "title": "SRP Chapter 6 Engineered Safety Features",
+    "category": "Containment"
+  },
+  {
+    "doc_id": "NUREG-0800-CH07",
+    "title": "SRP Chapter 7 Instrumentation and Control",
+    "category": "Digital I&C"
+  },
+  {
+    "doc_id": "NUREG-0800-CH08",
+    "title": "SRP Chapter 8 Electric Power",
+    "category": "Electrical"
+  },
+  {
+    "doc_id": "NUREG-0800-CH09",
+    "title": "SRP Chapter 9 Auxiliary Systems",
+    "category": "Systems"
+  },
+  {
+    "doc_id": "NUREG-0800-CH10",
+    "title": "SRP Chapter 10 Steam and Power Conversion",
+    "category": "Systems"
+  },
+  {
+    "doc_id": "NUREG-0800-CH11",
+    "title": "SRP Chapter 11 Radiation Protection",
+    "category": "Radiation"
+  },
+  {
+    "doc_id": "NUREG-0800-CH12",
+    "title": "SRP Chapter 12 Radioactive Waste Management",
+    "category": "Radiation"
+  },
+  {
+    "doc_id": "NUREG-0800-CH13",
+    "title": "SRP Chapter 13 Conduct of Operations",
+    "category": "Operations"
+  },
+  {
+    "doc_id": "NUREG-0800-CH14",
+    "title": "SRP Chapter 14 Initial Test Program",
+    "category": "Testing"
+  },
+  {
+    "doc_id": "NUREG-0800-CH15",
+    "title": "SRP Chapter 15 Accident Analyses",
+    "category": "Safety Analysis"
+  },
+  {
+    "doc_id": "NUREG-0800-CH16",
+    "title": "SRP Chapter 16 Technical Specifications",
+    "category": "Technical Specifications"
+  },
+  {
+    "doc_id": "NUREG-0800-CH17",
+    "title": "SRP Chapter 17 Quality Assurance",
+    "category": "Quality Assurance"
+  },
+  {
+    "doc_id": "NUREG-0800-CH18",
+    "title": "SRP Chapter 18 Human Factors Engineering",
+    "category": "Human Factors"
+  },
+  {
+    "doc_id": "NUREG-0800-CH19",
+    "title": "SRP Chapter 19 Probabilistic Risk Assessment",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "NUREG-1940",
+    "title": "Nuclear Power Plant Fire Modeling Analysis Guidelines",
+    "category": "Fire Protection"
+  },
+  {
+    "doc_id": "NUREG-0800-CYBER",
+    "title": "Cyber Security Review Guidance",
+    "category": "Cybersecurity"
   }
 ]
