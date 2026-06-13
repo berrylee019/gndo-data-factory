@@ -1,9 +1,272 @@
 [
   {
-    "doc_id":"NUREG-0800",
-    "title":"Standard Review Plan",
-    "source":"NRC",
-    "category":"NUREG",
-    "url":"https://..."
+    "doc_id": "RG-1.206",
+    "title": "Combined License Applications for Nuclear Power Plants",
+    "source": "NRC",
+    "category": "Licensing",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261645"
+  },
+  {
+    "doc_id": "RG-1.70",
+    "title": "Standard Format and Content of Safety Analysis Reports",
+    "source": "NRC",
+    "category": "Licensing",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261652"
+  },
+  {
+    "doc_id": "RG-1.68",
+    "title": "Initial Test Programs",
+    "source": "NRC",
+    "category": "Testing",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261653"
+  },
+  {
+    "doc_id": "RG-1.152",
+    "title": "Criteria for Use of Computers in Safety Systems",
+    "source": "NRC",
+    "category": "Digital I&C",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261655"
+  },
+  {
+    "doc_id": "RG-1.168",
+    "title": "Verification, Validation, Reviews, and Audits",
+    "source": "NRC",
+    "category": "Digital I&C",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261656"
+  },
+  {
+    "doc_id": "RG-1.169",
+    "title": "Configuration Management Plans",
+    "source": "NRC",
+    "category": "Digital I&C",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261657"
+  },
+  {
+    "doc_id": "RG-1.170",
+    "title": "Software Test Documentation",
+    "source": "NRC",
+    "category": "Digital I&C",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261658"
+  },
+  {
+    "doc_id": "RG-1.171",
+    "title": "Software Unit Testing",
+    "source": "NRC",
+    "category": "Digital I&C",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261661"
+  },
+  {
+    "doc_id": "RG-1.172",
+    "title": "Software Requirements Specifications",
+    "source": "NRC",
+    "category": "Digital I&C",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261662"
+  },
+  {
+    "doc_id": "RG-1.173",
+    "title": "Developing Software Life Cycle Processes",
+    "source": "NRC",
+    "category": "Digital I&C",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261664"
+  },
+  {
+    "doc_id": "RG-1.174",
+    "title": "Risk-Informed Decisions on Plant Changes",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261665"
+  },
+  {
+    "doc_id": "RG-1.200",
+    "title": "Acceptability of PRA Results",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261666"
+  },
+  {
+    "doc_id": "RG-1.201",
+    "title": "Guidelines for Categorization of SSCs",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261669"
+  },
+  {
+    "doc_id": "RG-1.177",
+    "title": "Plant-Specific Technical Specifications",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261670"
+  },
+  {
+    "doc_id": "RG-1.178",
+    "title": "Risk-Informed Inservice Inspection",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261671"
+  },
+  {
+    "doc_id": "RG-1.208",
+    "title": "Performance-Based Approach to Site-Specific Earthquake Ground Motion",
+    "source": "NRC",
+    "category": "Seismic",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261672"
+  },
+  {
+    "doc_id": "RG-1.60",
+    "title": "Design Response Spectra",
+    "source": "NRC",
+    "category": "Seismic",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261673"
+  },
+  {
+    "doc_id": "RG-1.61",
+    "title": "Damping Values for Seismic Design",
+    "source": "NRC",
+    "category": "Seismic",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261674"
+  },
+  {
+    "doc_id": "RG-1.198",
+    "title": "Procedures for Seismic Evaluation",
+    "source": "NRC",
+    "category": "Seismic",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261674"
+  },
+  {
+    "doc_id": "RG-1.199",
+    "title": "Anchoring Components and Equipment",
+    "source": "NRC",
+    "category": "Seismic",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261675"
+  },
+  {
+    "doc_id": "RG-5.71",
+    "title": "Cyber Security Programs",
+    "source": "NRC",
+    "category": "Cybersecurity",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261676"
+  },
+  {
+    "doc_id": "RG-5.83",
+    "title": "Cyber Security Event Notifications",
+    "source": "NRC",
+    "category": "Cybersecurity",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261679"
+  },
+  {
+    "doc_id": "RG-1.187",
+    "title": "Guidance for Human Factors Reviews",
+    "source": "NRC",
+    "category": "Human Factors",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261680"
+  },
+  {
+    "doc_id": "RG-1.188",
+    "title": "Human Reliability Analysis",
+    "source": "NRC",
+    "category": "Human Factors",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261681"
+  },
+  {
+    "doc_id": "RG-1.189",
+    "title": "Fire Protection Programs",
+    "source": "NRC",
+    "category": "Fire Protection",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261682"
+  },
+  {
+    "doc_id": "RG-1.205",
+    "title": "Risk-Informed Fire Protection",
+    "source": "NRC",
+    "category": "Fire Protection",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261683"
+  },
+  {
+    "doc_id": "RG-4.2",
+    "title": "Preparation of Environmental Reports",
+    "source": "NRC",
+    "category": "Environmental",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261684"
+  },
+  {
+    "doc_id": "RG-4.7",
+    "title": "Environmental Monitoring Programs",
+    "source": "NRC",
+    "category": "Environmental",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261685"
+  },
+  {
+    "doc_id": "RG-1.97",
+    "title": "Instrumentation for Light-Water-Cooled Nuclear Power Plants",
+    "source": "NRC",
+    "category": "Instrumentation",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261686"
+  },
+  {
+    "doc_id": "RG-1.26",
+    "title": "Quality Group Classifications",
+    "source": "NRC",
+    "category": "Quality Assurance",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.261687"
   }
 ]

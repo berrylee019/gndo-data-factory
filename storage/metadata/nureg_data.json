@@ -1,9 +1,362 @@
 [
   {
-    "doc_id":"NUREG-0800",
-    "title":"Standard Review Plan",
-    "source":"NRC",
-    "category":"NUREG",
-    "url":"https://..."
+    "doc_id": "NUREG-0800",
+    "title": "Standard Review Plan for the Review of Safety Analysis Reports for Nuclear Power Plants",
+    "source": "NRC",
+    "category": "Licensing",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239360"
+  },
+  {
+    "doc_id": "NUREG-0711",
+    "title": "Human Factors Engineering Program Review Model",
+    "source": "NRC",
+    "category": "Human Factors",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239367"
+  },
+  {
+    "doc_id": "NUREG-0700",
+    "title": "Human-System Interface Design Review Guidelines",
+    "source": "NRC",
+    "category": "Human Factors",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239369"
+  },
+  {
+    "doc_id": "NUREG-0654",
+    "title": "Criteria for Preparation and Evaluation of Radiological Emergency Response Plans",
+    "source": "NRC",
+    "category": "Emergency Planning",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239370"
+  },
+  {
+    "doc_id": "NUREG-0396",
+    "title": "Planning Basis for the Development of State and Local Government Radiological Emergency Response Plans",
+    "source": "NRC",
+    "category": "Emergency Planning",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239371"
+  },
+  {
+    "doc_id": "NUREG-1465",
+    "title": "Accident Source Terms",
+    "source": "NRC",
+    "category": "Severe Accident",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239372"
+  },
+  {
+    "doc_id": "NUREG-1935",
+    "title": "Severe Accident Risks",
+    "source": "NRC",
+    "category": "Severe Accident",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239374"
+  },
+  {
+    "doc_id": "NUREG-2161",
+    "title": "Consequence Study of a Beyond-Design-Basis Earthquake",
+    "source": "NRC",
+    "category": "Severe Accident",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239377"
+  },
+  {
+    "doc_id": "NUREG-1150",
+    "title": "Severe Accident Risks: An Assessment",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239378"
+  },
+  {
+    "doc_id": "NUREG-1855",
+    "title": "Guidance on Treatment of Uncertainties",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239380"
+  },
+  {
+    "doc_id": "NUREG-1792",
+    "title": "Good Practices for Implementing Human Reliability Analysis",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239381"
+  },
+  {
+    "doc_id": "NUREG-2201",
+    "title": "Guidance for Risk-Informed Decision Making",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239382"
+  },
+  {
+    "doc_id": "NUREG-1801",
+    "title": "Generic Aging Lessons Learned Report",
+    "source": "NRC",
+    "category": "Aging Management",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239383"
+  },
+  {
+    "doc_id": "NUREG-1800",
+    "title": "Standard Review Plan for Review of License Renewal Applications",
+    "source": "NRC",
+    "category": "Aging Management",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239384"
+  },
+  {
+    "doc_id": "NUREG-2191",
+    "title": "Generic Aging Lessons Learned for Subsequent License Renewal",
+    "source": "NRC",
+    "category": "Aging Management",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239385"
+  },
+  {
+    "doc_id": "NUREG-1437",
+    "title": "Generic Environmental Impact Statement",
+    "source": "NRC",
+    "category": "Environmental",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239386"
+  },
+  {
+    "doc_id": "NUREG-1555",
+    "title": "Environmental Standard Review Plan",
+    "source": "NRC",
+    "category": "Environmental",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239387"
+  },
+  {
+    "doc_id": "NUREG-1748",
+    "title": "Environmental Review Guidance",
+    "source": "NRC",
+    "category": "Environmental",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239388"
+  },
+  {
+    "doc_id": "NUREG-2150",
+    "title": "Cyber Security Review Guidance",
+    "source": "NRC",
+    "category": "Cybersecurity",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239389"
+  },
+  {
+    "doc_id": "NUREG-6847",
+    "title": "Cyber Security Self-Assessment Guide",
+    "source": "NRC",
+    "category": "Cybersecurity",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239390"
+  },
+  {
+    "doc_id": "NUREG-6850",
+    "title": "Fire PRA Methodology",
+    "source": "NRC",
+    "category": "Cybersecurity",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239391"
+  },
+  {
+    "doc_id": "NUREG-1536",
+    "title": "Standard Review Plan for Research Reactors",
+    "source": "NRC",
+    "category": "Licensing",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239392"
+  },
+  {
+    "doc_id": "NUREG-1537",
+    "title": "Guidelines for Preparing and Reviewing Applications for Licensing",
+    "source": "NRC",
+    "category": "Licensing",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239414"
+  },
+  {
+    "doc_id": "NUREG-0800-CH03",
+    "title": "SRP Chapter 3 Design of Structures",
+    "source": "NRC",
+    "category": "Containment",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239415"
+  },
+  {
+    "doc_id": "NUREG-0800-CH06",
+    "title": "SRP Chapter 6 Engineered Safety Features",
+    "source": "NRC",
+    "category": "Containment",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239416"
+  },
+  {
+    "doc_id": "NUREG-0800-CH07",
+    "title": "SRP Chapter 7 Instrumentation and Control",
+    "source": "NRC",
+    "category": "Digital I&C",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239417"
+  },
+  {
+    "doc_id": "NUREG-0800-CH08",
+    "title": "SRP Chapter 8 Electric Power",
+    "source": "NRC",
+    "category": "Electrical",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239418"
+  },
+  {
+    "doc_id": "NUREG-0800-CH09",
+    "title": "SRP Chapter 9 Auxiliary Systems",
+    "source": "NRC",
+    "category": "Systems",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239419"
+  },
+  {
+    "doc_id": "NUREG-0800-CH10",
+    "title": "SRP Chapter 10 Steam and Power Conversion",
+    "source": "NRC",
+    "category": "Systems",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239420"
+  },
+  {
+    "doc_id": "NUREG-0800-CH11",
+    "title": "SRP Chapter 11 Radiation Protection",
+    "source": "NRC",
+    "category": "Radiation",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239421"
+  },
+  {
+    "doc_id": "NUREG-0800-CH12",
+    "title": "SRP Chapter 12 Radioactive Waste Management",
+    "source": "NRC",
+    "category": "Radiation",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239422"
+  },
+  {
+    "doc_id": "NUREG-0800-CH13",
+    "title": "SRP Chapter 13 Conduct of Operations",
+    "source": "NRC",
+    "category": "Operations",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239423"
+  },
+  {
+    "doc_id": "NUREG-0800-CH14",
+    "title": "SRP Chapter 14 Initial Test Program",
+    "source": "NRC",
+    "category": "Testing",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239424"
+  },
+  {
+    "doc_id": "NUREG-0800-CH15",
+    "title": "SRP Chapter 15 Accident Analyses",
+    "source": "NRC",
+    "category": "Safety Analysis",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239425"
+  },
+  {
+    "doc_id": "NUREG-0800-CH16",
+    "title": "SRP Chapter 16 Technical Specifications",
+    "source": "NRC",
+    "category": "Technical Specifications",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239426"
+  },
+  {
+    "doc_id": "NUREG-0800-CH17",
+    "title": "SRP Chapter 17 Quality Assurance",
+    "source": "NRC",
+    "category": "Quality Assurance",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239427"
+  },
+  {
+    "doc_id": "NUREG-0800-CH18",
+    "title": "SRP Chapter 18 Human Factors Engineering",
+    "source": "NRC",
+    "category": "Human Factors",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239427"
+  },
+  {
+    "doc_id": "NUREG-0800-CH19",
+    "title": "SRP Chapter 19 Probabilistic Risk Assessment",
+    "source": "NRC",
+    "category": "PRA",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239428"
+  },
+  {
+    "doc_id": "NUREG-1940",
+    "title": "Nuclear Power Plant Fire Modeling Analysis Guidelines",
+    "source": "NRC",
+    "category": "Fire Protection",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239429"
+  },
+  {
+    "doc_id": "NUREG-0800-CYBER",
+    "title": "Cyber Security Review Guidance",
+    "source": "NRC",
+    "category": "Cybersecurity",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T05:17:02.239430"
   }
 ]
