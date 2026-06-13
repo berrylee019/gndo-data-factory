@@ -1,10 +1,7 @@
-from agents.nureg_agent import generate_metadata
+from agents.nureg_agent import generate_metadata as nureg
+from agents.rg_agent import generate_metadata as rg
 
-def main():
+nureg()
+rg()
 
-    generate_metadata()
-
-    print("GNDO Registry Build Complete")
-
-if __name__ == "__main__":
-    main()
+print("GNDO Registry Build Complete")
