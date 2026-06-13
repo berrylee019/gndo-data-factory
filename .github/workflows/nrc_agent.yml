@@ -49,6 +49,6 @@ jobs:
 
           git diff --staged --quiet || git commit -m "Auto update GNDO metadata"
 
-          git pull --rebase origin main
+          git pull --rebase origin main || true
           
-          git push origin main
+          git push origin HEAD:main
