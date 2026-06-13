@@ -1,16 +1,10 @@
-from agents.nrc_agent import main as run_nrc
-from agents.ap1000_agent import main as run_ap1000
-from agents.apr1400_agent import main as run_apr1400
+from agents.nureg_agent import generate_metadata
 
 def main():
 
-    print("Starting GNDO")
+    generate_metadata()
 
-    run_nrc()
-    run_ap1000()
-    run_apr1400()
-
-    print("Finished")
+    print("GNDO Registry Build Complete")
 
 if __name__ == "__main__":
     main()
