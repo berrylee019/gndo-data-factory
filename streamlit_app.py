@@ -1,7 +1,20 @@
 import json
 import streamlit as st
+from pathlib import Path
 
-with open("storage/metadata/nrc_data.json") as f:
-    nrc = json.load(f)
+def load_json(path):
 
-st.metric("NRC Documents", len(nrc))
+    if not Path(path).exists():
+        return []
+
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+nrc = load_json(
+    "storage/master/nrc_master.json"
+)
+
+st.metric(
+    "NRC Documents",
+    len(nrc)
+)
