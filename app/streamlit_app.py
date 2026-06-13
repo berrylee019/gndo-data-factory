@@ -42,7 +42,11 @@ apr1400 = load_json(
 )
 
 nrc = nureg + rg + srp + cfr
-all_docs = nrc
+all_docs = (
+    nrc
+    + ap1000
+    + apr1400
+)
 df = pd.DataFrame(all_docs)
 
 if df.empty:
