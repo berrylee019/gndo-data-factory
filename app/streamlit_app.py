@@ -37,6 +37,10 @@ ap1000 = load_json(
     "storage/metadata/ap1000_data.json"
 )
 
+apr1400 = load_json(
+    "storage/metadata/apr1400_data.json"
+)
+
 nrc = nureg + rg + srp + cfr
 all_docs = nrc
 df = pd.DataFrame(all_docs)
