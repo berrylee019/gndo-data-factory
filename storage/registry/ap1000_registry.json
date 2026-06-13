@@ -1,4 +1,14 @@
-AP1000-CH01
-AP1000-CH02
-...
-AP1000-CH19
+[
+  {
+    "doc_id":"AP1000-CH01",
+    "title":"Introduction and General Description",
+    "source":"Westinghouse",
+    "category":"AP1000"
+  },
+  {
+    "doc_id":"AP1000-CH02",
+    "title":"Site Characteristics",
+    "source":"Westinghouse",
+    "category":"AP1000"
+  }
+]
