@@ -72,7 +72,7 @@ selected_categories = st.multiselect(
     default=df["category"].unique()
 )
 filtered_df = df[
-    (df["source"].isin(selected_sources)
+    (df["source"].isin(selected_sources))
     &
     (df["category"].isin(selected_categories))
 ]
