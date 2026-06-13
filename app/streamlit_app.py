@@ -33,6 +33,10 @@ cfr = load_json(
     "storage/metadata/cfr_data.json"
 )
 
+ap1000 = load_json(
+    "storage/metadata/ap1000_data.json"
+)
+
 nrc = nureg + rg + srp + cfr
 all_docs = nrc
 df = pd.DataFrame(all_docs)
