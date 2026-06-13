@@ -26,25 +26,25 @@ def generate_metadata():
     for doc in registry:
 
         metadata.append({
-
+        
             "doc_id":
-                doc["doc_id"],
-
+                doc.get("doc_id", ""),
+        
             "title":
-                doc["title"],
-
+                doc.get("title", ""),
+        
             "source":
                 "NRC",
-
+        
             "category":
-                doc["category"],
-
+                doc.get("category", ""),
+        
             "url":
-                doc.get["url", ""],
-
+                doc.get("url", ""),
+        
             "status":
                 "active",
-
+        
             "collected_at":
                 datetime.utcnow().isoformat()
         })
