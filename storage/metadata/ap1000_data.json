@@ -1,7 +1,173 @@
 [
   {
-    "reactor": "AP1000",
-    "title": "AP1000 Design Control Document",
-    "source": "Westinghouse"
+    "doc_id": "AP1000-CH01",
+    "title": "Introduction and General Description of Plant",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877283"
+  },
+  {
+    "doc_id": "AP1000-CH02",
+    "title": "Site Characteristics",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877290"
+  },
+  {
+    "doc_id": "AP1000-CH03",
+    "title": "Design of Structures, Components, Equipment and Systems",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877292"
+  },
+  {
+    "doc_id": "AP1000-CH04",
+    "title": "Reactor",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877293"
+  },
+  {
+    "doc_id": "AP1000-CH05",
+    "title": "Reactor Coolant System and Connected Systems",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877294"
+  },
+  {
+    "doc_id": "AP1000-CH06",
+    "title": "Engineered Safety Features",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877296"
+  },
+  {
+    "doc_id": "AP1000-CH07",
+    "title": "Instrumentation and Controls",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877297"
+  },
+  {
+    "doc_id": "AP1000-CH08",
+    "title": "Electric Power",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877300"
+  },
+  {
+    "doc_id": "AP1000-CH09",
+    "title": "Auxiliary Systems",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877302"
+  },
+  {
+    "doc_id": "AP1000-CH10",
+    "title": "Steam and Power Conversion System",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877303"
+  },
+  {
+    "doc_id": "AP1000-CH11",
+    "title": "Radioactive Waste Management",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877304"
+  },
+  {
+    "doc_id": "AP1000-CH12",
+    "title": "Radiation Protection",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877305"
+  },
+  {
+    "doc_id": "AP1000-CH13",
+    "title": "Conduct of Operations",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877306"
+  },
+  {
+    "doc_id": "AP1000-CH14",
+    "title": "Initial Test Program",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877307"
+  },
+  {
+    "doc_id": "AP1000-CH15",
+    "title": "Accident Analyses",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877308"
+  },
+  {
+    "doc_id": "AP1000-CH16",
+    "title": "Technical Specifications",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877309"
+  },
+  {
+    "doc_id": "AP1000-CH17",
+    "title": "Quality Assurance",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877310"
+  },
+  {
+    "doc_id": "AP1000-CH18",
+    "title": "Human Factors Engineering",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877311"
+  },
+  {
+    "doc_id": "AP1000-CH19",
+    "title": "Probabilistic Risk Assessment and Severe Accident Evaluation",
+    "source": "Westinghouse",
+    "category": "AP1000",
+    "url": "",
+    "status": "active",
+    "collected_at": "2026-06-13T08:30:00.877312"
   }
 ]
