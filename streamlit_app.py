@@ -1,5 +1,7 @@
-GNDO Data Factory Dashboard
+import json
+import streamlit as st
 
-NRC Documents: 0
-AP1000 Documents: 0
-APR1400 Documents: 0
+with open("storage/metadata/nrc_data.json") as f:
+    nrc = json.load(f)
+
+st.metric("NRC Documents", len(nrc))
