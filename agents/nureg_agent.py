@@ -37,7 +37,7 @@ def generate_metadata():
                 "NRC",
 
             "category":
-                doc.get["category", ""],
+                doc["category"],
 
             "url":
                 doc.get["url", ""],
