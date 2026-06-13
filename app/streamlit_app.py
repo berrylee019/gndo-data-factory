@@ -35,7 +35,6 @@ cfr = load_json(
 
 nrc = nureg + rg + srp + cfr
 
-df = pd.DataFrame(all_docs)
 
 if df.empty:
     st.warning("No documents found.")
