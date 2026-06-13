@@ -1,1 +1,152 @@
-
+[
+  {
+    "doc_id": "RG-1.206",
+    "title": "Combined License Applications for Nuclear Power Plants",
+    "category": "Licensing"
+  },
+  {
+    "doc_id": "RG-1.70",
+    "title": "Standard Format and Content of Safety Analysis Reports",
+    "category": "Licensing"
+  },
+  {
+    "doc_id": "RG-1.68",
+    "title": "Initial Test Programs",
+    "category": "Testing"
+  },
+  {
+    "doc_id": "RG-1.152",
+    "title": "Criteria for Use of Computers in Safety Systems",
+    "category": "Digital I&C"
+  },
+  {
+    "doc_id": "RG-1.168",
+    "title": "Verification, Validation, Reviews, and Audits",
+    "category": "Digital I&C"
+  },
+  {
+    "doc_id": "RG-1.169",
+    "title": "Configuration Management Plans",
+    "category": "Digital I&C"
+  },
+  {
+    "doc_id": "RG-1.170",
+    "title": "Software Test Documentation",
+    "category": "Digital I&C"
+  },
+  {
+    "doc_id": "RG-1.171",
+    "title": "Software Unit Testing",
+    "category": "Digital I&C"
+  },
+  {
+    "doc_id": "RG-1.172",
+    "title": "Software Requirements Specifications",
+    "category": "Digital I&C"
+  },
+  {
+    "doc_id": "RG-1.173",
+    "title": "Developing Software Life Cycle Processes",
+    "category": "Digital I&C"
+  },
+  {
+    "doc_id": "RG-1.174",
+    "title": "Risk-Informed Decisions on Plant Changes",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "RG-1.200",
+    "title": "Acceptability of PRA Results",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "RG-1.201",
+    "title": "Guidelines for Categorization of SSCs",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "RG-1.177",
+    "title": "Plant-Specific Technical Specifications",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "RG-1.178",
+    "title": "Risk-Informed Inservice Inspection",
+    "category": "PRA"
+  },
+  {
+    "doc_id": "RG-1.208",
+    "title": "Performance-Based Approach to Site-Specific Earthquake Ground Motion",
+    "category": "Seismic"
+  },
+  {
+    "doc_id": "RG-1.60",
+    "title": "Design Response Spectra",
+    "category": "Seismic"
+  },
+  {
+    "doc_id": "RG-1.61",
+    "title": "Damping Values for Seismic Design",
+    "category": "Seismic"
+  },
+  {
+    "doc_id": "RG-1.198",
+    "title": "Procedures for Seismic Evaluation",
+    "category": "Seismic"
+  },
+  {
+    "doc_id": "RG-1.199",
+    "title": "Anchoring Components and Equipment",
+    "category": "Seismic"
+  },
+  {
+    "doc_id": "RG-5.71",
+    "title": "Cyber Security Programs",
+    "category": "Cybersecurity"
+  },
+  {
+    "doc_id": "RG-5.83",
+    "title": "Cyber Security Event Notifications",
+    "category": "Cybersecurity"
+  },
+  {
+    "doc_id": "RG-1.187",
+    "title": "Guidance for Human Factors Reviews",
+    "category": "Human Factors"
+  },
+  {
+    "doc_id": "RG-1.188",
+    "title": "Human Reliability Analysis",
+    "category": "Human Factors"
+  },
+  {
+    "doc_id": "RG-1.189",
+    "title": "Fire Protection Programs",
+    "category": "Fire Protection"
+  },
+  {
+    "doc_id": "RG-1.205",
+    "title": "Risk-Informed Fire Protection",
+    "category": "Fire Protection"
+  },
+  {
+    "doc_id": "RG-4.2",
+    "title": "Preparation of Environmental Reports",
+    "category": "Environmental"
+  },
+  {
+    "doc_id": "RG-4.7",
+    "title": "Environmental Monitoring Programs",
+    "category": "Environmental"
+  },
+  {
+    "doc_id": "RG-1.97",
+    "title": "Instrumentation for Light-Water-Cooled Nuclear Power Plants",
+    "category": "Instrumentation"
+  },
+  {
+    "doc_id": "RG-1.26",
+    "title": "Quality Group Classifications",
+    "category": "Quality Assurance"
+  }
+]
