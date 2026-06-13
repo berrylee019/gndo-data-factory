@@ -1,1 +1,52 @@
-
+[
+  {
+    "doc_id":"10CFR50",
+    "title":"Domestic Licensing of Production and Utilization Facilities",
+    "category":"CFR"
+  },
+  {
+    "doc_id":"10CFR52",
+    "title":"Licenses, Certifications and Approvals",
+    "category":"CFR"
+  },
+  {
+    "doc_id":"10CFR20",
+    "title":"Standards for Protection Against Radiation",
+    "category":"CFR"
+  },
+  {
+    "doc_id":"10CFR21",
+    "title":"Reporting of Defects and Noncompliance",
+    "category":"CFR"
+  },
+  {
+    "doc_id":"10CFR26",
+    "title":"Fitness for Duty Programs",
+    "category":"CFR"
+  },
+  {
+    "doc_id":"10CFR54",
+    "title":"License Renewal Requirements",
+    "category":"CFR"
+  },
+  {
+    "doc_id":"10CFR55",
+    "title":"Operators' Licenses",
+    "category":"CFR"
+  },
+  {
+    "doc_id":"10CFR73",
+    "title":"Physical Protection of Plants",
+    "category":"CFR"
+  },
+  {
+    "doc_id":"10CFR100",
+    "title":"Reactor Site Criteria",
+    "category":"CFR"
+  },
+  {
+    "doc_id":"10CFR140",
+    "title":"Financial Protection Requirements",
+    "category":"CFR"
+  }
+]
