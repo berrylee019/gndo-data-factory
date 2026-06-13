@@ -34,7 +34,7 @@ cfr = load_json(
 )
 
 nrc = nureg + rg + srp + cfr
-all_docs = nrc + ap1000 + apr1400
+all_docs = nrc
 df = pd.DataFrame(all_docs)
 
 if df.empty:
@@ -47,15 +47,6 @@ c1.metric(
     len(nrc)
 )
 
-c2.metric(
-    "AP1000",
-    len(ap1000)
-)
-
-c3.metric(
-    "APR1400",
-    len(apr1400)
-)
 st.subheader("Search")
 
 search_term = st.text_input(
