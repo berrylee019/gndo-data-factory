@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
 
+REGISTRY_FILE = "storage/registry/apr1400_registry.json"
 OUTPUT_FILE = "storage/metadata/apr1400_data.json"
 
 def main():
