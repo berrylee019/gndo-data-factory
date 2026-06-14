@@ -1,8 +1,8 @@
 import json
 from datetime import datetime
 
-REGISTRY_FILE = "storage/registry/ap1400_registry.json"
-OUTPUT_FILE = "storage/metadata/ap1400_data.json"
+REGISTRY_FILE = "storage/registry/apr1400_registry.json"
+OUTPUT_FILE = "storage/metadata/apr1400_data.json"
 
 def generate_metadata():
 
@@ -56,7 +56,7 @@ def generate_metadata():
         )
 
     print(
-        f"Generated {len(metadata)} AP1400 records"
+        f"Generated {len(metadata)} APR1400 records"
     )
 
 if __name__ == "__main__":
