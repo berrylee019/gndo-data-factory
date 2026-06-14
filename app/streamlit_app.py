@@ -41,6 +41,10 @@ apr1400 = load_json(
     "storage/metadata/apr1400_data.json"
 )
 
+crosswalk = load_json(
+    "storage/metadata/crosswalk_data.json"
+)
+
 nrc = nureg + rg + srp + cfr
 all_docs = (
     nrc
@@ -67,6 +71,11 @@ c2.metric(
 c3.metric(
     "APR1400",
     len(apr1400)
+)
+
+c4.metric(
+    "Knowledge Links",
+    len(crosswalk)
 )
 
 st.subheader("Search")
