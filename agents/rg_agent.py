@@ -55,9 +55,9 @@ def generate_metadata():
             ensure_ascii=False
         )
 
+    print(
+        f"Generated {len(metadata)} RG records"
+    )
+
 if __name__ == "__main__":
     generate_metadata()
-
-print(
-    f"Generated {len(metadata)} RG records"
-)
