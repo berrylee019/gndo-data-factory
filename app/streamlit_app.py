@@ -59,6 +59,16 @@ c1.metric(
     len(nrc)
 )
 
+c2.metric(
+    "AP1000",
+    len(ap1000)
+)
+
+c3.metric(
+    "APR1400",
+    len(apr1400)
+)
+
 st.subheader("Search")
 
 search_term = st.text_input(
