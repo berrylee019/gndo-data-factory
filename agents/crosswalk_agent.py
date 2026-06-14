@@ -41,16 +41,7 @@ def generate_metadata():
     print(
         f"Registry Count: {len(registry)}"
     )
-        json.dump(
-            metadata,
-            f,
-            indent=2,
-            ensure_ascii=False
-        )
+
     
-    print(
-        f"Generated {len(metadata)} Crosswalk records"
-    )
-    
-    if __name__ == "__main__":
-        generate_metadata()
+if __name__ == "__main__":
+    generate_metadata()
