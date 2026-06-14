@@ -41,7 +41,3 @@ def generate_metadata():
     print(
         f"Registry Count: {len(registry)}"
     )
-
-    
-    if __name__ == "__main__":
-        generate_metadata()
