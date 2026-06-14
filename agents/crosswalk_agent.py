@@ -36,7 +36,7 @@ def generate_metadata():
         encoding="utf-8"
     ) as f:
 
-            registry = json.load(f)
+
 
     json.dump(
         metadata,
