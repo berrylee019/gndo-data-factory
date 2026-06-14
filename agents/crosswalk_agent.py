@@ -35,7 +35,12 @@ def generate_metadata():
         "w",
         encoding="utf-8"
     ) as f:
-    
+
+            registry = json.load(f)
+
+    print(
+        f"Registry Count: {len(registry)}"
+    )
         json.dump(
             metadata,
             f,
