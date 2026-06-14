@@ -1,5 +1,16 @@
-{
-  "requirement":"RG-1.206",
-  "ap1000":"CH03",
-  "apr1400":"CH03"
-}
+[
+  {
+    "chapter": "03",
+    "topic": "Design of Structures, Components and Systems",
+    "srp": "SRP-CH03",
+    "ap1000": "AP1000-CH03",
+    "apr1400": "APR1400-CH03"
+  },
+  {
+    "chapter": "07",
+    "topic": "Instrumentation and Controls",
+    "srp": "SRP-CH07",
+    "ap1000": "AP1000-CH07",
+    "apr1400": "APR1400-CH07"
+  }
+]
