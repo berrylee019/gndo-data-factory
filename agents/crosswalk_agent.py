@@ -39,5 +39,5 @@ def generate_metadata():
             registry = json.load(f)
 
     print(
-        f"Registry Count: {len(registry)}"
+        f"Generated {len(metadata)} Crosswalk records"
     )
