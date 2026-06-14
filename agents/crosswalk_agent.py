@@ -47,5 +47,5 @@ def generate_metadata():
         f"Generated {len(metadata)} Crosswalk records"
     )
     
-    if **name** == "**main**":
-    generate_metadata()
+    if __name__ == "__main__":
+        generate_metadata()
