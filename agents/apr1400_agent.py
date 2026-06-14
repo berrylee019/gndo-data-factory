@@ -1,19 +1,46 @@
 import json
 from datetime import datetime
 
-REGISTRY_FILE = "storage/registry/apr1400_registry.json"
-OUTPUT_FILE = "storage/metadata/apr1400_data.json"
+REGISTRY_FILE = "storage/registry/ap1400_registry.json"
+OUTPUT_FILE = "storage/metadata/ap1400_data.json"
 
-def main():
+def generate_metadata():
 
-    documents = [
-        {
-            "reactor": "APR1400",
-            "title": "APR1400 Standard Design Description",
-            "source": "KHNP",
-            "updated_at": datetime.utcnow().isoformat()
-        }
-    ]
+    with open(
+        REGISTRY_FILE,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        registry = json.load(f)
+
+    metadata = []
+
+    for doc in registry:
+
+        metadata.append({
+
+            "doc_id":
+                doc.get("doc_id",""),
+
+            "title":
+                doc.get("title",""),
+
+            "source":
+                "Westinghouse",
+
+            "category":
+                "AP1000",
+
+            "url":
+                doc.get("url",""),
+
+            "status":
+                "active",
+
+            "collected_at":
+                datetime.utcnow().isoformat()
+        })
 
     with open(
         OUTPUT_FILE,
@@ -22,13 +49,15 @@ def main():
     ) as f:
 
         json.dump(
-            documents,
+            metadata,
             f,
             indent=2,
             ensure_ascii=False
         )
 
-    print("APR1400 data updated")
+    print(
+        f"Generated {len(metadata)} AP1400 records"
+    )
 
 if __name__ == "__main__":
-    main()
+    generate_metadata()
