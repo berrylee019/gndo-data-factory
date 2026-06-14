@@ -1,6 +1,8 @@
 import json
 from datetime import datetime
 
+print("CROSSWALK AGENT STARTED")
+
 REGISTRY_FILE = "storage/crosswalk/crosswalk_registry.json"
 OUTPUT_FILE = "storage/metadata/crosswalk_data.json"
 
