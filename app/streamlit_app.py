@@ -56,7 +56,7 @@ df = pd.DataFrame(all_docs)
 if df.empty:
     st.warning("No documents found.")
     st.stop()
-c1, c2, c3 = st.columns(3)
+c1, c2, c3, c4 = st.columns(4)
 
 c1.metric(
     "NRC",
