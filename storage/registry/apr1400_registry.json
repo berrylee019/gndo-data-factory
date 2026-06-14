@@ -1,4 +1,97 @@
-APR1400-CH01
-APR1400-CH02
-...
-APR1400-CH19
+[
+  {
+    "doc_id":"APR1400-CH01",
+    "title":"Introduction and General Description of Plant",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH02",
+    "title":"Site Characteristics",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH03",
+    "title":"Design of Structures, Components, Equipment and Systems",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH04",
+    "title":"Reactor",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH05",
+    "title":"Reactor Coolant System and Connected Systems",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH06",
+    "title":"Engineered Safety Features",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH07",
+    "title":"Instrumentation and Controls",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH08",
+    "title":"Electric Power",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH09",
+    "title":"Auxiliary Systems",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH10",
+    "title":"Steam and Power Conversion System",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH11",
+    "title":"Radioactive Waste Management",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH12",
+    "title":"Radiation Protection",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH13",
+    "title":"Conduct of Operations",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH14",
+    "title":"Initial Test Program",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH15",
+    "title":"Accident Analyses",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH16",
+    "title":"Technical Specifications",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH17",
+    "title":"Quality Assurance",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH18",
+    "title":"Human Factors Engineering",
+    "category":"APR1400"
+  },
+  {
+    "doc_id":"APR1400-CH19",
+    "title":"Probabilistic Risk Assessment and Severe Accident Evaluation",
+    "category":"APR1400"
+  }
+]
