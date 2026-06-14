@@ -6,6 +6,7 @@ OUTPUT_FILE = "storage/metadata/crosswalk_data.json"
 
 def generate_metadata():
 
+```
 with open(
     REGISTRY_FILE,
     "r",
@@ -46,6 +47,7 @@ with open(
 print(
     f"Generated {len(metadata)} Crosswalk records"
 )
+```
 
 if **name** == "**main**":
 generate_metadata()
