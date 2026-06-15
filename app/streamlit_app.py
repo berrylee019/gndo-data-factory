@@ -315,13 +315,15 @@ with tab5:
                 f"""
             ### Regulatory Mapping
             
-            ```text
             {selected['srp']}
-                  ↓
+            
+            ⬇️
+            
             {selected['ap1000']}
-                  ↓
+            
+            ⬇️
+            
             {selected['apr1400']}
-
             """
             )
             
