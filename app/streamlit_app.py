@@ -256,6 +256,23 @@ with tab4:
 
         net.from_nx(G)
 
+        for node in net.nodes:
+
+            if node["id"].startswith("NUREG"):
+                node["color"] = "#1f77b4"
+        
+            elif node["id"].startswith("RG"):
+                node["color"] = "#2ca02c"
+        
+            elif node["id"].startswith("SRP"):
+                node["color"] = "#9467bd"
+        
+            elif node["id"].startswith("AP1000"):
+                node["color"] = "#ffbf00"
+        
+            elif node["id"].startswith("APR1400"):
+                node["color"] = "#d62728"
+
         net.repulsion(
             node_distance=200,
             central_gravity=0.3,
