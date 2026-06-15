@@ -2,6 +2,15 @@ import streamlit as st
 import json
 import pandas as pd
 from pathlib import Path
+import streamlit as st
+import json
+import pandas as pd
+from pathlib import Path
+
+import networkx as nx
+from pyvis.network import Network
+import streamlit.components.v1 as components
+import tempfile
 
 st.set_page_config(
     page_title="GNDO Data Factory",
@@ -139,3 +148,89 @@ for _, row in filtered_df.iterrows():
                 "Open Document",
                 row["url"]
             )
+
+st.divider()
+
+st.subheader(
+    "🌐 GNDO Regulatory Knowledge Graph"
+)
+
+if crosswalk:
+
+    G = nx.Graph()
+
+    for item in crosswalk:
+
+        srp = item["srp"]
+        ap1000_node = item["ap1000"]
+        apr1400_node = item["apr1400"]
+
+        G.add_node(
+            srp,
+            group="SRP"
+        )
+
+        G.add_node(
+            ap1000_node,
+            group="AP1000"
+        )
+
+        G.add_node(
+            apr1400_node,
+            group="APR1400"
+        )
+
+        G.add_edge(
+            srp,
+            ap1000_node
+        )
+
+        G.add_edge(
+            ap1000_node,
+            apr1400_node
+        )
+
+    net = Network(
+        height="800px",
+        width="100%",
+        bgcolor="#ffffff",
+        font_color="black"
+    )
+
+    net.from_nx(G)
+
+    net.repulsion(
+        node_distance=200,
+        central_gravity=0.3,
+        spring_length=200,
+        spring_strength=0.05
+    )
+
+    tmp_file = tempfile.NamedTemporaryFile(
+        delete=False,
+        suffix=".html"
+    )
+
+    net.save_graph(
+        tmp_file.name
+    )
+
+    with open(
+        tmp_file.name,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        html = f.read()
+
+    components.html(
+        html,
+        height=850,
+        scrolling=True
+    )
+
+else:
+
+    st.info(
+        "No crosswalk data available."
+    )
