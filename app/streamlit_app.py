@@ -313,28 +313,28 @@ with tab5:
 
             st.code(
                 f"""
-            {selected['srp']}
-                ↓
-            {selected['ap1000']}
-                ↓
-            {selected['apr1400']}
-            """,
+        {selected['srp']}
+            ↓
+        {selected['ap1000']}
+            ↓
+        {selected['apr1400']}
+        """,
                 language="text"
             )
             
-        c1, c2, c3 = st.columns(3)
-
-        c1.metric(
-            "SRP",
-            selected["srp"]
-        )
-
-        c2.metric(
-            "AP1000",
-            selected["ap1000"]
-        )
-
-        c3.metric(
-            "APR1400",
-            selected["apr1400"]
-        )       
+            c1, c2, c3 = st.columns(3)
+    
+            c1.metric(
+                "SRP",
+                selected["srp"]
+            )
+    
+            c2.metric(
+                "AP1000",
+                selected["ap1000"]
+            )
+    
+            c3.metric(
+                "APR1400",
+                selected["apr1400"]
+            )       
