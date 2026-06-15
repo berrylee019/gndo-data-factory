@@ -205,7 +205,10 @@ with tab4:
 
         for item in crosswalk:
 
+            nureg = item["nureg"]
+            rg = item["rg"]
             srp = item["srp"]
+            
             ap1000_node = item["ap1000"]
             apr1400_node = item["apr1400"]
 
@@ -225,10 +228,20 @@ with tab4:
             )
 
             G.add_edge(
+                nureg,
+                rg
+            )
+            
+            G.add_edge(
+                rg,
+                srp
+            )
+            
+            G.add_edge(
                 srp,
                 ap1000_node
             )
-
+            
             G.add_edge(
                 ap1000_node,
                 apr1400_node
