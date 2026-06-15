@@ -84,7 +84,7 @@ with tab1:
 
     st.subheader("GNDO Overview")
 
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c2, c3, c4, c5 = st.columns(5)
 
     c1.metric(
         "NRC",
@@ -104,6 +104,11 @@ with tab1:
     c4.metric(
         "Knowledge Links",
         len(crosswalk)
+    )
+
+    c5.metric(
+        "RKG Links",
+        len(rkg)
     )
 
     st.info(
