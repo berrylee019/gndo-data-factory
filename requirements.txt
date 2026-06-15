@@ -9,3 +9,5 @@ openai
 chromadb
 neo4j
 langchain
+networkx
+pyvis
