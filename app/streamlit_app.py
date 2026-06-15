@@ -54,6 +54,10 @@ crosswalk = load_json(
     "storage/metadata/crosswalk_data.json"
 )
 
+rkg = load_json(
+    "storage/metadata/rkg_data.json"
+)
+
 nrc = nureg + rg + srp + cfr
 all_docs = (
     nrc
