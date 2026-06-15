@@ -193,6 +193,13 @@ with tab3:
                     row["url"]
                 )
 
+    selected_chapter = st.selectbox(
+        "Select Chapter",
+        sorted(
+            [x["chapter"] for x in rkg]
+        )
+    )
+    
 with tab4:
 
     st.subheader(
@@ -212,6 +219,11 @@ with tab4:
             ap1000_node = item["ap1000"]
             apr1400_node = item["apr1400"]
 
+            G.add_node(
+                nureg,
+                title=f"NUREG Chapter {chapter}"
+            )
+            
             G.add_node(
                 srp,
                 group="SRP"
