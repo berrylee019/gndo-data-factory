@@ -66,7 +66,7 @@ if df.empty:
     st.warning("No documents found.")
     st.stop()
 
-tab1, tab2, tab3, tab4, tabs5 = st.tabs(
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
     [
         "📊 Dashboard",
         "🔗 Crosswalk",
