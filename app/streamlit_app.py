@@ -313,15 +313,16 @@ with tab5:
 
             st.markdown(
                 f"""
-### Regulatory Mapping
+            ### Regulatory Mapping
+            
+            ```text
+            {selected['srp']}
+                  ↓
+            {selected['ap1000']}
+                  ↓
+            {selected['apr1400']}
 
-```text
-{selected['srp']}
-      ↓
-{selected['ap1000']}
-      ↓
-{selected['apr1400']}
-"""
+            """
             )
             
         c1, c2, c3 = st.columns(3)
