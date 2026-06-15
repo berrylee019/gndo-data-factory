@@ -337,9 +337,10 @@ with tab5:
             for item in crosswalk
         ]
 
-        selected_chapter = st.selectbox(
-            "Select Chapter",
-            chapter_list
+        selected_chapter_trace = st.selectbox(
+            "Traceability Chapter",
+            chapter_list,
+            key="trace_chapter"
         )
 
         selected = next(
