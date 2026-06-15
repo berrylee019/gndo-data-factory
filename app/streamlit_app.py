@@ -78,6 +78,12 @@ c4.metric(
     len(crosswalk)
 )
 
+st.subheader("Regulatory Knowledge Graph")
+
+st.dataframe(
+    pd.DataFrame(crosswalk)
+)
+
 st.subheader("Search")
 
 search_term = st.text_input(
