@@ -66,12 +66,13 @@ if df.empty:
     st.warning("No documents found.")
     st.stop()
 
-tab1, tab2, tab3, tab4 = st.tabs(
+tab1, tab2, tab3, tab4, tabs5 = st.tabs(
     [
         "📊 Dashboard",
         "🔗 Crosswalk",
         "📚 Documents",
-        "🌐 Knowledge Graph"
+        "🌐 Knowledge Graph",
+        "🧠 Traceability Explorer"
     ]
 )
 
@@ -268,3 +269,73 @@ with tab4:
         st.info(
             "No crosswalk data available."
         )
+
+with tab5:
+
+    st.subheader(
+        "🧠 Regulatory Traceability Explorer"
+    )
+
+    if not crosswalk:
+
+        st.warning(
+            "No crosswalk data found."
+        )
+
+    else:
+
+        chapter_list = [
+            item["chapter"]
+            for item in crosswalk
+        ]
+
+        selected_chapter = st.selectbox(
+            "Select Chapter",
+            chapter_list
+        )
+
+        selected = next(
+            (
+                item
+                for item in crosswalk
+                if item["chapter"]
+                == selected_chapter
+            ),
+            None
+        )
+
+        if selected:
+
+            st.success(
+                f"Chapter {selected['chapter']} : "
+                f"{selected['topic']}"
+            )
+
+            st.markdown(
+                f"""
+### Regulatory Mapping
+
+```text
+{selected['srp']}
+      ↓
+{selected['ap1000']}
+      ↓
+{selected['apr1400']}
+"""
+)
+        c1, c2, c3 = st.columns(3)
+
+        c1.metric(
+            "SRP",
+            selected["srp"]
+        )
+
+        c2.metric(
+            "AP1000",
+            selected["ap1000"]
+        )
+
+        c3.metric(
+            "APR1400",
+            selected["apr1400"]
+        )       
