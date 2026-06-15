@@ -320,8 +320,10 @@ with tab5:
       ↓
 {selected['ap1000']}
       ↓
-{selected['apr1400']}"""
+{selected['apr1400']}
+"""
             )
+            
         c1, c2, c3 = st.columns(3)
 
         c1.metric(
