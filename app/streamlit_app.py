@@ -19,6 +19,16 @@ st.set_page_config(
 
 st.title("☢️ GNDO Document Explorer")
 
+st.markdown("""
+## 📑 Navigation
+
+- [📊 Dashboard Metrics](#dashboard-metrics)
+- [🔗 Crosswalk Table](#crosswalk-table)
+- [🔍 Document Search](#document-search)
+- [📚 Documents](#documents)
+- [🌐 Regulatory Knowledge Graph](#regulatory-knowledge-graph)
+""")
+
 def load_json(path):
 
     if not Path(path).exists():
@@ -65,6 +75,12 @@ df = pd.DataFrame(all_docs)
 if df.empty:
     st.warning("No documents found.")
     st.stop()
+
+st.markdown(
+    '<div id="dashboard-metrics"></div>',
+    unsafe_allow_html=True
+)
+
 c1, c2, c3, c4 = st.columns(4)
 
 c1.metric(
@@ -87,10 +103,21 @@ c4.metric(
     len(crosswalk)
 )
 
+st.markdown(
+    '<div id="crosswalk-table"></div>',
+    unsafe_allow_html=True
+)
+
 st.subheader("Regulatory Knowledge Graph")
 
 st.dataframe(
     pd.DataFrame(crosswalk)
+)
+
+
+st.markdown(
+    '<div id="document-search"></div>',
+    unsafe_allow_html=True
 )
 
 st.subheader("Search")
@@ -124,6 +151,12 @@ if search_term:
             na=False
         )
     ]
+    
+st.markdown(
+    '<div id="documents"></div>',
+    unsafe_allow_html=True
+)
+
 st.subheader("Documents")
 
 st.dataframe(
@@ -150,6 +183,11 @@ for _, row in filtered_df.iterrows():
             )
 
 st.divider()
+
+st.markdown(
+    '<div id="regulatory-knowledge-graph"></div>',
+    unsafe_allow_html=True
+)
 
 st.subheader(
     "🌐 GNDO Regulatory Knowledge Graph"
