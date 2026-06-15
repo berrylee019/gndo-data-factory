@@ -47,9 +47,9 @@ jobs:
 
           python agents/apr1400_agent.py
 
-          echo "RUNNING CROSSWALK"
-
           python agents/crosswalk_agent.py
+
+          python agents/rkg_agent.py
 
       - name: Commit Updated Data
         run: |
