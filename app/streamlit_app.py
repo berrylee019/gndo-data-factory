@@ -203,7 +203,7 @@ with tab4:
 
         G = nx.Graph()
 
-        for item in crosswalk:
+        for item in rkg:
 
             nureg = item["nureg"]
             rg = item["rg"]
