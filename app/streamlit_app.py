@@ -311,20 +311,15 @@ with tab5:
                 f"{selected['topic']}"
             )
 
-            st.markdown(
+            st.code(
                 f"""
-            ### Regulatory Mapping
-            
             {selected['srp']}
-            
-            ⬇️
-            
+                ↓
             {selected['ap1000']}
-            
-            ⬇️
-            
+                ↓
             {selected['apr1400']}
-            """
+            """,
+                language="text"
             )
             
         c1, c2, c3 = st.columns(3)
