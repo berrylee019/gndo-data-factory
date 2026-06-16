@@ -348,7 +348,7 @@ with tab5:
                 item
                 for item in rkg
                 if item["chapter"]
-                == selected_chapter
+                == selected_chapter_trace
             ),
             None
         )
