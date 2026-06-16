@@ -6,7 +6,7 @@ OUTPUT_FILE = "storage/metadata/rkg_data_v03.json"
 
 def generate_metadata():
 
-```
+
 with open(
     REGISTRY_FILE,
     "r",
@@ -59,10 +59,10 @@ with open(
 print(
     f"Generated {len(metadata)} RKG v0.3 records"
 )
-```
+
 
 if **name** == "**main**":
 
-```
+
 generate_metadata()
-```
+
