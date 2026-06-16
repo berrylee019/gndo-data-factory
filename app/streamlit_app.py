@@ -324,17 +324,17 @@ with tab5:
         "🧠 Regulatory Traceability Explorer"
     )
 
-    if not crosswalk:
+    if not rkg:
 
         st.warning(
-            "No crosswalk data found."
+            "No RKG data found."
         )
 
     else:
 
         chapter_list = [
             item["chapter"]
-            for item in crosswalk
+            for item in rkg
         ]
 
         selected_chapter_trace = st.selectbox(
