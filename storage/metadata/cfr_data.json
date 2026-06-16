@@ -6,7 +6,7 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410629"
+    "collected_at": "2026-06-16T14:00:00.180665"
   },
   {
     "doc_id": "10CFR52",
@@ -15,7 +15,7 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410635"
+    "collected_at": "2026-06-16T14:00:00.180670"
   },
   {
     "doc_id": "10CFR20",
@@ -24,7 +24,7 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410637"
+    "collected_at": "2026-06-16T14:00:00.180672"
   },
   {
     "doc_id": "10CFR21",
@@ -33,7 +33,7 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410639"
+    "collected_at": "2026-06-16T14:00:00.180673"
   },
   {
     "doc_id": "10CFR26",
@@ -42,7 +42,7 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410640"
+    "collected_at": "2026-06-16T14:00:00.180675"
   },
   {
     "doc_id": "10CFR54",
@@ -51,7 +51,7 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410641"
+    "collected_at": "2026-06-16T14:00:00.180676"
   },
   {
     "doc_id": "10CFR55",
@@ -60,7 +60,7 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410642"
+    "collected_at": "2026-06-16T14:00:00.180677"
   },
   {
     "doc_id": "10CFR73",
@@ -69,7 +69,7 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410645"
+    "collected_at": "2026-06-16T14:00:00.180680"
   },
   {
     "doc_id": "10CFR100",
@@ -78,7 +78,7 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410647"
+    "collected_at": "2026-06-16T14:00:00.180682"
   },
   {
     "doc_id": "10CFR140",
@@ -87,6 +87,6 @@
     "category": "CFR",
     "url": "",
     "status": "active",
-    "collected_at": "2026-06-16T13:55:25.410648"
+    "collected_at": "2026-06-16T14:00:00.180683"
   }
 ]
