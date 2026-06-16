@@ -61,7 +61,7 @@ def generate_metadata():
     )
     
     
-    if **name** == "**main**":
+    if name == "main":
     
     
     generate_metadata()
