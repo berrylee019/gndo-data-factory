@@ -127,12 +127,7 @@ with tab2:
     )
 
 with tab3:
-    st.write(
-    df[
-        ["doc_id", "title", "source", "category"]
-    ].head(50)
-)
-    
+
     st.subheader("Search")
 
     search_term = st.text_input(
