@@ -222,18 +222,53 @@ with tab4:
 
             
             G.add_node(
-                srp,
-                group="SRP"
+                nureg,
+                group="NUREG",
+                title=f"""
+            NUREG
+            Chapter: {item['chapter']}
+            Topic: {item['topic']}
+            """
             )
-
+            
+            G.add_node(
+                rg,
+                group="RG",
+                title=f"""
+            Regulatory Guide
+            Chapter: {item['chapter']}
+            Topic: {item['topic']}
+            """
+            )
+            
+            G.add_node(
+                srp,
+                group="SRP",
+                title=f"""
+            Standard Review Plan
+            Chapter: {item['chapter']}
+            Topic: {item['topic']}
+            """
+            )
+            
             G.add_node(
                 ap1000_node,
-                group="AP1000"
+                group="AP1000",
+                title=f"""
+            AP1000
+            Chapter: {item['chapter']}
+            Topic: {item['topic']}
+            """
             )
-
+            
             G.add_node(
                 apr1400_node,
-                group="APR1400"
+                group="APR1400",
+                title=f"""
+            APR1400
+            Chapter: {item['chapter']}
+            Topic: {item['topic']}
+            """
             )
 
             G.add_edge(
@@ -266,21 +301,33 @@ with tab4:
         net.from_nx(G)
 
         for node in net.nodes:
-
-            if node["id"].startswith("NUREG"):
+        
+            node_id = str(node["id"])
+        
+            if node_id.startswith("NUREG"):
+        
                 node["color"] = "#1f77b4"
+                node["size"] = 40
         
-            elif node["id"].startswith("RG"):
+            elif node_id.startswith("RG"):
+        
                 node["color"] = "#2ca02c"
+                node["size"] = 35
         
-            elif node["id"].startswith("SRP"):
+            elif node_id.startswith("SRP"):
+        
                 node["color"] = "#9467bd"
+                node["size"] = 30
         
-            elif node["id"].startswith("AP1000"):
+            elif node_id.startswith("AP1000"):
+        
                 node["color"] = "#ffbf00"
+                node["size"] = 25
         
-            elif node["id"].startswith("APR1400"):
+            elif node_id.startswith("APR1400"):
+        
                 node["color"] = "#d62728"
+                node["size"] = 25
 
         net.repulsion(
             node_distance=200,
