@@ -205,15 +205,7 @@ with tab4:
     st.subheader(
         "🌐 GNDO Regulatory Knowledge Graph"
     )
-    st.metric(
-        "Visible Nodes",
-        len(G.nodes)
-    )
-    
-    st.metric(
-        "Visible Relationships",
-        len(G.edges)
-    )
+
     
     st.info(
         f"Current Chapter: {selected_chapter_graph}"
@@ -362,7 +354,16 @@ with tab4:
                 color="#d62728"
             )
 
-
+        st.metric(
+            "Visible Nodes",
+            len(G.nodes)
+        )
+        
+        st.metric(
+            "Visible Relationships",
+            len(G.edges)
+        )
+    
         net = Network(
             height="800px",
             width="100%",
