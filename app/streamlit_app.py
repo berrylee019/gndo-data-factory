@@ -282,6 +282,7 @@ with tab4:
                 rg,
                 srp,
                 label="GUIDES",
+                title="Regulatory Guide provides guidance to SRP review criteria",
                 color="#2ca02c"
             )
             
