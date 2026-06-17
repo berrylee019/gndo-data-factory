@@ -282,7 +282,7 @@ with tab4:
             )
 
             G.add_edge(
-                nureg,
+                cfr,
                 rg,
                 label="IMPLEMENTED_BY",
                 color="#1f77b4"
@@ -290,10 +290,16 @@ with tab4:
             
             G.add_edge(
                 rg,
-                srp,
+                nureg,
                 label="GUIDES",
-                title="Regulatory Guide provides guidance to SRP review criteria",
                 color="#2ca02c"
+            )
+            
+            G.add_edge(
+                nureg,
+                srp,
+                label="REVIEWED_BY",
+                color="#9467bd"
             )
             
             G.add_edge(
@@ -308,18 +314,6 @@ with tab4:
                 apr1400_node,
                 label="EQUIVALENT_TO",
                 color="#d62728"
-            )
-
-            G.add_edge(
-                rg,
-                nureg,
-                label="GUIDES"
-            )
-            
-            G.add_edge(
-                nureg,
-                srp,
-                label="REVIEWED_BY"
             )
 
 
