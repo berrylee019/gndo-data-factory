@@ -223,7 +223,16 @@ with tab4:
             if item["chapter"]
             == selected_chapter_graph
         ]
+    st.write(
+        "Selected Chapter:",
+        selected_chapter_graph
+    )
     
+    st.write(
+        "Graph Nodes:",
+        len(graph_data)
+    )
+
     c1, c2, c3, c4, c5 = st.columns(5)
 
     c1.markdown("🔵 **IMPLEMENTED_BY**")
