@@ -201,19 +201,21 @@ with tab3:
     )
     
 with tab4:
-
-    st.info("""
-🔵 IMPLEMENTED_BY
-🟢 GUIDES
-🟣 REVIEWED_BY
-🟠 APPLIED_TO
-🔴 EQUIVALENT_TO
-""")
     
     st.subheader(
         "🌐 GNDO Regulatory Knowledge Graph"
     )
 
+    c1, c2, c3, c4, c5 = st.columns(5)
+
+    c1.markdown("🔵 **IMPLEMENTED_BY**")
+    c2.markdown("🟢 **GUIDES**")
+    c3.markdown("🟣 **REVIEWED_BY**")
+    c4.markdown("🟠 **APPLIED_TO**")
+    c5.markdown("🔴 **EQUIVALENT_TO**")
+
+    st.divider()
+    
     if crosswalk:
 
         G = nx.Graph()
