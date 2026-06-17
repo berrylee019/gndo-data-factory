@@ -309,7 +309,19 @@ with tab4:
         net.from_nx(G)
 
         for edge in net.edges:
-            edge["font"] = {"size":12}
+        
+            edge["font"] = {
+                "size": 14,
+                "align": "middle"
+            }
+        
+            edge["width"] = 3
+        
+            edge["arrows"] = "to"
+        
+            edge["smooth"] = {
+                "type": "dynamic"
+            }
     
         for node in net.nodes:
         
