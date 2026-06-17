@@ -202,6 +202,14 @@ with tab3:
     
 with tab4:
 
+    st.info("""
+🔵 IMPLEMENTED_BY
+🟢 GUIDES
+🟣 REVIEWED_BY
+🟠 APPLIED_TO
+🔴 EQUIVALENT_TO
+""")
+    
     st.subheader(
         "🌐 GNDO Regulatory Knowledge Graph"
     )
