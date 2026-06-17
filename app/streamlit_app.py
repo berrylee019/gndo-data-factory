@@ -326,32 +326,23 @@ with tab4:
     
         for node in net.nodes:
         
-            node_id = str(node["id"])
-        
-            if node_id.startswith("NUREG"):
-        
-                node["color"] = "#1f77b4"
+            if node["id"].startswith("CFR"):
                 node["size"] = 40
         
-            elif node_id.startswith("RG"):
-        
-                node["color"] = "#2ca02c"
+            elif node["id"].startswith("RG"):
                 node["size"] = 35
         
-            elif node_id.startswith("SRP"):
-        
-                node["color"] = "#9467bd"
+            elif node["id"].startswith("NUREG"):
                 node["size"] = 30
         
-            elif node_id.startswith("AP1000"):
-        
-                node["color"] = "#ffbf00"
+            elif node["id"].startswith("SRP"):
                 node["size"] = 25
         
-            elif node_id.startswith("APR1400"):
+            elif node["id"].startswith("AP1000"):
+                node["size"] = 20
         
-                node["color"] = "#d62728"
-                node["size"] = 25
+            elif node["id"].startswith("APR1400"):
+                node["size"] = 20
 
         for edge in net.edges:
 
