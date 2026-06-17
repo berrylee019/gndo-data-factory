@@ -57,7 +57,7 @@ crosswalk = load_json(
 rkg = load_json(
     "storage/metadata/rkg_data_v03.json"
 )
-st.write(rkg[0])
+
 nrc = nureg + rg + srp + cfr
 all_docs = (
     nrc
