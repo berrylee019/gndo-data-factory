@@ -274,25 +274,29 @@ with tab4:
             G.add_edge(
                 nureg,
                 rg,
-                label="GUIDES"
+                label="IMPLEMENTED_BY",
+                color="#1f77b4"
             )
             
             G.add_edge(
                 rg,
                 srp,
-                label="REVIEWED_BY"
+                label="GUIDES",
+                color="#2ca02c"
             )
             
             G.add_edge(
                 srp,
                 ap1000_node,
-                label="APPLIED_TO"
+                label="APPLIED_TO",
+                color="#ff7f0e"
             )
             
             G.add_edge(
                 ap1000_node,
                 apr1400_node,
-                label="EQUIVALENT_TO"
+                label="EQUIVALENT_TO",
+                color="#d62728"
             )
 
         net = Network(
