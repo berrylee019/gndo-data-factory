@@ -216,7 +216,7 @@ with tab4:
 
     st.divider()
     
-    if crosswalk:
+    if rkg:
 
         G = nx.Graph()
 
