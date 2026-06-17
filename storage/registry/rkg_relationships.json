@@ -1,0 +1,31 @@
+[
+  {
+    "source":"10 CFR 50 Appendix B",
+    "target":"RG-1.152",
+    "relation":"IMPLEMENTED_BY"
+  },
+
+  {
+    "source":"RG-1.152",
+    "target":"NUREG-0800-CH07",
+    "relation":"GUIDES"
+  },
+
+  {
+    "source":"NUREG-0800-CH07",
+    "target":"SRP-CH07",
+    "relation":"REVIEWED_BY"
+  },
+
+  {
+    "source":"SRP-CH07",
+    "target":"AP1000-CH07",
+    "relation":"APPLIED_TO"
+  },
+
+  {
+    "source":"SRP-CH07",
+    "target":"APR1400-CH07",
+    "relation":"APPLIED_TO"
+  }
+]
