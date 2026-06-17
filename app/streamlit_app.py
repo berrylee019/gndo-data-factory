@@ -207,15 +207,17 @@ with tab4:
     )
 
     
-    st.info(
-        f"Current Chapter: {selected_chapter_graph}"
-    )
     
     selected_chapter_graph = st.selectbox(
         "Knowledge Graph Chapter",
         ["ALL"] + sorted([x["chapter"] for x in rkg]),
         key="graph_chapter"
     )
+
+    st.info(
+        f"Current Chapter: {selected_chapter_graph}"
+    )
+
     if selected_chapter_graph == "ALL":
 
         graph_data = rkg
