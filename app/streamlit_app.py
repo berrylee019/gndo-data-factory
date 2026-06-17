@@ -221,16 +221,30 @@ with tab4:
         G = nx.Graph()
 
         for item in rkg:
-
-            nureg = item["nureg"]
+        
+            cfr = item["cfr"]
+        
             rg = item["rg"]
+        
+            nureg = item["nureg"]
+        
             srp = item["srp"]
-            
+        
             ap1000_node = item["ap1000"]
+        
             apr1400_node = item["apr1400"]
 
 
-            
+            G.add_node(
+                cfr,
+                group="CFR",
+                title=f"""
+            CFR
+            Chapter: {item['chapter']}
+            Topic: {item['topic']}
+            """
+            )
+                        
             G.add_node(
                 nureg,
                 group="NUREG",
