@@ -354,12 +354,14 @@ with tab4:
                 color="#d62728"
             )
 
-        st.metric(
+        c1, c2 = st.columns(2)
+        
+        c1.metric(
             "Visible Nodes",
             len(G.nodes)
         )
         
-        st.metric(
+        c2.metric(
             "Visible Relationships",
             len(G.edges)
         )
