@@ -310,6 +310,19 @@ with tab4:
                 color="#d62728"
             )
 
+            G.add_edge(
+                rg,
+                nureg,
+                label="GUIDES"
+            )
+            
+            G.add_edge(
+                nureg,
+                srp,
+                label="REVIEWED_BY"
+            )
+
+
         net = Network(
             height="800px",
             width="100%",
