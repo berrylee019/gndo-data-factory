@@ -273,22 +273,26 @@ with tab4:
 
             G.add_edge(
                 nureg,
-                rg
+                rg,
+                label="GUIDES"
             )
             
             G.add_edge(
                 rg,
-                srp
+                srp,
+                label="REVIEWED_BY"
             )
             
             G.add_edge(
                 srp,
-                ap1000_node
+                ap1000_node,
+                label="APPLIED_TO"
             )
             
             G.add_edge(
                 ap1000_node,
-                apr1400_node
+                apr1400_node,
+                label="EQUIVALENT_TO"
             )
 
         net = Network(
@@ -300,6 +304,9 @@ with tab4:
 
         net.from_nx(G)
 
+        for edge in net.edges:
+            edge["font"] = {"size":12}
+    
         for node in net.nodes:
         
             node_id = str(node["id"])
@@ -329,6 +336,12 @@ with tab4:
                 node["color"] = "#d62728"
                 node["size"] = 25
 
+        for edge in net.edges:
+
+            edge["font"] = {
+                "size": 12
+            }
+            
         net.repulsion(
             node_distance=200,
             central_gravity=0.3,
