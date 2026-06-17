@@ -205,7 +205,13 @@ with tab4:
     st.subheader(
         "🌐 GNDO Regulatory Knowledge Graph"
     )
-
+    
+    selected_chapter_graph = st.selectbox(
+        "Knowledge Graph Chapter",
+        ["ALL"] + sorted([x["chapter"] for x in rkg]),
+        key="graph_chapter"
+    )
+    
     c1, c2, c3, c4, c5 = st.columns(5)
 
     c1.markdown("🔵 **IMPLEMENTED_BY**")
