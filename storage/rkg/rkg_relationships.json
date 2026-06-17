@@ -1,1 +1,43 @@
+[
+  {
+    "chapter":"01",
+    "source":"10 CFR 52",
+    "target":"RG-1.206",
+    "relation":"IMPLEMENTED_BY"
+  },
 
+  {
+    "chapter":"01",
+    "source":"RG-1.206",
+    "target":"NUREG-0800-CH01",
+    "relation":"GUIDES"
+  },
+
+  {
+    "chapter":"01",
+    "source":"NUREG-0800-CH01",
+    "target":"SRP-CH01",
+    "relation":"REVIEWED_BY"
+  },
+
+  {
+    "chapter":"01",
+    "source":"SRP-CH01",
+    "target":"AP1000-CH01",
+    "relation":"APPLIED_TO"
+  },
+
+  {
+    "chapter":"01",
+    "source":"SRP-CH01",
+    "target":"APR1400-CH01",
+    "relation":"APPLIED_TO"
+  },
+
+  {
+    "chapter":"01",
+    "source":"AP1000-CH01",
+    "target":"APR1400-CH01",
+    "relation":"EQUIVALENT_TO"
+  }
+]
