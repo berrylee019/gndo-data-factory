@@ -211,6 +211,18 @@ with tab4:
         ["ALL"] + sorted([x["chapter"] for x in rkg]),
         key="graph_chapter"
     )
+    if selected_chapter_graph == "ALL":
+
+        graph_data = rkg
+    
+    else:
+    
+        graph_data = [
+            item
+            for item in rkg
+            if item["chapter"]
+            == selected_chapter_graph
+        ]
     
     c1, c2, c3, c4, c5 = st.columns(5)
 
@@ -226,7 +238,7 @@ with tab4:
 
         G = nx.Graph()
 
-        for item in rkg:
+        for item in graph_data:
         
             cfr = item["cfr"]
         
