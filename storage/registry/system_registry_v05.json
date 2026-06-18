@@ -1,0 +1,22 @@
+[
+{
+"system_id": "SYS-CH07",
+"chapter": "07",
+"system_name": "Plant Protection System",
+"domain": "Digital I&C"
+},
+
+{
+"system_id": "SYS-CH08",
+"chapter": "08",
+"system_name": "Electrical Power System",
+"domain": "Electrical"
+},
+
+{
+"system_id": "SYS-CH06",
+"chapter": "06",
+"system_name": "Engineered Safety Features",
+"domain": "Safety"
+}
+]
