@@ -1,0 +1,7 @@
+{
+  "requirement_id": "REQ-CH07-001",
+  "chapter": "07",
+  "system": "Plant Protection System",
+  "component": "Reactor Trip System",
+  "requirement": "Protection system shall be independent"
+}
