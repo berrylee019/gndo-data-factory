@@ -21,24 +21,24 @@ def load_json(path):
 
 def generate_metadata():
 
-systems = load_json(
-    SYSTEM_FILE
-)
-
-components = load_json(
-    COMPONENT_FILE
-)
-
-registry = load_json(
-    REGISTRY_FILE
-)
-
-system_map = {
-    item["chapter"]: item
-    for item in systems
-}
-
-component_map = {}
+    systems = load_json(
+        SYSTEM_FILE
+    )
+    
+    components = load_json(
+        COMPONENT_FILE
+    )
+    
+    registry = load_json(
+        REGISTRY_FILE
+    )
+    
+    system_map = {
+        item["chapter"]: item
+        for item in systems
+    }
+    
+    component_map = {}
 
 for item in components:
 
