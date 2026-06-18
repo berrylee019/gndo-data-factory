@@ -32,7 +32,19 @@ def generate_metadata():
     registry = load_json(
         REGISTRY_FILE
     )
-    
+
+    requirements = load_json(
+        "storage/rkg/requirement_registry_v06.json"
+    )
+
+    print(
+        f"Requirements Loaded: {len(requirements)}"
+    )
+
+    print(
+        requirements[0]
+    )
+
     system_map = {
         item["chapter"]: item
         for item in systems
