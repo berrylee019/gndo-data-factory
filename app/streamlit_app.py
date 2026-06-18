@@ -370,35 +370,35 @@ with tab4:
                 srp,
                 system_node,
                 label="GOVERNS",
-                ="#ff7f0e"
+                color="#ff7f0e"
             )
             
             G.add_edge(
                 system_node,
                 component_node,
                 label="CONTAINS",
-                ="#17becf"
+                color="#17becf"
             )
             
             G.add_edge(
                 component_node,
                 ap1000_node,
                 label="IMPLEMENTS",
-                ="#8c564b"
+                color="#8c564b"
             )
             
             G.add_edge(
                 ap1000_node,
                 apr1400_node,
                 label="EQUIVALENT_TO",
-                ="#d62728"
+                color="#d62728"
             )
             
             G.add_edge(
                 ap1000_node,
                 apr1400_node,
                 label="EQUIVALENT_TO",
-                ="#d62728"
+                color="#d62728"
             )
 
         c1, c2 = st.columns(2)
