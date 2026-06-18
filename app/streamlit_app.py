@@ -417,7 +417,7 @@ with tab4:
             height="800px",
             width="100%",
             bg="#ffffff",
-            font_="black"
+            font_color="black"
         )
 
         net.from_nx(G)
