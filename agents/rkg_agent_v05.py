@@ -9,7 +9,7 @@ OUTPUT_FILE = "storage/metadata/rkg_data_v05.json"
 
 def load_json(path):
 
-```
+
 with open(
     path,
     "r",
@@ -17,11 +17,11 @@ with open(
 ) as f:
 
     return json.load(f)
-```
+
 
 def generate_metadata():
 
-```
+
 systems = load_json(
     SYSTEM_FILE
 )
@@ -177,10 +177,10 @@ with open(
 print(
     f"Generated {len(metadata)} RKG v0.5 records"
 )
-```
 
-if **name** == "**main**":
 
-```
+if __name__ == "__main__":
+
+
 generate_metadata()
-```
+
