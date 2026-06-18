@@ -1,0 +1,11 @@
+{
+  "chapter":"07",
+  "system":"Plant Protection System",
+  "component":"ESFAS",
+  "cfr":"10 CFR 50.55a",
+  "rg":"RG-1.152",
+  "nureg":"NUREG-0800-CH07",
+  "srp":"SRP-CH07",
+  "ap1000":"AP1000-PPS",
+  "apr1400":"APR1400-PPS"
+}
