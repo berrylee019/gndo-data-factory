@@ -94,22 +94,22 @@ for item in rkg_v05:
                 req["component"],
 
             "cfr":
-                item["cfr"],
+                item.get("cfr"),
 
             "rg":
-                item["rg"],
+                item.get("rg"),
 
             "nureg":
-                item["nureg"],
+                item.get("nureg"),
 
             "srp":
-                item["srp"],
+                item.get("srp"),
 
             "ap1000":
-                item["ap1000"],
+                item.get("ap1000"),
 
             "apr1400":
-                item["apr1400"],
+                item.get("apr1400"),
 
             "status":
                 "linked",
