@@ -1,0 +1,19 @@
+[
+{
+"component_id": "COMP-CH07-001",
+"system_id": "SYS-CH07",
+"component_name": "ESFAS"
+},
+
+{
+"component_id": "COMP-CH07-002",
+"system_id": "SYS-CH07",
+"component_name": "Reactor Trip Logic"
+},
+
+{
+"component_id": "COMP-CH08-001",
+"system_id": "SYS-CH08",
+"component_name": "Class 1E Power System"
+}
+]
