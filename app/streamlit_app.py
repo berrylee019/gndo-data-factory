@@ -55,7 +55,7 @@ crosswalk = load_json(
 )
 
 rkg = load_json(
-    "storage/metadata/rkg_data_v03.json"
+    "storage/metadata/rkg_data_v05.json"
 )
 
 nrc = nureg + rg + srp + cfr
@@ -255,7 +255,11 @@ with tab4:
             nureg = item["nureg"]
         
             srp = item["srp"]
-        
+
+            system_node = item["system_name"]
+
+            component_node = item["component_name"]
+    
             ap1000_node = item["ap1000"]
         
             apr1400_node = item["apr1400"]
@@ -296,6 +300,26 @@ with tab4:
                 group="SRP",
                 title=f"""
             Standard Review Plan
+            Chapter: {item['chapter']}
+            Topic: {item['topic']}
+            """
+            )
+
+            G.add_node(
+                system_node,
+                group="SYSTEM",
+                title=f"""
+            System
+            Chapter: {item['chapter']}
+            Topic: {item['topic']}
+            """
+            )
+
+            G.add_node(
+                component_node,
+                group="COMPONENT",
+                title=f"""
+            Component
             Chapter: {item['chapter']}
             Topic: {item['topic']}
             """
@@ -344,16 +368,37 @@ with tab4:
             
             G.add_edge(
                 srp,
+                system_node,
+                label="GOVERNS",
+                ="#ff7f0e"
+            )
+            
+            G.add_edge(
+                system_node,
+                component_node,
+                label="CONTAINS",
+                ="#17becf"
+            )
+            
+            G.add_edge(
+                component_node,
                 ap1000_node,
-                label="APPLIED_TO",
-                color="#ff7f0e"
+                label="IMPLEMENTS",
+                ="#8c564b"
             )
             
             G.add_edge(
                 ap1000_node,
                 apr1400_node,
                 label="EQUIVALENT_TO",
-                color="#d62728"
+                ="#d62728"
+            )
+            
+            G.add_edge(
+                ap1000_node,
+                apr1400_node,
+                label="EQUIVALENT_TO",
+                ="#d62728"
             )
 
         c1, c2 = st.columns(2)
@@ -371,8 +416,8 @@ with tab4:
         net = Network(
             height="800px",
             width="100%",
-            bgcolor="#ffffff",
-            font_color="black"
+            bg="#ffffff",
+            font_="black"
         )
 
         net.from_nx(G)
@@ -405,12 +450,22 @@ with tab4:
         
             elif node["id"].startswith("SRP"):
                 node["size"] = 25
-        
+
+            elif node["group"] == "SYSTEM":
+                node["size"] = 22
+                node["color"] = "#17becf"
+            
+            elif node["group"] == "COMPONENT":
+                node["size"] = 18
+                node["color"] = "#8c564b"
+
             elif node["id"].startswith("AP1000"):
                 node["size"] = 20
+                node["color"] = "#ffbf00"
         
             elif node["id"].startswith("APR1400"):
                 node["size"] = 20
+                node["color"] = "#d62728"
 
         for edge in net.edges:
 
