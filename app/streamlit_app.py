@@ -416,7 +416,7 @@ with tab4:
         net = Network(
             height="800px",
             width="100%",
-            bg="#ffffff",
+            bgcolor="#ffffff",
             font_color="black"
         )
 
