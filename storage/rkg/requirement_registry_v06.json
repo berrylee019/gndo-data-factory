@@ -1,23 +1,145 @@
 [
-  {
-    "requirement_id":"REQ-CH07-001",
-    "chapter":"07",
-    "system":"Plant Protection System",
-    "component":"Reactor Trip System",
-    "requirement":"Protection system shall be independent"
-  },
-  {
-    "requirement_id":"REQ-CH07-002",
-    "chapter":"07",
-    "system":"Plant Protection System",
-    "component":"ESFAS",
-    "requirement":"Safety actuation shall be reliable"
-  },
-  {
-    "requirement_id":"REQ-CH07-003",
-    "chapter":"07",
-    "system":"Plant Protection System",
-    "component":"Class 1E Network",
-    "requirement":"Communication shall be isolated"
-  }
+{
+"requirement_id":"REQ-CH01-001",
+"chapter":"01",
+"system":"Plant Design Basis",
+"component":"Design Functions",
+"requirement":"Plant design basis shall be documented"
+},
+
+{
+"requirement_id":"REQ-CH03-001",
+"chapter":"03",
+"system":"Containment Structure",
+"component":"Reactor Building",
+"requirement":"Structures shall withstand design basis loads"
+},
+
+{
+"requirement_id":"REQ-CH06-001",
+"chapter":"06",
+"system":"Engineered Safety Features",
+"component":"Containment Spray System",
+"requirement":"Safety features shall mitigate accident consequences"
+},
+
+{
+"requirement_id":"REQ-CH07-001",
+"chapter":"07",
+"system":"Plant Protection System",
+"component":"Reactor Trip System",
+"requirement":"Protection system shall be independent"
+},
+
+{
+"requirement_id":"REQ-CH07-002",
+"chapter":"07",
+"system":"Plant Protection System",
+"component":"ESFAS",
+"requirement":"Safety actuation shall be reliable"
+},
+
+{
+"requirement_id":"REQ-CH07-003",
+"chapter":"07",
+"system":"Plant Protection System",
+"component":"Class 1E Network",
+"requirement":"Communication shall be isolated"
+},
+
+{
+"requirement_id":"REQ-CH08-001",
+"chapter":"08",
+"system":"Electric Power System",
+"component":"Offsite Power",
+"requirement":"Power sources shall be redundant"
+},
+
+{
+"requirement_id":"REQ-CH09-001",
+"chapter":"09",
+"system":"Auxiliary Systems",
+"component":"Component Cooling Water",
+"requirement":"Cooling systems shall support safety functions"
+},
+
+{
+"requirement_id":"REQ-CH10-001",
+"chapter":"10",
+"system":"Steam and Power Conversion System",
+"component":"Turbine Generator",
+"requirement":"Power conversion systems shall meet performance criteria"
+},
+
+{
+"requirement_id":"REQ-CH11-001",
+"chapter":"11",
+"system":"Radiation Protection System",
+"component":"Radiation Monitor",
+"requirement":"Radiation exposure shall be monitored"
+},
+
+{
+"requirement_id":"REQ-CH12-001",
+"chapter":"12",
+"system":"Radioactive Waste System",
+"component":"Waste Processing",
+"requirement":"Waste releases shall be controlled"
+},
+
+{
+"requirement_id":"REQ-CH13-001",
+"chapter":"13",
+"system":"Operations Program",
+"component":"Operating Procedures",
+"requirement":"Plant operation shall follow approved procedures"
+},
+
+{
+"requirement_id":"REQ-CH14-001",
+"chapter":"14",
+"system":"Initial Test Program",
+"component":"Startup Testing",
+"requirement":"Systems shall be verified before operation"
+},
+
+{
+"requirement_id":"REQ-CH15-001",
+"chapter":"15",
+"system":"Accident Analysis Program",
+"component":"Transient Analysis",
+"requirement":"Accidents shall remain within acceptance criteria"
+},
+
+{
+"requirement_id":"REQ-CH16-001",
+"chapter":"16",
+"system":"Technical Specifications",
+"component":"Limiting Conditions",
+"requirement":"Operation shall comply with technical specifications"
+},
+
+{
+"requirement_id":"REQ-CH17-001",
+"chapter":"17",
+"system":"Quality Assurance Program",
+"component":"QA Records",
+"requirement":"Quality activities shall be documented"
+},
+
+{
+"requirement_id":"REQ-CH18-001",
+"chapter":"18",
+"system":"Human Factors Engineering",
+"component":"Control Room HSI",
+"requirement":"Human-system interfaces shall support operator performance"
+},
+
+{
+"requirement_id":"REQ-CH19-001",
+"chapter":"19",
+"system":"Probabilistic Risk Assessment",
+"component":"Core Damage Frequency",
+"requirement":"Risk shall be evaluated using PRA methods"
+}
 ]
