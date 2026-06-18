@@ -1,0 +1,23 @@
+[
+  {
+    "requirement_id":"REQ-CH07-001",
+    "chapter":"07",
+    "system":"Plant Protection System",
+    "component":"Reactor Trip System",
+    "requirement":"Protection system shall be independent"
+  },
+  {
+    "requirement_id":"REQ-CH07-002",
+    "chapter":"07",
+    "system":"Plant Protection System",
+    "component":"ESFAS",
+    "requirement":"Safety actuation shall be reliable"
+  },
+  {
+    "requirement_id":"REQ-CH07-003",
+    "chapter":"07",
+    "system":"Plant Protection System",
+    "component":"Class 1E Network",
+    "requirement":"Communication shall be isolated"
+  }
+]
