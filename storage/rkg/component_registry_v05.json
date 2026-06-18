@@ -1,0 +1,212 @@
+[
+{
+"chapter":"01",
+"system_id":"SYS-CH01",
+"component_id":"COMP-CH01-001",
+"component_name":"Plant Layout"
+},
+{
+"chapter":"01",
+"system_id":"SYS-CH01",
+"component_id":"COMP-CH01-002",
+"component_name":"Design Bases"
+},
+
+{
+"chapter":"02",
+"system_id":"SYS-CH02",
+"component_id":"COMP-CH02-001",
+"component_name":"Seismic Analysis"
+},
+{
+"chapter":"02",
+"system_id":"SYS-CH02",
+"component_id":"COMP-CH02-002",
+"component_name":"Meteorological Analysis"
+},
+
+{
+"chapter":"03",
+"system_id":"SYS-CH03",
+"component_id":"COMP-CH03-001",
+"component_name":"Containment Building"
+},
+{
+"chapter":"03",
+"system_id":"SYS-CH03",
+"component_id":"COMP-CH03-002",
+"component_name":"Shield Building"
+},
+
+{
+"chapter":"04",
+"system_id":"SYS-CH04",
+"component_id":"COMP-CH04-001",
+"component_name":"Reactor Vessel"
+},
+{
+"chapter":"04",
+"system_id":"SYS-CH04",
+"component_id":"COMP-CH04-002",
+"component_name":"Steam Generator"
+},
+
+{
+"chapter":"05",
+"system_id":"SYS-CH05",
+"component_id":"COMP-CH05-001",
+"component_name":"Primary Pressure Boundary"
+},
+
+{
+"chapter":"06",
+"system_id":"SYS-CH06",
+"component_id":"COMP-CH06-001",
+"component_name":"Containment Spray System"
+},
+{
+"chapter":"06",
+"system_id":"SYS-CH06",
+"component_id":"COMP-CH06-002",
+"component_name":"Safety Injection System"
+},
+
+{
+"chapter":"07",
+"system_id":"SYS-CH07",
+"component_id":"COMP-CH07-001",
+"component_name":"ESFAS"
+},
+{
+"chapter":"07",
+"system_id":"SYS-CH07",
+"component_id":"COMP-CH07-002",
+"component_name":"Reactor Trip System"
+},
+{
+"chapter":"07",
+"system_id":"SYS-CH07",
+"component_id":"COMP-CH07-003",
+"component_name":"Diverse Protection System"
+},
+{
+"chapter":"07",
+"system_id":"SYS-CH07",
+"component_id":"COMP-CH07-004",
+"component_name":"Class 1E Network"
+},
+
+{
+"chapter":"08",
+"system_id":"SYS-CH08",
+"component_id":"COMP-CH08-001",
+"component_name":"Diesel Generator"
+},
+{
+"chapter":"08",
+"system_id":"SYS-CH08",
+"component_id":"COMP-CH08-002",
+"component_name":"Class 1E Power System"
+},
+
+{
+"chapter":"09",
+"system_id":"SYS-CH09",
+"component_id":"COMP-CH09-001",
+"component_name":"Component Cooling Water System"
+},
+{
+"chapter":"09",
+"system_id":"SYS-CH09",
+"component_id":"COMP-CH09-002",
+"component_name":"Service Water System"
+},
+
+{
+"chapter":"10",
+"system_id":"SYS-CH10",
+"component_id":"COMP-CH10-001",
+"component_name":"Turbine Generator"
+},
+
+{
+"chapter":"11",
+"system_id":"SYS-CH11",
+"component_id":"COMP-CH11-001",
+"component_name":"Radiation Monitoring System"
+},
+
+{
+"chapter":"12",
+"system_id":"SYS-CH12",
+"component_id":"COMP-CH12-001",
+"component_name":"Liquid Waste Processing System"
+},
+
+{
+"chapter":"13",
+"system_id":"SYS-CH13",
+"component_id":"COMP-CH13-001",
+"component_name":"Operator Training Program"
+},
+
+{
+"chapter":"14",
+"system_id":"SYS-CH14",
+"component_id":"COMP-CH14-001",
+"component_name":"Preoperational Test Program"
+},
+
+{
+"chapter":"15",
+"system_id":"SYS-CH15",
+"component_id":"COMP-CH15-001",
+"component_name":"LOCA Analysis"
+},
+{
+"chapter":"15",
+"system_id":"SYS-CH15",
+"component_id":"COMP-CH15-002",
+"component_name":"Transient Analysis"
+},
+
+{
+"chapter":"16",
+"system_id":"SYS-CH16",
+"component_id":"COMP-CH16-001",
+"component_name":"Limiting Conditions for Operation"
+},
+
+{
+"chapter":"17",
+"system_id":"SYS-CH17",
+"component_id":"COMP-CH17-001",
+"component_name":"QA Audit Program"
+},
+
+{
+"chapter":"18",
+"system_id":"SYS-CH18",
+"component_id":"COMP-CH18-001",
+"component_name":"Human Machine Interface"
+},
+{
+"chapter":"18",
+"system_id":"SYS-CH18",
+"component_id":"COMP-CH18-002",
+"component_name":"Control Room Design"
+},
+
+{
+"chapter":"19",
+"system_id":"SYS-CH19",
+"component_id":"COMP-CH19-001",
+"component_name":"Core Damage Frequency"
+},
+{
+"chapter":"19",
+"system_id":"SYS-CH19",
+"component_id":"COMP-CH19-002",
+"component_name":"Large Early Release Frequency"
+}
+]
