@@ -1,0 +1,116 @@
+[
+{
+"chapter":"01",
+"system_id":"SYS-CH01",
+"system_name":"Plant General Arrangement",
+"domain":"General Design"
+},
+{
+"chapter":"02",
+"system_id":"SYS-CH02",
+"system_name":"Site Characteristics",
+"domain":"Site"
+},
+{
+"chapter":"03",
+"system_id":"SYS-CH03",
+"system_name":"Containment Structure",
+"domain":"Civil & Structural"
+},
+{
+"chapter":"04",
+"system_id":"SYS-CH04",
+"system_name":"Reactor Coolant System",
+"domain":"NSSS"
+},
+{
+"chapter":"05",
+"system_id":"SYS-CH05",
+"system_name":"Reactor Coolant Pressure Boundary",
+"domain":"NSSS"
+},
+{
+"chapter":"06",
+"system_id":"SYS-CH06",
+"system_name":"Engineered Safety Features",
+"domain":"Safety"
+},
+{
+"chapter":"07",
+"system_id":"SYS-CH07",
+"system_name":"Plant Protection System",
+"domain":"Digital I&C"
+},
+{
+"chapter":"08",
+"system_id":"SYS-CH08",
+"system_name":"Electric Power System",
+"domain":"Electrical"
+},
+{
+"chapter":"09",
+"system_id":"SYS-CH09",
+"system_name":"Auxiliary Systems",
+"domain":"Mechanical"
+},
+{
+"chapter":"10",
+"system_id":"SYS-CH10",
+"system_name":"Steam and Power Conversion System",
+"domain":"Turbine Island"
+},
+{
+"chapter":"11",
+"system_id":"SYS-CH11",
+"system_name":"Radiation Protection System",
+"domain":"Radiation"
+},
+{
+"chapter":"12",
+"system_id":"SYS-CH12",
+"system_name":"Radioactive Waste Management System",
+"domain":"Waste Management"
+},
+{
+"chapter":"13",
+"system_id":"SYS-CH13",
+"system_name":"Operations Management Program",
+"domain":"Operations"
+},
+{
+"chapter":"14",
+"system_id":"SYS-CH14",
+"system_name":"Initial Test Program",
+"domain":"Testing"
+},
+{
+"chapter":"15",
+"system_id":"SYS-CH15",
+"system_name":"Accident Analysis Program",
+"domain":"Safety Analysis"
+},
+{
+"chapter":"16",
+"system_id":"SYS-CH16",
+"system_name":"Technical Specifications Program",
+"domain":"Licensing"
+},
+{
+"chapter":"17",
+"system_id":"SYS-CH17",
+"system_name":"Quality Assurance Program",
+"domain":"QA"
+},
+{
+"chapter":"18",
+"system_id":"SYS-CH18",
+"system_name":"Human Factors Engineering Program",
+"domain":"Human Factors"
+},
+{
+"chapter":"19",
+"system_id":"SYS-CH19",
+"system_name":"Probabilistic Risk Assessment Program",
+"domain":"PRA"
+}
+]
