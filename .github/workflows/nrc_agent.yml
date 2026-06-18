@@ -60,6 +60,9 @@ jobs:
       - name: Python Syntax Check
         run: python -m py_compile agents/*.py
 
+      - name: Test Requirements
+        run: python agents/test_requirement.py
+
       - name: Commit Updated Data
         run: |
           git config --local user.email "action@github.com"
