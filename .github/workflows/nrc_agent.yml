@@ -53,6 +53,8 @@ jobs:
 
           python agents/rkg_agent_v03.py
 
+          python agents/rkg_agent_v05.py
+
       - name: Commit Updated Data
         run: |
           git config --local user.email "action@github.com"
