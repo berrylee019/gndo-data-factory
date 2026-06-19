@@ -57,6 +57,8 @@ jobs:
 
           python agents/rkg_agent_v06.py
 
+          python agents/verification_registry_agent_v07.py
+
       - name: Python Syntax Check
         run: python -m py_compile agents/*.py
 
