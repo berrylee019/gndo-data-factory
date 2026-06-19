@@ -244,7 +244,7 @@ with tab4:
     
     if rkg:
 
-        G = nx.Graph()
+        G = nx.DiGraph()
 
         for item in graph_data:
         
@@ -255,14 +255,26 @@ with tab4:
             nureg = item["nureg"]
         
             srp = item["srp"]
-
-            system_node = item["system_name"]
-
-            component_node = item["component_name"]
     
             ap1000_node = item["ap1000"]
         
             apr1400_node = item["apr1400"]
+
+            system_id = item.get(
+                "system_id"
+            )
+
+            component_id = item.get(
+                "component_id"
+            )
+
+            requirement_id = item.get(
+                "requirement_id"
+            )
+        
+            requirement_text = item.get(
+                "requirement"
+            )
 
 
             G.add_node(
@@ -305,25 +317,43 @@ with tab4:
             """
             )
 
-            G.add_node(
-                system_node,
-                group="SYSTEM",
-                title=f"""
-            System
-            Chapter: {item['chapter']}
-            Topic: {item['topic']}
+            if requirement_id:
+        
+                G.add_node(
+                    requirement_id,
+                    group="REQUIREMENT",
+                    title=f"""
+            Requirement
+            
+            {requirement_text}
             """
-            )
+                )
 
-            G.add_node(
-                component_node,
-                group="COMPONENT",
-                title=f"""
-            Component
-            Chapter: {item['chapter']}
-            Topic: {item['topic']}
+            if system_id:
+
+                G.add_node(
+                    system_id,
+                    group="SYSTEM",
+                    title=f"""
+            System
+
+            {item.get('system_name')}
             """
-            )
+                )
+            
+            if component_id:
+            
+                G.add_node(
+                    component_id,
+                    group="COMPONENT"
+                    title=f"""
+            Component
+            
+            {item.get('component_name')}
+            """
+                )
+
+
             
             G.add_node(
                 ap1000_node,
@@ -365,41 +395,49 @@ with tab4:
                 label="REVIEWED_BY",
                 color="#9467bd"
             )
+
+            if requirement_id:
+
+                G.add_edge(
+                    srp,
+                    requirement_id,
+                    label="GENERATES",
+                    color="#e377c2"
+                )
+
+            if requirement_id and system_id:
+
+                G.add_edge(
+                    requirement_id,
+                    system_id,
+                    label="ALLOCATED_TO",
+                    color="#17becf"
+                )
+
+            if system_id and component_id:
+
+                G.add_edge(
+                    system_id,
+                    component_id,
+                    label="CONTAINS",
+                    color="#8c564b"
+                )
             
             G.add_edge(
                 srp,
-                system_node,
-                label="GOVERNS",
+                ap1000_node,
+                label="APPLIED_TO",
                 color="#ff7f0e"
             )
             
             G.add_edge(
-                system_node,
-                component_node,
-                label="CONTAINS",
-                color="#17becf"
-            )
-            
-            G.add_edge(
-                component_node,
-                ap1000_node,
-                label="IMPLEMENTS",
-                color="#8c564b"
-            )
-            
-            G.add_edge(
                 ap1000_node,
                 apr1400_node,
                 label="EQUIVALENT_TO",
                 color="#d62728"
             )
             
-            G.add_edge(
-                ap1000_node,
-                apr1400_node,
-                label="EQUIVALENT_TO",
-                color="#d62728"
-            )
+
 
         c1, c2 = st.columns(2)
         
@@ -451,6 +489,11 @@ with tab4:
             elif node["id"].startswith("SRP"):
                 node["size"] = 25
 
+            elif node["group"] == "REQUIREMENT":
+
+                node["color"] = "#e377c2"
+                node["size"] = 28
+                
             elif node["group"] == "SYSTEM":
                 node["size"] = 22
                 node["color"] = "#17becf"
