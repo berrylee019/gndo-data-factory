@@ -319,9 +319,9 @@ with tab4:
 
             if requirement_id:
 
-                    print(
-                        f"REQ NODE: {requirement_id}"
-                    )
+                print(
+                    f"REQ NODE: {requirement_id}"
+                )
                 
                 G.add_node(
                     requirement_id,
