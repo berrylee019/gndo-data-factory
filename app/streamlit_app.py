@@ -318,7 +318,11 @@ with tab4:
             )
 
             if requirement_id:
-        
+
+                    print(
+                        f"REQ NODE: {requirement_id}"
+                    )
+                
                 G.add_node(
                     requirement_id,
                     group="REQUIREMENT",
@@ -406,6 +410,10 @@ with tab4:
                 )
 
             if requirement_id and system_id:
+
+                print(
+                    f"{requirement_id} -> {system_id}"
+                )
 
                 G.add_edge(
                     requirement_id,
