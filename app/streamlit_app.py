@@ -517,10 +517,10 @@ with tab4:
             }
             
         net.repulsion(
-            node_distance=200,
-            central_gravity=0.3,
-            spring_length=200,
-            spring_strength=0.05
+            node_distance=350,
+            central_gravity=0.15,
+            spring_length=350,
+            spring_strength=0.02
         )
 
         tmp_file = tempfile.NamedTemporaryFile(
