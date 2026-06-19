@@ -7,6 +7,10 @@
     "domain": "General Design",
     "component_id": "COMP-CH01-001",
     "component_name": "Plant Layout",
+    "requirement_id": "REQ-CH01-001",
+    "requirement": "Plant design basis shall be documented",
+    "requirement_system": "Plant Design Basis",
+    "requirement_component": "Design Functions",
     "cfr": "10 CFR 52",
     "rg": "RG-1.206",
     "nureg": "NUREG-0800-CH01",
@@ -14,7 +18,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810615"
+    "created_at": "2026-06-19T10:26:32.833582"
   },
   {
     "chapter": "01",
@@ -24,6 +28,10 @@
     "domain": "General Design",
     "component_id": "COMP-CH01-002",
     "component_name": "Design Bases",
+    "requirement_id": "REQ-CH01-001",
+    "requirement": "Plant design basis shall be documented",
+    "requirement_system": "Plant Design Basis",
+    "requirement_component": "Design Functions",
     "cfr": "10 CFR 52",
     "rg": "RG-1.206",
     "nureg": "NUREG-0800-CH01",
@@ -31,7 +39,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810622"
+    "created_at": "2026-06-19T10:26:32.833590"
   },
   {
     "chapter": "02",
@@ -75,6 +83,10 @@
     "domain": "Civil & Structural",
     "component_id": "COMP-CH03-001",
     "component_name": "Containment Building",
+    "requirement_id": "REQ-CH03-001",
+    "requirement": "Structures shall withstand design basis loads",
+    "requirement_system": "Containment Structure",
+    "requirement_component": "Reactor Building",
     "cfr": "10 CFR 50 Appendix A",
     "rg": "RG-1.136",
     "nureg": "NUREG-0800-CH03",
@@ -82,7 +94,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810628"
+    "created_at": "2026-06-19T10:26:32.833594"
   },
   {
     "chapter": "03",
@@ -92,6 +104,10 @@
     "domain": "Civil & Structural",
     "component_id": "COMP-CH03-002",
     "component_name": "Shield Building",
+    "requirement_id": "REQ-CH03-001",
+    "requirement": "Structures shall withstand design basis loads",
+    "requirement_system": "Containment Structure",
+    "requirement_component": "Reactor Building",
     "cfr": "10 CFR 50 Appendix A",
     "rg": "RG-1.136",
     "nureg": "NUREG-0800-CH03",
@@ -99,7 +115,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810629"
+    "created_at": "2026-06-19T10:26:32.833596"
   },
   {
     "chapter": "04",
@@ -160,6 +176,10 @@
     "domain": "Safety",
     "component_id": "COMP-CH06-001",
     "component_name": "Containment Spray System",
+    "requirement_id": "REQ-CH06-001",
+    "requirement": "Safety features shall mitigate accident consequences",
+    "requirement_system": "Engineered Safety Features",
+    "requirement_component": "Containment Spray System",
     "cfr": "10 CFR 50 Appendix A",
     "rg": "RG-1.82",
     "nureg": "NUREG-0800-CH06",
@@ -167,7 +187,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810639"
+    "created_at": "2026-06-19T10:26:32.833599"
   },
   {
     "chapter": "06",
@@ -177,6 +197,10 @@
     "domain": "Safety",
     "component_id": "COMP-CH06-002",
     "component_name": "Safety Injection System",
+    "requirement_id": "REQ-CH06-001",
+    "requirement": "Safety features shall mitigate accident consequences",
+    "requirement_system": "Engineered Safety Features",
+    "requirement_component": "Containment Spray System",
     "cfr": "10 CFR 50 Appendix A",
     "rg": "RG-1.82",
     "nureg": "NUREG-0800-CH06",
@@ -184,7 +208,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810640"
+    "created_at": "2026-06-19T10:26:32.833601"
   },
   {
     "chapter": "07",
@@ -194,6 +218,10 @@
     "domain": "Digital I&C",
     "component_id": "COMP-CH07-001",
     "component_name": "ESFAS",
+    "requirement_id": "REQ-CH07-001",
+    "requirement": "Protection system shall be independent",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "Reactor Trip System",
     "cfr": "10 CFR 50.55a",
     "rg": "RG-1.152",
     "nureg": "NUREG-0800-CH07",
@@ -201,7 +229,49 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810641"
+    "created_at": "2026-06-19T10:26:32.833607"
+  },
+  {
+    "chapter": "07",
+    "topic": "Instrumentation and Control",
+    "system_id": "SYS-CH07",
+    "system_name": "Plant Protection System",
+    "domain": "Digital I&C",
+    "component_id": "COMP-CH07-001",
+    "component_name": "ESFAS",
+    "requirement_id": "REQ-CH07-002",
+    "requirement": "Safety actuation shall be reliable",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "ESFAS",
+    "cfr": "10 CFR 50.55a",
+    "rg": "RG-1.152",
+    "nureg": "NUREG-0800-CH07",
+    "srp": "SRP-CH07",
+    "ap1000": "AP1000-PPS",
+    "apr1400": "APR1400-PPS",
+    "status": "linked",
+    "created_at": "2026-06-19T10:26:32.833609"
+  },
+  {
+    "chapter": "07",
+    "topic": "Instrumentation and Control",
+    "system_id": "SYS-CH07",
+    "system_name": "Plant Protection System",
+    "domain": "Digital I&C",
+    "component_id": "COMP-CH07-001",
+    "component_name": "ESFAS",
+    "requirement_id": "REQ-CH07-003",
+    "requirement": "Communication shall be isolated",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "Class 1E Network",
+    "cfr": "10 CFR 50.55a",
+    "rg": "RG-1.152",
+    "nureg": "NUREG-0800-CH07",
+    "srp": "SRP-CH07",
+    "ap1000": "AP1000-PPS",
+    "apr1400": "APR1400-PPS",
+    "status": "linked",
+    "created_at": "2026-06-19T10:26:32.833610"
   },
   {
     "chapter": "07",
@@ -211,6 +281,10 @@
     "domain": "Digital I&C",
     "component_id": "COMP-CH07-002",
     "component_name": "Reactor Trip System",
+    "requirement_id": "REQ-CH07-001",
+    "requirement": "Protection system shall be independent",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "Reactor Trip System",
     "cfr": "10 CFR 50.55a",
     "rg": "RG-1.152",
     "nureg": "NUREG-0800-CH07",
@@ -218,7 +292,49 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810643"
+    "created_at": "2026-06-19T10:26:32.833612"
+  },
+  {
+    "chapter": "07",
+    "topic": "Instrumentation and Control",
+    "system_id": "SYS-CH07",
+    "system_name": "Plant Protection System",
+    "domain": "Digital I&C",
+    "component_id": "COMP-CH07-002",
+    "component_name": "Reactor Trip System",
+    "requirement_id": "REQ-CH07-002",
+    "requirement": "Safety actuation shall be reliable",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "ESFAS",
+    "cfr": "10 CFR 50.55a",
+    "rg": "RG-1.152",
+    "nureg": "NUREG-0800-CH07",
+    "srp": "SRP-CH07",
+    "ap1000": "AP1000-PPS",
+    "apr1400": "APR1400-PPS",
+    "status": "linked",
+    "created_at": "2026-06-19T10:26:32.833614"
+  },
+  {
+    "chapter": "07",
+    "topic": "Instrumentation and Control",
+    "system_id": "SYS-CH07",
+    "system_name": "Plant Protection System",
+    "domain": "Digital I&C",
+    "component_id": "COMP-CH07-002",
+    "component_name": "Reactor Trip System",
+    "requirement_id": "REQ-CH07-003",
+    "requirement": "Communication shall be isolated",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "Class 1E Network",
+    "cfr": "10 CFR 50.55a",
+    "rg": "RG-1.152",
+    "nureg": "NUREG-0800-CH07",
+    "srp": "SRP-CH07",
+    "ap1000": "AP1000-PPS",
+    "apr1400": "APR1400-PPS",
+    "status": "linked",
+    "created_at": "2026-06-19T10:26:32.833616"
   },
   {
     "chapter": "07",
@@ -228,6 +344,10 @@
     "domain": "Digital I&C",
     "component_id": "COMP-CH07-003",
     "component_name": "Diverse Protection System",
+    "requirement_id": "REQ-CH07-001",
+    "requirement": "Protection system shall be independent",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "Reactor Trip System",
     "cfr": "10 CFR 50.55a",
     "rg": "RG-1.152",
     "nureg": "NUREG-0800-CH07",
@@ -235,7 +355,49 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810644"
+    "created_at": "2026-06-19T10:26:32.833618"
+  },
+  {
+    "chapter": "07",
+    "topic": "Instrumentation and Control",
+    "system_id": "SYS-CH07",
+    "system_name": "Plant Protection System",
+    "domain": "Digital I&C",
+    "component_id": "COMP-CH07-003",
+    "component_name": "Diverse Protection System",
+    "requirement_id": "REQ-CH07-002",
+    "requirement": "Safety actuation shall be reliable",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "ESFAS",
+    "cfr": "10 CFR 50.55a",
+    "rg": "RG-1.152",
+    "nureg": "NUREG-0800-CH07",
+    "srp": "SRP-CH07",
+    "ap1000": "AP1000-PPS",
+    "apr1400": "APR1400-PPS",
+    "status": "linked",
+    "created_at": "2026-06-19T10:26:32.833619"
+  },
+  {
+    "chapter": "07",
+    "topic": "Instrumentation and Control",
+    "system_id": "SYS-CH07",
+    "system_name": "Plant Protection System",
+    "domain": "Digital I&C",
+    "component_id": "COMP-CH07-003",
+    "component_name": "Diverse Protection System",
+    "requirement_id": "REQ-CH07-003",
+    "requirement": "Communication shall be isolated",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "Class 1E Network",
+    "cfr": "10 CFR 50.55a",
+    "rg": "RG-1.152",
+    "nureg": "NUREG-0800-CH07",
+    "srp": "SRP-CH07",
+    "ap1000": "AP1000-PPS",
+    "apr1400": "APR1400-PPS",
+    "status": "linked",
+    "created_at": "2026-06-19T10:26:32.833621"
   },
   {
     "chapter": "07",
@@ -245,6 +407,10 @@
     "domain": "Digital I&C",
     "component_id": "COMP-CH07-004",
     "component_name": "Class 1E Network",
+    "requirement_id": "REQ-CH07-001",
+    "requirement": "Protection system shall be independent",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "Reactor Trip System",
     "cfr": "10 CFR 50.55a",
     "rg": "RG-1.152",
     "nureg": "NUREG-0800-CH07",
@@ -252,7 +418,49 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810645"
+    "created_at": "2026-06-19T10:26:32.833622"
+  },
+  {
+    "chapter": "07",
+    "topic": "Instrumentation and Control",
+    "system_id": "SYS-CH07",
+    "system_name": "Plant Protection System",
+    "domain": "Digital I&C",
+    "component_id": "COMP-CH07-004",
+    "component_name": "Class 1E Network",
+    "requirement_id": "REQ-CH07-002",
+    "requirement": "Safety actuation shall be reliable",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "ESFAS",
+    "cfr": "10 CFR 50.55a",
+    "rg": "RG-1.152",
+    "nureg": "NUREG-0800-CH07",
+    "srp": "SRP-CH07",
+    "ap1000": "AP1000-PPS",
+    "apr1400": "APR1400-PPS",
+    "status": "linked",
+    "created_at": "2026-06-19T10:26:32.833626"
+  },
+  {
+    "chapter": "07",
+    "topic": "Instrumentation and Control",
+    "system_id": "SYS-CH07",
+    "system_name": "Plant Protection System",
+    "domain": "Digital I&C",
+    "component_id": "COMP-CH07-004",
+    "component_name": "Class 1E Network",
+    "requirement_id": "REQ-CH07-003",
+    "requirement": "Communication shall be isolated",
+    "requirement_system": "Plant Protection System",
+    "requirement_component": "Class 1E Network",
+    "cfr": "10 CFR 50.55a",
+    "rg": "RG-1.152",
+    "nureg": "NUREG-0800-CH07",
+    "srp": "SRP-CH07",
+    "ap1000": "AP1000-PPS",
+    "apr1400": "APR1400-PPS",
+    "status": "linked",
+    "created_at": "2026-06-19T10:26:32.833628"
   },
   {
     "chapter": "08",
@@ -262,6 +470,10 @@
     "domain": "Electrical",
     "component_id": "COMP-CH08-001",
     "component_name": "Diesel Generator",
+    "requirement_id": "REQ-CH08-001",
+    "requirement": "Power sources shall be redundant",
+    "requirement_system": "Electric Power System",
+    "requirement_component": "Offsite Power",
     "cfr": "10 CFR 50 Appendix A",
     "rg": "RG-1.32",
     "nureg": "NUREG-0800-CH08",
@@ -269,7 +481,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810647"
+    "created_at": "2026-06-19T10:26:32.833630"
   },
   {
     "chapter": "08",
@@ -279,6 +491,10 @@
     "domain": "Electrical",
     "component_id": "COMP-CH08-002",
     "component_name": "Class 1E Power System",
+    "requirement_id": "REQ-CH08-001",
+    "requirement": "Power sources shall be redundant",
+    "requirement_system": "Electric Power System",
+    "requirement_component": "Offsite Power",
     "cfr": "10 CFR 50 Appendix A",
     "rg": "RG-1.32",
     "nureg": "NUREG-0800-CH08",
@@ -286,7 +502,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810648"
+    "created_at": "2026-06-19T10:26:32.833631"
   },
   {
     "chapter": "09",
@@ -296,6 +512,10 @@
     "domain": "Mechanical",
     "component_id": "COMP-CH09-001",
     "component_name": "Component Cooling Water System",
+    "requirement_id": "REQ-CH09-001",
+    "requirement": "Cooling systems shall support safety functions",
+    "requirement_system": "Auxiliary Systems",
+    "requirement_component": "Component Cooling Water",
     "cfr": "10 CFR 50",
     "rg": "RG-1.27",
     "nureg": "NUREG-0800-CH09",
@@ -303,7 +523,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810649"
+    "created_at": "2026-06-19T10:26:32.833633"
   },
   {
     "chapter": "09",
@@ -313,6 +533,10 @@
     "domain": "Mechanical",
     "component_id": "COMP-CH09-002",
     "component_name": "Service Water System",
+    "requirement_id": "REQ-CH09-001",
+    "requirement": "Cooling systems shall support safety functions",
+    "requirement_system": "Auxiliary Systems",
+    "requirement_component": "Component Cooling Water",
     "cfr": "10 CFR 50",
     "rg": "RG-1.27",
     "nureg": "NUREG-0800-CH09",
@@ -320,7 +544,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810653"
+    "created_at": "2026-06-19T10:26:32.833635"
   },
   {
     "chapter": "10",
@@ -330,6 +554,10 @@
     "domain": "Turbine Island",
     "component_id": "COMP-CH10-001",
     "component_name": "Turbine Generator",
+    "requirement_id": "REQ-CH10-001",
+    "requirement": "Power conversion systems shall meet performance criteria",
+    "requirement_system": "Steam and Power Conversion System",
+    "requirement_component": "Turbine Generator",
     "cfr": "10 CFR 50",
     "rg": "RG-1.68",
     "nureg": "NUREG-0800-CH10",
@@ -337,7 +565,7 @@
     "ap1000": "AP1000-TG",
     "apr1400": "APR1400-TG",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810654"
+    "created_at": "2026-06-19T10:26:32.833637"
   },
   {
     "chapter": "11",
@@ -347,6 +575,10 @@
     "domain": "Radiation",
     "component_id": "COMP-CH11-001",
     "component_name": "Radiation Monitoring System",
+    "requirement_id": "REQ-CH11-001",
+    "requirement": "Radiation exposure shall be monitored",
+    "requirement_system": "Radiation Protection System",
+    "requirement_component": "Radiation Monitor",
     "cfr": "10 CFR 20",
     "rg": "RG-8.8",
     "nureg": "NUREG-0800-CH11",
@@ -354,7 +586,7 @@
     "ap1000": "AP1000-RP",
     "apr1400": "APR1400-RP",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810656"
+    "created_at": "2026-06-19T10:26:32.833639"
   },
   {
     "chapter": "12",
@@ -364,6 +596,10 @@
     "domain": "Waste Management",
     "component_id": "COMP-CH12-001",
     "component_name": "Liquid Waste Processing System",
+    "requirement_id": "REQ-CH12-001",
+    "requirement": "Waste releases shall be controlled",
+    "requirement_system": "Radioactive Waste System",
+    "requirement_component": "Waste Processing",
     "cfr": "10 CFR 61",
     "rg": "RG-1.143",
     "nureg": "NUREG-0800-CH12",
@@ -371,7 +607,7 @@
     "ap1000": "AP1000-RWMS",
     "apr1400": "APR1400-RWMS",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810658"
+    "created_at": "2026-06-19T10:26:32.833640"
   },
   {
     "chapter": "13",
@@ -381,6 +617,10 @@
     "domain": "Operations",
     "component_id": "COMP-CH13-001",
     "component_name": "Operator Training Program",
+    "requirement_id": "REQ-CH13-001",
+    "requirement": "Plant operation shall follow approved procedures",
+    "requirement_system": "Operations Program",
+    "requirement_component": "Operating Procedures",
     "cfr": "10 CFR 55",
     "rg": "RG-1.134",
     "nureg": "NUREG-0800-CH13",
@@ -388,7 +628,7 @@
     "ap1000": "AP1000-OPS",
     "apr1400": "APR1400-OPS",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810661"
+    "created_at": "2026-06-19T10:26:32.833642"
   },
   {
     "chapter": "14",
@@ -398,6 +638,10 @@
     "domain": "Testing",
     "component_id": "COMP-CH14-001",
     "component_name": "Preoperational Test Program",
+    "requirement_id": "REQ-CH14-001",
+    "requirement": "Systems shall be verified before operation",
+    "requirement_system": "Initial Test Program",
+    "requirement_component": "Startup Testing",
     "cfr": "10 CFR 52",
     "rg": "RG-1.68",
     "nureg": "NUREG-0800-CH14",
@@ -405,7 +649,7 @@
     "ap1000": "AP1000-ITP",
     "apr1400": "APR1400-ITP",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810663"
+    "created_at": "2026-06-19T10:26:32.833646"
   },
   {
     "chapter": "15",
@@ -415,6 +659,10 @@
     "domain": "Safety Analysis",
     "component_id": "COMP-CH15-001",
     "component_name": "LOCA Analysis",
+    "requirement_id": "REQ-CH15-001",
+    "requirement": "Accidents shall remain within acceptance criteria",
+    "requirement_system": "Accident Analysis Program",
+    "requirement_component": "Transient Analysis",
     "cfr": "10 CFR 50 Appendix K",
     "rg": "RG-1.157",
     "nureg": "NUREG-0800-CH15",
@@ -422,7 +670,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810664"
+    "created_at": "2026-06-19T10:26:32.833648"
   },
   {
     "chapter": "15",
@@ -432,6 +680,10 @@
     "domain": "Safety Analysis",
     "component_id": "COMP-CH15-002",
     "component_name": "Transient Analysis",
+    "requirement_id": "REQ-CH15-001",
+    "requirement": "Accidents shall remain within acceptance criteria",
+    "requirement_system": "Accident Analysis Program",
+    "requirement_component": "Transient Analysis",
     "cfr": "10 CFR 50 Appendix K",
     "rg": "RG-1.157",
     "nureg": "NUREG-0800-CH15",
@@ -439,7 +691,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810666"
+    "created_at": "2026-06-19T10:26:32.833650"
   },
   {
     "chapter": "16",
@@ -449,6 +701,10 @@
     "domain": "Licensing",
     "component_id": "COMP-CH16-001",
     "component_name": "Limiting Conditions for Operation",
+    "requirement_id": "REQ-CH16-001",
+    "requirement": "Operation shall comply with technical specifications",
+    "requirement_system": "Technical Specifications",
+    "requirement_component": "Limiting Conditions",
     "cfr": "10 CFR 50.36",
     "rg": "RG-1.181",
     "nureg": "NUREG-0800-CH16",
@@ -456,7 +712,7 @@
     "ap1000": "AP1000-TS",
     "apr1400": "APR1400-TS",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810667"
+    "created_at": "2026-06-19T10:26:32.833652"
   },
   {
     "chapter": "17",
@@ -466,6 +722,10 @@
     "domain": "QA",
     "component_id": "COMP-CH17-001",
     "component_name": "QA Audit Program",
+    "requirement_id": "REQ-CH17-001",
+    "requirement": "Quality activities shall be documented",
+    "requirement_system": "Quality Assurance Program",
+    "requirement_component": "QA Records",
     "cfr": "10 CFR 50 Appendix B",
     "rg": "RG-1.28",
     "nureg": "NUREG-0800-CH17",
@@ -473,7 +733,7 @@
     "ap1000": "AP1000-QA",
     "apr1400": "APR1400-QA",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810668"
+    "created_at": "2026-06-19T10:26:32.833653"
   },
   {
     "chapter": "18",
@@ -483,6 +743,10 @@
     "domain": "Human Factors",
     "component_id": "COMP-CH18-001",
     "component_name": "Human Machine Interface",
+    "requirement_id": "REQ-CH18-001",
+    "requirement": "Human-system interfaces shall support operator performance",
+    "requirement_system": "Human Factors Engineering",
+    "requirement_component": "Control Room HSI",
     "cfr": "10 CFR 50",
     "rg": "RG-1.174",
     "nureg": "NUREG-0800-CH18",
@@ -490,7 +754,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810672"
+    "created_at": "2026-06-19T10:26:32.833655"
   },
   {
     "chapter": "18",
@@ -500,6 +764,10 @@
     "domain": "Human Factors",
     "component_id": "COMP-CH18-002",
     "component_name": "Control Room Design",
+    "requirement_id": "REQ-CH18-001",
+    "requirement": "Human-system interfaces shall support operator performance",
+    "requirement_system": "Human Factors Engineering",
+    "requirement_component": "Control Room HSI",
     "cfr": "10 CFR 50",
     "rg": "RG-1.174",
     "nureg": "NUREG-0800-CH18",
@@ -507,7 +775,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810673"
+    "created_at": "2026-06-19T10:26:32.833657"
   },
   {
     "chapter": "19",
@@ -517,6 +785,10 @@
     "domain": "PRA",
     "component_id": "COMP-CH19-001",
     "component_name": "Core Damage Frequency",
+    "requirement_id": "REQ-CH19-001",
+    "requirement": "Risk shall be evaluated using PRA methods",
+    "requirement_system": "Probabilistic Risk Assessment",
+    "requirement_component": "Core Damage Frequency",
     "cfr": "10 CFR 50",
     "rg": "RG-1.200",
     "nureg": "NUREG-0800-CH19",
@@ -524,7 +796,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810675"
+    "created_at": "2026-06-19T10:26:32.833661"
   },
   {
     "chapter": "19",
@@ -534,6 +806,10 @@
     "domain": "PRA",
     "component_id": "COMP-CH19-002",
     "component_name": "Large Early Release Frequency",
+    "requirement_id": "REQ-CH19-001",
+    "requirement": "Risk shall be evaluated using PRA methods",
+    "requirement_system": "Probabilistic Risk Assessment",
+    "requirement_component": "Core Damage Frequency",
     "cfr": "10 CFR 50",
     "rg": "RG-1.200",
     "nureg": "NUREG-0800-CH19",
@@ -541,6 +817,6 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-19T10:26:32.810678"
+    "created_at": "2026-06-19T10:26:32.833663"
   }
 ]
