@@ -345,7 +345,7 @@ with tab4:
             
                 G.add_node(
                     component_id,
-                    group="COMPONENT"
+                    group="COMPONENT",
                     title=f"""
             Component
             
