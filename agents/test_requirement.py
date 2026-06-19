@@ -6,7 +6,7 @@ with open(
 encoding="utf-8"
 ) as f:
 
-requirements = json.load(f)
+  requirements = json.load(f)
 
 print(
 f"Requirements Loaded: {len(requirements)}"
