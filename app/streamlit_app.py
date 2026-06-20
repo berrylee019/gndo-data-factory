@@ -699,7 +699,7 @@ with tab4:
                 G.add_edge(
                     verification_id,
                     test_id,
-                    label="EXECUTED_BY",
+                    label="TESTED_BY",
                     color="#ff7f0e"
                 )
 
@@ -708,7 +708,7 @@ with tab4:
                 G.add_edge(
                     test_id,
                     artifact_id,
-                    label="VALIDATES",
+                    label="DOCUMENTED_BY",
                     color="#bcbd22"
                 )
     
@@ -753,7 +753,10 @@ with tab4:
                 color="#d62728"
             )
             
-
+            print(
+                failure_id,
+                verification_id
+            )
 
         c1, c2 = st.columns(2)
         
