@@ -5,8 +5,8 @@ RKG_V09_FILE = (
 "storage/metadata/rkg_data_v09.json"
 )
 
-ARTIFACT_FILE = (
-"storage/rkg/design_artifact_registry_v09.json"
+FAILURE_FILE = (
+"storage/rkg/failure_registry_v10.json"
 )
 
 OUTPUT_FILE = (
@@ -32,58 +32,68 @@ def generate_metadata():
         RKG_V09_FILE
     )
     
-    artifacts = load_json(
-        ARTIFACT_FILE
+    failures = load_json(
+        FAILURE_FILE
     )
     
-    artifact_map = {}
+    failure_map = {}
 
-    for artifact in artifacts:
+    for failure in failures:
     
-        chapter = artifact["chapter"]
+        requirement_id = failure["requirement_id"]
 
-        if chapter not in artifact_map:
+        if requirement_id not in failure_map:
           
-            artifact_map[chapter] = []
+            failure_map[requirement_id] = []
             
-        artifact_map[chapter].append(
-            artifact
+        failure_map[requirement_id].append(
+            failure
         )
       
     metadata = []
     
     for item in rkg_v09:
     
-        chapter = item["chapter"]
+        requirement_id = item.get("requirement_id")
     
-        artifact_list = artifact_map.get(
-            chapter,
+        failure_list = failure_map.get(
+            requirement_id,
             []
         )
 
-        if not artifact_list:
+        if not failure_list:
 
             metadata.append(item)
 
             continue
 
-        for artifact in artifact_list:
+        for failure in failure_list:
         
             metadata.append({
     
                 **item,
     
-                "artifact_id":
-                    artifact["artifact_id"],
+                "failure_id":
+                    failure.get("failure_id")
     
-                "artifact_type":
-                    artifact["artifact_type"],
+                "failure_mode":
+                    failure.get("failure_mode"),
     
-                "artifact_name":
-                    artifact["artifact_name"],
+                "severity":
+                    failure.get("severity"),
     
+                "consequence":
+                    failure.get("consequence"),
+                
+                "mitigation":
+                    failure.get("mitigation"),
+
+                "affected_system":
+                    failure.get("affected_system"),
+
                 "created_at":
                     datetime.utcnow().isoformat()
+                
             })
     
     with open(
