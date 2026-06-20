@@ -65,6 +65,10 @@ jobs:
 
           python agents/rkg_agent_v08.py
 
+          python agents/design_artifact_agent_v09.py
+
+          python agents/rkg_agent_v09.py
+
       - name: Python Syntax Check
         run: python -m py_compile agents/*.py
 
