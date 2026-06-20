@@ -128,218 +128,233 @@ with tab2:
 
 with tab3:
 
-    st.subheader("Search")
-
-    search_term = st.text_input(
-        "Search documents"
-    )
-
-    selected_sources = st.multiselect(
-        "Source Filter",
-        options=df["source"].unique(),
-        default=df["source"].unique()
-    )
-
-    selected_categories = st.multiselect(
-        "Category Filter",
-        options=df["category"].unique(),
-        default=df["category"].unique()
-    )
-
-    filtered_df = df[
-        (df["source"].isin(selected_sources))
-        &
-        (df["category"].isin(selected_categories))
-    ]
-
-    if search_term:
-
-        filtered_df = filtered_df[
-            filtered_df["title"]
-            .str.contains(
-                search_term,
-                case=False,
-                na=False
-            )
+    search_tab, gndo_tab, ask_tab = st.tabs(
+        [
+            "📄 Document Search",
+            "🔍 GNDO Search",
+            "🤖 Ask GNDO"
         ]
-
-    st.subheader(
-        "Documents"
     )
 
-    st.dataframe(
-        filtered_df,
-        use_container_width=True
-    )
+    with search_tab:
 
-    for _, row in filtered_df.iterrows():
+        st.subheader("Search")
 
-        with st.expander(
-            row["title"]
-        ):
-
-            st.write(
-                f"Source: {row['source']}"
-            )
-
-            st.write(
-                f"Category: {row.get('category','')}"
-            )
-
-            if row.get("url"):
-
-                st.link_button(
-                    "Open Document",
-                    row["url"]
-                )
-    st.divider()
+        search_term = st.text_input(
+            "Search documents"
+        )
     
-    st.subheader(
-        "GNDO Search"
-    )
+        selected_sources = st.multiselect(
+            "Source Filter",
+            options=df["source"].unique(),
+            default=df["source"].unique()
+        )
     
-    gndo_search = st.text_input(
-        "Search GNDO Objects"
-    )
-
-
-    rkg_df = pd.DataFrame(rkg)
-
-    gndo_result = pd.DataFrame()
-
-    if gndo_search:
-
-        gndo_result = rkg_df[
-            rkg_df.astype(str)
-            .apply(
-                lambda x:
-                x.str.contains(
-                    gndo_search,
+        selected_categories = st.multiselect(
+            "Category Filter",
+            options=df["category"].unique(),
+            default=df["category"].unique()
+        )
+    
+        filtered_df = df[
+            (df["source"].isin(selected_sources))
+            &
+            (df["category"].isin(selected_categories))
+        ]
+    
+        if search_term:
+    
+            filtered_df = filtered_df[
+                filtered_df["title"]
+                .str.contains(
+                    search_term,
                     case=False,
                     na=False
                 )
-            )
-            .any(axis=1)
-        ]
+            ]
     
-        st.success(
-            f"{len(gndo_result)} records found"
+        st.subheader(
+            "Documents"
         )
     
         st.dataframe(
-            gndo_result[
-                [
-                    "chapter",
-                    "requirement_id",
-                    "verification_id",
-                    "test_id",
-                    "artifact_id",
-                    "system_id",
-                    "component_id"
-                ]
-            ],
+            filtered_df,
             use_container_width=True
         )
-
-        for _, row in gndo_result.iterrows():
+    
+        for _, row in filtered_df.iterrows():
     
             with st.expander(
-        
-                f"{row.get('chapter')} | "
-                f"{row.get('topic')}"
-        
+                row["title"]
             ):
-        
-                st.json(
-                    row.to_dict()
+    
+                st.write(
+                    f"Source: {row['source']}"
                 )
+    
+                st.write(
+                    f"Category: {row.get('category','')}"
+                )
+    
+                if row.get("url"):
+    
+                    st.link_button(
+                        "Open Document",
+                        row["url"]
+                    )
+
+    with gndo_tab:
         
-    selected_chapter = st.selectbox(
-        "Select Chapter",
-        sorted(
-            [x["chapter"] for x in rkg]
+        st.subheader(
+            "GNDO Search"
         )
-    )
-
-    st.divider()
-
-    st.subheader(
-        "Ask GNDO"
-    )
+        
+        gndo_search = st.text_input(
+            "Search GNDO Objects"
+        )
     
-    ask_gndo = st.text_input(
-        "Ask a Traceability Question"
-    )
-
-    if ask_gndo:
     
-        query_df = rkg_df[
-            rkg_df.astype(str)
-            .apply(
-                lambda x:
-                x.str.contains(
-                    ask_gndo,
-                    case=False,
-                    na=False
+        rkg_df = pd.DataFrame(rkg)
+    
+        gndo_result = pd.DataFrame()
+    
+        if gndo_search:
+    
+            gndo_result = rkg_df[
+                rkg_df.astype(str)
+                .apply(
+                    lambda x:
+                    x.str.contains(
+                        gndo_search,
+                        case=False,
+                        na=False
+                    )
                 )
-            )
-            .any(axis=1)
-        ]
-
-        if not query_df.empty:
-
-            row = query_df.iloc[0]
-    
+                .any(axis=1)
+            ]
+        
             st.success(
-                "Traceability Path Found"
+                f"{len(gndo_result)} records found"
+            )
+        
+            st.dataframe(
+                gndo_result[
+                    [
+                        "chapter",
+                        "requirement_id",
+                        "verification_id",
+                        "test_id",
+                        "artifact_id",
+                        "system_id",
+                        "component_id"
+                    ]
+                ],
+                use_container_width=True
             )
     
-            summary = f"""
-    ### GNDO Traceability Summary
-    
-    **Requirement**
-    {row.get('requirement')}
-    
-    **Requirement ID**
-    {row.get('requirement_id')}
-    
-    **Verification**
-    {row.get('verification_id')}
-    
-    **Test**
-    {row.get('test_id')}
-    
-    **Design Artifact**
-    {row.get('artifact_id')}
-    
-    **System**
-    {row.get('system_name')}
-    
-    **Component**
-    {row.get('component_name')}
-    
-    **SRP**
-    {row.get('srp')}
-    
-    **NUREG**
-    {row.get('nureg')}
-    
-    **RG**
-    {row.get('rg')}
-    
-    **CFR**
-    {row.get('cfr')}
-    
-    **AP1000**
-    {row.get('ap1000')}
-    
-    **APR1400**
-    {row.get('apr1400')}
-    """
-    
-            st.markdown(
-                summary
+            for _, row in gndo_result.iterrows():
+        
+                with st.expander(
+            
+                    f"{row.get('chapter')} | "
+                    f"{row.get('topic')}"
+            
+                ):
+            
+                    st.json(
+                        row.to_dict()
+                    )
+            
+        selected_chapter = st.selectbox(
+            "Select Chapter",
+            sorted(
+                [x["chapter"] for x in rkg]
             )
+        )
+
+    with ask_tab:
+    
+        st.subheader(
+            "Ask GNDO"
+        )
+        
+        ask_gndo = st.text_input(
+            "Ask a Traceability Question"
+        )
+    
+        if ask_gndo:
+        
+            query_df = rkg_df[
+                rkg_df.astype(str)
+                .apply(
+                    lambda x:
+                    x.str.contains(
+                        ask_gndo,
+                        case=False,
+                        na=False
+                    )
+                )
+                .any(axis=1)
+            ]
+    
+            if not query_df.empty:
+    
+                row = query_df.iloc[0]
+        
+                st.success(
+                    "Traceability Path Found"
+                )
+        
+                summary = f"""
+        ### GNDO Traceability Summary
+        
+        **Requirement**
+        {row.get('requirement')}
+        
+        **Requirement ID**
+        {row.get('requirement_id')}
+        
+        **Verification**
+        {row.get('verification_id')}
+        
+        **Test**
+        {row.get('test_id')}
+        
+        **Design Artifact**
+        {row.get('artifact_id')}
+        
+        **System**
+        {row.get('system_name')}
+        
+        **Component**
+        {row.get('component_name')}
+        
+        **SRP**
+        {row.get('srp')}
+        
+        **NUREG**
+        {row.get('nureg')}
+        
+        **RG**
+        {row.get('rg')}
+        
+        **CFR**
+        {row.get('cfr')}
+        
+        **AP1000**
+        {row.get('ap1000')}
+        
+        **APR1400**
+        {row.get('apr1400')}
+        """
+        
+                st.markdown(
+                    summary
+                )
+
+
+
+
 with tab4:
     
     st.subheader(
