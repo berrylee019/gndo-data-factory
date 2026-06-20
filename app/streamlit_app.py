@@ -202,9 +202,9 @@ with tab3:
         "Search GNDO Objects"
     )
 
-    rkg_df = pd.DataFrame(
-        rkg
-    )
+    rkg_df = pd.DataFrame(rkg)
+
+    gndo_result = pd.DataFrame()
 
     if gndo_search:
 
@@ -230,19 +230,19 @@ with tab3:
             use_container_width=True
         )
 
-    for _, row in gndo_result.iterrows():
-
-        with st.expander(
+        for _, row in gndo_result.iterrows():
     
-            f"{row.get('chapter')} | "
-            f"{row.get('topic')}"
-    
-        ):
-    
-            st.json(
-                row.to_dict()
-            )
-    
+            with st.expander(
+        
+                f"{row.get('chapter')} | "
+                f"{row.get('topic')}"
+        
+            ):
+        
+                st.json(
+                    row.to_dict()
+                )
+        
     selected_chapter = st.selectbox(
         "Select Chapter",
         sorted(
