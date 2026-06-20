@@ -260,7 +260,86 @@ with tab3:
             [x["chapter"] for x in rkg]
         )
     )
+
+    st.divider()
+
+    st.subheader(
+        "Ask GNDO"
+    )
     
+    ask_gndo = st.text_input(
+        "Ask a Traceability Question"
+    )
+
+    if ask_gndo:
+    
+        query_df = rkg_df[
+            rkg_df.astype(str)
+            .apply(
+                lambda x:
+                x.str.contains(
+                    ask_gndo,
+                    case=False,
+                    na=False
+                )
+            )
+            .any(axis=1)
+        ]
+
+        if not query_df.empty:
+
+            row = query_df.iloc[0]
+    
+            st.success(
+                "Traceability Path Found"
+            )
+    
+            summary = f"""
+    ### GNDO Traceability Summary
+    
+    **Requirement**
+    {row.get('requirement')}
+    
+    **Requirement ID**
+    {row.get('requirement_id')}
+    
+    **Verification**
+    {row.get('verification_id')}
+    
+    **Test**
+    {row.get('test_id')}
+    
+    **Design Artifact**
+    {row.get('artifact_id')}
+    
+    **System**
+    {row.get('system_name')}
+    
+    **Component**
+    {row.get('component_name')}
+    
+    **SRP**
+    {row.get('srp')}
+    
+    **NUREG**
+    {row.get('nureg')}
+    
+    **RG**
+    {row.get('rg')}
+    
+    **CFR**
+    {row.get('cfr')}
+    
+    **AP1000**
+    {row.get('ap1000')}
+    
+    **APR1400**
+    {row.get('apr1400')}
+    """
+    
+            st.markdown(
+                summary
+            )
 with tab4:
     
     st.subheader(
