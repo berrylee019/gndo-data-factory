@@ -46,7 +46,7 @@ def generate_metadata():
         ] = ver
 
       
-        metadata = []
+    metadata = []
 
     for item in rkg_v06:
 
@@ -89,18 +89,18 @@ def generate_metadata():
                 datetime.utcnow().isoformat()
         })
 
-      with open(
-          OUTPUT_FILE,
-          "w",
-          encoding="utf-8"
-      ) as f:
-    
-          json.dump(
-              metadata,
-              f,
-              indent=2,
-              ensure_ascii=False
-          )
+    with open(
+        OUTPUT_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            metadata,
+            f,
+            indent=2,
+            ensure_ascii=False
+        )
 
     print(
         f"Generated {len(metadata)} RKG v0.7 records"
