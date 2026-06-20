@@ -478,6 +478,14 @@ with tab4:
                 "test_name"
             )
 
+            failure_id = item.get(
+                "failure_id"
+            )
+            
+            failure_mode = item.get(
+                "failure_mode"
+            )
+
             G.add_node(
                 cfr,
                 group="CFR",
@@ -572,9 +580,9 @@ with tab4:
                     artifact_id,
                     group="FAILURE",
                     title=f"""
-            Failure
+            Failure Mode
             
-            {artifact_name}
+            {failure_mode}
             """
                 )
             if system_id:
