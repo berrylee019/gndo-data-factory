@@ -18,11 +18,14 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498497",
+    "created_at": "2026-06-20T05:56:00.520644",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "01",
@@ -43,11 +46,14 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498504",
+    "created_at": "2026-06-20T05:56:00.520848",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "02",
@@ -64,11 +70,14 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498507",
+    "created_at": "2026-06-20T05:56:00.521021",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
-    "acceptance_criteria": null
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "02",
@@ -85,11 +94,14 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498509",
+    "created_at": "2026-06-20T05:56:00.521373",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
-    "acceptance_criteria": null
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "03",
@@ -110,11 +122,14 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498511",
+    "created_at": "2026-06-20T05:56:00.521682",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "03",
@@ -135,11 +150,14 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498512",
+    "created_at": "2026-06-20T05:56:00.522013",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "04",
@@ -156,11 +174,14 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498514",
+    "created_at": "2026-06-20T05:56:00.522365",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
-    "acceptance_criteria": null
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "04",
@@ -177,11 +198,14 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498515",
+    "created_at": "2026-06-20T05:56:00.522783",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
-    "acceptance_criteria": null
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "05",
@@ -198,11 +222,14 @@
     "ap1000": "AP1000-CH05",
     "apr1400": "APR1400-CH05",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498517",
+    "created_at": "2026-06-20T05:56:00.523142",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
-    "acceptance_criteria": null
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "06",
@@ -223,11 +250,14 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498518",
+    "created_at": "2026-06-20T05:56:00.523512",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "06",
@@ -248,11 +278,14 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498520",
+    "created_at": "2026-06-20T05:56:00.523913",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "07",
@@ -273,11 +306,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498521",
+    "created_at": "2026-06-20T05:56:00.524328",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Independence demonstrated",
+    "test_id": "TEST-CH07-001",
+    "test_name": "PPS Independence Test",
+    "test_type": "Analysis"
   },
   {
     "chapter": "07",
@@ -298,11 +334,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498523",
+    "created_at": "2026-06-20T05:56:00.524852",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Reliability target satisfied",
+    "test_id": "TEST-CH07-002",
+    "test_name": "ESFAS Reliability Test",
+    "test_type": "Functional Test"
   },
   {
     "chapter": "07",
@@ -323,11 +362,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498524",
+    "created_at": "2026-06-20T05:56:00.525300",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Trip response within limits",
+    "test_id": "TEST-CH07-003",
+    "test_name": "RTS Response Test",
+    "test_type": "Integrated Test"
   },
   {
     "chapter": "07",
@@ -348,11 +390,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498526",
+    "created_at": "2026-06-20T05:56:00.525788",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Independence demonstrated",
+    "test_id": "TEST-CH07-001",
+    "test_name": "PPS Independence Test",
+    "test_type": "Analysis"
   },
   {
     "chapter": "07",
@@ -373,11 +418,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498529",
+    "created_at": "2026-06-20T05:56:00.526269",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Reliability target satisfied",
+    "test_id": "TEST-CH07-002",
+    "test_name": "ESFAS Reliability Test",
+    "test_type": "Functional Test"
   },
   {
     "chapter": "07",
@@ -398,11 +446,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498531",
+    "created_at": "2026-06-20T05:56:00.526825",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Trip response within limits",
+    "test_id": "TEST-CH07-003",
+    "test_name": "RTS Response Test",
+    "test_type": "Integrated Test"
   },
   {
     "chapter": "07",
@@ -423,11 +474,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498532",
+    "created_at": "2026-06-20T05:56:00.527393",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Independence demonstrated",
+    "test_id": "TEST-CH07-001",
+    "test_name": "PPS Independence Test",
+    "test_type": "Analysis"
   },
   {
     "chapter": "07",
@@ -448,11 +502,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498534",
+    "created_at": "2026-06-20T05:56:00.528016",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Reliability target satisfied",
+    "test_id": "TEST-CH07-002",
+    "test_name": "ESFAS Reliability Test",
+    "test_type": "Functional Test"
   },
   {
     "chapter": "07",
@@ -473,11 +530,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498535",
+    "created_at": "2026-06-20T05:56:00.528561",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Trip response within limits",
+    "test_id": "TEST-CH07-003",
+    "test_name": "RTS Response Test",
+    "test_type": "Integrated Test"
   },
   {
     "chapter": "07",
@@ -498,11 +558,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498537",
+    "created_at": "2026-06-20T05:56:00.529196",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Independence demonstrated",
+    "test_id": "TEST-CH07-001",
+    "test_name": "PPS Independence Test",
+    "test_type": "Analysis"
   },
   {
     "chapter": "07",
@@ -523,11 +586,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498538",
+    "created_at": "2026-06-20T05:56:00.529794",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Reliability target satisfied",
+    "test_id": "TEST-CH07-002",
+    "test_name": "ESFAS Reliability Test",
+    "test_type": "Functional Test"
   },
   {
     "chapter": "07",
@@ -548,11 +614,14 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498539",
+    "created_at": "2026-06-20T05:56:00.530395",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": "Trip response within limits",
+    "test_id": "TEST-CH07-003",
+    "test_name": "RTS Response Test",
+    "test_type": "Integrated Test"
   },
   {
     "chapter": "08",
@@ -573,11 +642,14 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498541",
+    "created_at": "2026-06-20T05:56:00.531050",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "08",
@@ -598,11 +670,14 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498542",
+    "created_at": "2026-06-20T05:56:00.531745",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "09",
@@ -623,11 +698,14 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498544",
+    "created_at": "2026-06-20T05:56:00.532365",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "09",
@@ -648,11 +726,14 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498545",
+    "created_at": "2026-06-20T05:56:00.533147",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "10",
@@ -673,11 +754,14 @@
     "ap1000": "AP1000-TG",
     "apr1400": "APR1400-TG",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498547",
+    "created_at": "2026-06-20T05:56:00.533880",
     "verification_id": "VER-CH10-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH10-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "11",
@@ -698,11 +782,14 @@
     "ap1000": "AP1000-RP",
     "apr1400": "APR1400-RP",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498548",
+    "created_at": "2026-06-20T05:56:00.534600",
     "verification_id": "VER-CH11-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH11-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "12",
@@ -723,11 +810,14 @@
     "ap1000": "AP1000-RWMS",
     "apr1400": "APR1400-RWMS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498550",
+    "created_at": "2026-06-20T05:56:00.535379",
     "verification_id": "VER-CH12-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH12-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "13",
@@ -748,11 +838,14 @@
     "ap1000": "AP1000-OPS",
     "apr1400": "APR1400-OPS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498551",
+    "created_at": "2026-06-20T05:56:00.536127",
     "verification_id": "VER-CH13-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH13-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "14",
@@ -773,11 +866,14 @@
     "ap1000": "AP1000-ITP",
     "apr1400": "APR1400-ITP",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498553",
+    "created_at": "2026-06-20T05:56:00.536964",
     "verification_id": "VER-CH14-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH14-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "15",
@@ -798,11 +894,14 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498554",
+    "created_at": "2026-06-20T05:56:00.537748",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "15",
@@ -823,11 +922,14 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498555",
+    "created_at": "2026-06-20T05:56:00.538557",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "16",
@@ -848,11 +950,14 @@
     "ap1000": "AP1000-TS",
     "apr1400": "APR1400-TS",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498557",
+    "created_at": "2026-06-20T05:56:00.539372",
     "verification_id": "VER-CH16-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH16-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "17",
@@ -873,11 +978,14 @@
     "ap1000": "AP1000-QA",
     "apr1400": "APR1400-QA",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498558",
+    "created_at": "2026-06-20T05:56:00.540292",
     "verification_id": "VER-CH17-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH17-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "18",
@@ -898,11 +1006,14 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498560",
+    "created_at": "2026-06-20T05:56:00.541166",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "18",
@@ -923,11 +1034,14 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498561",
+    "created_at": "2026-06-20T05:56:00.542153",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "19",
@@ -948,11 +1062,14 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498563",
+    "created_at": "2026-06-20T05:56:00.543065",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   },
   {
     "chapter": "19",
@@ -973,10 +1090,13 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-20T05:56:00.498564",
+    "created_at": "2026-06-20T05:56:00.544034",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
-    "acceptance_criteria": "Requirement satisfied"
+    "acceptance_criteria": null,
+    "test_id": null,
+    "test_name": null,
+    "test_type": null
   }
 ]
