@@ -28,8 +28,8 @@ def load_json(path):
 def generate_metadata():
 
 
-    rkg_v08 = load_json(
-        RKG_V08_FILE
+    rkg_v09 = load_json(
+        RKG_V09_FILE
     )
     
     artifacts = load_json(
@@ -52,9 +52,9 @@ def generate_metadata():
       
     metadata = []
     
-    for item in rkg_v08:
+    for item in rkg_v09:
     
-        chapter_id = item["chapter"]
+        chapter = item["chapter"]
     
         artifact_list = artifact_map.get(
             chapter,
@@ -100,7 +100,7 @@ def generate_metadata():
         )
 
     print(
-        f"Generated {len(metadata)} RKG v0.9 records"
+        f"Generated {len(metadata)} RKG v1.0 records"
     )
     
     
