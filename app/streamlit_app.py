@@ -202,9 +202,7 @@ with tab3:
         "Search GNDO Objects"
     )
 
-    st.write(
-        "GNDO Search Loaded"
-    )
+
     rkg_df = pd.DataFrame(rkg)
 
     gndo_result = pd.DataFrame()
@@ -229,7 +227,17 @@ with tab3:
         )
     
         st.dataframe(
-            gndo_result,
+            gndo_result[
+                [
+                    "chapter",
+                    "requirement_id",
+                    "verification_id",
+                    "test_id",
+                    "artifact_id",
+                    "system_id",
+                    "component_id"
+                ]
+            ],
             use_container_width=True
         )
 
