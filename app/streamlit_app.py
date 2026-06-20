@@ -282,16 +282,72 @@ with tab3:
 
     with ask_tab:
     
-        st.subheader(
-            "Ask GNDO"
-        )
-        
-        ask_gndo = st.text_input(
-            "Ask a Traceability Question"
+    st.subheader(
+        "Ask GNDO"
+    )
+    
+    ask_gndo = st.text_input(
+        "Ask a Traceability Question"
+    )
+    
+    if ask_gndo:
+    
+        import re
+    
+        query = ask_gndo.upper()
+    
+        req_match = re.search(
+            r"(REQ-CH\d{2}-\d{3})",
+            query
         )
     
-        if ask_gndo:
-        
+        ver_match = re.search(
+            r"(VER-CH\d{2}-\d{3})",
+            query
+        )
+    
+        test_match = re.search(
+            r"(TEST-CH\d{2}-\d{3})",
+            query
+        )
+    
+        fail_match = re.search(
+            r"(FAIL-CH\d{2}-\d{3})",
+            query
+        )
+    
+        target_id = None
+    
+        if req_match:
+            target_id = req_match.group(1)
+    
+            result = rkg_df[
+                rkg_df["requirement_id"] == target_id
+            ]
+    
+        elif ver_match:
+            target_id = ver_match.group(1)
+    
+            result = rkg_df[
+                rkg_df["verification_id"] == target_id
+            ]
+    
+        elif test_match:
+            target_id = test_match.group(1)
+    
+            result = rkg_df[
+                rkg_df["test_id"] == target_id
+            ]
+    
+        elif fail_match:
+            target_id = fail_match.group(1)
+    
+            result = rkg_df[
+                rkg_df["failure_id"] == target_id
+            ]
+    
+        else:
+    
             result = rkg_df[
                 rkg_df.astype(str)
                 .apply(
@@ -305,75 +361,77 @@ with tab3:
                 .any(axis=1)
             ]
     
-            if result.empty:
-
-                st.warning(
-                    "No Traceability Found"
-                )
-
-            else:
-                
-                row = result.iloc[0]
-        
-                st.success(
-                    "Traceability Path Found"
-                )
-        
-                st.markdown(
-                    f"""
+        if result.empty:
+    
+            st.warning(
+                "No Traceability Found"
+            )
+    
+        else:
+    
+            row = result.iloc[0]
+    
+            st.success(
+                f"Traceability Found : {target_id}"
+            )
+    
+            st.markdown(
+                f"""
+    
     ### Requirement
-
-    {row.get('requirement')}
-    
-    ### Traceability Chain
-    
-    {row.get('cfr')}
-    
-    ↓
-    
-    {row.get('rg')}
-    
-    ↓
-    
-    {row.get('nureg')}
-    
-    ↓
-    
-    {row.get('srp')}
-    
-    ↓
     
     {row.get('requirement_id')}
     
-    ↓
+    {row.get('requirement')}
+    
+    
+    ### Failure Mode
+    
+    {row.get('failure_id')}
+    
+    {row.get('failure_mode')}
+
+    
+    ### Verification
     
     {row.get('verification_id')}
     
-    ↓
+    {row.get('verification_name')}
+    
+    
+    ### Test
     
     {row.get('test_id')}
     
-    ↓
+    {row.get('test_name')}
+
+    
+    ### Design Artifact
     
     {row.get('artifact_id')}
     
-    ↓
+    {row.get('artifact_name')}
+    
+    
+    ### System
     
     {row.get('system_id')}
     
-    ↓
+    
+    ### Component
     
     {row.get('component_id')}
     """
+    )
+    
+            with st.expander(
+                "Raw Record"
+            ):
+    
+                st.json(
+                    row.to_dict()
                 )
 
-                with st.expander(
-                    "Raw Record"
-                ):
-        
-                    st.json(
-                        row.to_dict()
-                    )
 
 
 
