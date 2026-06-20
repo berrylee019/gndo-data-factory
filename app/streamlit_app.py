@@ -55,7 +55,7 @@ crosswalk = load_json(
 )
 
 rkg = load_json(
-    "storage/metadata/rkg_data_v10.json"
+    "storage/metadata/rkg_data_v09.json"
 )
 
 nrc = nureg + rg + srp + cfr
@@ -135,7 +135,8 @@ with tab3:
             "🤖 Ask GNDO"
         ]
     )
-
+    rkg_df = pd.DataFrame(rkg)
+    
     with search_tab:
 
         st.subheader("Search")
