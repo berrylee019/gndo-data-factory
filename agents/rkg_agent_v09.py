@@ -28,7 +28,7 @@ def load_json(path):
 def generate_metadata():
 
 
-    rkg_v07 = load_json(
+    rkg_v08 = load_json(
         RKG_V08_FILE
     )
     
@@ -45,8 +45,9 @@ def generate_metadata():
         if chapter not in artifact_map:
           
             artifact_map[chapter] = []
+            
         artifact_map[chapter].append(
-          artifact
+            artifact
         )
       
     metadata = []
@@ -66,24 +67,24 @@ def generate_metadata():
 
             continue
 
-    for artifact in artifact_list:
+        for artifact in artifact_list:
+        
+            metadata.append({
     
-        metadata.append({
-
-            **item,
-
-            "artifact_id":
-                artifact["artifact_id"],
-
-            "artifact_type":
-                artifact["artifact_type"],
-
-            "artifact_name":
-                artifact["artifact_name"],
-
-            "created_at":
-                datetime.utcnow().isoformat()
-        })
+                **item,
+    
+                "artifact_id":
+                    artifact["artifact_id"],
+    
+                "artifact_type":
+                    artifact["artifact_type"],
+    
+                "artifact_name":
+                    artifact["artifact_name"],
+    
+                "created_at":
+                    datetime.utcnow().isoformat()
+            })
     
     with open(
         OUTPUT_FILE,
