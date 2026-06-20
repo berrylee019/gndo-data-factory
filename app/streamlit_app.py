@@ -245,6 +245,7 @@ with tab3:
                         "verification_id",
                         "test_id",
                         "artifact_id",
+                        "failure_id",
                         "system_id",
                         "component_id"
                     ]
@@ -557,7 +558,18 @@ with tab4:
             {artifact_name}
             """
                 )
-    
+
+            if failure_id:
+
+                G.add_node(
+                    artifact_id,
+                    group="FAILURE",
+                    title=f"""
+            Failure
+            
+            {artifact_name}
+            """
+                )
             if system_id:
 
                 G.add_node(
@@ -634,6 +646,13 @@ with tab4:
                     color="#e377c2"
                 )
 
+                G.add_edge(
+                    requirement_id,
+                    failure_id,
+                    label="CAUSES"
+                    color="#ff4d4d"
+                )
+
             if requirement_id and verification_id:
             
                 G.add_edge(
@@ -641,6 +660,12 @@ with tab4:
                     verification_id,
                     label="VERIFIED_BY",
                     color="#bc5090"
+                )
+
+                G.add_edge(
+                    failure_id,
+                    verification_id,
+                    label="VERIFIED_BY"
                 )
             
             if verification_id and test_id:
