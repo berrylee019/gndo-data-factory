@@ -31,6 +31,50 @@ def analyze_failure_impact(
 
     row = result.iloc[0]
 
+    impact_level = row.get(
+        "impact_level"
+    )
+    
+    retest_required = row.get(
+        "retest_required"
+    )
+    
+    safety_significant = row.get(
+        "safety_significant"
+    )
+
+    recommendations = []
+
+    if retest_required:
+    
+        recommendations.append(
+            f"Re-execute {row.get('test_id')}"
+        )
+    
+    if row.get("artifact_id"):
+    
+        recommendations.append(
+            f"Review {row.get('artifact_id')}"
+        )
+    
+    if row.get("system_id"):
+    
+        recommendations.append(
+            f"Verify {row.get('system_id')}"
+        )
+    
+    if row.get("component_id"):
+    
+        recommendations.append(
+            f"Inspect {row.get('component_id')}"
+        )
+    
+    if safety_significant:
+    
+        recommendations.append(
+            "Engineering Review Required"
+        )
+
     return {
 
         "failure_id":
@@ -57,7 +101,22 @@ def analyze_failure_impact(
         "component_id":
             row.get("component_id")
     }
+
+    if recommendations:
+
+        st.subheader(
+            "Recommended Actions"
+        )
     
+        for idx, rec in enumerate(
+            recommendations,
+            start=1
+        ):
+    
+            st.write(
+                f"{idx}. {rec}"
+            )
+            
 st.title("☢️ GNDO Document Explorer")
 
 def load_json(path):
@@ -421,7 +480,7 @@ with tab3:
 
                 if row.get("failure_id"):
 
-                    st.error(
+                    st.subheader(
                         "Failure Impact Analysis"
                     )
                 
@@ -446,63 +505,154 @@ with tab3:
                         impact_df,
                         use_container_width=True
                     )
-                    
+
+                impact_level = row.get(
+                    "impact_level"
+                )
+                
+                retest_required = row.get(
+                    "retest_required"
+                )
+                
+                safety_significant = row.get(
+                    "safety_significant"
+                )
+
                 st.success(
                     f"Traceability Found"
                 )
-        
 
-            if row.get("failure_id"):
-            
-                st.error(
-                    "Failure Impact Analysis"
-                )
-            
-                st.markdown(
-                    f"""
-            ### Failure
-            
-            {row.get('failure_id')}
-            
-            {row.get('failure_mode')}
-            
-            ---
-            
-            ### Affected Requirement
-            
-            {row.get('requirement_id')}
-            
-            ---
-            
-            ### Verification
-            
-            {row.get('verification_id')}
-            
-            ---
-            
-            ### Test
-            
-            {row.get('test_id')}
-            
-            ---
-            
-            ### Design Artifact
-            
-            {row.get('artifact_id')}
-            
-            ---
-            
-            ### System
-            
-            {row.get('system_id')}
-            
-            ---
-            
-            ### Component
-            
-            {row.get('component_id')}
-            """
-                )
+                if impact_level == "HIGH":
+    
+                    st.error(
+                        "Impact Level : HIGH"
+                    )
+                
+                elif impact_level == "MEDIUM":
+                
+                    st.warning(
+                        "Impact Level : MEDIUM"
+                    )
+                
+                elif impact_level == "LOW":
+                
+                    st.success(
+                        "Impact Level : LOW"
+                    )
+    
+                if safety_significant:
+    
+                    st.error(
+                        "Safety Significant : YES"
+                    )
+                
+                else:
+                
+                    st.success(
+                        "Safety Significant : NO"
+                    )
+    
+                if retest_required:
+    
+                    st.warning(
+                        "Retest Required : YES"
+                    )
+                
+                else:
+                
+                    st.success(
+                        "Retest Required : NO"
+                    )
+                    
+                recommendations = []
+
+                if retest_required:
+                
+                    recommendations.append(
+                        f"Re-execute {row.get('test_id')}"
+                    )
+                
+                if row.get("artifact_id"):
+                
+                    recommendations.append(
+                        f"Review {row.get('artifact_id')}"
+                    )
+                
+                if row.get("system_id"):
+                
+                    recommendations.append(
+                        f"Verify {row.get('system_id')}"
+                    )
+                
+                if row.get("component_id"):
+                
+                    recommendations.append(
+                        f"Inspect {row.get('component_id')}"
+                    )
+                
+                if safety_significant:
+                
+                    recommendations.append(
+                        "Engineering Review Required"
+                    )
+                if row.get("failure_id"):
+                
+                
+                    st.markdown(
+                        f"""
+                ### Failure
+                
+                {row.get('failure_id')}
+                
+                {row.get('failure_mode')}
+                
+                ---
+                
+                ### Affected Requirement
+                
+                {row.get('requirement_id')}
+                
+                ---
+                
+                ### Verification
+                
+                {row.get('verification_id')}
+                
+                ---
+                
+                ### Test
+                
+                {row.get('test_id')}
+                
+                ---
+                
+                ### Design Artifact
+                
+                {row.get('artifact_id')}
+                
+                ---
+                
+                ### System
+                
+                {row.get('system_id')}
+                
+                ---
+                
+                ### Component
+                
+                {row.get('component_id')}
+                """
+                    )
+
+                if recommendations:
+
+                    st.subheader(
+                        "Recommended Actions"
+                    )
+                
+                    for rec in recommendations:
+                
+                        st.info(rec)
         
                 with st.expander(
                     "Raw Record"
