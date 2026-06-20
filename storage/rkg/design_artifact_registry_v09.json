@@ -1,24 +1,5 @@
 [
 {
-"artifact_id": "DOC-CH07-001",
-"chapter": "07",
-"artifact_type": "FSAR",
-"artifact_name": "FSAR Chapter 7"
-},
-{
-"artifact_id": "DOC-CH07-002",
-"chapter": "07",
-"artifact_type": "Logic Diagram",
-"artifact_name": "Plant Protection Logic Diagram"
-},
-{
-"artifact_id": "DOC-CH07-003",
-"chapter": "07",
-"artifact_type": "Calculation",
-"artifact_name": "Reactor Trip Setpoint Calculation"
-},
-
-{
 "artifact_id": "DOC-CH01-001",
 "chapter": "01",
 "artifact_type": "FSAR",
@@ -30,5 +11,26 @@
 "chapter": "03",
 "artifact_type": "Design Specification",
 "artifact_name": "Seismic Design Specification"
+},
+
+{
+"artifact_id": "DOC-CH07-001",
+"chapter": "07",
+"artifact_type": "FSAR",
+"artifact_name": "FSAR Chapter 7"
+},
+
+{
+"artifact_id": "DOC-CH07-002",
+"chapter": "07",
+"artifact_type": "Logic Diagram",
+"artifact_name": "Plant Protection Logic Diagram"
+},
+
+{
+"artifact_id": "DOC-CH07-003",
+"chapter": "07",
+"artifact_type": "Calculation",
+"artifact_name": "Reactor Trip Setpoint Calculation"
 }
 ]
