@@ -1,0 +1,28 @@
+[
+  {
+    "test_id":"TEST-CH07-001",
+    "chapter":"07",
+    "verification_id":"VER-CH07-001",
+    "test_name":"PPS Independence Test",
+    "test_type":"Analysis",
+    "acceptance_criteria":"Independence demonstrated"
+  },
+
+  {
+    "test_id":"TEST-CH07-002",
+    "chapter":"07",
+    "verification_id":"VER-CH07-002",
+    "test_name":"ESFAS Reliability Test",
+    "test_type":"Functional Test",
+    "acceptance_criteria":"Reliability target satisfied"
+  },
+
+  {
+    "test_id":"TEST-CH07-003",
+    "chapter":"07",
+    "verification_id":"VER-CH07-003",
+    "test_name":"RTS Response Test",
+    "test_type":"Integrated Test",
+    "acceptance_criteria":"Trip response within limits"
+  }
+]
