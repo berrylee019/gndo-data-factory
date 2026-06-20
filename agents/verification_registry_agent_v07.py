@@ -195,7 +195,6 @@ def generate():
         "verification_name":"PRA Model Validation",
         "acceptance_criteria":"Risk metrics acceptable"
         }
-        ]
 
     ]
 
