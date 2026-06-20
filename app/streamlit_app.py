@@ -55,7 +55,7 @@ crosswalk = load_json(
 )
 
 rkg = load_json(
-    "storage/metadata/rkg_data_v06.json"
+    "storage/metadata/rkg_data_v07.json"
 )
 
 nrc = nureg + rg + srp + cfr
@@ -276,6 +276,14 @@ with tab4:
                 "requirement"
             )
 
+            verification_id = item.get(
+                "verification_id"
+            )
+            
+            verification_name = item.get(
+                "verification_name"
+            )
+
 
             G.add_node(
                 cfr,
@@ -318,10 +326,6 @@ with tab4:
             )
 
             if requirement_id:
-
-                print(
-                    f"REQ NODE: {requirement_id}"
-                )
                 
                 G.add_node(
                     requirement_id,
@@ -330,6 +334,18 @@ with tab4:
             Requirement
             
             {requirement_text}
+            """
+                )
+
+            if verification_id:
+
+                G.add_node(
+                    verification_id,
+                    group="VERIFICATION",
+                    title=f"""
+            Verification
+            
+            {verification_name}
             """
                 )
 
@@ -409,16 +425,21 @@ with tab4:
                     color="#e377c2"
                 )
 
-            if requirement_id and system_id:
-
-                print(
-                    f"{requirement_id} -> {system_id}"
-                )
-
+            if requirement_id and verification_id:
+            
                 G.add_edge(
                     requirement_id,
+                    verification_id,
+                    label="VERIFIED_BY",
+                    color="#bc5090"
+                )
+            
+            if verification_id and system_id:
+            
+                G.add_edge(
+                    verification_id,
                     system_id,
-                    label="ALLOCATED_TO",
+                    label="VALIDATES",
                     color="#17becf"
                 )
 
@@ -501,6 +522,11 @@ with tab4:
 
                 node["color"] = "#e377c2"
                 node["size"] = 28
+
+            elif node["group"] == "VERIFICATION":
+
+                node["color"] = "#bc5090"
+                node["size"] = 26
                 
             elif node["group"] == "SYSTEM":
                 node["size"] = 22
