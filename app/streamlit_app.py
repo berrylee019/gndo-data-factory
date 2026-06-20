@@ -208,13 +208,17 @@ with tab3:
         if search_term:
     
             filtered_df = filtered_df[
-                filtered_df["title"]
-                .str.contains(
+                filtered_df.astype(str)
+                .apply(
+                    lambda x:
+                    x.str.contains(
                     search_term,
                     case=False,
                     na=False
                 )
-            ]
+            )
+            .any(axis=1)
+        ]
     
         st.subheader(
             "Documents"
