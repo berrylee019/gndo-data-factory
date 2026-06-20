@@ -192,7 +192,57 @@ with tab3:
                     "Open Document",
                     row["url"]
                 )
+    st.divider()
+    
+    st.subheader(
+        "GNDO Search"
+    )
+    
+    gndo_search = st.text_input(
+        "Search GNDO Objects"
+    )
 
+    rkg_df = pd.DataFrame(
+        rkg
+    )
+
+    if gndo_search:
+
+        gndo_result = rkg_df[
+            rkg_df.astype(str)
+            .apply(
+                lambda x:
+                x.str.contains(
+                    gndo_search,
+                    case=False,
+                    na=False
+                )
+            )
+            .any(axis=1)
+        ]
+    
+        st.success(
+            f"{len(gndo_result)} records found"
+        )
+    
+        st.dataframe(
+            gndo_result,
+            use_container_width=True
+        )
+
+    for _, row in gndo_result.iterrows():
+
+        with st.expander(
+    
+            f"{row.get('chapter')} | "
+            f"{row.get('topic')}"
+    
+        ):
+    
+            st.json(
+                row.to_dict()
+            )
+    
     selected_chapter = st.selectbox(
         "Select Chapter",
         sorted(
