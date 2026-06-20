@@ -58,20 +58,16 @@ jobs:
           python agents/rkg_agent_v06.py
 
           python agents/verification_registry_agent_v07.py
-
-          python agents/test_registry_agent_v08.py
-
           python agents/rkg_agent_v07.py
 
+          python agents/test_registry_agent_v08.py
           python agents/rkg_agent_v08.py
 
           python agents/design_artifact_agent_v09.py
-
-          python agents/failure_registry_agent_v10.py
-
-          python agents/rkg_agent_v10.py
-
           python agents/rkg_agent_v09.py
+          
+          python agents/failure_registry_agent_v10.py
+          python agents/rkg_agent_v10.py
 
 
       - name: Python Syntax Check
