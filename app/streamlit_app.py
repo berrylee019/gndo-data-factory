@@ -441,7 +441,7 @@ with tab3:
                     )
                     
                 st.success(
-                    f"Traceability Found : {target_id}"
+                    f"Traceability Found"
                 )
         
 
