@@ -100,7 +100,7 @@ def generate_metadata():
         )
 
     print(
-        f"Generated {len(metadata)} RKG v0.8 records"
+        f"Generated {len(metadata)} RKG v0.9 records"
     )
     
     
