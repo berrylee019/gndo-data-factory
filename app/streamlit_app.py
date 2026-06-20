@@ -411,7 +411,35 @@ with tab3:
             else:
         
                 row = result.iloc[0]
-        
+
+                if row.get("failure_id"):
+
+                    st.error(
+                        "Failure Impact Analysis"
+                    )
+                
+                    impact_cols = [
+                        "requirement_id",
+                        "verification_id",
+                        "test_id",
+                        "artifact_id",
+                        "system_id",
+                        "component_id"
+                    ]
+                
+                    impact_df = result[
+                        [
+                            c
+                            for c in impact_cols
+                            if c in result.columns
+                        ]
+                    ]
+                
+                    st.dataframe(
+                        impact_df,
+                        use_container_width=True
+                    )
+                    
                 st.success(
                     f"Traceability Found : {target_id}"
                 )
