@@ -4,199 +4,56 @@ OUTPUT_FILE = (
     "storage/rkg/verification_registry_v07.json"
 )
 
+
+def load_json(path):
+
+    with open(
+        path,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        return json.load(f)
+
+
 def generate():
 
-    data = [
-        {
-        "verification_id":"VER-CH01-001",
-        "chapter":"01",
-        "requirement_id":"REQ-CH01-001",
-        "verification_method":"Inspection",
-        "verification_name":"Design Basis Documentation Review",
-        "acceptance_criteria":"Design basis documented"
-        },
-        
-        {
-        "verification_id":"VER-CH02-001",
-        "chapter":"02",
-        "requirement_id":"REQ-CH02-001",
-        "verification_method":"Analysis",
-        "verification_name":"Site Characteristic Evaluation",
-        "acceptance_criteria":"Site parameters validated"
-        },
-        
-        {
-        "verification_id":"VER-CH03-001",
-        "chapter":"03",
-        "requirement_id":"REQ-CH03-001",
-        "verification_method":"Analysis",
-        "verification_name":"Seismic Qualification Analysis",
-        "acceptance_criteria":"Seismic margin acceptable"
-        },
-        
-        {
-        "verification_id":"VER-CH04-001",
-        "chapter":"04",
-        "requirement_id":"REQ-CH04-001",
-        "verification_method":"Analysis",
-        "verification_name":"Reactor Core Design Analysis",
-        "acceptance_criteria":"Fuel limits satisfied"
-        },
-        
-        {
-        "verification_id":"VER-CH05-001",
-        "chapter":"05",
-        "requirement_id":"REQ-CH05-001",
-        "verification_method":"Inspection",
-        "verification_name":"Containment Integrity Review",
-        "acceptance_criteria":"Containment requirements satisfied"
-        },
-        
-        {
-        "verification_id":"VER-CH06-001",
-        "chapter":"06",
-        "requirement_id":"REQ-CH06-001",
-        "verification_method":"Test",
-        "verification_name":"ECCS Functional Test",
-        "acceptance_criteria":"ECCS performance acceptable"
-        },
-        
-        {
-        "verification_id":"VER-CH07-001",
-        "chapter":"07",
-        "requirement_id":"REQ-CH07-001",
-        "verification_method":"Analysis",
-        "verification_name":"Protection System Independence Analysis",
-        "acceptance_criteria":"No common mode failure path"
-        },
-        
-        {
-        "verification_id":"VER-CH07-002",
-        "chapter":"07",
-        "requirement_id":"REQ-CH07-002",
-        "verification_method":"Test",
-        "verification_name":"ESFAS Reliability Test",
-        "acceptance_criteria":"Actuation success rate > 99.9%"
-        },
-        
-        {
-        "verification_id":"VER-CH07-003",
-        "chapter":"07",
-        "requirement_id":"REQ-CH07-003",
-        "verification_method":"Inspection",
-        "verification_name":"Digital I&C Independence Review",
-        "acceptance_criteria":"Channel independence confirmed"
-        },
-        
-        {
-        "verification_id":"VER-CH08-001",
-        "chapter":"08",
-        "requirement_id":"REQ-CH08-001",
-        "verification_method":"Test",
-        "verification_name":"Electrical Distribution System Test",
-        "acceptance_criteria":"Power continuity maintained"
-        },
-        
-        {
-        "verification_id":"VER-CH09-001",
-        "chapter":"09",
-        "requirement_id":"REQ-CH09-001",
-        "verification_method":"Test",
-        "verification_name":"Auxiliary System Performance Test",
-        "acceptance_criteria":"Required flow available"
-        },
-        
-        {
-        "verification_id":"VER-CH10-001",
-        "chapter":"10",
-        "requirement_id":"REQ-CH10-001",
-        "verification_method":"Analysis",
-        "verification_name":"Steam and Power Conversion Analysis",
-        "acceptance_criteria":"Thermal efficiency acceptable"
-        },
-        
-        {
-        "verification_id":"VER-CH11-001",
-        "chapter":"11",
-        "requirement_id":"REQ-CH11-001",
-        "verification_method":"Test",
-        "verification_name":"Radiation Monitoring Calibration Test",
-        "acceptance_criteria":"Measurement accuracy verified"
-        },
-        
-        {
-        "verification_id":"VER-CH12-001",
-        "chapter":"12",
-        "requirement_id":"REQ-CH12-001",
-        "verification_method":"Inspection",
-        "verification_name":"Radiation Protection Program Review",
-        "acceptance_criteria":"ALARA objectives satisfied"
-        },
-        
-        {
-        "verification_id":"VER-CH13-001",
-        "chapter":"13",
-        "requirement_id":"REQ-CH13-001",
-        "verification_method":"Demonstration",
-        "verification_name":"Operator Training Demonstration",
-        "acceptance_criteria":"Training program completed"
-        },
-        
-        {
-        "verification_id":"VER-CH14-001",
-        "chapter":"14",
-        "requirement_id":"REQ-CH14-001",
-        "verification_method":"Test",
-        "verification_name":"Startup Test Program",
-        "acceptance_criteria":"Startup criteria satisfied"
-        },
-        
-        {
-        "verification_id":"VER-CH15-001",
-        "chapter":"15",
-        "requirement_id":"REQ-CH15-001",
-        "verification_method":"Analysis",
-        "verification_name":"Accident Analysis Validation",
-        "acceptance_criteria":"Safety limits maintained"
-        },
-        
-        {
-        "verification_id":"VER-CH16-001",
-        "chapter":"16",
-        "requirement_id":"REQ-CH16-001",
-        "verification_method":"Inspection",
-        "verification_name":"Technical Specification Review",
-        "acceptance_criteria":"Technical specifications complete"
-        },
-        
-        {
-        "verification_id":"VER-CH17-001",
-        "chapter":"17",
-        "requirement_id":"REQ-CH17-001",
-        "verification_method":"Audit",
-        "verification_name":"Quality Assurance Program Audit",
-        "acceptance_criteria":"QA program compliant"
-        },
-        
-        {
-        "verification_id":"VER-CH18-001",
-        "chapter":"18",
-        "requirement_id":"REQ-CH18-001",
-        "verification_method":"Inspection",
-        "verification_name":"Human Factors Engineering Review",
-        "acceptance_criteria":"HFE requirements satisfied"
-        },
-        
-        {
-        "verification_id":"VER-CH19-001",
-        "chapter":"19",
-        "requirement_id":"REQ-CH19-001",
-        "verification_method":"Analysis",
-        "verification_name":"PRA Model Validation",
-        "acceptance_criteria":"Risk metrics acceptable"
-        }
+    requirements = load_json(
+        "storage/rkg/requirement_registry_v06.json"
+    )
 
-    ]
+    data = []
+
+    for req in requirements:
+
+        verification_id = req[
+            "requirement_id"
+        ].replace(
+            "REQ",
+            "VER"
+        )
+
+        data.append({
+
+            "verification_id":
+                verification_id,
+
+            "chapter":
+                req["chapter"],
+
+            "requirement_id":
+                req["requirement_id"],
+
+            "verification_method":
+                "Analysis",
+
+            "verification_name":
+                f"Verification for {req['requirement_id']}",
+
+            "acceptance_criteria":
+                "Requirement satisfied"
+
+        })
 
     with open(
         OUTPUT_FILE,
@@ -216,4 +73,5 @@ def generate():
     )
 
 if __name__ == "__main__":
+    
     generate()
