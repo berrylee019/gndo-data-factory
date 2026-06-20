@@ -74,7 +74,7 @@ def generate_metadata():
                 **item,
     
                 "failure_id":
-                    failure.get("failure_id")
+                    failure.get("failure_id"),
     
                 "failure_mode":
                     failure.get("failure_mode"),
