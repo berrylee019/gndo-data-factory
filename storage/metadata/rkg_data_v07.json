@@ -18,7 +18,11 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070164"
+    "created_at": "2026-06-20T04:29:25.115875",
+    "verification_id": "VER-CH01-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH01-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "01",
@@ -39,7 +43,11 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070174"
+    "created_at": "2026-06-20T04:29:25.115885",
+    "verification_id": "VER-CH01-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH01-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "02",
@@ -56,7 +64,11 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.046173"
+    "created_at": "2026-06-20T04:29:25.115888",
+    "verification_id": null,
+    "verification_method": null,
+    "verification_name": null,
+    "acceptance_criteria": null
   },
   {
     "chapter": "02",
@@ -73,7 +85,11 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.046175"
+    "created_at": "2026-06-20T04:29:25.115890",
+    "verification_id": null,
+    "verification_method": null,
+    "verification_name": null,
+    "acceptance_criteria": null
   },
   {
     "chapter": "03",
@@ -94,7 +110,11 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070178"
+    "created_at": "2026-06-20T04:29:25.115892",
+    "verification_id": "VER-CH03-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH03-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "03",
@@ -115,7 +135,11 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070180"
+    "created_at": "2026-06-20T04:29:25.115894",
+    "verification_id": "VER-CH03-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH03-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "04",
@@ -132,7 +156,11 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.046180"
+    "created_at": "2026-06-20T04:29:25.115896",
+    "verification_id": null,
+    "verification_method": null,
+    "verification_name": null,
+    "acceptance_criteria": null
   },
   {
     "chapter": "04",
@@ -149,7 +177,11 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.046181"
+    "created_at": "2026-06-20T04:29:25.115897",
+    "verification_id": null,
+    "verification_method": null,
+    "verification_name": null,
+    "acceptance_criteria": null
   },
   {
     "chapter": "05",
@@ -166,7 +198,11 @@
     "ap1000": "AP1000-CH05",
     "apr1400": "APR1400-CH05",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.046185"
+    "created_at": "2026-06-20T04:29:25.115899",
+    "verification_id": null,
+    "verification_method": null,
+    "verification_name": null,
+    "acceptance_criteria": null
   },
   {
     "chapter": "06",
@@ -187,7 +223,11 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070185"
+    "created_at": "2026-06-20T04:29:25.115902",
+    "verification_id": "VER-CH06-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH06-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "06",
@@ -208,7 +248,11 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070188"
+    "created_at": "2026-06-20T04:29:25.115904",
+    "verification_id": "VER-CH06-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH06-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -229,7 +273,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070192"
+    "created_at": "2026-06-20T04:29:25.115905",
+    "verification_id": "VER-CH07-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -250,7 +298,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070194"
+    "created_at": "2026-06-20T04:29:25.115907",
+    "verification_id": "VER-CH07-002",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-002",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -271,7 +323,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070196"
+    "created_at": "2026-06-20T04:29:25.115908",
+    "verification_id": "VER-CH07-003",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-003",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -292,7 +348,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070198"
+    "created_at": "2026-06-20T04:29:25.115910",
+    "verification_id": "VER-CH07-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -313,7 +373,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070199"
+    "created_at": "2026-06-20T04:29:25.115911",
+    "verification_id": "VER-CH07-002",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-002",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -334,7 +398,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070201"
+    "created_at": "2026-06-20T04:29:25.115912",
+    "verification_id": "VER-CH07-003",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-003",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -355,7 +423,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070203"
+    "created_at": "2026-06-20T04:29:25.115914",
+    "verification_id": "VER-CH07-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -376,7 +448,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070205"
+    "created_at": "2026-06-20T04:29:25.115916",
+    "verification_id": "VER-CH07-002",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-002",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -397,7 +473,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070207"
+    "created_at": "2026-06-20T04:29:25.115917",
+    "verification_id": "VER-CH07-003",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-003",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -418,7 +498,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070209"
+    "created_at": "2026-06-20T04:29:25.115918",
+    "verification_id": "VER-CH07-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -439,7 +523,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070213"
+    "created_at": "2026-06-20T04:29:25.115920",
+    "verification_id": "VER-CH07-002",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-002",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "07",
@@ -460,7 +548,11 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070214"
+    "created_at": "2026-06-20T04:29:25.115921",
+    "verification_id": "VER-CH07-003",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH07-003",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "08",
@@ -481,7 +573,11 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070216"
+    "created_at": "2026-06-20T04:29:25.115922",
+    "verification_id": "VER-CH08-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH08-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "08",
@@ -502,7 +598,11 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070218"
+    "created_at": "2026-06-20T04:29:25.115924",
+    "verification_id": "VER-CH08-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH08-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "09",
@@ -523,7 +623,11 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070220"
+    "created_at": "2026-06-20T04:29:25.115925",
+    "verification_id": "VER-CH09-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH09-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "09",
@@ -544,7 +648,11 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070222"
+    "created_at": "2026-06-20T04:29:25.115927",
+    "verification_id": "VER-CH09-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH09-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "10",
@@ -565,7 +673,11 @@
     "ap1000": "AP1000-TG",
     "apr1400": "APR1400-TG",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070224"
+    "created_at": "2026-06-20T04:29:25.115928",
+    "verification_id": "VER-CH10-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH10-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "11",
@@ -586,7 +698,11 @@
     "ap1000": "AP1000-RP",
     "apr1400": "APR1400-RP",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070225"
+    "created_at": "2026-06-20T04:29:25.115929",
+    "verification_id": "VER-CH11-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH11-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "12",
@@ -607,7 +723,11 @@
     "ap1000": "AP1000-RWMS",
     "apr1400": "APR1400-RWMS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070227"
+    "created_at": "2026-06-20T04:29:25.115931",
+    "verification_id": "VER-CH12-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH12-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "13",
@@ -628,7 +748,11 @@
     "ap1000": "AP1000-OPS",
     "apr1400": "APR1400-OPS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070229"
+    "created_at": "2026-06-20T04:29:25.115932",
+    "verification_id": "VER-CH13-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH13-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "14",
@@ -649,7 +773,11 @@
     "ap1000": "AP1000-ITP",
     "apr1400": "APR1400-ITP",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070233"
+    "created_at": "2026-06-20T04:29:25.115934",
+    "verification_id": "VER-CH14-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH14-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "15",
@@ -670,7 +798,11 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070235"
+    "created_at": "2026-06-20T04:29:25.115935",
+    "verification_id": "VER-CH15-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH15-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "15",
@@ -691,7 +823,11 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070237"
+    "created_at": "2026-06-20T04:29:25.115936",
+    "verification_id": "VER-CH15-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH15-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "16",
@@ -712,7 +848,11 @@
     "ap1000": "AP1000-TS",
     "apr1400": "APR1400-TS",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070239"
+    "created_at": "2026-06-20T04:29:25.115938",
+    "verification_id": "VER-CH16-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH16-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "17",
@@ -733,7 +873,11 @@
     "ap1000": "AP1000-QA",
     "apr1400": "APR1400-QA",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070240"
+    "created_at": "2026-06-20T04:29:25.115939",
+    "verification_id": "VER-CH17-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH17-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "18",
@@ -754,7 +898,11 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070242"
+    "created_at": "2026-06-20T04:29:25.115940",
+    "verification_id": "VER-CH18-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH18-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "18",
@@ -775,7 +923,11 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070244"
+    "created_at": "2026-06-20T04:29:25.115942",
+    "verification_id": "VER-CH18-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH18-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "19",
@@ -796,7 +948,11 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070246"
+    "created_at": "2026-06-20T04:29:25.115943",
+    "verification_id": "VER-CH19-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH19-001",
+    "acceptance_criteria": "Requirement satisfied"
   },
   {
     "chapter": "19",
@@ -817,6 +973,10 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-20T04:29:25.070250"
+    "created_at": "2026-06-20T04:29:25.115944",
+    "verification_id": "VER-CH19-001",
+    "verification_method": "Analysis",
+    "verification_name": "Verification for REQ-CH19-001",
+    "acceptance_criteria": "Requirement satisfied"
   }
 ]
