@@ -577,7 +577,7 @@ with tab4:
             if failure_id:
 
                 G.add_node(
-                    artifact_id,
+                    failure_id,
                     group="FAILURE",
                     title=f"""
             Failure Mode
