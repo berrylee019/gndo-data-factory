@@ -688,11 +688,7 @@ with tab4:
                     color="#bc5090"
                 )
 
-                G.add_edge(
-                    failure_id,
-                    verification_id,
-                    label="VERIFIED_BY"
-                )
+
             
             if verification_id and test_id:
             
@@ -754,7 +750,9 @@ with tab4:
             )
             
             print(
+                "FAILURE:",
                 failure_id,
+                "VERIFICATION:",
                 verification_id
             )
 
