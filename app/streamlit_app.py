@@ -297,7 +297,7 @@ with tab3:
                 .any(axis=1)
             ]
     
-            if not result.empty:
+            if result.empty:
 
                 st.warning(
                     "No Traceability Found"
@@ -305,7 +305,7 @@ with tab3:
 
             else:
                 
-                row = query_df.iloc[0]
+                row = result.iloc[0]
         
                 st.success(
                     "Traceability Path Found"
@@ -313,59 +313,59 @@ with tab3:
         
                 st.markdown(
                     f"""
-        ### Requirement
+    ### Requirement
 
-        {row.get('requirement')}
-        
-        ### Traceability Chain
-        
-        {row.get('cfr')}
-        
-        ↓
-        
-        {row.get('rg')}
-        
-        ↓
-        
-        {row.get('nureg')}
-        
-        ↓
-        
-        {row.get('srp')}
-        
-        ↓
-        
-        {row.get('requirement_id')}
-        
-        ↓
-        
-        {row.get('verification_id')}
-        
-        ↓
-        
-        {row.get('test_id')}
-        
-        ↓
-        
-        {row.get('artifact_id')}
-        
-        ↓
-        
-        {row.get('system_id')}
-        
-        ↓
-        
-        {row.get('component_id')}
-        """
+    {row.get('requirement')}
+    
+    ### Traceability Chain
+    
+    {row.get('cfr')}
+    
+    ↓
+    
+    {row.get('rg')}
+    
+    ↓
+    
+    {row.get('nureg')}
+    
+    ↓
+    
+    {row.get('srp')}
+    
+    ↓
+    
+    {row.get('requirement_id')}
+    
+    ↓
+    
+    {row.get('verification_id')}
+    
+    ↓
+    
+    {row.get('test_id')}
+    
+    ↓
+    
+    {row.get('artifact_id')}
+    
+    ↓
+    
+    {row.get('system_id')}
+    
+    ↓
+    
+    {row.get('component_id')}
+    """
                 )
 
-        with st.expander(
-            "Raw Record"
-        ):
-
-            st.json(
-                row.to_dict()
-            )
+                with st.expander(
+                    "Raw Record"
+                ):
+        
+                    st.json(
+                        row.to_dict()
+                    )
 
 
 
