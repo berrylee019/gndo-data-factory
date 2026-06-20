@@ -209,10 +209,6 @@ with tab3:
             "GNDO Search"
         )
         
-        st.write(
-            rkg_df.columns.tolist()
-        )
-        
         gndo_search = st.text_input(
             "Search GNDO Objects"
         )
@@ -241,19 +237,25 @@ with tab3:
                 f"{len(gndo_result)} records found"
             )
         
+            display_cols = [
+                "chapter",
+                "requirement_id",
+                "failure_id",
+                "verification_id",
+                "test_id",
+                "artifact_id",
+                "system_id",
+                "component_id"
+            ]
+            
+            display_cols = [
+                c
+                for c in display_cols
+                if c in gndo_result.columns
+            ]
+            
             st.dataframe(
-                gndo_result[
-                    [
-                        "chapter",
-                        "requirement_id",
-                        "verification_id",
-                        "test_id",
-                        "artifact_id",
-                        "failure_id",
-                        "system_id",
-                        "component_id"
-                    ]
-                ],
+                gndo_result[display_cols],
                 use_container_width=True
             )
     
