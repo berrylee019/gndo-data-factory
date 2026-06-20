@@ -284,7 +284,7 @@ with tab3:
     
         if ask_gndo:
         
-            query_df = rkg_df[
+            result = rkg_df[
                 rkg_df.astype(str)
                 .apply(
                     lambda x:
@@ -297,61 +297,75 @@ with tab3:
                 .any(axis=1)
             ]
     
-            if not query_df.empty:
-    
+            if not result.empty:
+
+                st.warning(
+                    "No Traceability Found"
+                )
+
+            else:
+                
                 row = query_df.iloc[0]
         
                 st.success(
                     "Traceability Path Found"
                 )
         
-                summary = f"""
-        ### GNDO Traceability Summary
-        
-        **Requirement**
+                st.markdown(
+                    f"""
+        ### Requirement
+
         {row.get('requirement')}
         
-        **Requirement ID**
-        {row.get('requirement_id')}
+        ### Traceability Chain
         
-        **Verification**
-        {row.get('verification_id')}
-        
-        **Test**
-        {row.get('test_id')}
-        
-        **Design Artifact**
-        {row.get('artifact_id')}
-        
-        **System**
-        {row.get('system_name')}
-        
-        **Component**
-        {row.get('component_name')}
-        
-        **SRP**
-        {row.get('srp')}
-        
-        **NUREG**
-        {row.get('nureg')}
-        
-        **RG**
-        {row.get('rg')}
-        
-        **CFR**
         {row.get('cfr')}
         
-        **AP1000**
-        {row.get('ap1000')}
+        ↓
         
-        **APR1400**
-        {row.get('apr1400')}
+        {row.get('rg')}
+        
+        ↓
+        
+        {row.get('nureg')}
+        
+        ↓
+        
+        {row.get('srp')}
+        
+        ↓
+        
+        {row.get('requirement_id')}
+        
+        ↓
+        
+        {row.get('verification_id')}
+        
+        ↓
+        
+        {row.get('test_id')}
+        
+        ↓
+        
+        {row.get('artifact_id')}
+        
+        ↓
+        
+        {row.get('system_id')}
+        
+        ↓
+        
+        {row.get('component_id')}
         """
-        
-                st.markdown(
-                    summary
                 )
 
+        with st.expander(
+            "Raw Record"
+        ):
+
+            st.json(
+                row.to_dict()
+            )
 
 
 
