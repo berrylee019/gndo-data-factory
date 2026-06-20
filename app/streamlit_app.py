@@ -646,11 +646,22 @@ with tab4:
                     color="#e377c2"
                 )
 
+            if requirement_id and failure_id:
+            
                 G.add_edge(
                     requirement_id,
                     failure_id,
-                    label="CAUSES"
+                    label="CAUSES",
                     color="#ff4d4d"
+                )
+            
+            if failure_id and verification_id:
+            
+                G.add_edge(
+                    failure_id,
+                    verification_id,
+                    label="VERIFIED_BY",
+                    color="#ff9999"
                 )
 
             if requirement_id and verification_id:
