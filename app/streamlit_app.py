@@ -202,6 +202,9 @@ with tab3:
         "Search GNDO Objects"
     )
 
+    st.write(
+        "GNDO Search Loaded"
+    )
     rkg_df = pd.DataFrame(rkg)
 
     gndo_result = pd.DataFrame()
