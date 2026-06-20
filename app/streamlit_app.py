@@ -16,6 +16,47 @@ st.set_page_config(
     page_title="GNDO Data Factory",
     layout="wide"
 )
+
+def analyze_failure_impact(
+    failure_id,
+    rkg_df
+):
+
+    result = rkg_df[
+        rkg_df["failure_id"] == failure_id
+    ]
+
+    if result.empty:
+        return None
+
+    row = result.iloc[0]
+
+    return {
+
+        "failure_id":
+            row.get("failure_id"),
+
+        "failure_mode":
+            row.get("failure_mode"),
+
+        "requirement_id":
+            row.get("requirement_id"),
+
+        "verification_id":
+            row.get("verification_id"),
+
+        "test_id":
+            row.get("test_id"),
+
+        "artifact_id":
+            row.get("artifact_id"),
+
+        "system_id":
+            row.get("system_id"),
+
+        "component_id":
+            row.get("component_id")
+    }
     
 st.title("☢️ GNDO Document Explorer")
 
@@ -375,54 +416,58 @@ with tab3:
                     f"Traceability Found : {target_id}"
                 )
         
+
+            if row.get("failure_id"):
+            
+                st.error(
+                    "Failure Impact Analysis"
+                )
+            
                 st.markdown(
                     f"""
-        
-        ### Requirement
-        
-        {row.get('requirement_id')}
-        
-        {row.get('requirement')}
-        
-        
-        ### Failure Mode
-        
-        {row.get('failure_id')}
-        
-        {row.get('failure_mode')}
-    
-        
-        ### Verification
-        
-        {row.get('verification_id')}
-        
-        {row.get('verification_name')}
-        
-        
-        ### Test
-        
-        {row.get('test_id')}
-        
-        {row.get('test_name')}
-    
-        
-        ### Design Artifact
-        
-        {row.get('artifact_id')}
-        
-        {row.get('artifact_name')}
-        
-        
-        ### System
-        
-        {row.get('system_id')}
-        
-        
-        ### Component
-        
-        {row.get('component_id')}
-        """
-        )
+            ### Failure
+            
+            {row.get('failure_id')}
+            
+            {row.get('failure_mode')}
+            
+            ---
+            
+            ### Affected Requirement
+            
+            {row.get('requirement_id')}
+            
+            ---
+            
+            ### Verification
+            
+            {row.get('verification_id')}
+            
+            ---
+            
+            ### Test
+            
+            {row.get('test_id')}
+            
+            ---
+            
+            ### Design Artifact
+            
+            {row.get('artifact_id')}
+            
+            ---
+            
+            ### System
+            
+            {row.get('system_id')}
+            
+            ---
+            
+            ### Component
+            
+            {row.get('component_id')}
+            """
+                )
         
                 with st.expander(
                     "Raw Record"
