@@ -183,7 +183,8 @@ with tab3:
         st.subheader("Search")
 
         search_term = st.text_input(
-            "Search documents"
+            "Search documents",
+            placeholder="예: NUREG-0800 Chapter 7, Plant Protection System"
         )
     
         selected_sources = st.multiselect(
@@ -252,7 +253,8 @@ with tab3:
         )
 
         gndo_search = st.text_input(
-            "Search GNDO Objects"
+            "Search GNDO Objects",
+            placeholder="예: REQ-CH07-001, VER-CH07-001, TEST-CH07-001"
         )
     
     
@@ -328,7 +330,8 @@ with tab3:
         )
         
         ask_gndo = st.text_input(
-            "Ask a Traceability Question"
+            "Ask a Traceability Question",
+            placeholder="예: FAIL-CH07-001의 영향은? / REQ-CH07-001은 어떻게 검증되는가?"
         )
         
         if ask_gndo:
