@@ -209,9 +209,7 @@ with tab3:
         st.subheader(
             "GNDO Search"
         )
-        st.write(
-            rkg_df.columns.tolist()
-        )
+
         gndo_search = st.text_input(
             "Search GNDO Objects"
         )
