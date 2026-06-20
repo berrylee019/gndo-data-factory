@@ -1,0 +1,32 @@
+[
+  {
+    "failure_id": "FAIL-CH07-001",
+    "chapter": "07",
+    "failure_mode": "Loss of Independence",
+    "affected_system": "Plant Protection System",
+    "severity": "High",
+    "consequence": "Common Cause Failure",
+    "mitigation": "Independent Protection Channels",
+    "requirement_id": "REQ-CH07-001"
+  },
+  {
+    "failure_id": "FAIL-CH07-002",
+    "chapter": "07",
+    "failure_mode": "Spurious Actuation",
+    "affected_system": "ESFAS",
+    "severity": "Medium",
+    "consequence": "Unnecessary Safety Injection",
+    "mitigation": "Signal Validation Logic",
+    "requirement_id": "REQ-CH07-002"
+  },
+  {
+    "failure_id": "FAIL-CH07-003",
+    "chapter": "07",
+    "failure_mode": "Loss of Reliability",
+    "affected_system": "Plant Protection System",
+    "severity": "High",
+    "consequence": "Failure to Trip Reactor",
+    "mitigation": "Redundant Channels",
+    "requirement_id": "REQ-CH07-003"
+  }
+]
