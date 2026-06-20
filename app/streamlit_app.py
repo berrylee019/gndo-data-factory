@@ -288,6 +288,14 @@ with tab4:
             test_id = item.get(
                 "test_id"
             )
+
+            artifact_id = item.get(
+                "artifact_id"
+            )
+            
+            artifact_name = item.get(
+                "artifact_name"
+            )
             
             test_name = item.get(
                 "test_name"
@@ -369,6 +377,18 @@ with tab4:
             """
                 )
 
+            if artifact_id:
+
+                G.add_node(
+                    artifact_id,
+                    group="DOC",
+                    title=f"""
+            Design Artifact
+            
+            {artifact_name}
+            """
+                )
+    
             if system_id:
 
                 G.add_node(
@@ -462,7 +482,16 @@ with tab4:
                     label="EXECUTED_BY",
                     color="#ff7f0e"
                 )
-            
+
+            if test_id and artifact_id:
+
+                G.add_edge(
+                    test_id,
+                    artifact_id,
+                    label="VALIDATES",
+                    color="#bcbd22"
+                )
+    
             if test_id and system_id:
             
                 G.add_edge(
@@ -472,6 +501,15 @@ with tab4:
                     color="#17becf"
                 )
 
+            if artifact_id and system_id:
+
+                G.add_edge(
+                    artifact_id,
+                    system_id,
+                    label="IMPLEMENTS",
+                    color="#7f7f7f"
+                )
+    
             if system_id and component_id:
 
                 G.add_edge(
@@ -565,7 +603,11 @@ with tab4:
             elif node["group"] == "SYSTEM":
                 node["size"] = 22
                 node["color"] = "#17becf"
-            
+                
+            elif node["group"] == "DOC":
+                node["size"] = 24
+                node["color"] = "#bcbd22"
+    
             elif node["group"] == "COMPONENT":
                 node["size"] = 18
                 node["color"] = "#8c564b"
