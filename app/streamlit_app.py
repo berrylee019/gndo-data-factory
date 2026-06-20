@@ -55,7 +55,7 @@ crosswalk = load_json(
 )
 
 rkg = load_json(
-    "storage/metadata/rkg_data_v07.json"
+    "storage/metadata/rkg_data_v08.json"
 )
 
 nrc = nureg + rg + srp + cfr
@@ -232,13 +232,14 @@ with tab4:
         ]
 
 
-    c1, c2, c3, c4, c5 = st.columns(5)
+    c1, c2, c3, c4, c5, c6 = st.columns(6)
 
     c1.markdown("🔵 **IMPLEMENTED_BY**")
     c2.markdown("🟢 **GUIDES**")
     c3.markdown("🟣 **REVIEWED_BY**")
     c4.markdown("🟠 **APPLIED_TO**")
     c5.markdown("🔴 **EQUIVALENT_TO**")
+    c6.markdown("🟡 **EXECUTED_BY**")
 
     st.divider()
     
@@ -284,6 +285,13 @@ with tab4:
                 "verification_name"
             )
 
+            test_id = item.get(
+                "test_id"
+            )
+            
+            test_name = item.get(
+                "test_name"
+            )
 
             G.add_node(
                 cfr,
@@ -346,6 +354,18 @@ with tab4:
             Verification
             
             {verification_name}
+            """
+                )
+
+            if test_id:
+
+                G.add_node(
+                    test_id,
+                    group="TEST",
+                    title=f"""
+            Test
+            
+            {test_name}
             """
                 )
 
@@ -434,10 +454,19 @@ with tab4:
                     color="#bc5090"
                 )
             
-            if verification_id and system_id:
+            if verification_id and test_id:
             
                 G.add_edge(
                     verification_id,
+                    test_id,
+                    label="EXECUTED_BY",
+                    color="#ff7f0e"
+                )
+            
+            if test_id and system_id:
+            
+                G.add_edge(
+                    test_id,
                     system_id,
                     label="VALIDATES",
                     color="#17becf"
@@ -527,6 +556,11 @@ with tab4:
 
                 node["color"] = "#bc5090"
                 node["size"] = 26
+
+            elif node["group"] == "TEST":
+
+                node["color"] = "#ff7f0e"
+                node["size"] = 24
                 
             elif node["group"] == "SYSTEM":
                 node["size"] = 22
