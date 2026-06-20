@@ -69,6 +69,12 @@ jobs:
           python agents/failure_registry_agent_v10.py
           python agents/rkg_agent_v10.py
 
+      - name: Generate Impact Registry
+        run: python agents/impact_registry_agent_v11.py
+      
+      - name: Generate RKG v11
+        run: python agents/rkg_agent_v11.py
+
 
       - name: Python Syntax Check
         run: python -m py_compile agents/*.py
