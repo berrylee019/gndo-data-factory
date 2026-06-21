@@ -881,6 +881,7 @@ with tab4:
                 G.add_node(
                     artifact_id,
                     group="DOC",
+                    color=node_color,
                     title=f"""
             Design Artifact
             
