@@ -891,7 +891,13 @@ with tab4:
 
             
             if failure_id:
-
+            
+                node_color = (
+                    "#ff0000"
+                    if failure_id in impact_path
+                    else "#97C2FC"
+                )
+            
                 G.add_node(
                     failure_id,
                     group="FAILURE",
@@ -899,8 +905,10 @@ with tab4:
             Failure Mode
             
             {failure_mode}
-            """
+            """,
+                    color=node_color
                 )
+    
             if system_id:
 
                 G.add_node(
@@ -913,17 +921,6 @@ with tab4:
             """
                 )
 
-                node_color = (
-                    "#ff0000"
-                    if system_id in impact_path
-                    else "#97C2FC"
-                )
-
-                G.add_node(
-                    failure_id,
-                    group="FAILURE",
-                    color=node_color
-                )
             
             if component_id:
 
