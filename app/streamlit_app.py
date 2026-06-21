@@ -789,17 +789,6 @@ with tab4:
                 "failure_mode"
             )
 
-            node_color = (
-                "#ff0000"
-                if failure_id in impact_path
-                else "#97C2FC"
-            )
-            
-            G.add_node(
-                failure_id,
-                group="FAILURE",
-                color=node_color
-            )
             
             G.add_node(
                 cfr,
@@ -857,6 +846,12 @@ with tab4:
 
             if verification_id:
 
+                node_color = (
+                    "#ff0000"
+                    if verification_id in impact_path
+                    else "#97C2FC"
+                )
+
                 G.add_node(
                     verification_id,
                     group="VERIFICATION",
@@ -865,13 +860,9 @@ with tab4:
             
             {verification_name}
             """
+                    color=node_color
                 )
 
-            node_color = (
-                "#ff0000"
-                if verification_id in impact_path
-                else "#97C2FC"
-            )
             
             if test_id:
 
@@ -885,11 +876,6 @@ with tab4:
             """
                 )
 
-            node_color = (
-                "#ff0000"
-                if test_id in impact_path
-                else "#97C2FC"
-            )
             if artifact_id:
 
                 G.add_node(
@@ -902,23 +888,18 @@ with tab4:
             """
                 )
 
-            node_color = (
-                "#ff0000"
-                if artifact_id in impact_path
-                else "#97C2FC"
-            )
             
             if failure_id:
 
-                G.add_node(
-                    failure_id,
-                    group="FAILURE",
-                    title=f"""
-            Failure Mode
-            
-            {failure_mode}
-            """
-                )
+            G.add_node(
+                failure_id,
+                group="FAILURE",
+                title=f"""
+        Failure Mode
+        
+        {failure_mode}
+        """
+            )
             if system_id:
 
                 G.add_node(
@@ -931,11 +912,11 @@ with tab4:
             """
                 )
 
-            node_color = (
-                "#ff0000"
-                if system_id in impact_path
-                else "#97C2FC"
-            )
+                node_color = (
+                    "#ff0000"
+                    if system_id in impact_path
+                    else "#97C2FC"
+                )
 
                 G.add_node(
                     failure_id,
@@ -944,6 +925,12 @@ with tab4:
                 )
             
             if component_id:
+
+                node_color = (
+                    "#ff0000"
+                    if component_id in impact_path
+                    else "#97C2FC"
+                )
             
                 G.add_node(
                     component_id,
@@ -955,11 +942,6 @@ with tab4:
             """
                 )
 
-            node_color = (
-                "#ff0000"
-                if component_id in impact_path
-                else "#97C2FC"
-            )
             
             G.add_node(
                 ap1000_node,
