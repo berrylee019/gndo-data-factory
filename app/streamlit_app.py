@@ -843,17 +843,17 @@ with tab4:
 
             if requirement_id:
                 
-            node_color = (
-                "#ff0000"
-                if requirement_id in impact_path
-                else "#97C2FC"
-            )
-            
-            G.add_node(
-                requirement_id,
-                group="REQUIREMENT",
-                color=node_color
-            )
+                node_color = (
+                    "#ff0000"
+                    if requirement_id in impact_path
+                    else "#97C2FC"
+                )
+                
+                G.add_node(
+                    requirement_id,
+                    group="REQUIREMENT",
+                    color=node_color
+                )
 
             if verification_id:
 
