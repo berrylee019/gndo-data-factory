@@ -855,12 +855,12 @@ with tab4:
                 G.add_node(
                     verification_id,
                     group="VERIFICATION",
+                    color=node_color,
                     title=f"""
             Verification
             
             {verification_name}
             """
-                    color=node_color
                 )
 
             
