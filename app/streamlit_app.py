@@ -936,6 +936,12 @@ with tab4:
                 if system_id in impact_path
                 else "#97C2FC"
             )
+
+                G.add_node(
+                    failure_id,
+                    group="FAILURE",
+                    color=node_color
+                )
             
             if component_id:
             
