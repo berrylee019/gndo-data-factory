@@ -31,6 +31,16 @@ def analyze_failure_impact(
 
     row = result.iloc[0]
 
+    st.session_state["impact_path"] = [
+        row.get("failure_id"),
+        row.get("requirement_id"),
+        row.get("verification_id"),
+        row.get("test_id"),
+        row.get("artifact_id"),
+        row.get("system_id"),
+        row.get("component_id")
+    ]
+
     impact_level = row.get(
         "impact_level"
     )
@@ -712,6 +722,11 @@ with tab4:
 
         G = nx.DiGraph()
 
+        impact_path = st.session_state.get(
+            "impact_path",
+            []
+        )
+        
         for item in graph_data:
         
             cfr = item["cfr"]
@@ -774,6 +789,18 @@ with tab4:
                 "failure_mode"
             )
 
+            node_color = (
+                "#ff0000"
+                if failure_id in impact_path
+                else "#97C2FC"
+            )
+            
+            G.add_node(
+                failure_id,
+                group="FAILURE",
+                color=node_color
+            )
+            
             G.add_node(
                 cfr,
                 group="CFR",
@@ -816,15 +843,17 @@ with tab4:
 
             if requirement_id:
                 
-                G.add_node(
-                    requirement_id,
-                    group="REQUIREMENT",
-                    title=f"""
-            Requirement
+            node_color = (
+                "#ff0000"
+                if requirement_id in impact_path
+                else "#97C2FC"
+            )
             
-            {requirement_text}
-            """
-                )
+            G.add_node(
+                requirement_id,
+                group="REQUIREMENT",
+                color=node_color
+            )
 
             if verification_id:
 
@@ -838,6 +867,12 @@ with tab4:
             """
                 )
 
+            node_color = (
+                "#ff0000"
+                if verification_id in impact_path
+                else "#97C2FC"
+            )
+            
             if test_id:
 
                 G.add_node(
@@ -850,6 +885,11 @@ with tab4:
             """
                 )
 
+            node_color = (
+                "#ff0000"
+                if test_id in impact_path
+                else "#97C2FC"
+            )
             if artifact_id:
 
                 G.add_node(
@@ -862,6 +902,12 @@ with tab4:
             """
                 )
 
+            node_color = (
+                "#ff0000"
+                if artifact_id in impact_path
+                else "#97C2FC"
+            )
+            
             if failure_id:
 
                 G.add_node(
@@ -884,6 +930,12 @@ with tab4:
             {item.get('system_name')}
             """
                 )
+
+            node_color = (
+                "#ff0000"
+                if system_id in impact_path
+                else "#97C2FC"
+            )
             
             if component_id:
             
@@ -897,7 +949,11 @@ with tab4:
             """
                 )
 
-
+            node_color = (
+                "#ff0000"
+                if component_id in impact_path
+                else "#97C2FC"
+            )
             
             G.add_node(
                 ap1000_node,
@@ -958,14 +1014,22 @@ with tab4:
                     color="#ff4d4d"
                 )
             
-            if failure_id and verification_id:
+            edge_color = "#cccccc"
             
-                G.add_edge(
-                    failure_id,
-                    verification_id,
-                    label="VERIFIED_BY",
-                    color="#ff9999"
-                )
+            if (
+                failure_id in impact_path
+                and
+                verification_id in impact_path
+            ):
+                edge_color = "#ff0000"
+            
+            G.add_edge(
+                failure_id,
+                verification_id,
+                label="VERIFIED_BY",
+                color=edge_color,
+                width=4
+            )
 
             if requirement_id and verification_id:
             
