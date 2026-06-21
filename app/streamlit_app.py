@@ -1002,20 +1002,25 @@ with tab4:
             
             edge_color = "#cccccc"
             
-            if (
-                failure_id in impact_path
-                and
-                verification_id in impact_path
-            ):
-                edge_color = "#ff0000"
-            
-            G.add_edge(
-                failure_id,
-                verification_id,
-                label="VERIFIED_BY",
-                color=edge_color,
-                width=4
-            )
+            if failure_id and verification_id:
+                
+                edge_color = (
+                    "#ff0000"
+                    if (
+                        failure_id in impact_path
+                        and
+                        verification_id in impact_path
+                    )
+                    else "#cccccc"
+                )
+                    
+                G.add_edge(
+                    failure_id,
+                    verification_id,
+                    label="VERIFIED_BY",
+                    color=edge_color,
+                    width=4
+                )
 
             if requirement_id and verification_id:
             
