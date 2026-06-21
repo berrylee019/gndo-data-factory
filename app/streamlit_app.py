@@ -892,15 +892,15 @@ with tab4:
             
             if failure_id:
 
-            G.add_node(
-                failure_id,
-                group="FAILURE",
-                title=f"""
-        Failure Mode
-        
-        {failure_mode}
-        """
-            )
+                G.add_node(
+                    failure_id,
+                    group="FAILURE",
+                    title=f"""
+            Failure Mode
+            
+            {failure_mode}
+            """
+                )
             if system_id:
 
                 G.add_node(
