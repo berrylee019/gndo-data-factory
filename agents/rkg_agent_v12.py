@@ -74,11 +74,11 @@ def generate_metadata():
         artifact_id = item.get(
             "artifact_id"
         )
-    
-        change = (
-            change_map.get(artifact_id)
-            or change_map.get(system_id)
-            or {}
+
+        
+        change = change_map.get(
+            artifact_id,
+            {}
         )
 
         metadata.append({
