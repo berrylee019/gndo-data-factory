@@ -6,6 +6,10 @@ RKG_V11_FILE = (
     "storage/metadata/rkg_data_v11.json"
 )
 
+IMPACT_FILE = (
+    "storage/rkg/impact_registry_v11.json"
+)
+
 CHANGE_FILE = (
     "storage/rkg/change_registry_v12.json"
 )
@@ -26,7 +30,7 @@ def load_json(path):
 
 def generate_metadata():
 
-    rkg_v10 = load_json(
+    rkg_v11 = load_json(
         RKG_V10_FILE
     )
 
@@ -34,7 +38,12 @@ def generate_metadata():
         IMPACT_FILE
     )
 
+    changes = load_json(
+        CHANGE_FILE
+    )
+
     impact_map = {}
+    change_map = {}
 
     for impact in impacts:
 
@@ -42,9 +51,16 @@ def generate_metadata():
             impact["failure_id"]
         ] = impact
 
+    for change in changes:
+
+        change_map[
+            change["target_id"]
+        ] = change
+
+
     metadata = []
 
-    for item in rkg_v10:
+    for item in rkg_v11:
 
         failure_id = item.get(
             "failure_id"
@@ -55,10 +71,22 @@ def generate_metadata():
             {}
         )
 
+        artifact_id = item.get(
+            "artifact_id"
+        )
+    
+        change = (
+            change_map.get(artifact_id)
+            or change_map.get(system_id)
+            or {}
+        )
+
         metadata.append({
 
             **item,
 
+            # v1.1 Impact
+            
             "impact_level":
                 impact.get(
                     "impact_level"
@@ -79,6 +107,33 @@ def generate_metadata():
                     "safety_significant"
                 ),
 
+            # v1.2 Change
+
+            "change_id":
+                change.get(
+                    "change_id"
+                ),
+        
+            "change_type":
+                change.get(
+                    "change_type"
+                ),
+        
+            "impact_scope":
+                change.get(
+                    "impact_scope"
+                ),
+        
+            "requires_reverification":
+                change.get(
+                    "requires_reverification"
+                ),
+        
+            "requires_retest":
+                change.get(
+                    "requires_retest"
+                ),
+            
             "created_at":
                 datetime.utcnow().isoformat()
         })
@@ -97,7 +152,7 @@ def generate_metadata():
         )
 
     print(
-        f"Generated {len(metadata)} RKG v1.1 records"
+        f"Generated {len(metadata)} RKG v1.2 records"
     )
 
 if __name__ == "__main__":
