@@ -73,6 +73,9 @@ jobs:
 
           python agents/rkg_agent_v11.py
 
+          python agents/change_registry_agent_v12.py
+          python agents/rkg_agent_v12.py
+
       - name: Generate Impact Registry
         run: python agents/impact_registry_agent_v11.py
       
