@@ -31,7 +31,7 @@ def load_json(path):
 def generate_metadata():
 
     rkg_v11 = load_json(
-        RKG_V10_FILE
+        RKG_V11_FILE
     )
 
     impacts = load_json(
