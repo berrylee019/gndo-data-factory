@@ -165,7 +165,7 @@ crosswalk = load_json(
 )
 
 rkg = load_json(
-    "storage/metadata/rkg_data_v11.json"
+    "storage/metadata/rkg_data_v12.json"
 )
 
 nrc = nureg + rg + srp + cfr
