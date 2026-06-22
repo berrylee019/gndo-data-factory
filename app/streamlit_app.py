@@ -432,7 +432,12 @@ with tab3:
                 r"(FAIL-CH\d{2}-\d{3})",
                 query
             )
-        
+
+            chg_match = re.search(
+                r"(CHG-CH\d{2}-\d{3})",
+                query
+            )
+            
             target_id = None
         
             if req_match:
@@ -461,6 +466,13 @@ with tab3:
         
                 result = rkg_df[
                     rkg_df["failure_id"] == target_id
+                ]
+
+            elif chg_match:
+                target_id = chg_match.group(1)
+        
+                result = rkg_df[
+                    rkg_df["change_id"] == target_id
                 ]
         
             else:
