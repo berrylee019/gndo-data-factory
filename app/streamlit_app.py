@@ -666,6 +666,36 @@ with tab3:
                 """
                     )
 
+                if row.get("change_id"):
+
+                    st.info(
+                        "Change Impact Analysis"
+                    )
+                
+                    st.markdown(
+                        f"""
+                ### Change
+                
+                {row.get('change_id')}
+                
+                ### Change Type
+                
+                {row.get('change_type')}
+                
+                ### Impact Scope
+                
+                {row.get('impact_scope')}
+                
+                ### Requires Reverification
+                
+                {row.get('requires_reverification')}
+                
+                ### Requires Retest
+                
+                {row.get('requires_retest')}
+                """
+                    )
+                        
                 if recommendations:
 
                     st.subheader(
