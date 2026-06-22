@@ -500,7 +500,7 @@ with tab3:
         
                 row = result.iloc[0]
 
-                if row.get("failure_id"):
+                if pd.notna(row.get("failure_id")):
 
                     st.subheader(
                         "Failure Impact Analysis"
