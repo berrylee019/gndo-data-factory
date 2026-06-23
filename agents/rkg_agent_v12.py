@@ -81,6 +81,16 @@ def generate_metadata():
             {}
         )
 
+        print(
+            "ARTIFACT:",
+            artifact_id
+        )
+        
+        print(
+            "CHANGE:",
+            change
+        )
+        
         metadata.append({
 
             **item,
