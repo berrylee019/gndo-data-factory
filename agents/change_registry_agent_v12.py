@@ -13,6 +13,15 @@ changes = [
         "change_type": "Design Update",
         "change_description": "PPS logic modification",
         "impact_scope": "FULL",
+        "affected_requirement":
+            "REQ-CH07-001",
+
+        "affected_verification":
+            "VER-CH07-001",
+    
+        "affected_test":
+            "TEST-CH07-001",
+        
         "requires_reverification": True,
         "requires_retest": True
     },
@@ -24,6 +33,15 @@ changes = [
         "change_type": "Software Revision",
         "change_description": "Trip setpoint update",
         "impact_scope": "PARTIAL",
+        "affected_requirement":
+            "REQ-CH07-001",
+
+        "affected_verification":
+            "VER-CH07-001",
+    
+        "affected_test":
+            "TEST-CH07-001",
+        
         "requires_reverification": True,
         "requires_retest": False
     }
