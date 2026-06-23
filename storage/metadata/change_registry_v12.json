@@ -1,0 +1,11 @@
+{
+  "change_id": "CHG-CH07-001",
+  "change_type": "Design Update",
+  "impact_scope": "FULL",
+  "requires_reverification": true,
+  "requires_retest": true,
+
+  "affected_requirement": "REQ-CH07-001",
+  "affected_verification": "VER-CH07-001",
+  "affected_test": "TEST-CH07-001"
+}
