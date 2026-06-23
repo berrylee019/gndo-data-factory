@@ -133,6 +133,21 @@ def generate_metadata():
                 change.get(
                     "requires_retest"
                 ),
+
+            "affected_requirement":
+                change.get(
+                    "affected_requirement"
+                ),
+            
+            "affected_verification":
+                change.get(
+                    "affected_verification"
+                ),
+            
+            "affected_test":
+                change.get(
+                    "affected_test"
+                ),
             
             "created_at":
                 datetime.utcnow().isoformat()
