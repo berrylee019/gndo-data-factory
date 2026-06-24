@@ -59,19 +59,37 @@ def generate_metadata():
         ] = change
 
     for failure in failures:
-
+    
         failure_map[
-            failure["failure_id"]
+            failure["requirement_id"]
         ] = failure
         
     metadata = []
 
     for item in rkg_v11:
 
-        failure_id = item.get(
-            "failure_id"
+        requirement_id = item.get(
+            "requirement_id"
+        )
+        
+        failure = failure_map.get(
+            requirement_id,
+            {}
         )
 
+        requirement_id = item.get(
+            "requirement_id"
+        )
+        
+        failure = failure_map.get(
+            requirement_id,
+            {}
+        )
+        
+        failure_id = failure.get(
+            "failure_id"
+        )
+        
         impact = impact_map.get(
             failure_id,
             {}
@@ -185,6 +203,28 @@ def generate_metadata():
             "related_test":
                 failure.get(
                     "related_test"
+                ),
+            
+            # v1.3 change
+            
+            "failure_id":
+                failure.get(
+                    "failure_id"
+                ),
+            
+            "failure_mode":
+                failure.get(
+                    "failure_mode"
+                ),
+            
+            "failure_severity":
+                failure.get(
+                    "severity"
+                ),
+            
+            "failure_consequence":
+                failure.get(
+                    "consequence"
                 ),
             
             "created_at":
