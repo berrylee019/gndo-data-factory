@@ -14,9 +14,14 @@ CHANGE_FILE = (
     "storage/rkg/change_registry_v12.json"
 )
 
+FAILURE_FILE = (
+    "storage/rkg/failure_registry_v10.json"
+)
+
 OUTPUT_FILE = (
     "storage/metadata/rkg_data_v12.json"
 )
+
 
 def load_json(path):
 
@@ -41,6 +46,10 @@ def generate_metadata():
     changes = load_json(
         CHANGE_FILE
     )
+
+    failures = load_json(
+    FAILURE_FILE
+)
 
     impact_map = {}
     change_map = {}
