@@ -33,8 +33,10 @@ def load_json(path):
         return json.load(f)
 
 def generate_metadata():
-    print("[DEBUG] failures loaded:", 'failures' in locals())
-    print("[DEBUG] FAILURE_FILE:", FAILURE_FILE)
+    rkg_v11 = load_json(RKG_V11_FILE)
+    impacts = load_json(IMPACT_FILE)
+    changes = load_json(CHANGE_FILE)
+    failures = load_json(FAILURE_FILE) or []
 
     rkg_v11 = load_json(
         RKG_V11_FILE
