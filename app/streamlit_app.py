@@ -123,7 +123,7 @@ def analyze_failure_impact(
             start=1
         ):
     
-            st.write(
+            
                 f"{idx}. {rec}"
             )
             
@@ -304,7 +304,7 @@ with tab3:
                 row["title"]
             ):
     
-                st.write(
+                
                     f"Source: {row['source']}"
                 )
     
@@ -499,14 +499,15 @@ with tab3:
         
             else:
 
-                    st.write(result[
-                        [
-                            "change_id",
-                            "requirement_id",
-                            "verification_id",
-                            "artifact_id"
-                        ]
-                    ].head(20))
+                    st.write(
+                        result[
+                            [
+                                "change_id",
+                                "requirement_id",
+                                "verification_id",
+                                "artifact_id"
+                            ]
+                        ].head(20))
         
                 row = result.iloc[0]
 
