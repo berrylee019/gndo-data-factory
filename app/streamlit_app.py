@@ -532,7 +532,127 @@ with tab3:
                     st.subheader(
                         "Change Impact Analysis"
                     )
+
+                    change_id = row.get(
+                        "change_id"
+                    )
+                
+                    req_id = row.get(
+                        "affected_requirement"
+                    )
+                
+                    ver_id = row.get(
+                        "affected_verification"
+                    )
+                
+                    test_id = row.get(
+                        "affected_test"
+                    )
+
+                    G = nx.DiGraph()
+
+                    if change_id:
+                
+                        G.add_node(
+                            change_id,
+                            group="CHANGE"
+                        )
+                
+                    if req_id:
+                
+                        G.add_node(
+                            req_id,
+                            group="REQUIREMENT"
+                        )
+                
+                    if ver_id:
+                
+                        G.add_node(
+                            ver_id,
+                            group="VERIFICATION"
+                        )
+                
+                    if test_id:
+                
+                        G.add_node(
+                            test_id,
+                            group="TEST"
+                        )
+                
+                    if change_id and req_id:
+                
+                        G.add_edge(
+                            change_id,
+                            req_id
+                        )
+                
+                    if req_id and ver_id:
+                
+                        G.add_edge(
+                            req_id,
+                            ver_id
+                        )
+                
+                    if ver_id and test_id:
+                
+                        G.add_edge(
+                            ver_id,
+                            test_id
+                        )
+
+                        net = Network(
+                            height="500px",
+                            width="100%",
+                            directed=True
+                        )
                     
+                        net.from_nx(G)
+
+                        for node in net.nodes:
+
+                            if node["id"].startswith(
+                                "CHG"
+                            ):
+                    
+                                node["color"] = "#ff0000"
+                    
+                            elif node["id"].startswith(
+                                "REQ"
+                            ):
+                    
+                                node["color"] = "#00cc66"
+                    
+                            elif node["id"].startswith(
+                                "VER"
+                            ):
+                    
+                                node["color"] = "#ffcc00"
+                    
+                            elif node["id"].startswith(
+                                "TEST"
+                            ):
+                    
+                                node["color"] = "#0099ff"
+
+                        with tempfile.NamedTemporaryFile(
+                            delete=False,
+                            suffix=".html"
+                        ) as tmp:
+                    
+                            net.save_graph(
+                                tmp.name
+                            )
+                    
+                            html = open(
+                                tmp.name,
+                                encoding="utf-8"
+                            ).read()
+                    
+                        st.components.v1.html(
+                            html,
+                            height=550
+                        )
+                        
                 elif (
                     target_id
                     and target_id.startswith("REQ-")
