@@ -498,7 +498,7 @@ with tab3:
                         ]
                     ].head(20))
         
-                row = result.iloc[0]
+                    row = result.iloc[0]
 
                 if pd.notna(row.get("failure_id")):
 
