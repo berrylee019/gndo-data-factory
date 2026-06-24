@@ -655,7 +655,10 @@ with tab3:
                     recommendations.append(
                         "Engineering Review Required"
                     )
-                if row.get("failure_id"):
+                if (
+                    target_id
+                    and target_id.startswith("FAIL-")
+                ):
                 
                 
                     st.markdown(
@@ -704,7 +707,10 @@ with tab3:
                 """
                     )
 
-                if row.get("change_id"):
+                if (
+                    target_id
+                    and target_id.startswith("CHG-")
+                ):
 
                     st.info(
                         "Change Impact Analysis"
