@@ -644,7 +644,7 @@ with tab3:
                 
                 ### Test
                 
-                {row.get('affected_test_id')}
+                {row.get('test_id')}
                 
                 ---
                 
@@ -693,8 +693,20 @@ with tab3:
                 ### Requires Retest
                 
                 {row.get('requires_retest')}
+
+                ### Affected Requirement
+
+                {row.get('affected_requirement')}
+                
+                ### Affected Verification
+                
+                {row.get('affected_verification')}
+                
+                ### Affected Test
+                
+                {row.get('affected_test')}
                 """
-                    )
+                )
                         
                 if recommendations:
 
