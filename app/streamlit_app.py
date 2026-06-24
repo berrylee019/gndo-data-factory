@@ -600,23 +600,23 @@ with tab3:
                         "Impact Level : LOW"
                     )
     
-                if safety_significant:
+                    if safety_significant:
+        
+                        st.error(
+                            "Safety Significant : YES"
+                        )
+                    
+                    else:
+                    
+                        st.success(
+                            "Safety Significant : NO"
+                        )
     
-                    st.error(
-                        "Safety Significant : YES"
-                    )
-                
-                else:
-                
-                    st.success(
-                        "Safety Significant : NO"
-                    )
-    
-                if retest_required:
-    
-                    st.warning(
-                        "Retest Required : YES"
-                    )
+                    if retest_required:
+        
+                        st.warning(
+                            "Retest Required : YES"
+                        )
                 
                 else:
                 
