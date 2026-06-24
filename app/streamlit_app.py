@@ -294,7 +294,7 @@ with tab3:
                 row["title"]
             ):
     
-                
+                st.write(
                     f"Source: {row['source']}"
                 )
     
