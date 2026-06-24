@@ -1,4 +1,3 @@
-
 import json
 from datetime import datetime
 
@@ -49,7 +48,10 @@ def generate_metadata():
 
     failures = load_json(
         FAILURE_FILE
-    )
+    ) or []
+
+    if not isinstance(failures, list):
+    failures = []
 
     impact_map = {}
     change_map = {}
