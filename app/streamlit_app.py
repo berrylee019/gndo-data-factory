@@ -504,26 +504,41 @@ with tab3:
                     target_id
                     and target_id.startswith("FAIL-")
                 ):
-
-                if (
+                    st.subheader(
+                        "Failure Impact Analysis"
+                    )
+                    
+                elif (
                     target_id
                     and target_id.startswith("CHG-")
                 ):
-
-                if (
+                    st.subheader(
+                        "Change Impact Analysis"
+                    )
+                    
+                elif (
                     target_id
                     and target_id.startswith("REQ-")
                 ):
-
-                if (
+                    st.subheader(
+                        "Requirement Impact Analysis"
+                    )
+    
+                elif (
                     target_id
                     and target_id.startswith("VER-")
                 ):
-
-                if (
+                    st.subheader(
+                        "Verification Impact Analysis"
+                    )
+    
+                elif (
                     target_id
                     and target_id.startswith("TEST-")
                 ):
+                    st.subheader(
+                        "Test Impact Analysis"
+                    )
                     
                     st.subheader(
                         "Failure Impact Analysis"
