@@ -499,15 +499,14 @@ with tab3:
         
             else:
 
-                    st.write(
-                        result[
-                            [
-                                "change_id",
-                                "requirement_id",
-                                "verification_id",
-                                "artifact_id"
-                            ]
-                        ].head(20))
+                    st.write(result[
+                        [
+                            "change_id",
+                            "requirement_id",
+                            "verification_id",
+                            "artifact_id"
+                        ]
+                    ].head(20))
         
                 row = result.iloc[0]
 
