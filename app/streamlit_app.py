@@ -110,22 +110,12 @@ def analyze_failure_impact(
 
         "component_id":
             row.get("component_id")
+
+        "recommendations":
+            recommendations
     }
 
-    if recommendations:
 
-        st.subheader(
-            "Recommended Actions"
-        )
-    
-        for idx, rec in enumerate(
-            recommendations,
-            start=1
-        ):
-    
-            
-                f"{idx}. {rec}"
-            )
             
 st.title("☢️ GNDO Document Explorer")
 
