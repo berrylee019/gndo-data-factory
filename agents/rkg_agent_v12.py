@@ -33,10 +33,14 @@ def load_json(path):
         return json.load(f)
 
 def generate_metadata():
-    rkg_v11 = load_json(RKG_V11_FILE)
-    impacts = load_json(IMPACT_FILE)
-    changes = load_json(CHANGE_FILE)
-    failures = load_json(FAILURE_FILE) or []
+    failure_modes = generate_failure_modes()
+
+    generate_metadata(
+        rkg_v11,
+        impacts,
+        changes,
+        failure_modes
+    )
 
     rkg_v11 = load_json(
         RKG_V11_FILE
