@@ -644,7 +644,7 @@ with tab3:
                 
                 ### Test
                 
-                {row.get('test_id')}
+                {row.get('affected_test_id')}
                 
                 ---
                 
