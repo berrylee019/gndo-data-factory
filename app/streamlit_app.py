@@ -711,10 +711,7 @@ with tab3:
                     target_id
                     and target_id.startswith("CHG-")
                 ):
-
-                    st.info(
-                        "Change Impact Analysis"
-                    )
+                    
                 
                     st.markdown(
                         f"""
