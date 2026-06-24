@@ -109,7 +109,7 @@ def analyze_failure_impact(
             row.get("system_id"),
 
         "component_id":
-            row.get("component_id")
+            row.get("component_id"),
 
         "recommendations":
             recommendations
