@@ -500,8 +500,31 @@ with tab3:
         
                 row = result.iloc[0]
 
-                if pd.notna(row.get("failure_id")):
+                if (
+                    target_id
+                    and target_id.startswith("FAIL-")
+                ):
 
+                if (
+                    target_id
+                    and target_id.startswith("CHG-")
+                ):
+
+                if (
+                    target_id
+                    and target_id.startswith("REQ-")
+                ):
+
+                if (
+                    target_id
+                    and target_id.startswith("VER-")
+                ):
+
+                if (
+                    target_id
+                    and target_id.startswith("TEST-")
+                ):
+                    
                     st.subheader(
                         "Failure Impact Analysis"
                     )
