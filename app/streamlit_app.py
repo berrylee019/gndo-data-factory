@@ -500,6 +500,23 @@ with tab3:
         
                 row = result.iloc[0]
 
+                change_row = row
+
+                if change_row.get("change_id"):
+                
+                    affected_req = change_row.get(
+                        "affected_requirement"
+                    )
+                
+                    affected_rows = rkg_df[
+                        rkg_df["requirement_id"]
+                        == affected_req
+                    ]
+                
+                    if not affected_rows.empty:
+                
+                        row = affected_rows.iloc[0]
+
                 if (
                     target_id
                     and target_id.startswith("FAIL-")
@@ -539,10 +556,7 @@ with tab3:
                     st.subheader(
                         "Test Impact Analysis"
                     )
-                    
-                    st.subheader(
-                        "Failure Impact Analysis"
-                    )
+                
                 
                     impact_cols = [
                         "requirement_id",
@@ -600,23 +614,23 @@ with tab3:
                         "Impact Level : LOW"
                     )
     
-                    if safety_significant:
-        
-                        st.error(
-                            "Safety Significant : YES"
-                        )
-                    
-                    else:
-                    
-                        st.success(
-                            "Safety Significant : NO"
-                        )
+                if safety_significant:
     
-                    if retest_required:
-        
-                        st.warning(
-                            "Retest Required : YES"
-                        )
+                    st.error(
+                        "Safety Significant : YES"
+                    )
+                
+                else:
+                
+                    st.success(
+                        "Safety Significant : NO"
+                    )
+
+                if retest_required:
+    
+                    st.warning(
+                        "Retest Required : YES"
+                    )
                 
                 else:
                 
@@ -661,51 +675,51 @@ with tab3:
                 ):
                 
                 
-                    st.markdown(
-                        f"""
-                ### Failure
-                
-                {row.get('failure_id')}
-                
-                {row.get('failure_mode')}
-                
-                ---
-                
-                ### Affected Requirement
-                
-                {row.get('requirement_id')}
-                
-                ---
-                
-                ### Verification
-                
-                {row.get('verification_id')}
-                
-                ---
-                
-                ### Test
-                
-                {row.get('test_id')}
-                
-                ---
-                
-                ### Design Artifact
-                
-                {row.get('artifact_id')}
-                
-                ---
-                
-                ### System
-                
-                {row.get('system_id')}
-                
-                ---
-                
-                ### Component
-                
-                {row.get('component_id')}
-                """
-                    )
+                        st.markdown(
+                            f"""
+                    ### Failure
+                    
+                    {row.get('failure_id')}
+                    
+                    {row.get('failure_mode')}
+                    
+                    ---
+                    
+                    ### Affected Requirement
+                    
+                    {row.get('requirement_id')}
+                    
+                    ---
+                    
+                    ### Verification
+                    
+                    {row.get('verification_id')}
+                    
+                    ---
+                    
+                    ### Test
+                    
+                    {row.get('test_id')}
+                    
+                    ---
+                    
+                    ### Design Artifact
+                    
+                    {row.get('artifact_id')}
+                    
+                    ---
+                    
+                    ### System
+                    
+                    {row.get('system_id')}
+                    
+                    ---
+                    
+                    ### Component
+                    
+                    {row.get('component_id')}
+                    """
+                        )
 
                 if (
                     target_id
