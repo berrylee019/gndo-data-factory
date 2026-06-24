@@ -48,8 +48,8 @@ def generate_metadata():
     )
 
     failures = load_json(
-    FAILURE_FILE
-)
+        FAILURE_FILE
+    )
 
     impact_map = {}
     change_map = {}
@@ -80,10 +80,16 @@ def generate_metadata():
         requirement_id = item.get(
             "requirement_id"
         )
+        artifact_id = item.get(
+            "artifact_id"
+        )
         
         failure = failure_map.get(
             requirement_id,
             {}
+        )
+        failure_id = failure.get(
+            "failure_id"
         )
 
         requirement_id = item.get(
@@ -95,29 +101,17 @@ def generate_metadata():
             {}
         )
         
-        failure_id = failure.get(
-            "failure_id"
-        )
         
         impact = impact_map.get(
             failure_id,
             {}
         )
-
-        failure = failure_map.get(
-            failure_id,
-            {}
-        )
-
-        artifact_id = item.get(
-            "artifact_id"
-        )
-
-        
         change = change_map.get(
             artifact_id,
             {}
         )
+
+
 
         print(
             "ARTIFACT:",
