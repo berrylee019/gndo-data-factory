@@ -608,6 +608,17 @@ with tab3:
                     
                         net.from_nx(G)
 
+                        G = nx.DiGraph()
+
+                        G.add_node(change_id)
+                        G.add_node(req_id)
+                        G.add_node(ver_id)
+                        G.add_node(test_id)
+                        
+                        G.add_edge(change_id, req_id)
+                        G.add_edge(req_id, ver_id)
+                        G.add_edge(ver_id, test_id)
+
                         for node in net.nodes:
 
                             if node["id"].startswith(
