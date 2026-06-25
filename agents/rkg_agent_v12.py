@@ -99,8 +99,13 @@ def generate_metadata():
             "requirement_id"
         )
         
+        failure_req = (
+            change.get("affected_requirement")
+            or item.get("requirement_id")
+        )
+        
         failure = failure_map.get(
-            requirement_id,
+            failure_req,
             {}
         )
         
