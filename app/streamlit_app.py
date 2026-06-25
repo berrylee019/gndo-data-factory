@@ -309,49 +309,7 @@ with tab3:
                         row["url"]
                     )
     
-    with ask_tab:
-        
-        st.subheader(
-            "Ask GNDO"
-        )
 
-        G = nx.DiGraph()
-        
-        for _, r in rkg_df.iterrows():
-        
-            change_id = r.get("change_id")
-            req_id = r.get("affected_requirement")
-            ver_id = r.get("affected_verification")
-            test_id = r.get("affected_test")
-            fail_id = r.get("failure_id")
-        
-            if pd.notna(change_id) and pd.notna(req_id):
-        
-                G.add_edge(
-                    change_id,
-                    req_id
-                )
-        
-            if pd.notna(req_id) and pd.notna(ver_id):
-        
-                G.add_edge(
-                    req_id,
-                    ver_id
-                )
-        
-            if pd.notna(ver_id) and pd.notna(test_id):
-        
-                G.add_edge(
-                    ver_id,
-                    test_id
-                )
-        
-            if pd.notna(req_id) and pd.notna(fail_id):
-        
-                G.add_edge(
-                    test_id,
-                    fail_id
-                )
         # ===========================
         # v1.4 Impact Propagation Graph
         # ===========================
@@ -359,6 +317,17 @@ with tab3:
         G = nx.DiGraph()
                 
         
+    with gndo_tab:
+    
+        st.subheader(
+            "GNDO Search"
+        )
+    
+        gndo_search = st.text_input(
+            "Search GNDO Objects",
+            placeholder="예: REQ-CH07-001, VER-CH07-001, TEST-CH07-001"
+        )
+    
         gndo_result = pd.DataFrame()
     
         if gndo_search:
@@ -422,6 +391,50 @@ with tab3:
             )
         )
 
+    with ask_tab:
+        
+        st.subheader(
+            "Ask GNDO"
+        )
+
+        G = nx.DiGraph()
+        
+        for _, r in rkg_df.iterrows():
+        
+            change_id = r.get("change_id")
+            req_id = r.get("affected_requirement")
+            ver_id = r.get("affected_verification")
+            test_id = r.get("affected_test")
+            fail_id = r.get("failure_id")
+        
+            if pd.notna(change_id) and pd.notna(req_id):
+        
+                G.add_edge(
+                    change_id,
+                    req_id
+                )
+        
+            if pd.notna(req_id) and pd.notna(ver_id):
+        
+                G.add_edge(
+                    req_id,
+                    ver_id
+                )
+        
+            if pd.notna(ver_id) and pd.notna(test_id):
+        
+                G.add_edge(
+                    ver_id,
+                    test_id
+                )
+        
+            if pd.notna(req_id) and pd.notna(fail_id):
+        
+                G.add_edge(
+                    test_id,
+                    fail_id
+                )
+                
         ask_gndo = st.text_input(
             "Ask GNDO Question V14",
             placeholder="예: FAIL-CH07-001의 영향은?"
