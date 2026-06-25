@@ -356,21 +356,21 @@ with tab3:
                     fail_id
                 )
                 
-    with gndo_tab:
+        with gndo_tab:
         
-        st.subheader(
-            "GNDO Search"
-        )
-
-        gndo_search = st.text_input(
-            "Search GNDO Objects",
-            placeholder="예: REQ-CH07-001, VER-CH07-001, TEST-CH07-001"
-        )
+            st.subheader(
+                "GNDO Search"
+            )
     
-    
-        rkg_df = pd.DataFrame(rkg)
-    
-        gndo_result = pd.DataFrame()
+            gndo_search = st.text_input(
+                "Search GNDO Objects",
+                placeholder="예: REQ-CH07-001, VER-CH07-001, TEST-CH07-001"
+            )
+        
+        
+            rkg_df = pd.DataFrame(rkg)
+        
+            gndo_result = pd.DataFrame()
     
         if gndo_search:
     
