@@ -31,6 +31,41 @@ def analyze_failure_impact(
 
     row = result.iloc[0]
 
+    impact_nodes = []
+
+    if target_id in G:
+    
+        impact_nodes = list(
+            nx.descendants(
+                G,
+                target_id
+            )
+        )
+
+    affected_requirements = [
+        n
+        for n in impact_nodes
+        if str(n).startswith("REQ-")
+    ]
+    
+    affected_verifications = [
+        n
+        for n in impact_nodes
+        if str(n).startswith("VER-")
+    ]
+    
+    affected_tests = [
+        n
+        for n in impact_nodes
+        if str(n).startswith("TEST-")
+    ]
+    
+    affected_failures = [
+        n
+        for n in impact_nodes
+        if str(n).startswith("FAIL-")
+    ]
+
     st.session_state["impact_path"] = [
         row.get("failure_id"),
         row.get("requirement_id"),
@@ -533,6 +568,30 @@ with tab3:
                         "Change Impact Analysis"
                     )
 
+                    st.subheader(
+                        "Impact Summary"
+                    )
+                    
+                    st.metric(
+                        "Requirements",
+                        len(affected_requirements)
+                    )
+                    
+                    st.metric(
+                        "Verifications",
+                        len(affected_verifications)
+                    )
+                    
+                    st.metric(
+                        "Tests",
+                        len(affected_tests)
+                    )
+                    
+                    st.metric(
+                        "Failures",
+                        len(affected_failures)
+                    )
+
                     change_id = row.get(
                         "change_id"
                     )
@@ -620,6 +679,36 @@ with tab3:
                         net.from_nx(G)
 
                         G = nx.DiGraph()
+
+                        for _, row in rkg_df.iterrows():
+                        
+                            if pd.notna(row.get("change_id")) and pd.notna(row.get("affected_requirement")):
+                        
+                                G.add_edge(
+                                    row["change_id"],
+                                    row["affected_requirement"]
+                                )
+                        
+                            if pd.notna(row.get("affected_requirement")) and pd.notna(row.get("affected_verification")):
+                        
+                                G.add_edge(
+                                    row["affected_requirement"],
+                                    row["affected_verification"]
+                                )
+                        
+                            if pd.notna(row.get("affected_verification")) and pd.notna(row.get("affected_test")):
+                        
+                                G.add_edge(
+                                    row["affected_verification"],
+                                    row["affected_test"]
+                                )
+                        
+                            if pd.notna(row.get("affected_test")) and pd.notna(row.get("failure_id")):
+                        
+                                G.add_edge(
+                                    row["affected_test"],
+                                    row["failure_id"]
+                                )
 
                         G.add_node(change_id)
                         G.add_node(req_id)
