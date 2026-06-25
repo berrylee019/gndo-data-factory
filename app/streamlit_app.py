@@ -359,7 +359,7 @@ with tab3:
         G = nx.DiGraph()
                 
         
-            gndo_result = pd.DataFrame()
+        gndo_result = pd.DataFrame()
     
         if gndo_search:
     
