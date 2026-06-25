@@ -59,11 +59,17 @@ def generate_metadata():
     )
 
     if not isinstance(failures, list):
-    failures = []
+        failures = []
 
     impact_map = {}
     change_map = {}
     failure_map = {}
+
+    for failure in failures:
+
+        failure_map[
+            failure["requirement_id"]
+        ] = failure
 
     for impact in impacts:
 
@@ -77,11 +83,6 @@ def generate_metadata():
             change["target_id"]
         ] = change
 
-    for failure in failures:
-    
-        failure_map[
-            failure["requirement_id"]
-        ] = failure
         
     metadata = []
 
