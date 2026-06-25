@@ -752,24 +752,24 @@ with tab3:
                 
                             node["color"] = "#0099ff"
 
-                        with tempfile.NamedTemporaryFile(
-                            delete=False,
-                            suffix=".html"
-                        ) as tmp:
-                    
-                            net.save_graph(
-                                tmp.name
-                            )
-                    
-                            html = open(
-                                tmp.name,
-                                encoding="utf-8"
-                            ).read()
-                    
-                        st.components.v1.html(
-                            html,
-                            height=550
+                    with tempfile.NamedTemporaryFile(
+                        delete=False,
+                        suffix=".html"
+                    ) as tmp:
+                
+                        net.save_graph(
+                            tmp.name
                         )
+                
+                        html = open(
+                            tmp.name,
+                            encoding="utf-8"
+                        ).read()
+                
+                    st.components.v1.html(
+                        html,
+                        height=550
+                    )
                         
                 elif (
                     target_id
