@@ -56,7 +56,7 @@ def generate_metadata():
 
     failures = load_json(
         FAILURE_FILE
-    ) or []
+    )
 
     if not isinstance(failures, list):
     failures = []
