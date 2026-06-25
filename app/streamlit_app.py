@@ -549,6 +549,10 @@ with tab3:
                         "affected_test"
                     )
 
+                    failure_id = row.get(
+                        "failure_id"
+                    )
+
                     G = nx.DiGraph()
 
                     if change_id:
@@ -598,6 +602,13 @@ with tab3:
                         G.add_edge(
                             ver_id,
                             test_id
+                        )
+
+                    if failure_id:
+
+                        G.add_edge(
+                            test_id,
+                            failure_id
                         )
 
                         net = Network(
