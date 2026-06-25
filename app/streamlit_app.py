@@ -723,8 +723,8 @@ with tab3:
                         width="100%",
                         directed=True
                     )
-                    
-                        net.from_nx(G)
+                
+                    net.from_nx(G)
 
                         for node in net.nodes:
 
