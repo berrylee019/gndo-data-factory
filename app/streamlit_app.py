@@ -314,10 +314,7 @@ with tab3:
         st.subheader(
             "Ask GNDO"
         )
-        # ===========================
-        # v1.4 Impact Propagation Graph
-        # ===========================
-        
+
         G = nx.DiGraph()
         
         for _, r in rkg_df.iterrows():
@@ -352,23 +349,15 @@ with tab3:
             if pd.notna(req_id) and pd.notna(fail_id):
         
                 G.add_edge(
-                    req_id,
+                    test_id,
                     fail_id
                 )
+        # ===========================
+        # v1.4 Impact Propagation Graph
+        # ===========================
+        
+        G = nx.DiGraph()
                 
-        with gndo_tab:
-        
-            st.subheader(
-                "GNDO Search"
-            )
-    
-            gndo_search = st.text_input(
-                "Search GNDO Objects",
-                placeholder="예: REQ-CH07-001, VER-CH07-001, TEST-CH07-001"
-            )
-        
-        
-            rkg_df = pd.DataFrame(rkg)
         
             gndo_result = pd.DataFrame()
     
@@ -574,6 +563,10 @@ with tab3:
                     target_id
                     and target_id.startswith("CHG-")
                 ):
+
+                impact_nodes = []
+
+                if target_id in G:
                     
                     impact_nodes = list(
                         nx.descendants(
