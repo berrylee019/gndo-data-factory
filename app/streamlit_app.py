@@ -577,40 +577,40 @@ with tab3:
                     and target_id.startswith("CHG-")
                 ):
 
-                impact_nodes = []
-
-                if target_id in G:
-                    
-                    impact_nodes = list(
-                        nx.descendants(
-                            G,
-                            target_id
+                    impact_nodes = []
+    
+                    if target_id in G:
+                        
+                        impact_nodes = list(
+                            nx.descendants(
+                                G,
+                                target_id
+                            )
                         )
-                    )
-                
-                affected_requirements = [
-                    n
-                    for n in impact_nodes
-                    if str(n).startswith("REQ-")
-                ]
-                
-                affected_verifications = [
-                    n
-                    for n in impact_nodes
-                    if str(n).startswith("VER-")
-                ]
-                
-                affected_tests = [
-                    n
-                    for n in impact_nodes
-                    if str(n).startswith("TEST-")
-                ]
-                
-                affected_failures = [
-                    n
-                    for n in impact_nodes
-                    if str(n).startswith("FAIL-")
-                ]
+                    
+                    affected_requirements = [
+                        n
+                        for n in impact_nodes
+                        if str(n).startswith("REQ-")
+                    ]
+                    
+                    affected_verifications = [
+                        n
+                        for n in impact_nodes
+                        if str(n).startswith("VER-")
+                    ]
+                    
+                    affected_tests = [
+                        n
+                        for n in impact_nodes
+                        if str(n).startswith("TEST-")
+                    ]
+                    
+                    affected_failures = [
+                        n
+                        for n in impact_nodes
+                        if str(n).startswith("FAIL-")
+                    ]
 
                 st.subheader(
                     "Change Impact Analysis"
