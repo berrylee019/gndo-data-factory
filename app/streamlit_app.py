@@ -429,7 +429,8 @@ for _, r in rkg_df.iterrows():
         )
     
     with ask_tab:
-    
+        st.write("DEBUG-ASK-TAB")
+        
         st.subheader(
             "Ask GNDO"
         )
