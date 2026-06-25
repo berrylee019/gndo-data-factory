@@ -431,7 +431,7 @@ with tab3:
             if pd.notna(req_id) and pd.notna(fail_id):
         
                 G.add_edge(
-                    test_id,
+                    req_id,
                     fail_id
                 )
                 
