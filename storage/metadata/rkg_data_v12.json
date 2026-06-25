@@ -18,7 +18,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363362",
+    "created_at": "2026-06-25T09:57:23.271056",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -40,7 +40,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "01",
@@ -61,7 +66,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363376",
+    "created_at": "2026-06-25T09:57:23.271070",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -83,7 +88,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "01",
@@ -104,7 +114,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363386",
+    "created_at": "2026-06-25T09:57:23.271075",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -126,7 +136,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "01",
@@ -147,7 +162,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363394",
+    "created_at": "2026-06-25T09:57:23.271082",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -169,7 +184,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "01",
@@ -190,7 +210,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363398",
+    "created_at": "2026-06-25T09:57:23.271088",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -212,7 +232,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "01",
@@ -233,7 +258,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363402",
+    "created_at": "2026-06-25T09:57:23.271093",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -255,7 +280,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "02",
@@ -272,7 +302,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363408",
+    "created_at": "2026-06-25T09:57:23.271099",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -294,7 +324,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "02",
@@ -311,7 +346,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363412",
+    "created_at": "2026-06-25T09:57:23.271103",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -333,7 +368,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "02",
@@ -350,7 +390,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363415",
+    "created_at": "2026-06-25T09:57:23.271107",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -372,7 +412,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "02",
@@ -389,7 +434,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363423",
+    "created_at": "2026-06-25T09:57:23.271114",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -411,7 +456,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "02",
@@ -428,7 +478,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363426",
+    "created_at": "2026-06-25T09:57:23.271118",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -450,7 +500,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "02",
@@ -467,7 +522,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363429",
+    "created_at": "2026-06-25T09:57:23.271122",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -489,7 +544,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "03",
@@ -510,7 +570,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363435",
+    "created_at": "2026-06-25T09:57:23.271128",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -532,7 +592,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "03",
@@ -553,7 +618,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363440",
+    "created_at": "2026-06-25T09:57:23.271133",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -575,7 +640,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "03",
@@ -596,7 +666,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363443",
+    "created_at": "2026-06-25T09:57:23.271137",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -618,7 +688,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "03",
@@ -639,7 +714,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363448",
+    "created_at": "2026-06-25T09:57:23.271145",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -661,7 +736,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "03",
@@ -682,7 +762,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363452",
+    "created_at": "2026-06-25T09:57:23.271150",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -704,7 +784,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "03",
@@ -725,7 +810,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363455",
+    "created_at": "2026-06-25T09:57:23.271154",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -747,7 +832,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "04",
@@ -764,7 +854,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363462",
+    "created_at": "2026-06-25T09:57:23.271159",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -786,7 +876,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "04",
@@ -803,7 +898,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363465",
+    "created_at": "2026-06-25T09:57:23.271163",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -825,7 +920,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "04",
@@ -842,7 +942,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363468",
+    "created_at": "2026-06-25T09:57:23.271167",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -864,7 +964,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "04",
@@ -881,7 +986,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363476",
+    "created_at": "2026-06-25T09:57:23.271172",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -903,7 +1008,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "04",
@@ -920,7 +1030,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363479",
+    "created_at": "2026-06-25T09:57:23.271179",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -942,7 +1052,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "04",
@@ -959,7 +1074,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363482",
+    "created_at": "2026-06-25T09:57:23.271183",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -981,7 +1096,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "05",
@@ -998,7 +1118,7 @@
     "ap1000": "AP1000-CH05",
     "apr1400": "APR1400-CH05",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363487",
+    "created_at": "2026-06-25T09:57:23.271188",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -1020,7 +1140,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "05",
@@ -1037,7 +1162,7 @@
     "ap1000": "AP1000-CH05",
     "apr1400": "APR1400-CH05",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363492",
+    "created_at": "2026-06-25T09:57:23.271193",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -1059,7 +1184,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "05",
@@ -1076,7 +1206,7 @@
     "ap1000": "AP1000-CH05",
     "apr1400": "APR1400-CH05",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363495",
+    "created_at": "2026-06-25T09:57:23.271197",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -1098,7 +1228,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "06",
@@ -1119,7 +1254,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363502",
+    "created_at": "2026-06-25T09:57:23.271203",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -1141,7 +1276,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "06",
@@ -1162,7 +1302,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363506",
+    "created_at": "2026-06-25T09:57:23.271207",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -1184,7 +1324,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "06",
@@ -1205,7 +1350,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363509",
+    "created_at": "2026-06-25T09:57:23.271212",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -1227,7 +1372,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "06",
@@ -1248,7 +1398,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363517",
+    "created_at": "2026-06-25T09:57:23.271218",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -1270,7 +1420,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "06",
@@ -1291,7 +1446,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363522",
+    "created_at": "2026-06-25T09:57:23.271222",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -1313,7 +1468,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "06",
@@ -1334,7 +1494,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363525",
+    "created_at": "2026-06-25T09:57:23.271226",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -1356,7 +1516,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "07",
@@ -1377,7 +1542,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363531",
+    "created_at": "2026-06-25T09:57:23.271234",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1405,7 +1570,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -1426,7 +1594,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363537",
+    "created_at": "2026-06-25T09:57:23.271239",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1454,7 +1622,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -1475,7 +1646,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363541",
+    "created_at": "2026-06-25T09:57:23.271242",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1503,7 +1674,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -1524,7 +1698,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363548",
+    "created_at": "2026-06-25T09:57:23.271250",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1552,7 +1726,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -1573,7 +1750,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363551",
+    "created_at": "2026-06-25T09:57:23.271254",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1601,7 +1778,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -1622,7 +1802,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363559",
+    "created_at": "2026-06-25T09:57:23.271259",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1650,7 +1830,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -1671,7 +1854,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363565",
+    "created_at": "2026-06-25T09:57:23.271265",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1699,7 +1882,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -1720,7 +1906,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363568",
+    "created_at": "2026-06-25T09:57:23.271270",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1748,7 +1934,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -1769,7 +1958,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363574",
+    "created_at": "2026-06-25T09:57:23.271274",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1797,7 +1986,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -1818,7 +2010,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363579",
+    "created_at": "2026-06-25T09:57:23.271279",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1846,7 +2038,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -1867,7 +2062,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363585",
+    "created_at": "2026-06-25T09:57:23.271284",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1895,7 +2090,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -1916,7 +2114,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363591",
+    "created_at": "2026-06-25T09:57:23.271291",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1944,7 +2142,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -1965,7 +2166,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363596",
+    "created_at": "2026-06-25T09:57:23.271297",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1993,7 +2194,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -2014,7 +2218,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363600",
+    "created_at": "2026-06-25T09:57:23.271301",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2042,7 +2246,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -2063,7 +2270,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363603",
+    "created_at": "2026-06-25T09:57:23.271306",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2091,7 +2298,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -2112,7 +2322,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363610",
+    "created_at": "2026-06-25T09:57:23.271311",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -2140,7 +2350,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -2161,7 +2374,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363614",
+    "created_at": "2026-06-25T09:57:23.271315",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -2189,7 +2402,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -2210,7 +2426,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363620",
+    "created_at": "2026-06-25T09:57:23.271320",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -2238,7 +2454,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -2259,7 +2478,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363652",
+    "created_at": "2026-06-25T09:57:23.271349",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -2287,7 +2506,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -2308,7 +2530,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363656",
+    "created_at": "2026-06-25T09:57:23.271357",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -2336,7 +2558,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -2357,7 +2582,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363660",
+    "created_at": "2026-06-25T09:57:23.271362",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -2385,7 +2610,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -2406,7 +2634,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363666",
+    "created_at": "2026-06-25T09:57:23.271370",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2434,7 +2662,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -2455,7 +2686,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363669",
+    "created_at": "2026-06-25T09:57:23.271376",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2483,7 +2714,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -2504,7 +2738,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363672",
+    "created_at": "2026-06-25T09:57:23.271382",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2532,7 +2766,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -2553,7 +2790,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363677",
+    "created_at": "2026-06-25T09:57:23.271391",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -2581,7 +2818,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -2602,7 +2842,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363681",
+    "created_at": "2026-06-25T09:57:23.271398",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -2630,7 +2870,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -2651,7 +2894,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363685",
+    "created_at": "2026-06-25T09:57:23.271405",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -2679,7 +2922,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -2700,7 +2946,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363692",
+    "created_at": "2026-06-25T09:57:23.271415",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -2728,7 +2974,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -2749,7 +2998,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363697",
+    "created_at": "2026-06-25T09:57:23.271422",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -2777,7 +3026,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -2798,7 +3050,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363706",
+    "created_at": "2026-06-25T09:57:23.271430",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -2826,7 +3078,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Common Cause Failure"
   },
   {
     "chapter": "07",
@@ -2847,7 +3102,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363718",
+    "created_at": "2026-06-25T09:57:23.271442",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2875,7 +3130,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -2896,7 +3154,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363723",
+    "created_at": "2026-06-25T09:57:23.271447",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2924,7 +3182,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -2945,7 +3206,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363729",
+    "created_at": "2026-06-25T09:57:23.271456",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2973,7 +3234,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "Medium",
+    "failure_consequence": "Unnecessary Safety Injection"
   },
   {
     "chapter": "07",
@@ -2994,7 +3258,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363739",
+    "created_at": "2026-06-25T09:57:23.271466",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -3022,7 +3286,10 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -3043,7 +3310,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363745",
+    "created_at": "2026-06-25T09:57:23.271473",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -3071,7 +3338,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "07",
@@ -3092,7 +3362,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363752",
+    "created_at": "2026-06-25T09:57:23.271482",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -3120,7 +3390,10 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "related_test": null,
+    "failure_severity": "High",
+    "failure_consequence": "Failure to Trip Reactor"
   },
   {
     "chapter": "08",
@@ -3141,7 +3414,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363760",
+    "created_at": "2026-06-25T09:57:23.271492",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -3163,7 +3436,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "08",
@@ -3184,7 +3462,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363765",
+    "created_at": "2026-06-25T09:57:23.271500",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -3206,7 +3484,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "08",
@@ -3227,7 +3510,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363770",
+    "created_at": "2026-06-25T09:57:23.271520",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -3249,7 +3532,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "08",
@@ -3270,7 +3558,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363777",
+    "created_at": "2026-06-25T09:57:23.271532",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -3292,7 +3580,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "08",
@@ -3313,7 +3606,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363784",
+    "created_at": "2026-06-25T09:57:23.271539",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -3335,7 +3628,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "08",
@@ -3356,7 +3654,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363789",
+    "created_at": "2026-06-25T09:57:23.271550",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -3378,7 +3676,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "09",
@@ -3399,7 +3702,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363798",
+    "created_at": "2026-06-25T09:57:23.271559",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -3421,7 +3724,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "09",
@@ -3442,7 +3750,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363802",
+    "created_at": "2026-06-25T09:57:23.271568",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -3464,7 +3772,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "09",
@@ -3485,7 +3798,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363807",
+    "created_at": "2026-06-25T09:57:23.271575",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -3507,7 +3820,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "09",
@@ -3528,7 +3846,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363822",
+    "created_at": "2026-06-25T09:57:23.271584",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -3550,7 +3868,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "09",
@@ -3571,7 +3894,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363826",
+    "created_at": "2026-06-25T09:57:23.271591",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -3593,7 +3916,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "09",
@@ -3614,7 +3942,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363832",
+    "created_at": "2026-06-25T09:57:23.271598",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -3636,7 +3964,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "10",
@@ -3657,7 +3990,7 @@
     "ap1000": "AP1000-TG",
     "apr1400": "APR1400-TG",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363843",
+    "created_at": "2026-06-25T09:57:23.271610",
     "verification_id": "VER-CH10-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH10-001",
@@ -3679,7 +4012,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "10",
@@ -3700,7 +4038,7 @@
     "ap1000": "AP1000-TG",
     "apr1400": "APR1400-TG",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363849",
+    "created_at": "2026-06-25T09:57:23.271616",
     "verification_id": "VER-CH10-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH10-001",
@@ -3722,7 +4060,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "10",
@@ -3743,7 +4086,7 @@
     "ap1000": "AP1000-TG",
     "apr1400": "APR1400-TG",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363857",
+    "created_at": "2026-06-25T09:57:23.271623",
     "verification_id": "VER-CH10-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH10-001",
@@ -3765,7 +4108,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "11",
@@ -3786,7 +4134,7 @@
     "ap1000": "AP1000-RP",
     "apr1400": "APR1400-RP",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363865",
+    "created_at": "2026-06-25T09:57:23.271635",
     "verification_id": "VER-CH11-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH11-001",
@@ -3808,7 +4156,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "11",
@@ -3829,7 +4182,7 @@
     "ap1000": "AP1000-RP",
     "apr1400": "APR1400-RP",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363870",
+    "created_at": "2026-06-25T09:57:23.271641",
     "verification_id": "VER-CH11-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH11-001",
@@ -3851,7 +4204,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "11",
@@ -3872,7 +4230,7 @@
     "ap1000": "AP1000-RP",
     "apr1400": "APR1400-RP",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363875",
+    "created_at": "2026-06-25T09:57:23.271649",
     "verification_id": "VER-CH11-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH11-001",
@@ -3894,7 +4252,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "12",
@@ -3915,7 +4278,7 @@
     "ap1000": "AP1000-RWMS",
     "apr1400": "APR1400-RWMS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363885",
+    "created_at": "2026-06-25T09:57:23.271658",
     "verification_id": "VER-CH12-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH12-001",
@@ -3937,7 +4300,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "12",
@@ -3958,7 +4326,7 @@
     "ap1000": "AP1000-RWMS",
     "apr1400": "APR1400-RWMS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363891",
+    "created_at": "2026-06-25T09:57:23.271667",
     "verification_id": "VER-CH12-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH12-001",
@@ -3980,7 +4348,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "12",
@@ -4001,7 +4374,7 @@
     "ap1000": "AP1000-RWMS",
     "apr1400": "APR1400-RWMS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363896",
+    "created_at": "2026-06-25T09:57:23.271674",
     "verification_id": "VER-CH12-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH12-001",
@@ -4023,7 +4396,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "13",
@@ -4044,7 +4422,7 @@
     "ap1000": "AP1000-OPS",
     "apr1400": "APR1400-OPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363906",
+    "created_at": "2026-06-25T09:57:23.271691",
     "verification_id": "VER-CH13-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH13-001",
@@ -4066,7 +4444,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "13",
@@ -4087,7 +4470,7 @@
     "ap1000": "AP1000-OPS",
     "apr1400": "APR1400-OPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363911",
+    "created_at": "2026-06-25T09:57:23.271698",
     "verification_id": "VER-CH13-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH13-001",
@@ -4109,7 +4492,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "13",
@@ -4130,7 +4518,7 @@
     "ap1000": "AP1000-OPS",
     "apr1400": "APR1400-OPS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363916",
+    "created_at": "2026-06-25T09:57:23.271705",
     "verification_id": "VER-CH13-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH13-001",
@@ -4152,7 +4540,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "14",
@@ -4173,7 +4566,7 @@
     "ap1000": "AP1000-ITP",
     "apr1400": "APR1400-ITP",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363924",
+    "created_at": "2026-06-25T09:57:23.271718",
     "verification_id": "VER-CH14-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH14-001",
@@ -4195,7 +4588,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "14",
@@ -4216,7 +4614,7 @@
     "ap1000": "AP1000-ITP",
     "apr1400": "APR1400-ITP",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363929",
+    "created_at": "2026-06-25T09:57:23.271725",
     "verification_id": "VER-CH14-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH14-001",
@@ -4238,7 +4636,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "14",
@@ -4259,7 +4662,7 @@
     "ap1000": "AP1000-ITP",
     "apr1400": "APR1400-ITP",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363939",
+    "created_at": "2026-06-25T09:57:23.271735",
     "verification_id": "VER-CH14-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH14-001",
@@ -4281,7 +4684,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "15",
@@ -4302,7 +4710,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363947",
+    "created_at": "2026-06-25T09:57:23.271745",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -4324,7 +4732,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "15",
@@ -4345,7 +4758,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363952",
+    "created_at": "2026-06-25T09:57:23.271754",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -4367,7 +4780,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "15",
@@ -4388,7 +4806,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363957",
+    "created_at": "2026-06-25T09:57:23.271761",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -4410,7 +4828,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "15",
@@ -4431,7 +4854,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363968",
+    "created_at": "2026-06-25T09:57:23.271771",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -4453,7 +4876,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "15",
@@ -4474,7 +4902,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363973",
+    "created_at": "2026-06-25T09:57:23.271780",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -4496,7 +4924,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "15",
@@ -4517,7 +4950,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363980",
+    "created_at": "2026-06-25T09:57:23.271789",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -4539,7 +4972,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "16",
@@ -4560,7 +4998,7 @@
     "ap1000": "AP1000-TS",
     "apr1400": "APR1400-TS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363988",
+    "created_at": "2026-06-25T09:57:23.271799",
     "verification_id": "VER-CH16-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH16-001",
@@ -4582,7 +5020,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "16",
@@ -4603,7 +5046,7 @@
     "ap1000": "AP1000-TS",
     "apr1400": "APR1400-TS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363993",
+    "created_at": "2026-06-25T09:57:23.271805",
     "verification_id": "VER-CH16-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH16-001",
@@ -4625,7 +5068,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "16",
@@ -4646,7 +5094,7 @@
     "ap1000": "AP1000-TS",
     "apr1400": "APR1400-TS",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.363998",
+    "created_at": "2026-06-25T09:57:23.271812",
     "verification_id": "VER-CH16-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH16-001",
@@ -4668,7 +5116,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "17",
@@ -4689,7 +5142,7 @@
     "ap1000": "AP1000-QA",
     "apr1400": "APR1400-QA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364029",
+    "created_at": "2026-06-25T09:57:23.271843",
     "verification_id": "VER-CH17-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH17-001",
@@ -4711,7 +5164,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "17",
@@ -4732,7 +5190,7 @@
     "ap1000": "AP1000-QA",
     "apr1400": "APR1400-QA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364034",
+    "created_at": "2026-06-25T09:57:23.271851",
     "verification_id": "VER-CH17-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH17-001",
@@ -4754,7 +5212,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "17",
@@ -4775,7 +5238,7 @@
     "ap1000": "AP1000-QA",
     "apr1400": "APR1400-QA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364040",
+    "created_at": "2026-06-25T09:57:23.271859",
     "verification_id": "VER-CH17-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH17-001",
@@ -4797,7 +5260,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "18",
@@ -4818,7 +5286,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364048",
+    "created_at": "2026-06-25T09:57:23.271870",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -4840,7 +5308,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "18",
@@ -4861,7 +5334,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364053",
+    "created_at": "2026-06-25T09:57:23.271877",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -4883,7 +5356,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "18",
@@ -4904,7 +5382,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364058",
+    "created_at": "2026-06-25T09:57:23.271882",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -4926,7 +5404,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "18",
@@ -4947,7 +5430,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364066",
+    "created_at": "2026-06-25T09:57:23.271890",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -4969,7 +5452,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "18",
@@ -4990,7 +5478,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364071",
+    "created_at": "2026-06-25T09:57:23.271899",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -5012,7 +5500,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "18",
@@ -5033,7 +5526,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364076",
+    "created_at": "2026-06-25T09:57:23.271906",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -5055,7 +5548,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "19",
@@ -5076,7 +5574,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364084",
+    "created_at": "2026-06-25T09:57:23.271916",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -5098,7 +5596,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "19",
@@ -5119,7 +5622,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364089",
+    "created_at": "2026-06-25T09:57:23.271926",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -5141,7 +5644,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "19",
@@ -5162,7 +5670,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364094",
+    "created_at": "2026-06-25T09:57:23.271933",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -5184,7 +5692,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "19",
@@ -5205,7 +5718,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364102",
+    "created_at": "2026-06-25T09:57:23.271946",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -5227,7 +5740,12 @@
     "requires_retest": true,
     "affected_requirement": "REQ-CH07-001",
     "affected_verification": "VER-CH07-001",
-    "affected_test": "TEST-CH07-001"
+    "affected_test": "TEST-CH07-001",
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "19",
@@ -5248,7 +5766,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364107",
+    "created_at": "2026-06-25T09:57:23.271953",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -5270,7 +5788,12 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   },
   {
     "chapter": "19",
@@ -5291,7 +5814,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-24T02:53:18.364112",
+    "created_at": "2026-06-25T09:57:23.271960",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -5313,6 +5836,11 @@
     "requires_retest": null,
     "affected_requirement": null,
     "affected_verification": null,
-    "affected_test": null
+    "affected_test": null,
+    "failure_id": null,
+    "failure_mode": null,
+    "related_test": null,
+    "failure_severity": null,
+    "failure_consequence": null
   }
 ]
