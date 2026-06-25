@@ -726,31 +726,31 @@ with tab3:
                 
                     net.from_nx(G)
 
-                        for node in net.nodes:
+                    for node in net.nodes:
 
-                            if node["id"].startswith(
-                                "CHG"
-                            ):
-                    
-                                node["color"] = "#ff0000"
-                    
-                            elif node["id"].startswith(
-                                "REQ"
-                            ):
-                    
-                                node["color"] = "#00cc66"
-                    
-                            elif node["id"].startswith(
-                                "VER"
-                            ):
-                    
-                                node["color"] = "#ffcc00"
-                    
-                            elif node["id"].startswith(
-                                "TEST"
-                            ):
-                    
-                                node["color"] = "#0099ff"
+                        if node["id"].startswith(
+                            "CHG"
+                        ):
+                
+                            node["color"] = "#ff0000"
+                
+                        elif node["id"].startswith(
+                            "REQ"
+                        ):
+                
+                            node["color"] = "#00cc66"
+                
+                        elif node["id"].startswith(
+                            "VER"
+                        ):
+                
+                            node["color"] = "#ffcc00"
+                
+                        elif node["id"].startswith(
+                            "TEST"
+                        ):
+                
+                            node["color"] = "#0099ff"
 
                         with tempfile.NamedTemporaryFile(
                             delete=False,
