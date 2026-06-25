@@ -718,53 +718,13 @@ for _, r in rkg_df.iterrows():
                             failure_id
                         )
 
-                    net = Network(
-                        height="500px",
-                        width="100%",
-                        directed=True
-                    )
-                
-                    net.from_nx(G)
-
-
-                        for _, row in rkg_df.iterrows():
-                        
-                            if pd.notna(row.get("change_id")) and pd.notna(row.get("affected_requirement")):
-                        
-                                G.add_edge(
-                                    row["change_id"],
-                                    row["affected_requirement"]
-                                )
-                        
-                            if pd.notna(row.get("affected_requirement")) and pd.notna(row.get("affected_verification")):
-                        
-                                G.add_edge(
-                                    row["affected_requirement"],
-                                    row["affected_verification"]
-                                )
-                        
-                            if pd.notna(row.get("affected_verification")) and pd.notna(row.get("affected_test")):
-                        
-                                G.add_edge(
-                                    row["affected_verification"],
-                                    row["affected_test"]
-                                )
-                        
-                            if pd.notna(row.get("affected_test")) and pd.notna(row.get("failure_id")):
-                        
-                                G.add_edge(
-                                    row["affected_test"],
-                                    row["failure_id"]
-                                )
-
-                        G.add_node(change_id)
-                        G.add_node(req_id)
-                        G.add_node(ver_id)
-                        G.add_node(test_id)
-                        
-                        G.add_edge(change_id, req_id)
-                        G.add_edge(req_id, ver_id)
-                        G.add_edge(ver_id, test_id)
+                        net = Network(
+                            height="500px",
+                            width="100%",
+                            directed=True
+                        )
+                    
+                        net.from_nx(G)
 
                         for node in net.nodes:
 
