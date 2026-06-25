@@ -433,10 +433,9 @@ for _, r in rkg_df.iterrows():
         st.subheader(
             "Ask GNDO"
         )
-        st.write("TEXT_INPUT_CREATED")
         
         ask_gndo = st.text_input(
-            "Ask a Traceability Question",
+            "Ask GNDO Question V14",
             placeholder="예: FAIL-CH07-001의 영향은?"
         )
         
