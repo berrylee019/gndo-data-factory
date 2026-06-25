@@ -435,7 +435,7 @@ for _, r in rkg_df.iterrows():
         )
         
         ask_gndo = st.text_input(
-            st.write("HERE-438")
+        st.write("HERE-438")
             "Ask a Traceability Question",
             placeholder="예: FAIL-CH07-001의 영향은?",
             key="ask_gndo_input_v14"
