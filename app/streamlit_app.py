@@ -718,13 +718,13 @@ for _, r in rkg_df.iterrows():
                             failure_id
                         )
 
-                        net = Network(
-                            height="500px",
-                            width="100%",
-                            directed=True
-                        )
-                    
-                        net.from_nx(G)
+                    net = Network(
+                        height="500px",
+                        width="100%",
+                        directed=True
+                    )
+                
+                    net.from_nx(G)
 
 
                         for _, row in rkg_df.iterrows():
