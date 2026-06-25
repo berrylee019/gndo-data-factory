@@ -433,6 +433,7 @@ for _, r in rkg_df.iterrows():
         st.subheader(
             "Ask GNDO"
         )
+        st.write("TEXT_INPUT_CREATED")
         
         ask_gndo = st.text_input(
             "Ask a Traceability Question",
