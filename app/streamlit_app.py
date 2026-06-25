@@ -726,7 +726,6 @@ for _, r in rkg_df.iterrows():
                     
                         net.from_nx(G)
 
-                        G = nx.DiGraph()
 
                         for _, row in rkg_df.iterrows():
                         
