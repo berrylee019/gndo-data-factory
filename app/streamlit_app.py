@@ -582,11 +582,33 @@ with tab3:
                     if target_id in G:
                         
                         impact_nodes = list(
-                            nx.descendants(
-                                G,
-                                target_id
-                            )
+                            set(impact_nodes)
+                            |
+                            semantic_nodes
                         )
+
+                        semantic_nodes = set()
+
+                        for node in impact_nodes:
+                        
+                            req_rows = rkg_df[
+                                rkg_df["requirement_id"] == node
+                            ]
+                        
+                            if not req_rows.empty:
+                        
+                                system = req_rows.iloc[0]["system_id"]
+                        
+                                related = rkg_df[
+                                    rkg_df["system_id"] == system
+                                ]
+                        
+                                semantic_nodes.update(
+                                    related["requirement_id"]
+                                    .dropna()
+                                    .tolist()
+                                )
+
                         
     
                     affected_requirements = [
