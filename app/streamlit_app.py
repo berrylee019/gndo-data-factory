@@ -238,7 +238,6 @@ with tab3:
     )
     rkg_df = pd.DataFrame(rkg)
 
-    st.write(GraphBuilder)
     GRAPH = GraphBuilder.build(rkg_df)
 
     with search_tab:
