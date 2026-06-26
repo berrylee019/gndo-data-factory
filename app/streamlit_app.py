@@ -1,4 +1,4 @@
-
+from engine.graph_builder import GraphBuilder
 import streamlit as st
 import json
 import pandas as pd
@@ -400,8 +400,9 @@ with tab3:
             "Ask GNDO"
         )
 
-        st.write("Graph Nodes :", len(GRAPH.nodes()))
-        st.write("Graph Edges :", len(GRAPH.edges()))
+        st.success(
+            f"Graph Loaded : {len(GRAPH.nodes())} nodes / {len(GRAPH.edges())} edges"
+        )
     
         G = nx.DiGraph()
         
