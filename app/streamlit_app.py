@@ -587,7 +587,15 @@ with tab3:
                                 target_id
                             )
                         )
-                    
+
+                        # ------------------------
+                        # DEBUG
+                        # ------------------------
+                        st.subheader("Impact Nodes")
+
+                        for node in impact_nodes:
+                            st.write(node)
+    
                     affected_requirements = [
                         n
                         for n in impact_nodes
