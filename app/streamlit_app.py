@@ -622,12 +622,12 @@ with tab3:
                                 .tolist()
                             )
 
-                            impact_nodes = list(
-                                set(impact_nodes)
-                                |
-                                semantic_nodes
-                            )
-                            
+                        impact_nodes = list(
+                            set(impact_nodes)
+                            |
+                            semantic_nodes
+                        )
+                        
                         expanded_nodes = set(impact_nodes)
 
                         for req in semantic_nodes:
