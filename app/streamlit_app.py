@@ -398,10 +398,6 @@ with tab3:
         st.subheader(
             "Ask GNDO"
         )
-
-        st.success(
-            f"Graph Loaded : {len(GRAPH.nodes())} nodes / {len(GRAPH.edges())} edges"
-        )
     
         G = nx.DiGraph()
         
