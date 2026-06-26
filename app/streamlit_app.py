@@ -6,7 +6,6 @@ ROOT = Path(__file__).resolve().parent.parent
 
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-    
 import streamlit as st
 import json
 import pandas as pd
