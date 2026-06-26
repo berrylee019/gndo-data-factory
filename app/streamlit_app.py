@@ -8,6 +8,15 @@ import json
 import pandas as pd
 from pathlib import Path
 import streamlit as st
+import os
+import sys
+
+print("CURRENT DIR =", os.getcwd())
+print("FILE =", __file__)
+print("PYTHON PATH =")
+for p in sys.path:
+    print(p)
+    
 import json
 import pandas as pd
 from pathlib import Path
