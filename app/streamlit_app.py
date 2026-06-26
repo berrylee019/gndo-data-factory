@@ -239,8 +239,8 @@ with tab3:
     rkg_df = pd.DataFrame(rkg)
 
     GRAPH = GraphBuilder.build(rkg_df)
-    st.write("Graph Nodes :", len(GRAPH.nodes()))
-    st.write("Graph Edges :", len(GRAPH.edges()))
+        st.write("Graph Nodes :", len(GRAPH.nodes()))
+        st.write("Graph Edges :", len(GRAPH.edges()))
 
     with search_tab:
 
