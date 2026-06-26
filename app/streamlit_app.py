@@ -7,6 +7,7 @@ import json
 import pandas as pd
 from pathlib import Path
 from engine.graph_builder import GraphBuilder
+from engine.propagation_engine import PropagationEngine
 import networkx as nx
 
 from pyvis.network import Network
