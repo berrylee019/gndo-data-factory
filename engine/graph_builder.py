@@ -11,28 +11,22 @@ class GraphBuilder:
 
         for _, r in rkg_df.iterrows():
 
-            if pd.notna(r.get("change_id")) and pd.notna(r.get("affected_requirement")):
-                G.add_edge(
-                    r["change_id"],
-                    r["affected_requirement"]
-                )
+            change = r.get("change_id")
+            req = r.get("affected_requirement")
+            ver = r.get("affected_verification")
+            test = r.get("affected_test")
+            fail = r.get("failure_id")
 
-            if pd.notna(r.get("affected_requirement")) and pd.notna(r.get("affected_verification")):
-                G.add_edge(
-                    r["affected_requirement"],
-                    r["affected_verification"]
-                )
+            if pd.notna(change) and pd.notna(req):
+                G.add_edge(change, req)
 
-            if pd.notna(r.get("affected_verification")) and pd.notna(r.get("affected_test")):
-                G.add_edge(
-                    r["affected_verification"],
-                    r["affected_test"]
-                )
+            if pd.notna(req) and pd.notna(ver):
+                G.add_edge(req, ver)
 
-            if pd.notna(r.get("affected_test")) and pd.notna(r.get("failure_id")):
-                G.add_edge(
-                    r["affected_test"],
-                    r["failure_id"]
-                )
+            if pd.notna(ver) and pd.notna(test):
+                G.add_edge(ver, test)
+
+            if pd.notna(test) and pd.notna(fail):
+                G.add_edge(test, fail)
 
         return G
