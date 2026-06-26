@@ -685,119 +685,119 @@ with tab3:
                             if str(n).startswith("FAIL-")
                         ]
                     
-                st.subheader(
-                    "Change Impact Analysis"
-                )
-
-                st.subheader(
-                    "Impact Summary"
-                )
-            
-                st.metric(
-                    "Requirements",
-                    len(affected_requirements)
-                )
-                
-                st.metric(
-                    "Verifications",
-                    len(affected_verifications)
-                )
-                
-                st.metric(
-                    "Tests",
-                    len(affected_tests)
-                )
-                
-                st.metric(
-                    "Failures",
-                    len(affected_failures)
-                )
-
-                change_id = row.get(
-                    "change_id"
-                )
-            
-                req_id = row.get(
-                    "affected_requirement"
-                )
-            
-                ver_id = row.get(
-                    "affected_verification"
-                )
-            
-                test_id = row.get(
-                    "affected_test"
-                )
-
-                failure_id = row.get(
-                    "failure_id"
-                )
-
-                G = nx.DiGraph()
-
-                if change_id:
-            
-                    G.add_node(
-                        change_id,
-                        group="CHANGE"
-                    )
-            
-                if req_id:
-            
-                    G.add_node(
-                        req_id,
-                        group="REQUIREMENT"
-                    )
-            
-                if ver_id:
-            
-                    G.add_node(
-                        ver_id,
-                        group="VERIFICATION"
-                    )
-            
-                if test_id:
-            
-                    G.add_node(
-                        test_id,
-                        group="TEST"
-                    )
-            
-                if change_id and req_id:
-            
-                    G.add_edge(
-                        change_id,
-                        req_id
-                    )
-            
-                if req_id and ver_id:
-            
-                    G.add_edge(
-                        req_id,
-                        ver_id
-                    )
-            
-                if ver_id and test_id:
-            
-                    G.add_edge(
-                        ver_id,
-                        test_id
-                    )
-
-                if failure_id:
-
-                    G.add_edge(
-                        test_id,
-                        failure_id
-                    )
-
-                    net = Network(
-                        height="500px",
-                        width="100%",
-                        directed=True
-                    )
-                
-                    net.from_nx(G)
+                        st.subheader(
+                            "Change Impact Analysis"
+                        )
+        
+                        st.subheader(
+                            "Impact Summary"
+                        )
+                    
+                        st.metric(
+                            "Requirements",
+                            len(affected_requirements)
+                        )
+                        
+                        st.metric(
+                            "Verifications",
+                            len(affected_verifications)
+                        )
+                        
+                        st.metric(
+                            "Tests",
+                            len(affected_tests)
+                        )
+                        
+                        st.metric(
+                            "Failures",
+                            len(affected_failures)
+                        )
+        
+                        change_id = row.get(
+                            "change_id"
+                        )
+                    
+                        req_id = row.get(
+                            "affected_requirement"
+                        )
+                    
+                        ver_id = row.get(
+                            "affected_verification"
+                        )
+                    
+                        test_id = row.get(
+                            "affected_test"
+                        )
+        
+                        failure_id = row.get(
+                            "failure_id"
+                        )
+        
+                        G = nx.DiGraph()
+        
+                        if change_id:
+                    
+                            G.add_node(
+                                change_id,
+                                group="CHANGE"
+                            )
+                    
+                        if req_id:
+                    
+                            G.add_node(
+                                req_id,
+                                group="REQUIREMENT"
+                            )
+                    
+                        if ver_id:
+                    
+                            G.add_node(
+                                ver_id,
+                                group="VERIFICATION"
+                            )
+                    
+                        if test_id:
+                    
+                            G.add_node(
+                                test_id,
+                                group="TEST"
+                            )
+                    
+                        if change_id and req_id:
+                    
+                            G.add_edge(
+                                change_id,
+                                req_id
+                            )
+                    
+                        if req_id and ver_id:
+                    
+                            G.add_edge(
+                                req_id,
+                                ver_id
+                            )
+                    
+                        if ver_id and test_id:
+                    
+                            G.add_edge(
+                                ver_id,
+                                test_id
+                            )
+        
+                        if failure_id:
+        
+                            G.add_edge(
+                                test_id,
+                                failure_id
+                            )
+        
+                            net = Network(
+                                height="500px",
+                                width="100%",
+                                directed=True
+                            )
+                        
+                            net.from_nx(G)
 
                     for node in net.nodes:
 
