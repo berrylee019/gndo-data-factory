@@ -582,9 +582,10 @@ with tab3:
                     if target_id in G:
                         
                         impact_nodes = list(
-                            set(impact_nodes)
-                            |
-                            semantic_nodes
+                            nx.descendants(
+                                G,
+                                target_id
+                            )
                         )
 
                         # ==========================
@@ -621,6 +622,12 @@ with tab3:
                                 .tolist()
                             )
 
+                            impact_nodes = list(
+                                set(impact_nodes)
+                                |
+                                semantic_nodes
+                            )
+                            
                         expanded_nodes = set(impact_nodes)
 
                         for req in semantic_nodes:
