@@ -596,18 +596,6 @@ with tab3:
                         for node in impact_nodes:
                             st.write(node)
                         
-                        st.write("Affected Requirements")
-                        st.write(affected_requirements)
-                        
-                        st.write("Affected Verifications")
-                        st.write(affected_verifications)
-                        
-                        st.write("Affected Tests")
-                        st.write(affected_tests)
-                        
-                        st.write("Affected Failures")
-                        st.write(affected_failures)
-                        
     
                     affected_requirements = [
                         n
@@ -633,6 +621,26 @@ with tab3:
                         if str(n).startswith("FAIL-")
                     ]
 
+                    st.write("Affected Requirements")
+                    st.write(affected_requirements)
+                    
+                    st.write("Affected Verifications")
+                    st.write(affected_verifications)
+                    
+                    st.write("Affected Tests")
+                    st.write(affected_tests)
+                    
+                    st.write("Affected Failures")
+                    st.write(affected_failures)
+
+                    st.write(rkg_df[
+                        [
+                            "failure_id",
+                            "affected_test",
+                            "affected_requirement"
+                        ]
+                    ].drop_duplicates())
+                    
                 st.subheader(
                     "Change Impact Analysis"
                 )
