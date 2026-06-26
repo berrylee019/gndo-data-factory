@@ -436,7 +436,7 @@ with tab3:
                 )
                 
         ask_gndo = st.text_input(
-            "Ask GNDO Question V14",
+            "Ask GNDO Question",
             placeholder="예: FAIL-CH07-001의 영향은?"
         )
         
