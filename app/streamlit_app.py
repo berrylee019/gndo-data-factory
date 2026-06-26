@@ -587,14 +587,6 @@ with tab3:
                                 target_id
                             )
                         )
-
-                        # ------------------------
-                        # DEBUG
-                        # ------------------------
-                        st.subheader("Impact Nodes")
-
-                        for node in impact_nodes:
-                            st.write(node)
                         
     
                     affected_requirements = [
@@ -620,26 +612,6 @@ with tab3:
                         for n in impact_nodes
                         if str(n).startswith("FAIL-")
                     ]
-
-                    st.write("Affected Requirements")
-                    st.write(affected_requirements)
-                    
-                    st.write("Affected Verifications")
-                    st.write(affected_verifications)
-                    
-                    st.write("Affected Tests")
-                    st.write(affected_tests)
-                    
-                    st.write("Affected Failures")
-                    st.write(affected_failures)
-
-                    st.write(rkg_df[
-                        [
-                            "failure_id",
-                            "affected_test",
-                            "affected_requirement"
-                        ]
-                    ].drop_duplicates())
                     
                 st.subheader(
                     "Change Impact Analysis"
