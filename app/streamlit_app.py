@@ -645,9 +645,20 @@ with tab3:
 
                         st.subheader("Semantic Expansion")
 
-                        st.write("Same System Requirements")
+                        st.write("Impact Nodes")
+                        st.write(impact_nodes)
                         
-                        st.write(sorted(list(semantic_nodes)))
+                        st.write("Affected Requirements")
+                        st.write(affected_requirements)
+                        
+                        st.write("Affected Verifications")
+                        st.write(affected_verifications)
+                        
+                        st.write("Affected Tests")
+                        st.write(affected_tests)
+                        
+                        st.write("Affected Failures")
+                        st.write(affected_failures)
                         
     
                     affected_requirements = [
