@@ -587,28 +587,60 @@ with tab3:
                             semantic_nodes
                         )
 
+                        # ==========================
+                        # Semantic Expansion
+                        # Same System
+                        # ==========================
+                        
                         semantic_nodes = set()
-
+                        
                         for node in impact_nodes:
+                        
+                            if not str(node).startswith("REQ-"):
+                                continue
                         
                             req_rows = rkg_df[
                                 rkg_df["requirement_id"] == node
                             ]
                         
-                            if not req_rows.empty:
+                            if req_rows.empty:
+                                continue
                         
-                                system = req_rows.iloc[0]["system_id"]
+                            system_id = req_rows.iloc[0].get("system_id")
                         
-                                related = rkg_df[
-                                    rkg_df["system_id"] == system
-                                ]
+                            if pd.isna(system_id):
+                                continue
                         
-                                semantic_nodes.update(
-                                    related["requirement_id"]
-                                    .dropna()
-                                    .tolist()
-                                )
+                            same_system = rkg_df[
+                                rkg_df["system_id"] == system_id
+                            ]
+                        
+                            semantic_nodes.update(
+                                same_system["requirement_id"]
+                                .dropna()
+                                .tolist()
+                            )
 
+                        expanded_nodes = set(impact_nodes)
+
+                        for req in semantic_nodes:
+                        
+                            if req in G:
+                        
+                                expanded_nodes.update(
+                                    nx.descendants(
+                                        G,
+                                        req
+                                    )
+                                )
+                        
+                        impact_nodes = list(expanded_nodes)
+
+                        st.subheader("Semantic Expansion")
+
+                        st.write("Same System Requirements")
+                        
+                        st.write(sorted(list(semantic_nodes)))
                         
     
                     affected_requirements = [
