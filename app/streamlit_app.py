@@ -14,7 +14,6 @@ import streamlit as st
 import json
 import pandas as pd
 from pathlib import Path
-from engine.graph_builder import GraphBuilder
 
 import networkx as nx
 
