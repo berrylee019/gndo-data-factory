@@ -1,3 +1,4 @@
+from engine.graph_builder import GraphBuilder
 import streamlit as st
 import json
 import pandas as pd
@@ -8,7 +9,7 @@ import pandas as pd
 from pathlib import Path
 
 import networkx as nx
-from engine.graph_builder import GraphBuilder
+
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
