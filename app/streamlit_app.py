@@ -1,32 +1,16 @@
-import sys
-import os
-
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import os
 import sys
 from pathlib import Path
-
-
 import streamlit as st
 import json
 import pandas as pd
 from pathlib import Path
-import streamlit as st
-import os
-import sys
-
-print("CURRENT DIR =", os.getcwd())
-print("FILE =", __file__)
-print("PYTHON PATH =")
-for p in sys.path:
-    print(p)
-    
+import streamlit as st   
 import json
 import pandas as pd
 from pathlib import Path
-
 import networkx as nx
-
+from ..engine.graph_builder import GraphBuilder
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
