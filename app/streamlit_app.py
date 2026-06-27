@@ -16,17 +16,6 @@ import tempfile
 from gndo_engine.graph_builder import GraphBuilder
 from gndo_engine.propagation_engine import PropagationEngine
 
-import engine
-
-st.write("ENGINE MODULE")
-st.write(engine)
-
-st.write("ENGINE FILE")
-st.write(getattr(engine, "__file__", "No __file__"))
-
-st.write("ENGINE PATH")
-st.write(getattr(engine, "__path__", "No __path__"))
-
 
 st.set_page_config(
     page_title="GNDO Data Factory",
