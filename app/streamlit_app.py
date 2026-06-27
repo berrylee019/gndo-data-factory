@@ -247,7 +247,9 @@ with tab3:
         ]
     )
     rkg_df = pd.DataFrame(rkg)
-    
+
+    st.write("RKG DF SIZE")
+    st.write(rkg_df.shape)
     GRAPH = GraphBuilder.build(rkg_df)
     
     st.success("✅ GraphBuilder Loaded")
