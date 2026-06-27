@@ -14,7 +14,7 @@ from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
 # from engine.graph_builder import GraphBuilder
-from engine.propagation_engine import PropagationEngine
+# from engine.propagation_engine import PropagationEngine
 
 st.write("CURRENT DIR")
 st.write(os.getcwd())
