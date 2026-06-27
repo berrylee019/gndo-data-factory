@@ -13,7 +13,14 @@ import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
-from gndo_engine.graph_builder import GraphBuilder
+# from gndo_engine.graph_builder import GraphBuilder
+import gndo_engine.graph_builder as gb
+
+st.write("GraphBuilder file")
+st.write(gb.__file__)
+
+GraphBuilder = gb.GraphBuilder
+
 from gndo_engine.propagation_engine import PropagationEngine
 
 try:
