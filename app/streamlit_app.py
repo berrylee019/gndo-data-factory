@@ -259,12 +259,6 @@ with tab3:
     st.write(rkg_df.shape)
     st.write(rkg_df.columns.tolist())
 
-    GRAPH, debug_df = GraphBuilder.build(rkg_df)
-
-    st.write(debug_df)
-    st.metric("Graph Nodes", GRAPH.number_of_nodes())
-    st.metric("Graph Edges", GRAPH.number_of_edges())
-
     GRAPH = GraphBuilder.build(rkg_df)
     
     st.success("✅ GraphBuilder Loaded")
