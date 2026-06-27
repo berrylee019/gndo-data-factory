@@ -8,6 +8,20 @@ class GraphBuilder:
 
         G = nx.DiGraph()
 
+        print("========== FIRST ROW ==========")
+
+        print(
+            rkg_df.iloc[0][[
+                "change_id",
+                "affected_requirement",
+                "affected_verification",
+                "affected_test",
+                "failure_id"
+            ]]
+        )
+
+        print("===============================")
+
         edge_count = 0
 
         for _, r in rkg_df.iterrows():
