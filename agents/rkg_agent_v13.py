@@ -86,6 +86,16 @@ def generate_metadata():
 
     print("Loaded Successfully")
 
+        stats = {
+        "Requirements": len(rkg_v11),
+        "Impacts": len(impacts),
+        "Changes": len(changes),
+        "Failures": len(failures)
+    }
+
+    print(stats)
+
+    return stats
 
 
 if __name__ == "__main__":
