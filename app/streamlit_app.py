@@ -262,10 +262,23 @@ with tab3:
     st.metric("Graph Nodes", GRAPH.number_of_nodes())
     st.metric("Graph Edges", GRAPH.number_of_edges())
 
-    st.subheader("RKG HEAD (First 3 Rows)")
-
+    st.subheader("RKG Sample")
+    
     st.dataframe(
-        rkg_df.head(3)
+    
+        rkg_df[
+            [
+                "requirement_id",
+                "verification_id",
+                "test_id",
+                "failure_id",
+                "change_id",
+                "affected_requirement",
+                "affected_verification",
+                "affected_test"
+            ]
+        ].head(3)
+    
     )
     
     with search_tab:
