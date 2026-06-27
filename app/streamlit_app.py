@@ -247,8 +247,13 @@ with tab3:
         ]
     )
     rkg_df = pd.DataFrame(rkg)
+    
     GRAPH = GraphBuilder.build(rkg_df)
-    print("GRAPH BUILT")
+    
+    st.success("✅ GraphBuilder Loaded")
+    
+    st.write("Graph Nodes :", GRAPH.number_of_nodes())
+    st.write("Graph Edges :", GRAPH.number_of_edges())
     
     with search_tab:
 
