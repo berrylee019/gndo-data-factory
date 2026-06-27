@@ -268,16 +268,17 @@ with tab3:
     
         rkg_df[
             [
+                "chapter",
                 "requirement_id",
                 "verification_id",
                 "test_id",
                 "failure_id",
                 "change_id",
-                "affected_requirement",
-                "affected_verification",
-                "affected_test"
+                "affected_requirement"
             ]
-        ].head(3)
+        ].query(
+            "chapter=='CH07'"
+        ).head(10)
     
     )
     
