@@ -251,6 +251,15 @@ with tab3:
     st.write("RKG DF SIZE")
     st.write(rkg_df.shape)
     st.write(rkg_df.columns.tolist())
+
+    print(rkg_df.iloc[0][[
+        "change_id",
+        "affected_requirement",
+        "affected_verification",
+        "affected_test",
+        "failure_id"
+    ]])
+
     GRAPH = GraphBuilder.build(rkg_df)
     
     st.success("✅ GraphBuilder Loaded")
