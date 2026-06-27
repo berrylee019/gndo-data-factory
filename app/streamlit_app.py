@@ -252,8 +252,8 @@ with tab3:
     
     st.success("✅ GraphBuilder Loaded")
     
-    st.write("Graph Nodes :", GRAPH.number_of_nodes())
-    st.write("Graph Edges :", GRAPH.number_of_edges())
+    st.metric("Graph Nodes", GRAPH.number_of_nodes())
+    st.metric("Graph Edges", GRAPH.number_of_edges())
     
     with search_tab:
 
