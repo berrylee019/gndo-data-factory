@@ -250,6 +250,7 @@ with tab3:
 
     st.write("RKG DF SIZE")
     st.write(rkg_df.shape)
+    st.write(rkg_df.columns.tolist())
     GRAPH = GraphBuilder.build(rkg_df)
     
     st.success("✅ GraphBuilder Loaded")
