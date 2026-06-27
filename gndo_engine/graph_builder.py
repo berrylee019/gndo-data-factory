@@ -1,6 +1,7 @@
 import networkx as nx
 import pandas as pd
 
+
 class GraphBuilder:
 
     @staticmethod
@@ -8,52 +9,119 @@ class GraphBuilder:
 
         G = nx.DiGraph()
 
-        print("========== FIRST ROW ==========")
-
-        print(
-            rkg_df.iloc[0][[
-                "change_id",
-                "affected_requirement",
-                "affected_verification",
-                "affected_test",
-                "failure_id"
-            ]]
-        )
-
-        print("===============================")
-
-        edge_count = 0
-
         for _, r in rkg_df.iterrows():
 
-            change = r.get("change_id")
-            req = r.get("affected_requirement")
-            ver = r.get("affected_verification")
-            test = r.get("affected_test")
+            ##################################################
+            # IDs
+            ##################################################
+
+            req = r.get("requirement_id")
+            ver = r.get("verification_id")
+            test = r.get("test_id")
             fail = r.get("failure_id")
 
-            if pd.notna(change) and pd.notna(req):
-                print("ADD EDGE", change, "->", req)
-                
-                G.add_edge(change, req)
-                edge_count += 1
+            change = r.get("change_id")
+
+            affected_req = r.get("affected_requirement")
+            affected_ver = r.get("affected_verification")
+            affected_test = r.get("affected_test")
+
+            ##################################################
+            # Requirement
+            ##################################################
+
+            if pd.notna(req):
+
+                G.add_node(
+                    req,
+                    type="REQ",
+                    chapter=r.get("chapter"),
+                    system=r.get("system_id"),
+                    component=r.get("component_id")
+                )
+
+            ##################################################
+            # Verification
+            ##################################################
+
+            if pd.notna(ver):
+
+                G.add_node(
+                    ver,
+                    type="VER"
+                )
+
+            ##################################################
+            # Test
+            ##################################################
+
+            if pd.notna(test):
+
+                G.add_node(
+                    test,
+                    type="TEST"
+                )
+
+            ##################################################
+            # Failure
+            ##################################################
+
+            if pd.notna(fail):
+
+                G.add_node(
+                    fail,
+                    type="FAIL"
+                )
+
+            ##################################################
+            # Change
+            ##################################################
+
+            if pd.notna(change):
+
+                G.add_node(
+                    change,
+                    type="CHANGE"
+                )
+
+            ##################################################
+            # Traceability
+            ##################################################
 
             if pd.notna(req) and pd.notna(ver):
+
                 G.add_edge(req, ver)
-                edge_count += 1
 
             if pd.notna(ver) and pd.notna(test):
+
                 G.add_edge(ver, test)
-                edge_count += 1
 
             if pd.notna(test) and pd.notna(fail):
-                G.add_edge(test, fail)
-                edge_count += 1
 
-        print("EDGE COUNT =", edge_count)
-        print("GRAPH NODES =", len(G.nodes()))
-        print("GRAPH EDGES =", len(G.edges()))
+                G.add_edge(test, fail)
+
+            ##################################################
+            # Requirement -> Failure
+            ##################################################
+
+            if pd.notna(req) and pd.notna(fail):
+
+                G.add_edge(req, fail)
+
+            ##################################################
+            # Change Impact
+            ##################################################
+
+            if pd.notna(change) and pd.notna(affected_req):
+
+                G.add_edge(change, affected_req)
+
+            if pd.notna(affected_req) and pd.notna(affected_ver):
+
+                G.add_edge(affected_req, affected_ver)
+
+            if pd.notna(affected_ver) and pd.notna(affected_test):
+
+                G.add_edge(affected_ver, affected_test)
 
         return G
-
-
