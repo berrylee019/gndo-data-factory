@@ -13,6 +13,7 @@ import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
+from engine.graph_builder import GraphBuilder
 
 st.set_page_config(
     page_title="GNDO Data Factory",
@@ -238,7 +239,11 @@ with tab3:
         ]
     )
     rkg_df = pd.DataFrame(rkg)
+    GRAPH = GraphBuilder.build(rkg_df)
 
+    st.write("Graph Nodes :", len(GRAPH.nodes()))
+    st.write("Graph Edges :", len(GRAPH.edges()))
+    
     with search_tab:
 
         st.subheader("Search")
