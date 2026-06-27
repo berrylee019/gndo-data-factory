@@ -6,30 +6,20 @@ from datetime import datetime
 # INPUT FILES
 ########################################################
 
-RKG_V11_FILE = (
-    "storage/metadata/rkg_data_v11.json"
-)
+RKG_V11_FILE = "storage/metadata/rkg_data_v11.json"
 
-IMPACT_FILE = (
-    "storage/rkg/impact_registry_v11.json"
-)
+IMPACT_FILE = "storage/rkg/impact_registry_v11.json"
 
-CHANGE_FILE = (
-    "storage/rkg/change_registry_v12.json"
-)
+CHANGE_FILE = "storage/rkg/change_registry_v12.json"
 
-FAILURE_FILE = (
-    "storage/rkg/failure_registry_v10.json"
-)
+FAILURE_FILE = "storage/rkg/failure_registry_v10.json"
 
 
 ########################################################
 # OUTPUT
 ########################################################
 
-OUTPUT_FILE = (
-    "storage/metadata/rkg_data_v13.json"
-)
+OUTPUT_FILE = "storage/metadata/rkg_data_v13.json"
 
 
 ########################################################
@@ -48,56 +38,49 @@ def load_json(path):
 
 
 ########################################################
-# Generator
+# Registry Maps
 ########################################################
 
-def generate_metadata():
+def build_failure_map(failures):
 
-    print("===================================")
-    print("GNDO RKG AGENT v13")
-    print("===================================")
+    failure_map = {}
 
-    rkg_v11 = load_json(
-        RKG_V11_FILE
-    )
+    for row in failures:
 
-    impacts = load_json(
-        IMPACT_FILE
-    )
+        req = row.get("requirement_id")
 
-    changes = load_json(
-        CHANGE_FILE
-    )
+        if req:
 
-    failures = load_json(
-        FAILURE_FILE
-    )
+            failure_map[req] = row
 
-    print()
-
-    print("Requirements :", len(rkg_v11))
-    print("Impacts      :", len(impacts))
-    print("Changes      :", len(changes))
-    print("Failures     :", len(failures))
-
-    print()
-
-    metadata = []
-
-    print("Loaded Successfully")
-
-    stats = {
-        "Requirements": len(rkg_v11),
-        "Impacts": len(impacts),
-        "Changes": len(changes),
-        "Failures": len(failures)
-    }
-
-    print(stats)
-
-    return stats
+    return failure_map
 
 
-if __name__ == "__main__":
+def build_impact_map(impacts):
 
-    generate_metadata()
+    impact_map = {}
+
+    for row in impacts:
+
+        fid = row.get("failure_id")
+
+        if fid:
+
+            impact_map[fid] = row
+
+    return impact_map
+
+
+def build_change_map(changes):
+
+    change_map = {}
+
+    for row in changes:
+
+        target = row.get("target_id")
+
+        if target:
+
+            change_map[target] = row
+
+    return change_map
