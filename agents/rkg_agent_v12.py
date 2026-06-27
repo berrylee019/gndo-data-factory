@@ -131,7 +131,10 @@ def generate_metadata():
             list(change_map.keys())[:5]
         )
 
-        print("CHANGE:", change)
+        print(
+            "CHANGE:",
+            change
+        )
         
         metadata.append({
 
