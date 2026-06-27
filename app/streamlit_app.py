@@ -16,12 +16,7 @@ import tempfile
 # from engine.graph_builder import GraphBuilder
 # from engine.propagation_engine import PropagationEngine
 
-try:
-    from engine.graph_builder import GraphBuilder
-    st.success("GraphBuilder import success")
-except Exception as e:
-    st.error(e)
-    st.stop()
+st.write(os.listdir("engine"))
 
 st.set_page_config(
     page_title="GNDO Data Factory",
