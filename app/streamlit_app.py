@@ -240,6 +240,7 @@ with tab3:
     )
     rkg_df = pd.DataFrame(rkg)
     GRAPH = GraphBuilder.build(rkg_df)
+    print("GRAPH BUILT")
     
     with search_tab:
 
@@ -399,10 +400,6 @@ with tab3:
         
         st.subheader(
             "Ask GNDO"
-        )
-
-        st.success(
-            f"Graph Loaded : {len(GRAPH.nodes())} nodes / {len(GRAPH.edges())} edges"
         )
         
         G = nx.DiGraph()
