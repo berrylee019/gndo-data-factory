@@ -255,16 +255,18 @@ with tab3:
     )
     rkg_df = pd.DataFrame(rkg)
 
-    st.write("RKG DF SIZE")
-    st.write(rkg_df.shape)
-    st.write(rkg_df.columns.tolist())
-
     GRAPH = GraphBuilder.build(rkg_df)
     
     st.success("✅ GraphBuilder Loaded")
     
     st.metric("Graph Nodes", GRAPH.number_of_nodes())
     st.metric("Graph Edges", GRAPH.number_of_edges())
+
+    st.subheader("RKG HEAD (First 3 Rows)")
+
+    st.dataframe(
+        rkg_df.head(3)
+    )
     
     with search_tab:
 
