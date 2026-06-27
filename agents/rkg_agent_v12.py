@@ -125,11 +125,13 @@ def generate_metadata():
             "ARTIFACT:",
             artifact_id
         )
-        
+
         print(
-            "CHANGE:",
-            change
+            "CHANGE MAP KEYS:",
+            list(change_map.keys())[:5]
         )
+
+        print("CHANGE:", change)
         
         metadata.append({
 
