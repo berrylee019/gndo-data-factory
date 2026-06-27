@@ -16,19 +16,6 @@ import tempfile
 from gndo_engine.graph_builder import GraphBuilder
 import gndo_engine.graph_builder as gb
 
-st.write("GraphBuilder file")
-st.write(gb.__file__)
-
-GraphBuilder = gb.GraphBuilder
-
-from gndo_engine.propagation_engine import PropagationEngine
-
-try:
-    from gndo_engine.graph_builder import GraphBuilder
-    st.success("✅ GraphBuilder Loaded")
-except Exception as e:
-    st.error(e)
-    st.stop()
 
 st.set_page_config(
     page_title="GNDO Data Factory",
@@ -255,13 +242,9 @@ with tab3:
     )
     rkg_df = pd.DataFrame(rkg)
 
-    from agents.rkg_agent_v13 import generate_metadata
+    st.write(rkg_df.shape)
     
-    stats = generate_metadata()
-    
-    st.subheader("GNDO Registry Status")
-    
-    st.write(stats)
+    st.write(rkg_df.columns.tolist())
     
     with search_tab:
 
