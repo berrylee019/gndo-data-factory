@@ -74,13 +74,13 @@ jobs:
           python agents/rkg_agent_v11.py
 
           python agents/change_registry_agent_v12.py
-          python agents/rkg_agent_v12.py
+          python agents/rkg_agent_v13.py
 
       - name: Generate Impact Registry
         run: python agents/impact_registry_agent_v11.py
       
-      - name: Generate RKG v11
-        run: python agents/rkg_agent_v11.py
+      - name: Generate RKG v13
+        run: python agents/rkg_agent_v13.py
 
 
       - name: Python Syntax Check
