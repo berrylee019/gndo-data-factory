@@ -13,7 +13,7 @@ import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
-# from gndo_engine.graph_builder import GraphBuilder
+from gndo_engine.graph_builder import GraphBuilder
 import gndo_engine.graph_builder as gb
 
 st.write("GraphBuilder file")
@@ -255,32 +255,9 @@ with tab3:
     )
     rkg_df = pd.DataFrame(rkg)
 
-    GRAPH = GraphBuilder.build(rkg_df)
+    st.subheader("GNDO RKG Status")
     
-    st.success("✅ GraphBuilder Loaded")
-    
-    st.metric("Graph Nodes", GRAPH.number_of_nodes())
-    st.metric("Graph Edges", GRAPH.number_of_edges())
-
-    st.subheader("RKG Sample")
-    
-    st.dataframe(
-    
-        rkg_df[
-            [
-                "chapter",
-                "requirement_id",
-                "verification_id",
-                "test_id",
-                "failure_id",
-                "change_id",
-                "affected_requirement"
-            ]
-        ].query(
-            "chapter=='CH07'"
-        ).head(10)
-    
-    )
+    st.write("Requirements :", len(rkg_df))
     
     with search_tab:
 
