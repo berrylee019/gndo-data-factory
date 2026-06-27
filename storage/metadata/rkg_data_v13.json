@@ -18,7 +18,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032582",
+    "created_at": "2026-06-27T08:23:39.204533",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -28,7 +28,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "01",
@@ -49,7 +53,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032590",
+    "created_at": "2026-06-27T08:23:39.204541",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -59,7 +63,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "01",
@@ -80,7 +88,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032594",
+    "created_at": "2026-06-27T08:23:39.204543",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -90,7 +98,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "01",
@@ -111,7 +123,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032596",
+    "created_at": "2026-06-27T08:23:39.204544",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -121,7 +133,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "01",
@@ -142,7 +158,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032598",
+    "created_at": "2026-06-27T08:23:39.204544",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -152,7 +168,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "01",
@@ -173,7 +193,7 @@
     "ap1000": "AP1000-CH01",
     "apr1400": "APR1400-CH01",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032599",
+    "created_at": "2026-06-27T08:23:39.204545",
     "verification_id": "VER-CH01-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH01-001",
@@ -183,7 +203,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "02",
@@ -200,7 +224,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032600",
+    "created_at": "2026-06-27T08:23:39.204546",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -210,7 +234,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "02",
@@ -227,7 +255,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032601",
+    "created_at": "2026-06-27T08:23:39.204548",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -237,7 +265,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "02",
@@ -254,7 +286,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032602",
+    "created_at": "2026-06-27T08:23:39.204550",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -264,7 +296,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "02",
@@ -281,7 +317,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032603",
+    "created_at": "2026-06-27T08:23:39.204551",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -291,7 +327,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "02",
@@ -308,7 +348,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032604",
+    "created_at": "2026-06-27T08:23:39.204551",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -318,7 +358,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "02",
@@ -335,7 +379,7 @@
     "ap1000": "AP1000-CH02",
     "apr1400": "APR1400-CH02",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032605",
+    "created_at": "2026-06-27T08:23:39.204552",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -345,7 +389,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "03",
@@ -366,7 +414,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032606",
+    "created_at": "2026-06-27T08:23:39.204555",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -376,7 +424,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "03",
@@ -397,7 +449,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032607",
+    "created_at": "2026-06-27T08:23:39.204555",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -407,7 +459,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "03",
@@ -428,7 +484,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032607",
+    "created_at": "2026-06-27T08:23:39.204556",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -438,7 +494,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "03",
@@ -459,7 +519,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032608",
+    "created_at": "2026-06-27T08:23:39.204557",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -469,7 +529,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "03",
@@ -490,7 +554,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032609",
+    "created_at": "2026-06-27T08:23:39.204557",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -500,7 +564,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "03",
@@ -521,7 +589,7 @@
     "ap1000": "AP1000-CH03",
     "apr1400": "APR1400-CH03",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032610",
+    "created_at": "2026-06-27T08:23:39.204560",
     "verification_id": "VER-CH03-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH03-001",
@@ -531,7 +599,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "04",
@@ -548,7 +620,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032625",
+    "created_at": "2026-06-27T08:23:39.204560",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -558,7 +630,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "04",
@@ -575,7 +651,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032628",
+    "created_at": "2026-06-27T08:23:39.204561",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -585,7 +661,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "04",
@@ -602,7 +682,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032629",
+    "created_at": "2026-06-27T08:23:39.204562",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -612,7 +692,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "04",
@@ -629,7 +713,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032630",
+    "created_at": "2026-06-27T08:23:39.204562",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -639,7 +723,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "04",
@@ -656,7 +744,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032631",
+    "created_at": "2026-06-27T08:23:39.204568",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -666,7 +754,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "04",
@@ -683,7 +775,7 @@
     "ap1000": "AP1000-CH04",
     "apr1400": "APR1400-CH04",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032632",
+    "created_at": "2026-06-27T08:23:39.204569",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -693,7 +785,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "05",
@@ -710,7 +806,7 @@
     "ap1000": "AP1000-CH05",
     "apr1400": "APR1400-CH05",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032633",
+    "created_at": "2026-06-27T08:23:39.204570",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -720,7 +816,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "05",
@@ -737,7 +837,7 @@
     "ap1000": "AP1000-CH05",
     "apr1400": "APR1400-CH05",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032634",
+    "created_at": "2026-06-27T08:23:39.204571",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -747,7 +847,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "05",
@@ -764,7 +868,7 @@
     "ap1000": "AP1000-CH05",
     "apr1400": "APR1400-CH05",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032635",
+    "created_at": "2026-06-27T08:23:39.204571",
     "verification_id": null,
     "verification_method": null,
     "verification_name": null,
@@ -774,7 +878,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "06",
@@ -795,7 +903,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032636",
+    "created_at": "2026-06-27T08:23:39.204573",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -805,7 +913,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "06",
@@ -826,7 +938,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032637",
+    "created_at": "2026-06-27T08:23:39.204574",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -836,7 +948,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "06",
@@ -857,7 +973,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032637",
+    "created_at": "2026-06-27T08:23:39.204575",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -867,7 +983,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "06",
@@ -888,7 +1008,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032638",
+    "created_at": "2026-06-27T08:23:39.204575",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -898,7 +1018,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "06",
@@ -919,7 +1043,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032639",
+    "created_at": "2026-06-27T08:23:39.204576",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -929,7 +1053,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "06",
@@ -950,7 +1078,7 @@
     "ap1000": "AP1000-CH06",
     "apr1400": "APR1400-CH06",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032640",
+    "created_at": "2026-06-27T08:23:39.204577",
     "verification_id": "VER-CH06-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH06-001",
@@ -960,7 +1088,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "07",
@@ -981,7 +1113,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071092",
+    "created_at": "2026-06-27T08:23:39.204579",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -997,7 +1129,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1018,7 +1154,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071102",
+    "created_at": "2026-06-27T08:23:39.204580",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1034,7 +1170,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1055,7 +1195,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071104",
+    "created_at": "2026-06-27T08:23:39.204580",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1071,7 +1211,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1092,7 +1236,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071105",
+    "created_at": "2026-06-27T08:23:39.204581",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1108,7 +1252,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1129,7 +1277,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071107",
+    "created_at": "2026-06-27T08:23:39.204582",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1145,7 +1293,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1166,7 +1318,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071108",
+    "created_at": "2026-06-27T08:23:39.204584",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1182,7 +1334,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1203,7 +1359,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071109",
+    "created_at": "2026-06-27T08:23:39.204585",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1219,7 +1375,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -1240,7 +1400,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071111",
+    "created_at": "2026-06-27T08:23:39.204585",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1256,7 +1416,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -1277,7 +1441,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071112",
+    "created_at": "2026-06-27T08:23:39.204586",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1293,7 +1457,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -1314,7 +1482,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071113",
+    "created_at": "2026-06-27T08:23:39.204587",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1330,7 +1498,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1351,7 +1523,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071115",
+    "created_at": "2026-06-27T08:23:39.204589",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1367,7 +1539,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1388,7 +1564,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071116",
+    "created_at": "2026-06-27T08:23:39.204590",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1404,7 +1580,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1425,7 +1605,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071117",
+    "created_at": "2026-06-27T08:23:39.204590",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1441,7 +1621,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1462,7 +1646,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071118",
+    "created_at": "2026-06-27T08:23:39.204591",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1478,7 +1662,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1499,7 +1687,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071120",
+    "created_at": "2026-06-27T08:23:39.204592",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1515,7 +1703,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1536,7 +1728,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071121",
+    "created_at": "2026-06-27T08:23:39.204594",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1552,7 +1744,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -1573,7 +1769,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071122",
+    "created_at": "2026-06-27T08:23:39.204595",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1589,7 +1785,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -1610,7 +1810,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071123",
+    "created_at": "2026-06-27T08:23:39.204595",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1626,7 +1826,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -1647,7 +1851,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071125",
+    "created_at": "2026-06-27T08:23:39.204596",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1663,7 +1867,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1684,7 +1892,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071126",
+    "created_at": "2026-06-27T08:23:39.204598",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1700,7 +1908,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1721,7 +1933,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071127",
+    "created_at": "2026-06-27T08:23:39.204599",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1737,7 +1949,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1758,7 +1974,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071129",
+    "created_at": "2026-06-27T08:23:39.204601",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1774,7 +1990,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1795,7 +2015,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071130",
+    "created_at": "2026-06-27T08:23:39.204602",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1811,7 +2031,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1832,7 +2056,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071131",
+    "created_at": "2026-06-27T08:23:39.204603",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -1848,7 +2072,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -1869,7 +2097,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071133",
+    "created_at": "2026-06-27T08:23:39.204603",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1885,7 +2113,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -1906,7 +2138,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071134",
+    "created_at": "2026-06-27T08:23:39.204604",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1922,7 +2154,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -1943,7 +2179,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071135",
+    "created_at": "2026-06-27T08:23:39.204606",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -1959,7 +2195,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -1980,7 +2220,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071137",
+    "created_at": "2026-06-27T08:23:39.204607",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -1996,7 +2236,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -2017,7 +2261,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071138",
+    "created_at": "2026-06-27T08:23:39.204608",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -2033,7 +2277,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -2054,7 +2302,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071139",
+    "created_at": "2026-06-27T08:23:39.204608",
     "verification_id": "VER-CH07-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-001",
@@ -2070,7 +2318,11 @@
     "severity": "High",
     "consequence": "Common Cause Failure",
     "mitigation": "Independent Protection Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "HIGH",
+    "impact_type": "Loss of Independence",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -2091,7 +2343,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071140",
+    "created_at": "2026-06-27T08:23:39.204609",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2107,7 +2359,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -2128,7 +2384,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071141",
+    "created_at": "2026-06-27T08:23:39.204626",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2144,7 +2400,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -2165,7 +2425,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071142",
+    "created_at": "2026-06-27T08:23:39.204627",
     "verification_id": "VER-CH07-002",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-002",
@@ -2181,7 +2441,11 @@
     "severity": "Medium",
     "consequence": "Unnecessary Safety Injection",
     "mitigation": "Signal Validation Logic",
-    "affected_system": "ESFAS"
+    "affected_system": "ESFAS",
+    "impact_level": "MEDIUM",
+    "impact_type": "Logic Fault",
+    "retest_required": true,
+    "safety_significant": true
   },
   {
     "chapter": "07",
@@ -2202,7 +2466,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071144",
+    "created_at": "2026-06-27T08:23:39.204627",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -2218,7 +2482,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -2239,7 +2507,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071145",
+    "created_at": "2026-06-27T08:23:39.204628",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -2255,7 +2523,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "07",
@@ -2276,7 +2548,7 @@
     "ap1000": "AP1000-PPS",
     "apr1400": "APR1400-PPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.071146",
+    "created_at": "2026-06-27T08:23:39.204629",
     "verification_id": "VER-CH07-003",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH07-003",
@@ -2292,7 +2564,11 @@
     "severity": "High",
     "consequence": "Failure to Trip Reactor",
     "mitigation": "Redundant Channels",
-    "affected_system": "Plant Protection System"
+    "affected_system": "Plant Protection System",
+    "impact_level": "LOW",
+    "impact_type": "Documentation Mismatch",
+    "retest_required": false,
+    "safety_significant": false
   },
   {
     "chapter": "08",
@@ -2313,7 +2589,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032677",
+    "created_at": "2026-06-27T08:23:39.204631",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -2323,7 +2599,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "08",
@@ -2344,7 +2624,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032678",
+    "created_at": "2026-06-27T08:23:39.204632",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -2354,7 +2634,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "08",
@@ -2375,7 +2659,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032679",
+    "created_at": "2026-06-27T08:23:39.204632",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -2385,7 +2669,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "08",
@@ -2406,7 +2694,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032680",
+    "created_at": "2026-06-27T08:23:39.204633",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -2416,7 +2704,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "08",
@@ -2437,7 +2729,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032681",
+    "created_at": "2026-06-27T08:23:39.204634",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -2447,7 +2739,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "08",
@@ -2468,7 +2764,7 @@
     "ap1000": "AP1000-EPS",
     "apr1400": "APR1400-EPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032683",
+    "created_at": "2026-06-27T08:23:39.204634",
     "verification_id": "VER-CH08-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH08-001",
@@ -2478,7 +2774,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "09",
@@ -2499,7 +2799,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032685",
+    "created_at": "2026-06-27T08:23:39.204636",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -2509,7 +2809,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "09",
@@ -2530,7 +2834,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032685",
+    "created_at": "2026-06-27T08:23:39.204637",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -2540,7 +2844,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "09",
@@ -2561,7 +2869,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032687",
+    "created_at": "2026-06-27T08:23:39.204638",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -2571,7 +2879,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "09",
@@ -2592,7 +2904,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032689",
+    "created_at": "2026-06-27T08:23:39.204639",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -2602,7 +2914,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "09",
@@ -2623,7 +2939,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032690",
+    "created_at": "2026-06-27T08:23:39.204641",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -2633,7 +2949,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "09",
@@ -2654,7 +2974,7 @@
     "ap1000": "AP1000-CH09",
     "apr1400": "APR1400-CH09",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032691",
+    "created_at": "2026-06-27T08:23:39.204642",
     "verification_id": "VER-CH09-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH09-001",
@@ -2664,7 +2984,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "10",
@@ -2685,7 +3009,7 @@
     "ap1000": "AP1000-TG",
     "apr1400": "APR1400-TG",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032692",
+    "created_at": "2026-06-27T08:23:39.204642",
     "verification_id": "VER-CH10-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH10-001",
@@ -2695,7 +3019,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "10",
@@ -2716,7 +3044,7 @@
     "ap1000": "AP1000-TG",
     "apr1400": "APR1400-TG",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032693",
+    "created_at": "2026-06-27T08:23:39.204643",
     "verification_id": "VER-CH10-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH10-001",
@@ -2726,7 +3054,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "10",
@@ -2747,7 +3079,7 @@
     "ap1000": "AP1000-TG",
     "apr1400": "APR1400-TG",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032694",
+    "created_at": "2026-06-27T08:23:39.204644",
     "verification_id": "VER-CH10-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH10-001",
@@ -2757,7 +3089,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "11",
@@ -2778,7 +3114,7 @@
     "ap1000": "AP1000-RP",
     "apr1400": "APR1400-RP",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032697",
+    "created_at": "2026-06-27T08:23:39.204646",
     "verification_id": "VER-CH11-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH11-001",
@@ -2788,7 +3124,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "11",
@@ -2809,7 +3149,7 @@
     "ap1000": "AP1000-RP",
     "apr1400": "APR1400-RP",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032698",
+    "created_at": "2026-06-27T08:23:39.204646",
     "verification_id": "VER-CH11-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH11-001",
@@ -2819,7 +3159,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "11",
@@ -2840,7 +3184,7 @@
     "ap1000": "AP1000-RP",
     "apr1400": "APR1400-RP",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032698",
+    "created_at": "2026-06-27T08:23:39.204649",
     "verification_id": "VER-CH11-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH11-001",
@@ -2850,7 +3194,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "12",
@@ -2871,7 +3219,7 @@
     "ap1000": "AP1000-RWMS",
     "apr1400": "APR1400-RWMS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032699",
+    "created_at": "2026-06-27T08:23:39.204649",
     "verification_id": "VER-CH12-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH12-001",
@@ -2881,7 +3229,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "12",
@@ -2902,7 +3254,7 @@
     "ap1000": "AP1000-RWMS",
     "apr1400": "APR1400-RWMS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032700",
+    "created_at": "2026-06-27T08:23:39.204650",
     "verification_id": "VER-CH12-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH12-001",
@@ -2912,7 +3264,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "12",
@@ -2933,7 +3289,7 @@
     "ap1000": "AP1000-RWMS",
     "apr1400": "APR1400-RWMS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032703",
+    "created_at": "2026-06-27T08:23:39.204652",
     "verification_id": "VER-CH12-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH12-001",
@@ -2943,7 +3299,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "13",
@@ -2964,7 +3324,7 @@
     "ap1000": "AP1000-OPS",
     "apr1400": "APR1400-OPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032704",
+    "created_at": "2026-06-27T08:23:39.204653",
     "verification_id": "VER-CH13-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH13-001",
@@ -2974,7 +3334,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "13",
@@ -2995,7 +3359,7 @@
     "ap1000": "AP1000-OPS",
     "apr1400": "APR1400-OPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032705",
+    "created_at": "2026-06-27T08:23:39.204653",
     "verification_id": "VER-CH13-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH13-001",
@@ -3005,7 +3369,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "13",
@@ -3026,7 +3394,7 @@
     "ap1000": "AP1000-OPS",
     "apr1400": "APR1400-OPS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032706",
+    "created_at": "2026-06-27T08:23:39.204654",
     "verification_id": "VER-CH13-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH13-001",
@@ -3036,7 +3404,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "14",
@@ -3057,7 +3429,7 @@
     "ap1000": "AP1000-ITP",
     "apr1400": "APR1400-ITP",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032708",
+    "created_at": "2026-06-27T08:23:39.204656",
     "verification_id": "VER-CH14-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH14-001",
@@ -3067,7 +3439,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "14",
@@ -3088,7 +3464,7 @@
     "ap1000": "AP1000-ITP",
     "apr1400": "APR1400-ITP",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032709",
+    "created_at": "2026-06-27T08:23:39.204657",
     "verification_id": "VER-CH14-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH14-001",
@@ -3098,7 +3474,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "14",
@@ -3119,7 +3499,7 @@
     "ap1000": "AP1000-ITP",
     "apr1400": "APR1400-ITP",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032710",
+    "created_at": "2026-06-27T08:23:39.204658",
     "verification_id": "VER-CH14-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH14-001",
@@ -3129,7 +3509,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "15",
@@ -3150,7 +3534,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032711",
+    "created_at": "2026-06-27T08:23:39.204658",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -3160,7 +3544,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "15",
@@ -3181,7 +3569,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032712",
+    "created_at": "2026-06-27T08:23:39.204659",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -3191,7 +3579,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "15",
@@ -3212,7 +3604,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032714",
+    "created_at": "2026-06-27T08:23:39.204660",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -3222,7 +3614,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "15",
@@ -3243,7 +3639,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032716",
+    "created_at": "2026-06-27T08:23:39.204662",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -3253,7 +3649,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "15",
@@ -3274,7 +3674,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032716",
+    "created_at": "2026-06-27T08:23:39.204663",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -3284,7 +3684,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "15",
@@ -3305,7 +3709,7 @@
     "ap1000": "AP1000-AA",
     "apr1400": "APR1400-AA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032717",
+    "created_at": "2026-06-27T08:23:39.204663",
     "verification_id": "VER-CH15-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH15-001",
@@ -3315,7 +3719,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "16",
@@ -3336,7 +3744,7 @@
     "ap1000": "AP1000-TS",
     "apr1400": "APR1400-TS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032718",
+    "created_at": "2026-06-27T08:23:39.204664",
     "verification_id": "VER-CH16-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH16-001",
@@ -3346,7 +3754,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "16",
@@ -3367,7 +3779,7 @@
     "ap1000": "AP1000-TS",
     "apr1400": "APR1400-TS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032721",
+    "created_at": "2026-06-27T08:23:39.204665",
     "verification_id": "VER-CH16-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH16-001",
@@ -3377,7 +3789,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "16",
@@ -3398,7 +3814,7 @@
     "ap1000": "AP1000-TS",
     "apr1400": "APR1400-TS",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032722",
+    "created_at": "2026-06-27T08:23:39.204668",
     "verification_id": "VER-CH16-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH16-001",
@@ -3408,7 +3824,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "17",
@@ -3429,7 +3849,7 @@
     "ap1000": "AP1000-QA",
     "apr1400": "APR1400-QA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032723",
+    "created_at": "2026-06-27T08:23:39.204669",
     "verification_id": "VER-CH17-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH17-001",
@@ -3439,7 +3859,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "17",
@@ -3460,7 +3884,7 @@
     "ap1000": "AP1000-QA",
     "apr1400": "APR1400-QA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032723",
+    "created_at": "2026-06-27T08:23:39.204670",
     "verification_id": "VER-CH17-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH17-001",
@@ -3470,7 +3894,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "17",
@@ -3491,7 +3919,7 @@
     "ap1000": "AP1000-QA",
     "apr1400": "APR1400-QA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032724",
+    "created_at": "2026-06-27T08:23:39.204671",
     "verification_id": "VER-CH17-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH17-001",
@@ -3501,7 +3929,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "18",
@@ -3522,7 +3954,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032725",
+    "created_at": "2026-06-27T08:23:39.204671",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -3532,7 +3964,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "18",
@@ -3553,7 +3989,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032728",
+    "created_at": "2026-06-27T08:23:39.204674",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -3563,7 +3999,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "18",
@@ -3584,7 +4024,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032729",
+    "created_at": "2026-06-27T08:23:39.204675",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -3594,7 +4034,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "18",
@@ -3615,7 +4059,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032730",
+    "created_at": "2026-06-27T08:23:39.204675",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -3625,7 +4069,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "18",
@@ -3646,7 +4094,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032731",
+    "created_at": "2026-06-27T08:23:39.204676",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -3656,7 +4104,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "18",
@@ -3677,7 +4129,7 @@
     "ap1000": "AP1000-HFE",
     "apr1400": "APR1400-HFE",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032734",
+    "created_at": "2026-06-27T08:23:39.204676",
     "verification_id": "VER-CH18-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH18-001",
@@ -3687,7 +4139,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "19",
@@ -3708,7 +4164,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032735",
+    "created_at": "2026-06-27T08:23:39.204679",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -3718,7 +4174,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "19",
@@ -3739,7 +4199,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032736",
+    "created_at": "2026-06-27T08:23:39.204679",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -3749,7 +4209,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "19",
@@ -3770,7 +4234,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032738",
+    "created_at": "2026-06-27T08:23:39.204680",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -3780,7 +4244,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "19",
@@ -3801,7 +4269,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032739",
+    "created_at": "2026-06-27T08:23:39.204681",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -3811,7 +4279,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-001",
     "artifact_type": "FSAR",
-    "artifact_name": "FSAR Chapter 7"
+    "artifact_name": "FSAR Chapter 7",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "19",
@@ -3832,7 +4304,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032740",
+    "created_at": "2026-06-27T08:23:39.204681",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -3842,7 +4314,11 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-002",
     "artifact_type": "Logic Diagram",
-    "artifact_name": "Plant Protection Logic Diagram"
+    "artifact_name": "Plant Protection Logic Diagram",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   },
   {
     "chapter": "19",
@@ -3863,7 +4339,7 @@
     "ap1000": "AP1000-PRA",
     "apr1400": "APR1400-PRA",
     "status": "linked",
-    "created_at": "2026-06-27T08:23:39.032743",
+    "created_at": "2026-06-27T08:23:39.204684",
     "verification_id": "VER-CH19-001",
     "verification_method": "Analysis",
     "verification_name": "Verification for REQ-CH19-001",
@@ -3873,6 +4349,10 @@
     "test_type": null,
     "artifact_id": "DOC-CH07-003",
     "artifact_type": "Calculation",
-    "artifact_name": "Reactor Trip Setpoint Calculation"
+    "artifact_name": "Reactor Trip Setpoint Calculation",
+    "impact_level": null,
+    "impact_type": null,
+    "retest_required": null,
+    "safety_significant": null
   }
 ]
