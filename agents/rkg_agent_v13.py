@@ -86,7 +86,7 @@ def generate_metadata():
 
     print("Loaded Successfully")
 
-        stats = {
+    stats = {
         "Requirements": len(rkg_v11),
         "Impacts": len(impacts),
         "Changes": len(changes),
