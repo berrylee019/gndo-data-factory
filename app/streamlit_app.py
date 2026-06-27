@@ -255,9 +255,13 @@ with tab3:
     )
     rkg_df = pd.DataFrame(rkg)
 
-    st.subheader("GNDO RKG Status")
+    from agents.rkg_agent_v13 import generate_metadata
     
-    st.write("Requirements :", len(rkg_df))
+    stats = generate_metadata()
+    
+    st.subheader("GNDO Registry Status")
+    
+    st.write(stats)
     
     with search_tab:
 
