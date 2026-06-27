@@ -33,6 +33,8 @@ class GraphBuilder:
             fail = r.get("failure_id")
 
             if pd.notna(change) and pd.notna(req):
+                print("ADD EDGE", change, "->", req)
+                
                 G.add_edge(change, req)
                 edge_count += 1
 
@@ -53,3 +55,5 @@ class GraphBuilder:
         print("GRAPH EDGES =", len(G.edges()))
 
         return G
+
+
