@@ -13,8 +13,24 @@ import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
-from engine.graph_builder import GraphBuilder
+# from engine.graph_builder import GraphBuilder
 from engine.propagation_engine import PropagationEngine
+
+st.write("CURRENT DIR")
+st.write(os.getcwd())
+
+st.write("FILE")
+st.write(__file__)
+
+st.write("ROOT")
+ROOT = Path(__file__).resolve().parents[1]
+st.write(ROOT)
+
+st.write("ROOT EXISTS")
+st.write((ROOT / "engine").exists())
+
+st.write("FILES")
+st.write(os.listdir(ROOT))
 
 st.set_page_config(
     page_title="GNDO Data Factory",
