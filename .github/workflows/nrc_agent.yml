@@ -89,6 +89,14 @@ jobs:
       - name: Test Requirements
         run: python agents/test_requirement.py
 
+      - name: Debug Git Status
+        run: |
+          echo "========== GIT STATUS =========="
+          git status
+          echo ""
+          echo "========== CHANGED FILES =========="
+          git diff --name-only
+    
       - name: Commit Updated Data
         run: |
           git config --local user.email "action@github.com"
