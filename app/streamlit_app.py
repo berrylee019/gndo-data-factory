@@ -256,7 +256,7 @@ with tab3:
         ]
     )
     rkg_df = pd.DataFrame(rkg)
-    GRAPH = GraphBuilder.build(rkg_df)
+    # GRAPH = GraphBuilder.build(rkg_df)
     print("GRAPH BUILT")
     
     with search_tab:
