@@ -6,11 +6,21 @@ class GraphBuilder:
 
     @staticmethod
     def build(rkg_df):
-
+        print("========== GRAPH BUILDER V2 ==========")
+        print("Rows =", len(rkg_df))
+        
         G = nx.DiGraph()
-
-        for _, r in rkg_df.iterrows():
-
+    
+        for i, (_, r) in enumerate(rkg_df.iterrows()):
+    
+            if i < 5:
+                print(
+                    r["requirement_id"],
+                    r["verification_id"],
+                    r["test_id"],
+                    r["failure_id"],
+                    r["change_id"]
+                )
             ##################################################
             # IDs
             ##################################################
@@ -124,4 +134,7 @@ class GraphBuilder:
 
                 G.add_edge(affected_ver, affected_test)
 
-        return G
+        print("Nodes =", G.number_of_nodes())
+        print("Edges =", G.number_of_edges())
+        
+        return G, rkg_df.head()
