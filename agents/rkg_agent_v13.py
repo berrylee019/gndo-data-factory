@@ -2,29 +2,10 @@ import json
 from datetime import datetime
 
 
-########################################################
-# INPUT FILES
-########################################################
-
 RKG_V11_FILE = "storage/metadata/rkg_data_v11.json"
-
-IMPACT_FILE = "storage/rkg/impact_registry_v11.json"
-
-CHANGE_FILE = "storage/rkg/change_registry_v12.json"
-
-FAILURE_FILE = "storage/rkg/failure_registry_v10.json"
-
-
-########################################################
-# OUTPUT
-########################################################
 
 OUTPUT_FILE = "storage/metadata/rkg_data_v13.json"
 
-
-########################################################
-# JSON Loader
-########################################################
 
 def load_json(path):
 
@@ -37,50 +18,65 @@ def load_json(path):
         return json.load(f)
 
 
-########################################################
-# Registry Maps
-########################################################
+def save_json(path, data):
 
-def build_failure_map(failures):
+    with open(
+        path,
+        "w",
+        encoding="utf-8"
+    ) as f:
 
-    failure_map = {}
-
-    for row in failures:
-
-        req = row.get("requirement_id")
-
-        if req:
-
-            failure_map[req] = row
-
-    return failure_map
+        json.dump(
+            data,
+            f,
+            indent=2,
+            ensure_ascii=False
+        )
 
 
-def build_impact_map(impacts):
+def generate_metadata():
 
-    impact_map = {}
+    print("===================================")
+    print("GNDO RKG AGENT v13")
+    print("===================================")
 
-    for row in impacts:
+    rkg_v11 = load_json(
+        RKG_V11_FILE
+    )
 
-        fid = row.get("failure_id")
+    metadata = []
 
-        if fid:
+    for row in rkg_v11:
 
-            impact_map[fid] = row
+        item = dict(row)
 
-    return impact_map
+        item["created_at"] = (
+            datetime.utcnow().isoformat()
+        )
+
+        metadata.append(item)
+
+    save_json(
+        OUTPUT_FILE,
+        metadata
+    )
+
+    print()
+
+    print(
+        "Generated",
+        len(metadata),
+        "records"
+    )
+
+    print()
+
+    print(
+        "Output :",
+        OUTPUT_FILE
+    )
 
 
-def build_change_map(changes):
+if __name__ == "__main__":
 
-    change_map = {}
-
-    for row in changes:
-
-        target = row.get("target_id")
-
-        if target:
-
-            change_map[target] = row
-
-    return change_map
+    generate_metadata()
