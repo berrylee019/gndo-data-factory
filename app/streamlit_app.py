@@ -1,6 +1,6 @@
 import streamlit as st
 import sys
-from gndo_engine.graph_builder import GraphBuilder
+from gndo_engine.graph_builder_v3 import GraphBuilderV3
 import os
 import sys
 from pathlib import Path
@@ -769,83 +769,9 @@ with tab3:
                             "failure_id"
                         )
         
-                        G = nx.DiGraph()
-        
-                        if change_id:
-                    
-                            G.add_node(
-                                change_id,
-                                group="CHANGE"
-                            )
-                    
-                        if req_id:
-                    
-                            G.add_node(
-                                req_id,
-                                group="REQUIREMENT"
-                            )
-                    
-                        if ver_id:
-                    
-                            G.add_node(
-                                ver_id,
-                                group="VERIFICATION"
-                            )
-                    
-                        if test_id:
-                    
-                            G.add_node(
-                                test_id,
-                                group="TEST"
-                            )
-                    
-                        if change_id and req_id:
-                    
-                            G.add_edge(
-                                change_id,
-                                req_id
-                            )
-                    
-                        if req_id and ver_id:
-                    
-                            G.add_edge(
-                                req_id,
-                                ver_id
-                            )
-                    
-                        if ver_id and test_id:
-                    
-                            G.add_edge(
-                                ver_id,
-                                test_id
-                            )
-        
-                        if failure_id:
+                        from gndo_engine.graph_builder_v3 import GraphBuilderV3
                         
-                            G.add_edge(
-                                test_id,
-                                failure_id
-                            )
-                        
-                        ####################################################
-                        # Build PyVis Network
-                        ####################################################
-                        
-                        net = Network(
-                            height="800px",
-                            width="100%",
-                            bgcolor="#ffffff",
-                            font_color="black",
-                            directed=True
-                        )
-
-                        # =====================================
-                        # SANITIZE GRAPH FOR PYVIS
-                        # =====================================
-                        
-                        import networkx as nx
-                        
-                        G_clean = nx.DiGraph()
+                        G = GraphBuilderV3.build(rkg_df)
                         
                         for u, v, data in G.edges(data=True):
                         
