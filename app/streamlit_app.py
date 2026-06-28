@@ -1,3 +1,10 @@
+import sys
+from pathlib import Path
+
+st.write("CURRENT FILE", __file__)
+st.write("CURRENT DIR", Path.cwd())
+st.write("PYTHON PATH", sys.path[:5])
+
 import os
 import sys
 from pathlib import Path
