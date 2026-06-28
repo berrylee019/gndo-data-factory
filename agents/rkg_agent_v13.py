@@ -8,6 +8,12 @@ VERIFICATION_FILE = "storage/rkg/verification_registry_v07.json"
 
 TEST_FILE = "storage/rkg/test_registry_v08.json"
 
+FAILURE_FILE = "storage/rkg/failure_registry_v10.json"
+
+IMPACT_FILE = "storage/rkg/impact_registry_v11.json"
+
+CHANGE_FILE = "storage/rkg/change_registry_v12.json"
+
 OUTPUT_FILE = "storage/metadata/rkg_data_v13.json"
 
 
