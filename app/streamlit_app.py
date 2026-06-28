@@ -15,6 +15,14 @@ import streamlit.components.v1 as components
 import tempfile
 from gndo_engine.graph_builder import GraphBuilder
 import gndo_engine.graph_builder as gb
+import inspect
+
+st.write("GraphBuilder file")
+st.code(inspect.getfile(GraphBuilder))
+
+st.write("Build source")
+st.code(inspect.getsource(GraphBuilder.build))
+
 
 
 st.set_page_config(
