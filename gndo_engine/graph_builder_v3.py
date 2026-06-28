@@ -214,4 +214,50 @@ class GraphBuilderV3:
         print("Rows :", len(rkg_df))
         print()
 
+        ##################################################
+        # Validation
+        ##################################################
+        
+        req_count = 0
+        ver_count = 0
+        test_count = 0
+        fail_count = 0
+        change_count = 0
+        
+        for _, attr in G.nodes(data=True):
+        
+            node_type = attr.get("type")
+        
+            if node_type == "REQ":
+                req_count += 1
+        
+            elif node_type == "VER":
+                ver_count += 1
+        
+            elif node_type == "TEST":
+                test_count += 1
+        
+            elif node_type == "FAIL":
+                fail_count += 1
+        
+            elif node_type == "CHANGE":
+                change_count += 1
+        
+        print("======================================")
+        print("Graph Summary")
+        print("======================================")
+        
+        print("REQ    :", req_count)
+        print("VER    :", ver_count)
+        print("TEST   :", test_count)
+        print("FAIL   :", fail_count)
+        print("CHANGE :", change_count)
+        
+        print("--------------------------------------")
+        
+        print("Total Nodes :", G.number_of_nodes())
+        print("Total Edges :", G.number_of_edges())
+        
+        print("======================================")
+
         return G
