@@ -1,15 +1,7 @@
 import streamlit as st
-import sys
-from pathlib import Path
-
-st.write("CURRENT FILE", __file__)
-st.write("CURRENT DIR", Path.cwd())
-st.write("PYTHON PATH", sys.path[:5])
-
 import os
 import sys
 from pathlib import Path
-
 import json
 import pandas as pd
 from pathlib import Path
@@ -195,6 +187,7 @@ result = GraphBuilder.build(rkg_df)
 
 st.write(type(result))
 st.write(result)
+st.stop()
 
 st.success("GraphBuilder Loaded")
 
