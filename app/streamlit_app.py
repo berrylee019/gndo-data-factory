@@ -812,8 +812,44 @@ with tab3:
                             font_color="black",
                             directed=True
                         )
+
+                        # =====================================
+                        # SANITIZE GRAPH FOR PYVIS
+                        # =====================================
                         
-                        net.from_nx(G)
+                        import networkx as nx
+                        
+                        G_clean = nx.DiGraph()
+                        
+                        for u, v, data in G.edges(data=True):
+                        
+                            # 노드 ID를 문자열로 강제 변환
+                            if u is None or v is None:
+                                continue
+                        
+                            if str(u).lower() == "nan" or str(v).lower() == "nan":
+                                continue
+                        
+                            u = str(u)
+                            v = str(v)
+                        
+                            if u.strip() == "" or v.strip() == "":
+                                continue
+                        
+                            G_clean.add_node(u)
+                        
+                            G_clean.add_node(v)
+                        
+                            G_clean.add_edge(u, v)
+                        
+                        print("Original Nodes :", G.number_of_nodes())
+                        print("Original Edges :", G.number_of_edges())
+                        
+                        print("Clean Nodes :", G_clean.number_of_nodes())
+                        print("Clean Edges :", G_clean.number_of_edges())
+                        
+                        net.from_nx(G_clean)
+
                         
                         ####################################################
                         # Node Color
