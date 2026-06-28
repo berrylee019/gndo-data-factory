@@ -187,17 +187,6 @@ with st.expander("Preview"):
 
     st.dataframe(preview)
     
-
-st.success("GraphBuilder Loaded")
-
-st.write("Graph Nodes :", GRAPH.number_of_nodes())
-
-st.write("Graph Edges :", GRAPH.number_of_edges())
-
-with st.expander("Graph Preview"):
-
-    st.dataframe(preview)
-    
 nrc = nureg + rg + srp + cfr
 
 all_docs = (
