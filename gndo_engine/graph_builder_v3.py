@@ -261,3 +261,88 @@ class GraphBuilderV3:
         print("======================================")
 
         return G
+
+        ##################################################
+        # Impact Graph
+        ##################################################
+        @staticmethod
+        def build_impact_graph(row):
+
+            G = nx.DiGraph()
+        
+            change = row.get("change_id")
+        
+            req = row.get("affected_requirement")
+        
+            ver = row.get("affected_verification")
+        
+            test = row.get("affected_test")
+        
+            fail = row.get("failure_id")
+        
+            chapter = row.get("chapter")
+
+            ##################################################
+            # CHANGE
+            ##################################################
+        
+            if pd.notna(change):
+        
+                G.add_node(
+                    str(change),
+                    type="CHANGE",
+                    label=str(change),
+                    chapter=chapter
+                )
+        
+            ##################################################
+            # REQUIREMENT
+            ##################################################
+        
+            if pd.notna(req):
+        
+                G.add_node(
+                    str(req),
+                    type="REQ",
+                    label=str(req),
+                    chapter=chapter
+                )
+        
+            ##################################################
+            # VERIFICATION
+            ##################################################
+        
+            if pd.notna(ver):
+        
+                G.add_node(
+                    str(ver),
+                    type="VER",
+                    label=str(ver),
+                    chapter=chapter
+                )
+        
+            ##################################################
+            # TEST
+            ##################################################
+        
+            if pd.notna(test):
+        
+                G.add_node(
+                    str(test),
+                    type="TEST",
+                    label=str(test),
+                    chapter=chapter
+                )
+        
+            ##################################################
+            # FAILURE
+            ##################################################
+        
+            if pd.notna(fail):
+        
+                G.add_node(
+                    str(fail),
+                    type="FAIL",
+                    label=str(fail),
+                    chapter=chapter
+                )
