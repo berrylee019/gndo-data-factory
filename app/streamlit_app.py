@@ -809,6 +809,11 @@ with tab3:
                         
                         st.write("Clean Nodes :", G_clean.number_of_nodes())
                         st.write("Clean Edges :", G_clean.number_of_edges())
+
+                        print("===== G_clean =====")
+                        print(type(G_clean))
+                        print("Nodes:", G_clean.number_of_nodes())
+                        print("Edges:", G_clean.number_of_edges())
                         
                         net.from_nx(G_clean)
 
