@@ -242,8 +242,6 @@ with tab3:
     )
     rkg_df = pd.DataFrame(rkg)
     
-    st.write(rkg_df.columns.tolist())
-    
     with search_tab:
 
         st.subheader("Search")
