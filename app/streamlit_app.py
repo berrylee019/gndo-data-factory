@@ -162,30 +162,6 @@ crosswalk = load_json(
 rkg = load_json(
     "storage/metadata/rkg_data_v13.json"
 )
-
-####################################################
-# RKG DataFrame
-####################################################
-
-rkg_df = pd.DataFrame(rkg)
-
-st.write("RKG DF SIZE", rkg_df.shape)
-
-####################################################
-# Regulatory Knowledge Graph
-####################################################
-
-GRAPH, preview = GraphBuilder.build(rkg_df)
-
-st.success("✅ GraphBuilder Loaded")
-
-st.write("Graph Nodes :", GRAPH.number_of_nodes())
-
-st.write("Graph Edges :", GRAPH.number_of_edges())
-
-with st.expander("Preview"):
-
-    st.dataframe(preview)
     
 nrc = nureg + rg + srp + cfr
 
