@@ -800,14 +800,6 @@ with tab3:
                                 test_id,
                                 failure_id
                             )
-        
-                            net = Network(
-                                height="500px",
-                                width="100%",
-                                directed=True
-                            )
-                        
-                            net.from_nx(G)
 
                     for node in net.nodes:
 
@@ -1576,7 +1568,17 @@ with tab4:
                     repr(u),
                     repr(v)
                 )
+                
+        print("============== NODE ATTRIBUTES ==============")
 
+        for n, attrs in G.nodes(data=True):
+        
+            print(n)
+        
+            print(attrs)
+        
+            break
+            
         net.from_nx(G)
 
         for edge in net.edges:
