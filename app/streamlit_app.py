@@ -1,11 +1,5 @@
 import streamlit as st
 import sys
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parent.parent
-
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
 from gndo_engine.graph_builder import GraphBuilder
 import os
 import sys
@@ -21,17 +15,7 @@ import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
-
 import gndo_engine.graph_builder as gb
-import inspect
-
-st.write("GraphBuilder file")
-st.code(inspect.getfile(GraphBuilder))
-
-st.write("Build source")
-st.code(inspect.getsource(GraphBuilder.build))
-
-
 
 st.set_page_config(
     page_title="GNDO Data Factory",
@@ -191,11 +175,18 @@ st.write("RKG DF SIZE", rkg_df.shape)
 # Regulatory Knowledge Graph
 ####################################################
 
-result = GraphBuilder.build(rkg_df)
+GRAPH, preview = GraphBuilder.build(rkg_df)
 
-st.write(type(result))
-st.write(result)
-st.stop()
+st.success("✅ GraphBuilder Loaded")
+
+st.write("Graph Nodes :", GRAPH.number_of_nodes())
+
+st.write("Graph Edges :", GRAPH.number_of_edges())
+
+with st.expander("Preview"):
+
+    st.dataframe(preview)
+    
 
 st.success("GraphBuilder Loaded")
 
