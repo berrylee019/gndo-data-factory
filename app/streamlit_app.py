@@ -406,6 +406,18 @@ with tab3:
             "Ask GNDO"
         )
         
+        st.write(
+            rkg_df[
+                [
+                    "requirement_id",
+                    "verification_id",
+                    "test_id",
+                    "failure_id",
+                    "change_id"
+                ]
+            ].head(10)
+        )
+        
         G = nx.DiGraph()
         
         for _, r in rkg_df.iterrows():
