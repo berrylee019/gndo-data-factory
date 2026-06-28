@@ -47,6 +47,26 @@ def generate_metadata():
     rkg_v11 = load_json(
         RKG_V11_FILE
     )
+    
+    verifications = load_json(
+        VERIFICATION_FILE
+    )
+    
+    tests = load_json(
+        TEST_FILE
+    )
+    
+    failures = load_json(
+        FAILURE_FILE
+    )
+    
+    impacts = load_json(
+        IMPACT_FILE
+    )
+    
+    changes = load_json(
+        CHANGE_FILE
+    )
 
     print()
     
