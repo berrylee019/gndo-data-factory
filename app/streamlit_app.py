@@ -183,7 +183,10 @@ st.write("RKG DF SIZE", rkg_df.shape)
 # Regulatory Knowledge Graph
 ####################################################
 
-GRAPH, preview = GraphBuilder.build(rkg_df)
+result = GraphBuilder.build(rkg_df)
+
+st.write(type(result))
+st.write(result)
 
 st.success("GraphBuilder Loaded")
 
