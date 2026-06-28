@@ -1,3 +1,4 @@
+import streamlit as st
 import sys
 from pathlib import Path
 
@@ -8,7 +9,7 @@ st.write("PYTHON PATH", sys.path[:5])
 import os
 import sys
 from pathlib import Path
-import streamlit as st
+
 import json
 import pandas as pd
 from pathlib import Path
