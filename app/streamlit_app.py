@@ -247,6 +247,17 @@ with tab3:
     st.write(rkg_df.shape)
     st.write(rkg_df.columns.tolist())
 
+    st.write(
+        rkg_df[
+            [
+                "requirement_id",
+                "verification_id",
+                "test_id",
+                "failure_id"
+            ]
+        ].head(20)
+    )
+    
     with search_tab:
 
         st.subheader("Search")
@@ -842,11 +853,11 @@ with tab3:
                         
                             G_clean.add_edge(u, v)
                         
-                        print("Original Nodes :", G.number_of_nodes())
-                        print("Original Edges :", G.number_of_edges())
+                        st.write("Original Nodes :", G.number_of_nodes())
+                        st.write("Original Edges :", G.number_of_edges())
                         
-                        print("Clean Nodes :", G_clean.number_of_nodes())
-                        print("Clean Edges :", G_clean.number_of_edges())
+                        st.write("Clean Nodes :", G_clean.number_of_nodes())
+                        st.write("Clean Edges :", G_clean.number_of_edges())
                         
                         net.from_nx(G_clean)
 
