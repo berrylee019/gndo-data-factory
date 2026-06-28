@@ -4,6 +4,10 @@ from datetime import datetime
 
 RKG_V11_FILE = "storage/metadata/rkg_data_v11.json"
 
+VERIFICATION_FILE = "storage/rkg/verification_registry_v07.json"
+
+TEST_FILE = "storage/rkg/test_registry_v08.json"
+
 OUTPUT_FILE = "storage/metadata/rkg_data_v13.json"
 
 
@@ -44,6 +48,56 @@ def generate_metadata():
         RKG_V11_FILE
     )
 
+    print()
+    
+    print("Requirements :", len(rkg_v11))
+    print("Impacts      :", len(impacts))
+    print("Changes      :", len(changes))
+    print("Failures     :", len(failures))
+    
+    print()
+    
+    # ===============================
+    # 여기부터 Map 생성
+    # ===============================
+    
+    verification_map = {
+        r["requirement_id"]: r
+        for r in verifications
+    }
+    
+    test_map = {
+        r["verification_id"]: r
+        for r in tests
+    }
+    
+    failure_map = {
+        r["requirement_id"]: r
+        for r in failures
+    }
+    
+    impact_map = {
+        r["failure_id"]: r
+        for r in impacts
+    }
+    
+    change_map = {
+        r["target_id"]: r
+        for r in changes
+    }
+    
+    print("Verification Map :", len(verification_map))
+    print("Test Map         :", len(test_map))
+    print("Failure Map      :", len(failure_map))
+    print("Impact Map       :", len(impact_map))
+    print("Change Map       :", len(change_map))
+    
+    print()
+    
+    # ===============================
+    # 여기까지 Map 생성
+    # ===============================
+    
     metadata = []
 
     for row in rkg_v11:
