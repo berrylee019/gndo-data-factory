@@ -346,3 +346,104 @@ class GraphBuilderV3:
                     label=str(fail),
                     chapter=chapter
                 )
+            ##################################################
+            # CHANGE -> REQUIREMENT
+            ##################################################
+        
+            if (
+                pd.notna(change)
+                and
+                pd.notna(req)
+            ):
+        
+                G.add_edge(
+                    str(change),
+                    str(req),
+                    relation="changes"
+                )
+
+            ##################################################
+            # REQUIREMENT -> VERIFICATION
+            ##################################################
+        
+            if (
+                pd.notna(req)
+                and
+                pd.notna(ver)
+            ):
+        
+                G.add_edge(
+                    str(req),
+                    str(ver),
+                    relation="verified_by"
+                )
+
+            ##################################################
+            # VERIFICATION -> TEST
+            ##################################################
+        
+            if (
+                pd.notna(ver)
+                and
+                pd.notna(test)
+            ):
+        
+                G.add_edge(
+                    str(ver),
+                    str(test),
+                    relation="tested_by"
+                )
+
+            ##################################################
+            # TEST -> FAILURE
+            ##################################################
+        
+            if (
+                pd.notna(test)
+                and
+                pd.notna(fail)
+            ):
+        
+                G.add_edge(
+                    str(test),
+                    str(fail),
+                    relation="failure_mode"
+                )
+
+            ##################################################
+            # REQUIREMENT -> FAILURE
+            ##################################################
+        
+            if (
+                pd.notna(req)
+                and
+                pd.notna(fail)
+            ):
+        
+                G.add_edge(
+                    str(req),
+                    str(fail),
+                    relation="causes"
+                )
+
+            print()
+        
+            print("Impact Graph")
+        
+            print("---------------------------")
+        
+            print("Nodes :", G.number_of_nodes())
+        
+            print("Edges :", G.number_of_edges())
+        
+            print("---------------------------")
+        
+            for u, v in G.edges():
+        
+                print(
+                    u,
+                    "->",
+                    v
+                )
+
+        return G
