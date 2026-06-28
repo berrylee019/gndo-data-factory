@@ -241,8 +241,6 @@ with tab3:
         ]
     )
     rkg_df = pd.DataFrame(rkg)
-
-    st.write(rkg_df.shape)
     
     st.write(rkg_df.columns.tolist())
     
@@ -404,18 +402,6 @@ with tab3:
         
         st.subheader(
             "Ask GNDO"
-        )
-        
-        st.write(
-            rkg_df[
-                [
-                    "requirement_id",
-                    "verification_id",
-                    "test_id",
-                    "failure_id",
-                    "change_id"
-                ]
-            ].head(10)
         )
         
         G = nx.DiGraph()
