@@ -1548,14 +1548,34 @@ with tab4:
             font_color="black"
         )
 
-        st.write("===== INVALID NODES =====")
-
-        invalid_nodes = [
-            n for n in G.nodes()
-            if not isinstance(n, (str, int))
-        ]
+        import math
         
-        st.write(invalid_nodes)
+        print("========== NODE CHECK ==========")
+        
+        for node in G.nodes():
+        
+            if not isinstance(node, (str, int)):
+                print(
+                    "INVALID NODE:",
+                    repr(node),
+                    type(node)
+                )
+        
+        print("========== EDGE CHECK ==========")
+        
+        for u, v in G.edges():
+        
+            if (
+                not isinstance(u, (str, int))
+                or
+                not isinstance(v, (str, int))
+            ):
+        
+                print(
+                    "INVALID EDGE:",
+                    repr(u),
+                    repr(v)
+                )
 
         net.from_nx(G)
 
