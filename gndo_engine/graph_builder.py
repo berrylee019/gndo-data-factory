@@ -1,3 +1,8 @@
+def valid_id(x):
+    return (
+        isinstance(x, str)
+        and x.strip() != ""
+    )
 import networkx as nx
 import pandas as pd
 
@@ -41,7 +46,7 @@ class GraphBuilder:
             # Requirement
             ##################################################
 
-            if pd.notna(req):
+            if valid_id(req):
 
                 G.add_node(
                     req,
@@ -55,7 +60,7 @@ class GraphBuilder:
             # Verification
             ##################################################
 
-            if pd.notna(ver):
+            if valid_id(ver):
 
                 G.add_node(
                     ver,
@@ -66,7 +71,7 @@ class GraphBuilder:
             # Test
             ##################################################
 
-            if pd.notna(test):
+            if valid_id(test):
 
                 G.add_node(
                     test,
@@ -77,7 +82,7 @@ class GraphBuilder:
             # Failure
             ##################################################
 
-            if pd.notna(fail):
+            if valid_id(fail):
 
                 G.add_node(
                     fail,
@@ -88,7 +93,7 @@ class GraphBuilder:
             # Change
             ##################################################
 
-            if pd.notna(change):
+            if valid_id(change):
 
                 G.add_node(
                     change,
@@ -99,15 +104,15 @@ class GraphBuilder:
             # Traceability
             ##################################################
 
-            if pd.notna(req) and pd.notna(ver):
+            if valid_id(req) and valid_id(ver):
 
                 G.add_edge(req, ver)
 
-            if pd.notna(ver) and pd.notna(test):
+            if valid_id(ver) and valid_id(test):
 
                 G.add_edge(ver, test)
 
-            if pd.notna(test) and pd.notna(fail):
+            if valid_id(test) and valid_id(fail):
 
                 G.add_edge(test, fail)
 
@@ -115,7 +120,7 @@ class GraphBuilder:
             # Requirement -> Failure
             ##################################################
 
-            if pd.notna(req) and pd.notna(fail):
+            if valid_id(req) and valid_id(fail):
 
                 G.add_edge(req, fail)
 
@@ -123,15 +128,15 @@ class GraphBuilder:
             # Change Impact
             ##################################################
 
-            if pd.notna(change) and pd.notna(affected_req):
+            if valid_id(change) and valid_id(affected_req):
 
                 G.add_edge(change, affected_req)
 
-            if pd.notna(affected_req) and pd.notna(affected_ver):
+            if valid_id(affected_req) and valid_id(affected_ver):
 
                 G.add_edge(affected_req, affected_ver)
 
-            if pd.notna(affected_ver) and pd.notna(affected_test):
+            if valid_id(affected_ver) and valid_id(affected_test):
 
                 G.add_edge(affected_ver, affected_test)
 
@@ -165,5 +170,15 @@ class GraphBuilder:
             ):
         
                 G.remove_edge(u, v)
+
+        bad_nodes = [
+        n for n in G.nodes
+        if not isinstance(n, (str, int))
+            
+        ]
         
+        if bad_nodes:
+            print("REMOVE:", bad_nodes)
+            G.remove_nodes_from(bad_nodes)
+            
         return G, rkg_df.head()
