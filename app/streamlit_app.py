@@ -809,6 +809,15 @@ with tab3:
                         
                             net.from_nx(G)
 
+                        st.write("===== INVALID NODES =====")
+
+                        invalid_nodes = [
+                            n for n in G.nodes()
+                            if not isinstance(n, (str, int))
+                        ]
+                        
+                        st.write(invalid_nodes)
+
                     for node in net.nodes:
 
                         if node["id"].startswith(
