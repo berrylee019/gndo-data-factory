@@ -862,11 +862,21 @@ with tab3:
                             if u.strip() == "" or v.strip() == "":
                                 continue
                         
-                            G_clean.add_node(u)
+                            G_clean.add_node(
+                                u,
+                                **G.nodes[u]
+                            )
+                            
+                            G_clean.add_node(
+                                v,
+                                **G.nodes[v]
+                            )
                         
-                            G_clean.add_node(v)
-                        
-                            G_clean.add_edge(u, v)
+                            G_clean.add_edge(
+                                u,
+                                v,
+                                **data
+                            )
                         
                         st.write("Original Nodes :", G.number_of_nodes())
                         st.write("Original Edges :", G.number_of_edges())
