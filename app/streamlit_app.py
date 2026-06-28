@@ -795,37 +795,46 @@ with tab3:
                             )
         
                         if failure_id:
-        
+                        
                             G.add_edge(
                                 test_id,
                                 failure_id
                             )
-
-                    for node in net.nodes:
-
-                        if node["id"].startswith(
-                            "CHG"
-                        ):
-                
-                            node["color"] = "#ff0000"
-                
-                        elif node["id"].startswith(
-                            "REQ"
-                        ):
-                
-                            node["color"] = "#00cc66"
-                
-                        elif node["id"].startswith(
-                            "VER"
-                        ):
-                
-                            node["color"] = "#ffcc00"
-                
-                        elif node["id"].startswith(
-                            "TEST"
-                        ):
-                
-                            node["color"] = "#0099ff"
+                        
+                        ####################################################
+                        # Build PyVis Network
+                        ####################################################
+                        
+                        net = Network(
+                            height="800px",
+                            width="100%",
+                            bgcolor="#ffffff",
+                            font_color="black",
+                            directed=True
+                        )
+                        
+                        net.from_nx(G)
+                        
+                        ####################################################
+                        # Node Color
+                        ####################################################
+                        
+                        for node in net.nodes:
+                        
+                            if node["id"].startswith("CHG"):
+                                node["color"] = "#ff0000"
+                        
+                            elif node["id"].startswith("REQ"):
+                                node["color"] = "#00cc66"
+                        
+                            elif node["id"].startswith("VER"):
+                                node["color"] = "#0099ff"
+                        
+                            elif node["id"].startswith("TEST"):
+                                node["color"] = "#ffaa00"
+                        
+                            elif node["id"].startswith("FAIL"):
+                                node["color"] = "#9900cc"
 
                     with tempfile.NamedTemporaryFile(
                         delete=False,
