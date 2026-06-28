@@ -258,6 +258,21 @@ with tab3:
         ].head(20)
     )
     
+    st.write(
+        rkg_df[
+            [
+                "requirement_id",
+                "verification_id",
+                "test_id",
+                "failure_id",
+                "change_id"
+            ]
+        ].query(
+            "failure_id.notnull()",
+            engine="python"
+        )
+    )
+    
     with search_tab:
 
         st.subheader("Search")
