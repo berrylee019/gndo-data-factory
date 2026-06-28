@@ -139,4 +139,31 @@ class GraphBuilder:
         print("Edges =", G.number_of_edges())
         
         print("=== BUILD END ===")
+        ##################################################
+        # Remove Invalid Nodes
+        ##################################################
+        
+        invalid_nodes = [
+            n for n in G.nodes
+            if not isinstance(n, (str, int))
+        ]
+        
+        if invalid_nodes:
+            print("REMOVE INVALID NODES:", invalid_nodes)
+            G.remove_nodes_from(invalid_nodes)
+
+        ##################################################
+        # Remove Invalid Edges
+        ##################################################
+        
+        for u, v in list(G.edges()):
+        
+            if (
+                not isinstance(u, (str, int))
+                or
+                not isinstance(v, (str, int))
+            ):
+        
+                G.remove_edge(u, v)
+        
         return G, rkg_df.head()
