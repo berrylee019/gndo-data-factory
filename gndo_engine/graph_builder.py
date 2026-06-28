@@ -6,6 +6,7 @@ class GraphBuilder:
 
     @staticmethod
     def build(rkg_df):
+        print("=== BUILD START ===")
         print("========== GRAPH BUILDER V2 ==========")
         print("Rows =", len(rkg_df))
         
@@ -137,4 +138,5 @@ class GraphBuilder:
         print("Nodes =", G.number_of_nodes())
         print("Edges =", G.number_of_edges())
         
+        print("=== BUILD END ===")
         return G, rkg_df.head()
