@@ -771,37 +771,23 @@ with tab3:
         
                         from gndo_engine.graph_builder_v3 import GraphBuilderV3
                         
-                        G = GraphBuilderV3.build(rkg_df)
+                        G = GraphBuilderV3.build_impact_graph(row)
                         
-                        for u, v, data in G.edges(data=True):
-                        
-                            # 노드 ID를 문자열로 강제 변환
-                            if u is None or v is None:
-                                continue
-                        
-                            if str(u).lower() == "nan" or str(v).lower() == "nan":
-                                continue
-                        
-                            u = str(u)
-                            v = str(v)
-                        
-                            if u.strip() == "" or v.strip() == "":
-                                continue
+                        G_clean = nx.DiGraph()
+
+                        for node, attrs in G.nodes(data=True):
                         
                             G_clean.add_node(
-                                u,
-                                **G.nodes[u]
+                                str(node),
+                                **attrs
                             )
-                            
-                            G_clean.add_node(
-                                v,
-                                **G.nodes[v]
-                            )
+                        
+                        for u, v, attrs in G.edges(data=True):
                         
                             G_clean.add_edge(
-                                u,
-                                v,
-                                **data
+                                str(u),
+                                str(v),
+                                **attrs
                             )
                         
                         st.write("Original Nodes :", G.number_of_nodes())
