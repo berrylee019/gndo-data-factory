@@ -1,7 +1,6 @@
 import streamlit as st
 import sys
 from gndo_engine.graph_builder_v3 import GraphBuilderV3
-st.write(hasattr(GraphBuilderV3, "build_impact_graph"))
 import os
 import sys
 from pathlib import Path
