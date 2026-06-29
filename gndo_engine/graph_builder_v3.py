@@ -185,7 +185,12 @@ class GraphBuilderV3:
     @staticmethod
     def build_impact_graph(row):
         
-        print("GraphBuilderV3 VERSION = 2026-06-29 V3")
+            print("========== IMPACT ==========")
+            print(row.to_dict())
+            print("----------------------------")
+            print("failure_id =", row.get("failure_id"))
+            print("affected_test =", row.get("affected_test"))
+            print(row.to_dict())
         
         G = nx.DiGraph()
 
