@@ -22,6 +22,7 @@ from gndo_engine.graph_builder_v3 import GraphBuilderV3
 import inspect
 
 st.write(inspect.getfile(GraphBuilderV3))
+st.write(dir(GraphBuilderV3))
 
 st.set_page_config(
     page_title="GNDO Data Factory",
