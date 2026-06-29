@@ -835,7 +835,7 @@ with tab3:
                         # Node Color
                         ####################################################
                         
-                        for node in net.nodes:
+                        for node in Impact_net.nodes:
                         
                             if node["id"].startswith("CHG"):
                                 node["color"] = "#ff0000"
@@ -1608,7 +1608,7 @@ with tab4:
             
         full_net.from_nx(G)
 
-        for edge in net.edges:
+        for edge in full_net.edges:
         
             edge["font"] = {
                 "size": 14,
@@ -1623,7 +1623,7 @@ with tab4:
                 "type": "dynamic"
             }
     
-        for node in net.nodes:
+        for node in full_net.nodes:
         
             if node["id"].startswith("CFR"):
                 node["size"] = 40
@@ -1672,7 +1672,7 @@ with tab4:
                 node["size"] = 20
                 node["color"] = "#d62728"
 
-        for edge in net.edges:
+        for edge in full_net.edges:
 
             edge["font"] = {
                 "size": 12
