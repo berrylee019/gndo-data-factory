@@ -262,188 +262,188 @@ class GraphBuilderV3:
 
         return G
 
+    ##################################################
+    # Impact Graph
+    ##################################################
+    @staticmethod
+    def build_impact_graph(row):
+
+        G = nx.DiGraph()
+    
+        change = row.get("change_id")
+    
+        req = row.get("affected_requirement")
+    
+        ver = row.get("affected_verification")
+    
+        test = row.get("affected_test")
+    
+        fail = row.get("failure_id")
+    
+        chapter = row.get("chapter")
+
         ##################################################
-        # Impact Graph
+        # CHANGE
         ##################################################
-        @staticmethod
-        def build_impact_graph(row):
+    
+        if pd.notna(change):
+    
+            G.add_node(
+                str(change),
+                type="CHANGE",
+                label=str(change),
+                chapter=chapter
+            )
+    
+        ##################################################
+        # REQUIREMENT
+        ##################################################
+    
+        if pd.notna(req):
+    
+            G.add_node(
+                str(req),
+                type="REQ",
+                label=str(req),
+                chapter=chapter
+            )
+    
+        ##################################################
+        # VERIFICATION
+        ##################################################
+    
+        if pd.notna(ver):
+    
+            G.add_node(
+                str(ver),
+                type="VER",
+                label=str(ver),
+                chapter=chapter
+            )
+    
+        ##################################################
+        # TEST
+        ##################################################
+    
+        if pd.notna(test):
+    
+            G.add_node(
+                str(test),
+                type="TEST",
+                label=str(test),
+                chapter=chapter
+            )
+    
+        ##################################################
+        # FAILURE
+        ##################################################
+    
+        if pd.notna(fail):
+    
+            G.add_node(
+                str(fail),
+                type="FAIL",
+                label=str(fail),
+                chapter=chapter
+            )
+        ##################################################
+        # CHANGE -> REQUIREMENT
+        ##################################################
+    
+        if (
+            pd.notna(change)
+            and
+            pd.notna(req)
+        ):
+    
+            G.add_edge(
+                str(change),
+                str(req),
+                relation="changes"
+            )
 
-            G = nx.DiGraph()
-        
-            change = row.get("change_id")
-        
-            req = row.get("affected_requirement")
-        
-            ver = row.get("affected_verification")
-        
-            test = row.get("affected_test")
-        
-            fail = row.get("failure_id")
-        
-            chapter = row.get("chapter")
+        ##################################################
+        # REQUIREMENT -> VERIFICATION
+        ##################################################
+    
+        if (
+            pd.notna(req)
+            and
+            pd.notna(ver)
+        ):
+    
+            G.add_edge(
+                str(req),
+                str(ver),
+                relation="verified_by"
+            )
 
-            ##################################################
-            # CHANGE
-            ##################################################
-        
-            if pd.notna(change):
-        
-                G.add_node(
-                    str(change),
-                    type="CHANGE",
-                    label=str(change),
-                    chapter=chapter
-                )
-        
-            ##################################################
-            # REQUIREMENT
-            ##################################################
-        
-            if pd.notna(req):
-        
-                G.add_node(
-                    str(req),
-                    type="REQ",
-                    label=str(req),
-                    chapter=chapter
-                )
-        
-            ##################################################
-            # VERIFICATION
-            ##################################################
-        
-            if pd.notna(ver):
-        
-                G.add_node(
-                    str(ver),
-                    type="VER",
-                    label=str(ver),
-                    chapter=chapter
-                )
-        
-            ##################################################
-            # TEST
-            ##################################################
-        
-            if pd.notna(test):
-        
-                G.add_node(
-                    str(test),
-                    type="TEST",
-                    label=str(test),
-                    chapter=chapter
-                )
-        
-            ##################################################
-            # FAILURE
-            ##################################################
-        
-            if pd.notna(fail):
-        
-                G.add_node(
-                    str(fail),
-                    type="FAIL",
-                    label=str(fail),
-                    chapter=chapter
-                )
-            ##################################################
-            # CHANGE -> REQUIREMENT
-            ##################################################
-        
-            if (
-                pd.notna(change)
-                and
-                pd.notna(req)
-            ):
-        
-                G.add_edge(
-                    str(change),
-                    str(req),
-                    relation="changes"
-                )
+        ##################################################
+        # VERIFICATION -> TEST
+        ##################################################
+    
+        if (
+            pd.notna(ver)
+            and
+            pd.notna(test)
+        ):
+    
+            G.add_edge(
+                str(ver),
+                str(test),
+                relation="tested_by"
+            )
 
-            ##################################################
-            # REQUIREMENT -> VERIFICATION
-            ##################################################
-        
-            if (
-                pd.notna(req)
-                and
-                pd.notna(ver)
-            ):
-        
-                G.add_edge(
-                    str(req),
-                    str(ver),
-                    relation="verified_by"
-                )
+        ##################################################
+        # TEST -> FAILURE
+        ##################################################
+    
+        if (
+            pd.notna(test)
+            and
+            pd.notna(fail)
+        ):
+    
+            G.add_edge(
+                str(test),
+                str(fail),
+                relation="failure_mode"
+            )
 
-            ##################################################
-            # VERIFICATION -> TEST
-            ##################################################
-        
-            if (
-                pd.notna(ver)
-                and
-                pd.notna(test)
-            ):
-        
-                G.add_edge(
-                    str(ver),
-                    str(test),
-                    relation="tested_by"
-                )
+        ##################################################
+        # REQUIREMENT -> FAILURE
+        ##################################################
+    
+        if (
+            pd.notna(req)
+            and
+            pd.notna(fail)
+        ):
+    
+            G.add_edge(
+                str(req),
+                str(fail),
+                relation="causes"
+            )
 
-            ##################################################
-            # TEST -> FAILURE
-            ##################################################
-        
-            if (
-                pd.notna(test)
-                and
-                pd.notna(fail)
-            ):
-        
-                G.add_edge(
-                    str(test),
-                    str(fail),
-                    relation="failure_mode"
-                )
-
-            ##################################################
-            # REQUIREMENT -> FAILURE
-            ##################################################
-        
-            if (
-                pd.notna(req)
-                and
-                pd.notna(fail)
-            ):
-        
-                G.add_edge(
-                    str(req),
-                    str(fail),
-                    relation="causes"
-                )
-
-            print()
-        
-            print("Impact Graph")
-        
-            print("---------------------------")
-        
-            print("Nodes :", G.number_of_nodes())
-        
-            print("Edges :", G.number_of_edges())
-        
-            print("---------------------------")
-        
-            for u, v in G.edges():
-        
-                print(
-                    u,
-                    "->",
-                    v
-                )
+        print()
+    
+        print("Impact Graph")
+    
+        print("---------------------------")
+    
+        print("Nodes :", G.number_of_nodes())
+    
+        print("Edges :", G.number_of_edges())
+    
+        print("---------------------------")
+    
+        for u, v in G.edges():
+    
+            print(
+                u,
+                "->",
+                v
+            )
 
         return G
