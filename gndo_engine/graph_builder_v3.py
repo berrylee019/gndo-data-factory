@@ -447,3 +447,4 @@ class GraphBuilderV3:
             )
 
         return G
+        print(dir(GraphBuilderV3))
