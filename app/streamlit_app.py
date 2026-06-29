@@ -17,11 +17,6 @@ import streamlit.components.v1 as components
 import tempfile
 import gndo_engine.graph_builder as gb
 
-import inspect
-from gndo_engine.graph_builder_v3 import GraphBuilderV3
-
-st.write(inspect.getfile(GraphBuilderV3))
-
 st.set_page_config(
     page_title="GNDO Data Factory",
     layout="wide"
