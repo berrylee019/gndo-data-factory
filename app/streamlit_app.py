@@ -1,6 +1,6 @@
 import streamlit as st
 import sys
-from gndo_engine.graph_builder_v3 import GraphBuilderV3
+
 import os
 import sys
 from pathlib import Path
@@ -19,9 +19,9 @@ import gndo_engine.graph_builder as gb
 
 from gndo_engine.graph_builder_v3 import GraphBuilderV3
 
-st.success("GraphBuilderV3 Loaded")
-st.write(hasattr(GraphBuilderV3, "build"))
-st.write(hasattr(GraphBuilderV3, "build_impact_graph"))
+import inspect
+
+st.write(inspect.getfile(GraphBuilderV3))
 
 st.set_page_config(
     page_title="GNDO Data Factory",
