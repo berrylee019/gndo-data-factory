@@ -1,10 +1,3 @@
-import sys
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parent.parent
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
-    
 import streamlit as st
 import sys
 
@@ -788,6 +781,12 @@ with tab3:
                         )
         
                         from gndo_engine.graph_builder_v3 import GraphBuilderV3
+                        
+                        print("========== IMPACT ==========")
+                        print(row)
+                        print("----------------------------")
+                        print("failure_id =", row.get("failure_id"))
+                        print("affected_test =", row.get("affected_test"))
                         
                         G = GraphBuilderV3.build_impact_graph(row)
                         st.write("Impact Nodes :", list(G.nodes()))
