@@ -857,7 +857,7 @@ with tab3:
                         suffix=".html"
                     ) as tmp:
                 
-                        net.save_graph(
+                        Impact_net.save_graph(
                             tmp.name
                         )
                 
