@@ -1,3 +1,10 @@
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+    
 import streamlit as st
 import sys
 
@@ -15,7 +22,6 @@ import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
-import gndo_engine.graph_builder as gb
 
 from gndo_engine.graph_builder_v3 import GraphBuilderV3
 
