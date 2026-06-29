@@ -1555,7 +1555,9 @@ with tab4:
         print("========== NODE CHECK ==========")
         
         for node in G.nodes():
-        
+        for node in G.nodes(data=True):
+            print(node)
+            
             if not isinstance(node, (str, int)):
                 print(
                     "INVALID NODE:",
