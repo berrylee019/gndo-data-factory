@@ -17,6 +17,12 @@ import streamlit.components.v1 as components
 import tempfile
 import gndo_engine.graph_builder as gb
 
+from gndo_engine.graph_builder_v3 import GraphBuilderV3
+
+st.success("GraphBuilderV3 Loaded")
+st.write(hasattr(GraphBuilderV3, "build"))
+st.write(hasattr(GraphBuilderV3, "build_impact_graph"))
+
 st.set_page_config(
     page_title="GNDO Data Factory",
     layout="wide"
