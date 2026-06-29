@@ -820,8 +820,16 @@ with tab3:
                         print(type(G_clean))
                         print("Nodes:", G_clean.number_of_nodes())
                         print("Edges:", G_clean.number_of_edges())
+
+                        Impact_net = Network(
+                            height="800px",
+                            width="100%",
+                            bgcolor="#ffffff",
+                            font_color="black",
+                            directed=True
+                        )
                         
-                        net.from_nx(G_clean)
+                        Impact_net.from_nx(G_clean)
 
                         ####################################################
                         # Node Color
@@ -1550,7 +1558,7 @@ with tab4:
             len(G.edges)
         )
     
-        net = Network(
+        full_net = Network(
             height="800px",
             width="100%",
             bgcolor="#ffffff",
@@ -1598,7 +1606,7 @@ with tab4:
         
             break
             
-        net.from_nx(G)
+        full_net.from_nx(G)
 
         for edge in net.edges:
         
