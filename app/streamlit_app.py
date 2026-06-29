@@ -783,6 +783,8 @@ with tab3:
                         from gndo_engine.graph_builder_v3 import GraphBuilderV3
                         
                         G = GraphBuilderV3.build_impact_graph(row)
+                        st.write("Impact Nodes :", list(G.nodes()))
+                        st.write("Impact Edges :", list(G.edges()))
                         
                         G_clean = nx.DiGraph()
 
