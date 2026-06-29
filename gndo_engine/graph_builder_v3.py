@@ -190,7 +190,6 @@ class GraphBuilderV3:
             print("----------------------------")
             print("failure_id =", row.get("failure_id"))
             print("affected_test =", row.get("affected_test"))
-            print(row.to_dict())
         
         G = nx.DiGraph()
 
