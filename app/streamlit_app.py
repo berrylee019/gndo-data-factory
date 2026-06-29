@@ -15,7 +15,7 @@ import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
-
+import gndo_engine.graph_builder as gb
 
 from gndo_engine.graph_builder_v3 import GraphBuilderV3
 
