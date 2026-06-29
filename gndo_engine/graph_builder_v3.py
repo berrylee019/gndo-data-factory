@@ -1,6 +1,7 @@
 import networkx as nx
 import pandas as pd
 
+print("GraphBuilderV3 VERSION = 2026-06-29 V3")
 
 class GraphBuilderV3:
 
@@ -183,7 +184,9 @@ class GraphBuilderV3:
 
     @staticmethod
     def build_impact_graph(row):
-
+        
+        print("GraphBuilderV3 VERSION = 2026-06-29 V3")
+        
         G = nx.DiGraph()
 
         change = row.get("change_id")
