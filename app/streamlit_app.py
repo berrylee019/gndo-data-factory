@@ -782,12 +782,6 @@ with tab3:
         
                         from gndo_engine.graph_builder_v3 import GraphBuilderV3
                         
-                        print("========== IMPACT ==========")
-                        print(row)
-                        print("----------------------------")
-                        print("failure_id =", row.get("failure_id"))
-                        print("affected_test =", row.get("affected_test"))
-                        
                         G = GraphBuilderV3.build_impact_graph(row)
                         st.write("Impact Nodes :", list(G.nodes()))
                         st.write("Impact Edges :", list(G.edges()))
