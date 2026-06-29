@@ -249,6 +249,11 @@ with tab3:
         ]
     )
     rkg_df = pd.DataFrame(rkg)
+    
+    G = GraphBuilderV3.build(rkg_df)
+
+    st.write("Nodes :", G.number_of_nodes())
+    st.write("Edges :", G.number_of_edges())
 
     st.write(rkg_df.shape)
     st.write(rkg_df.columns.tolist())
