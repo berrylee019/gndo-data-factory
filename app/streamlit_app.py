@@ -1,6 +1,5 @@
 import streamlit as st
 import sys
-from gndo_engine.graph_builder_v3 import GraphBuilderV3
 import os
 import sys
 from pathlib import Path
@@ -13,6 +12,7 @@ import pandas as pd
 from pathlib import Path
 import networkx as nx
 from pyvis.network import Network
+from gndo_engine.graph_builder_v3 import GraphBuilderV3
 import streamlit.components.v1 as components
 import tempfile
 
@@ -800,56 +800,17 @@ with tab3:
                         print("Nodes:", G_clean.number_of_nodes())
                         print("Edges:", G_clean.number_of_edges())
 
-                        impact_net = Network(
-                            height="800px",
-                            width="100%",
-                            bgcolor="#ffffff",
-                            font_color="black",
-                            directed=True
-                        )
-                        
-                        impact_net.from_nx(G_clean)
+                        from gndo_engine.graph_visualizer import GraphVisualizer
 
+                        net = GraphVisualizer.build_network(G_clean)
                         
-                        ####################################################
-                        # Node Color
-                        ####################################################
+                        html = GraphVisualizer.save_html(net)
                         
-                        for node in impact_net.nodes:
-                        
-                            if node["id"].startswith("CHG"):
-                                node["color"] = "#ff0000"
-                        
-                            elif node["id"].startswith("REQ"):
-                                node["color"] = "#00cc66"
-                        
-                            elif node["id"].startswith("VER"):
-                                node["color"] = "#0099ff"
-                        
-                            elif node["id"].startswith("TEST"):
-                                node["color"] = "#ffaa00"
-                        
-                            elif node["id"].startswith("FAIL"):
-                                node["color"] = "#9900cc"
-
-                    with tempfile.NamedTemporaryFile(
-                        delete=False,
-                        suffix=".html"
-                    ) as tmp:
-                
-                        impact_net.save_graph(
-                            tmp.name
+                        components.html(
+                            html,
+                            height=850,
                         )
-                
-                        html = open(
-                            tmp.name,
-                            encoding="utf-8"
-                        ).read()
-                
-                    st.components.v1.html(
-                        html,
-                        height=550
-                    )
+
                         
                 elif (
                     target_id
