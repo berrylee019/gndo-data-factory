@@ -14,7 +14,7 @@ import networkx as nx
 from pyvis.network import Network
 from gndo_engine.graph_builder_v3 import GraphBuilderV3
 from gndo_engine.traceability_engine import TraceabilityEngine
-
+from gndo_engine.impact_engine import ImpactEngine
 import streamlit.components.v1 as components
 import tempfile
 
@@ -579,10 +579,9 @@ with tab3:
         
                 row = result.iloc[0]
 
-                affected_requirements = []
-                affected_verifications = []
-                affected_tests = []
-                affected_failures = []
+                impact = ImpactEngine(G)
+                
+                summary = impact.summary()
 
                 change_row = row
 
@@ -732,22 +731,22 @@ with tab3:
                     
                         st.metric(
                             "Requirements",
-                            len(affected_requirements)
+                            summary["requirements]
                         )
                         
                         st.metric(
                             "Verifications",
-                            len(affected_verifications)
+                            summary["verifications]
                         )
                         
                         st.metric(
                             "Tests",
-                            len(affected_tests)
+                            summary["tests]
                         )
                         
                         st.metric(
                             "Failures",
-                            len(affected_failures)
+                            summary["failures]
                         )
         
                         change_id = row.get(
