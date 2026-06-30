@@ -1668,7 +1668,7 @@ with tab4:
             suffix=".html"
         )
 
-        net.save_graph(
+        full_net.save_graph(
             tmp_file.name
         )
 
