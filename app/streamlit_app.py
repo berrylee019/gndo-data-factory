@@ -330,6 +330,7 @@ with tab3:
             G = engine.build_change_graph(
                 row["change_id"]
             )
+            
             st.write("Impact Nodes:", list(G.nodes()))
             st.write("Impact Edges:", list(G.edges()))
             
