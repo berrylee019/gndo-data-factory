@@ -12,15 +12,15 @@ class TraceabilityEngine:
 
     def find_change(self, change_id):
 
-    rows = self.rkg_df[
-        self.rkg_df["change_id"] == change_id
-    ]
-
-    if rows.empty:
-
-        return None
-
-    return rows.iloc[0]
+        rows = self.rkg_df[
+            self.rkg_df["change_id"] == change_id
+        ]
+    
+        if rows.empty:
+    
+            return None
+    
+        return rows.iloc[0]
   
 
     def build_change_graph(self, change_id):
