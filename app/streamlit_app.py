@@ -246,7 +246,7 @@ with tab3:
     rkg_df = pd.DataFrame(rkg)
 
     st.write(rkg_df.shape)
-    st.write(rkg_df.columns.tolist())
+    st.write(filtered_df.columns.tolist())
 
     st.write(
         rkg_df[
@@ -331,6 +331,10 @@ with tab3:
     
         for _, row in filtered_df.iterrows():
 
+            st.write(df.columns.tolist())
+
+            st.write(rkg_df.columns.tolist())
+            
             st.divider()
         
             st.markdown(
