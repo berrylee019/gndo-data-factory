@@ -731,22 +731,22 @@ with tab3:
                     
                         st.metric(
                             "Requirements",
-                            summary["requirements]
+                            summary[requirements]
                         )
                         
                         st.metric(
                             "Verifications",
-                            summary["verifications]
+                            summary[verifications]
                         )
                         
                         st.metric(
                             "Tests",
-                            summary["tests]
+                            summary[tests]
                         )
                         
                         st.metric(
                             "Failures",
-                            summary["failures]
+                            summary[failures]
                         )
         
                         change_id = row.get(
