@@ -799,15 +799,23 @@ with tab3:
                         print(type(G_clean))
                         print("Nodes:", G_clean.number_of_nodes())
                         print("Edges:", G_clean.number_of_edges())
+
+                        impact_net = Network(
+                            height="800px",
+                            width="100%",
+                            bgcolor="#ffffff",
+                            font_color="black",
+                            directed=True
+                        )
                         
-                        net.from_nx(G_clean)
+                        impact_net.from_nx(G_clean)
 
                         
                         ####################################################
                         # Node Color
                         ####################################################
                         
-                        for node in net.nodes:
+                        for node in impact_net.nodes:
                         
                             if node["id"].startswith("CHG"):
                                 node["color"] = "#ff0000"
@@ -1530,7 +1538,7 @@ with tab4:
             len(G.edges)
         )
     
-        net = Network(
+        full_net = Network(
             height="800px",
             width="100%",
             bgcolor="#ffffff",
@@ -1576,9 +1584,9 @@ with tab4:
         
             break
             
-        net.from_nx(G)
+        full_net.from_nx(G)
 
-        for edge in net.edges:
+        for edge in full_net.edges:
         
             edge["font"] = {
                 "size": 14,
@@ -1593,7 +1601,7 @@ with tab4:
                 "type": "dynamic"
             }
     
-        for node in net.nodes:
+        for node in full_net.nodes:
         
             if node["id"].startswith("CFR"):
                 node["size"] = 40
@@ -1642,7 +1650,7 @@ with tab4:
                 node["size"] = 20
                 node["color"] = "#d62728"
 
-        for edge in net.edges:
+        for edge in full_net.edges:
 
             edge["font"] = {
                 "size": 12
