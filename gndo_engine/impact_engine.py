@@ -7,15 +7,15 @@ class ImpactEngine:
 
     def get_nodes(self, prefix):
 
-    return [
-
-        n
-
-        for n in self.graph.nodes()
-
-        if str(n).startswith(prefix)
-
-    ]
+        return [
+    
+            n
+    
+            for n in self.graph.nodes()
+    
+            if str(n).startswith(prefix)
+    
+        ]
 
   
     def requirements(self):
