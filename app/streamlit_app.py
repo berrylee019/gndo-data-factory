@@ -322,10 +322,81 @@ with tab3:
     
         st.dataframe(
             filtered_df,
-            use_container_width=True
+            width="stretch"
         )
+
+        from gndo_engine.traceability_engine import TraceabilityEngine
+
+        engine = TraceabilityEngine(rkg_df)
     
         for _, row in filtered_df.iterrows():
+
+            st.divider()
+        
+            st.markdown(
+                f"## {row['document_id']}"
+            )
+
+            change_id = row.get("change_id")
+
+            if pd.notna(change_id):
+            
+                G = engine.build_change_graph(change_id)
+
+            from gndo_engine.impact_engine import ImpactEngine
+
+            impact = ImpactEngine(G)
+            
+            summary = impact.summary()
+            
+
+            c1, c2, c3, c4 = st.columns(4)
+
+            c1.metric(
+                "REQ",
+                summary["requirements"]
+            )
+            
+            c2.metric(
+                "VER",
+                summary["verifications"]
+            )
+            
+            c3.metric(
+                "TEST",
+                summary["tests"]
+            )
+            
+            c4.metric(
+                "FAIL",
+                summary["failures"]
+            )
+
+            from gndo_engine.graph_visualizer import GraphVisualizer
+
+            impact_net = GraphVisualizer.build_network(G)
+            
+            impact_html = GraphVisualizer.save_html(
+                impact_net
+            )
+            
+            components.html(
+                impact_html,
+                height=650
+            )
+
+            if pd.notna(row.get("failure_name")):
+
+                st.error(
+                    row["failure_name"]
+                )
+            
+            if pd.notna(row.get("failure_description")):
+            
+                st.write(
+                    row["failure_description"]
+                )
+
 
             G = engine.build_change_graph(
                 row["change_id"]
@@ -334,14 +405,6 @@ with tab3:
             st.write("Impact Nodes:", list(G.nodes()))
             st.write("Impact Edges:", list(G.edges()))
             
-            impact_net = GraphVisualizer.build_network(G)
-
-            impact_html = GraphVisualizer.save_html(impact_net)
-            
-            components.html(
-                impact_html,
-                height=650
-            )
     
             with st.expander(
                 row["title"]
