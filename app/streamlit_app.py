@@ -1656,7 +1656,7 @@ with tab4:
                 "size": 12
             }
             
-        net.repulsion(
+        full_net.repulsion(
             node_distance=350,
             central_gravity=0.15,
             spring_length=350,
