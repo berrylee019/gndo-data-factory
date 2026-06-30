@@ -326,6 +326,21 @@ with tab3:
         )
     
         for _, row in filtered_df.iterrows():
+
+            G = engine.build_change_graph(
+                row["change_id"]
+            )
+            st.write("Impact Nodes:", list(G.nodes()))
+            st.write("Impact Edges:", list(G.edges()))
+            
+            impact_net = GraphVisualizer.build_network(G)
+
+            impact_html = GraphVisualizer.save_html(impact_net)
+            
+            components.html(
+                impact_html,
+                height=650
+            )
     
             with st.expander(
                 row["title"]
@@ -773,20 +788,7 @@ with tab3:
                         
                         engine = TraceabilityEngine(rkg_df)
 
-                        G = engine.build_change_graph(
-                            row["change_id"]
-                        )
-                        st.write("Impact Nodes:", list(G.nodes()))
-                        st.write("Impact Edges:", list(G.edges()))
-                        
-                        impact_net = GraphVisualizer.build_network(G)
 
-                        impact_html = GraphVisualizer.save_html(impact_net)
-                        
-                        components.html(
-                            impact_html,
-                            height=650
-                        )
                 
                         
                 elif (
