@@ -1499,11 +1499,15 @@ with tab4:
             len(G.edges)
         )
     
-        full_net = Network(
-            height="800px",
-            width="100%",
-            bgcolor="#ffffff",
-            font_color="black"
+        from gndo_engine.graph_visualizer import GraphVisualizer
+        
+        full_net = GraphVisualizer.build_network(G)
+        
+        html = GraphVisualizer.save_html(full_net)
+        
+        components.html(
+            html,
+            height=850
         )
 
         import math
@@ -1545,107 +1549,7 @@ with tab4:
         
             break
             
-        full_net.from_nx(G)
 
-        for edge in full_net.edges:
-        
-            edge["font"] = {
-                "size": 14,
-                "align": "middle"
-            }
-        
-            edge["width"] = 3
-        
-            edge["arrows"] = "to"
-        
-            edge["smooth"] = {
-                "type": "dynamic"
-            }
-    
-        for node in full_net.nodes:
-        
-            if node["id"].startswith("CFR"):
-                node["size"] = 40
-        
-            elif node["id"].startswith("RG"):
-                node["size"] = 35
-        
-            elif node["id"].startswith("NUREG"):
-                node["size"] = 30
-        
-            elif node["id"].startswith("SRP"):
-                node["size"] = 25
-
-            elif node["group"] == "REQUIREMENT":
-
-                node["color"] = "#e377c2"
-                node["size"] = 28
-
-            elif node["group"] == "VERIFICATION":
-
-                node["color"] = "#bc5090"
-                node["size"] = 26
-
-            elif node["group"] == "TEST":
-
-                node["color"] = "#ff7f0e"
-                node["size"] = 24
-                
-            elif node["group"] == "SYSTEM":
-                node["size"] = 22
-                node["color"] = "#17becf"
-                
-            elif node["group"] == "DOC":
-                node["size"] = 24
-                node["color"] = "#bcbd22"
-    
-            elif node["group"] == "COMPONENT":
-                node["size"] = 18
-                node["color"] = "#8c564b"
-
-            elif node["id"].startswith("AP1000"):
-                node["size"] = 20
-                node["color"] = "#ffbf00"
-        
-            elif node["id"].startswith("APR1400"):
-                node["size"] = 20
-                node["color"] = "#d62728"
-
-        for edge in full_net.edges:
-
-            edge["font"] = {
-                "size": 12
-            }
-            
-        full_net.repulsion(
-            node_distance=350,
-            central_gravity=0.15,
-            spring_length=350,
-            spring_strength=0.02
-        )
-
-        tmp_file = tempfile.NamedTemporaryFile(
-            delete=False,
-            suffix=".html"
-        )
-
-        full_net.save_graph(
-            tmp_file.name
-        )
-
-        with open(
-            tmp_file.name,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            html = f.read()
-
-        components.html(
-            html,
-            height=850,
-            scrolling=True
-        )
 
     else:
 
