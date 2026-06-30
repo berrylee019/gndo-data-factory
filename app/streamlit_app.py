@@ -776,46 +776,18 @@ with tab3:
                         G = engine.build_change_graph(
                             row["change_id"]
                         )
+                        st.write("Impact Nodes:", list(G.nodes()))
+                        st.write("Impact Edges:", list(G.edges()))
                         
-                        G_clean = nx.DiGraph()
+                        impact_net = GraphVisualizer.build_network(G)
 
-                        for node, attrs in G.nodes(data=True):
-                        
-                            G_clean.add_node(
-                                str(node),
-                                **attrs
-                            )
-                        
-                        for u, v, attrs in G.edges(data=True):
-                        
-                            G_clean.add_edge(
-                                str(u),
-                                str(v),
-                                **attrs
-                            )
-                        
-                        st.write("Original Nodes :", G.number_of_nodes())
-                        st.write("Original Edges :", G.number_of_edges())
-                        
-                        st.write("Clean Nodes :", G_clean.number_of_nodes())
-                        st.write("Clean Edges :", G_clean.number_of_edges())
-
-                        print("===== G_clean =====")
-                        print(type(G_clean))
-                        print("Nodes:", G_clean.number_of_nodes())
-                        print("Edges:", G_clean.number_of_edges())
-
-                        from gndo_engine.graph_visualizer import GraphVisualizer
-
-                        net = GraphVisualizer.build_network(G_clean)
-                        
-                        html = GraphVisualizer.save_html(net)
+                        impact_html = GraphVisualizer.save_html(impact_net)
                         
                         components.html(
-                            html,
-                            height=850,
+                            impact_html,
+                            height=650
                         )
-
+                
                         
                 elif (
                     target_id
