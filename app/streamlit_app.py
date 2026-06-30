@@ -246,7 +246,7 @@ with tab3:
     rkg_df = pd.DataFrame(rkg)
 
     st.write(rkg_df.shape)
-    st.write(filtered_df.columns.tolist())
+    st.write(rkg_df.columns.tolist())
 
     st.write(
         rkg_df[
