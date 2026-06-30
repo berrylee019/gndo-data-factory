@@ -439,9 +439,9 @@ with tab3:
         for _, r in rkg_df.iterrows():
         
             change_id = r.get("change_id")
-            req_id = r.get("affected_requirement")
-            ver_id = r.get("affected_verification")
-            test_id = r.get("affected_test")
+            req_id = r.get("impact.requirement")
+            ver_id = r.get("impact.verification")
+            test_id = r.get("impact.test")
             fail_id = r.get("failure_id")
         
             if pd.notna(change_id) and pd.notna(req_id):
@@ -588,7 +588,7 @@ with tab3:
                 if change_row.get("change_id"):
                 
                     affected_req = change_row.get(
-                        "affected_requirement"
+                        "impact.requirement"
                     )
                 
                     affected_rows = rkg_df[
@@ -685,37 +685,37 @@ with tab3:
                         st.write(impact_nodes)
                         
                         st.write("Affected Requirements")
-                        st.write(affected_requirements)
+                        st.write(impact.requirements)
                         
                         st.write("Affected Verifications")
-                        st.write(affected_verifications)
+                        st.write(impact.verifications)
                         
                         st.write("Affected Tests")
-                        st.write(affected_tests)
+                        st.write(impact.tests)
                         
                         st.write("Affected Failures")
-                        st.write(affected_failures)
+                        st.write(impact.failures)
                         
     
-                        affected_requirements = [
+                        impact.requirements = [
                             n
                             for n in impact_nodes
                             if str(n).startswith("REQ-")
                         ]
                         
-                        affected_verifications = [
+                        impact.verifications = [
                             n
                             for n in impact_nodes
                             if str(n).startswith("VER-")
                         ]
                         
-                        affected_tests = [
+                        impact.tests = [
                             n
                             for n in impact_nodes
                             if str(n).startswith("TEST-")
                         ]
                         
-                        affected_failures = [
+                        impact.failures = [
                             n
                             for n in impact_nodes
                             if str(n).startswith("FAIL-")
@@ -754,15 +754,15 @@ with tab3:
                         )
                     
                         req_id = row.get(
-                            "affected_requirement"
+                            "impact.requirement"
                         )
                     
                         ver_id = row.get(
-                            "affected_verification"
+                            "impact.verification"
                         )
                     
                         test_id = row.get(
-                            "affected_test"
+                            "impact.test"
                         )
         
                         failure_id = row.get(
@@ -1035,15 +1035,15 @@ with tab3:
 
                 ### Affected Requirement
 
-                {row.get('affected_requirement')}
+                {row.get('impact.requirement')}
                 
                 ### Affected Verification
                 
-                {row.get('affected_verification')}
+                {row.get('impact.verification')}
                 
                 ### Affected Test
                 
-                {row.get('affected_test')}
+                {row.get('impact.test')}
                 """
                 )
                         
