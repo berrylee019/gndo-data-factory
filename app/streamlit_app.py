@@ -404,94 +404,62 @@ with tab3:
             chapter_rkg["requirement_id"] == selected_requirement
         ]
 
-        verification_list = sorted(
-            requirement_rkg[
-                "verification_id"
-            ]
-            .dropna()
-            .unique()
-        )
-        
-        selected_verification = st.selectbox(
-            "Select Verification",
-            verification_list
-        )
+        selected_row = requirement_rkg.iloc[0]
 
-        verification_rkg = requirement_rkg[
-            requirement_rkg["verification_id"]
-            ==
-            selected_verification
-        ]
+        st.subheader("Requirement Detail")
 
-        test_list = sorted(
-            verification_rkg[
-                "test_id"
-            ]
-            .dropna()
-            .unique()
-        )
+        col1, col2 = st.columns(2)
         
-        selected_test = st.selectbox(
-            "Select Test",
-            test_list
-        )
+        with col1:
+        
+            st.write("Requirement")
+        
+            st.success(selected_row["requirement_id"])
+        
+            st.write(selected_row["requirement"])
+        
+        with col2:
+        
+            st.write("Verification")
+        
+            st.info(selected_row["verification_id"])
+    
 
-        test_rkg = verification_rkg[
-            verification_rkg["test_id"]
-            ==
-            selected_test
-        ]
+        st.write("Test")
 
+        if pd.notna(selected_row["test_id"]):
         
-        selected_row = test_rkg.iloc[0]
+            st.success(selected_row["test_id"])
+        
+        else:
+        
+            st.warning("No Test Defined")
+    
 
-        st.subheader("Failure")
+    
+        st.subheader("Failure Information")
         
-        st.write(
-            selected_row["failure_mode"]
-        )
+        if pd.notna(selected_row["failure_id"]):
         
-        st.write(
-            selected_row["failure_consequence"]
-        )
+            st.error(selected_row["failure_mode"])
         
-        st.success(
-            selected_row["mitigation"]
-        )
+            st.write(
+                selected_row["failure_consequence"]
+            )
+        
+            st.success(
+                selected_row["mitigation"]
+            )
+        
+        else:
+        
+            st.success("No Failure Linked")
 
-        selected_row = test_rkg.iloc[0]
-
-        
-        st.dataframe(
-        
-            chapter_rkg[
-                [
-                    "requirement_id",
-                    "verification_id",
-                    "test_id",
-                    "failure_id"
-                ]
-            ],
-        
-            width="stretch"
-        
-        )
 
         from gndo_engine.traceability_engine import TraceabilityEngine
 
         engine = TraceabilityEngine(rkg_df)
-   
-           
-       
-        st.markdown(
-            f"""
-        ## {selected_document["doc_id"]}
-        
-        {selected_document["title"]}
-        """
-        )
 
-        selected_row = requirement_rkg.iloc[0]
 
         st.subheader("Requirement Trace")
 
@@ -597,7 +565,15 @@ with tab3:
                         "Open Document",
                         selected_document["url"]
                     )
-   
+                    
+        st.markdown(
+            f"""
+        ## {selected_document["doc_id"]}
+        
+        {selected_document["title"]}
+        """
+        )
+        
 
         # ===========================
         # v1.4 Impact Propagation Graph
