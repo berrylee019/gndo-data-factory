@@ -389,6 +389,21 @@ with tab3:
         
         st.subheader("Chapter Preview")
 
+        requirements = sorted(
+            chapter_rkg["requirement_id"]
+            .dropna()
+            .unique()
+        )
+        
+        selected_requirement = st.selectbox(
+            "Select Requirement",
+            requirements
+        )
+
+        requirement_rkg = chapter_rkg[
+            chapter_rkg["requirement_id"] == selected_requirement
+        ]
+        
         st.dataframe(
         
             chapter_rkg[
@@ -418,7 +433,24 @@ with tab3:
         """
         )
 
-        selected_row = chapter_rkg.iloc[0]
+        selected_row = requirement_rkg.iloc[0]
+
+        st.subheader("Requirement Trace")
+
+        st.dataframe(
+        
+            requirement_rkg[
+                [
+                    "requirement_id",
+                    "verification_id",
+                    "test_id",
+                    "failure_id"
+                ]
+            ],
+        
+            width="stretch"
+        )
+        
 
         change_id = selected_row["change_id"]
 
