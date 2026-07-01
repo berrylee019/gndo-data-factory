@@ -347,7 +347,62 @@ with tab3:
         Source : {selected_document['source']}
         """
         )
+
+        selected_source = selected_document["source"]
+        chapter_df = rkg_df.copy()
+
+        if selected_source == "NRC":
+
+            chapter_df = chapter_df[
+                chapter_df["nureg"].notna()
+            ]
+            
+        elif selected_source == "RG":
         
+            chapter_df = chapter_df[
+                chapter_df["rg"].notna()
+            ]
+
+        elif selected_source == "SRP":
+
+            chapter_df = chapter_df[
+                chapter_df["srp"].notna()
+            ]
+
+        chapters = sorted(
+            chapter_df["chapter"]
+            .dropna()
+            .unique()
+        )
+
+        selected_chapter = st.selectbox(
+
+            "Select Chapter",
+        
+            chapters
+        
+        )
+
+        chapter_rkg = rkg_df[
+            rkg_df["chapter"] == selected_chapter
+        ]
+        
+        st.subheader("Chapter Preview")
+
+        st.dataframe(
+        
+            chapter_rkg[
+                [
+                    "requirement_id",
+                    "verification_id",
+                    "test_id",
+                    "failure_id"
+                ]
+            ],
+        
+            width="stretch"
+        
+        )
 
         from gndo_engine.traceability_engine import TraceabilityEngine
 
@@ -365,7 +420,8 @@ with tab3:
                 f"## {row['document_id']}"
             )
 
-            change_id = row.get("change_id")
+            selected_row = chapter_rkg.iloc[0]
+            change_id = selected_row["change_id"]
 
             if pd.notna(change_id):
            
