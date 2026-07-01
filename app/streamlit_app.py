@@ -474,10 +474,10 @@ with tab3:
                     selected_row["failure_mode"]
                 )
            
-            if pd.notna(row.get("failure_description")):
+            if pd.notna(selected_row.get("failure_description")):
            
                 st.write(
-                    row["failure_description"]
+                    selected_row["failure_description"]
                 )
 
 
