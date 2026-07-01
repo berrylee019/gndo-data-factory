@@ -411,10 +411,6 @@ with tab3:
             .unique()
         )
         
-        selected_requirement = st.selectbox(
-            "Requirement",
-            requirements
-        )
         
         st.markdown(
         f"""
