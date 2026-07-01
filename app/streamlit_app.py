@@ -442,19 +442,6 @@ with tab3:
             selected_test
         ]
 
-        st.write(
-            verification_rkg[
-                [
-                    "verification_id",
-                    "test_id",
-                    "failure_id"
-                ]
-            ]
-        )
-
-        st.write(
-            verification_rkg["test_id"].unique()
-        )
         
         selected_row = test_rkg.iloc[0]
 
