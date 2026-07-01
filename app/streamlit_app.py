@@ -324,6 +324,30 @@ with tab3:
             filtered_df,
             width="stretch"
         )
+        
+        selected_doc = st.selectbox(
+            "Select Document",
+            filtered_df["doc_id"] + " | " + filtered_df["title"]
+        )
+
+        selected_doc_id = selected_doc.split(" | ")[0]
+
+        selected_document = filtered_df[
+            filtered_df["doc_id"] == selected_doc_id
+        ].iloc[0]
+
+        st.info(
+            f"""
+        Document
+        
+        ID : {selected_document['doc_id']}
+        
+        Title : {selected_document['title']}
+        
+        Source : {selected_document['source']}
+        """
+        )
+        
 
         from gndo_engine.traceability_engine import TraceabilityEngine
 
