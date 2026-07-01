@@ -409,7 +409,6 @@ with tab3:
         engine = TraceabilityEngine(rkg_df)
    
            
-            st.divider()
        
             st.markdown(
                 f"""
