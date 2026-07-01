@@ -501,11 +501,11 @@ with tab3:
                     f"Category: {selected_document['category']}"
                 )
    
-                if row.get("url"):
-   
+                if pd.notna(selected_document.get("url")):
+            
                     st.link_button(
                         "Open Document",
-                        row["url"]
+                        selected_document["url"]
                     )
    
 
