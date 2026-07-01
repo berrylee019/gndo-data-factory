@@ -403,6 +403,63 @@ with tab3:
         requirement_rkg = chapter_rkg[
             chapter_rkg["requirement_id"] == selected_requirement
         ]
+
+        verification_list = sorted(
+            requirement_rkg[
+                "verification_id"
+            ]
+            .dropna()
+            .unique()
+        )
+        
+        selected_verification = st.selectbox(
+            "Select Verification",
+            verification_list
+        )
+
+        verification_rkg = requirement_rkg[
+            requirement_rkg["verification_id"]
+            ==
+            selected_verification
+        ]
+
+        test_list = sorted(
+            verification_rkg[
+                "test_id"
+            ]
+            .dropna()
+            .unique()
+        )
+        
+        selected_test = st.selectbox(
+            "Select Test",
+            test_list
+        )
+
+        test_rkg = verification_rkg[
+            verification_rkg["test_id"]
+            ==
+            selected_test
+        ]
+
+        selected_row = test_rkg.iloc[0]
+
+        st.subheader("Failure")
+        
+        st.write(
+            selected_row["failure_mode"]
+        )
+        
+        st.write(
+            selected_row["failure_consequence"]
+        )
+        
+        st.success(
+            selected_row["mitigation"]
+        )
+
+        selected_row = test_rkg.iloc[0]
+
         
         st.dataframe(
         
