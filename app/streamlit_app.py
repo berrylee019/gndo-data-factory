@@ -360,13 +360,9 @@ with tab3:
             )
 
         selected_chapter = st.selectbox(
-
             "Select Chapter",
-        
             chapters
-        
         )
-        
         
         selected_requirement = st.selectbox(
             "Requirement",
