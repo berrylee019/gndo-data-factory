@@ -1,20 +1,14 @@
 import streamlit as st
-import sys
-import os
-import sys
-from pathlib import Path
 import json
 import pandas as pd
 from pathlib import Path
-import streamlit as st  
+import streamlit as st
 import json
 import pandas as pd
 from pathlib import Path
+
 import networkx as nx
 from pyvis.network import Network
-from gndo_engine.graph_builder_v3 import GraphBuilderV3
-from gndo_engine.traceability_engine import TraceabilityEngine
-from gndo_engine.impact_engine import ImpactEngine
 import streamlit.components.v1 as components
 import tempfile
 
@@ -161,17 +155,15 @@ crosswalk = load_json(
 )
 
 rkg = load_json(
-    "storage/metadata/rkg_data_v13.json"
+    "storage/metadata/rkg_data_v12.json"
 )
-   
-nrc = nureg + rg + srp + cfr
 
+nrc = nureg + rg + srp + cfr
 all_docs = (
     nrc
     + ap1000
     + apr1400
 )
-
 df = pd.DataFrame(all_docs)
 
 if df.empty:
@@ -244,345 +236,79 @@ with tab3:
         ]
     )
     rkg_df = pd.DataFrame(rkg)
-
-    st.write(rkg_df.shape)
-    st.write(rkg_df.columns.tolist())
-
-    st.write(
-        rkg_df[
-            [
-                "requirement_id",
-                "verification_id",
-                "test_id",
-                "failure_id"
-            ]
-        ].head(20)
-    )
    
-    st.write(
-        rkg_df[
-            [
-                "requirement_id",
-                "verification_id",
-                "test_id",
-                "failure_id",
-                "change_id"
-            ]
-        ].query(
-            "failure_id.notnull()",
-            engine="python"
-        )
-    )
-
     with search_tab:
-    
+
         st.subheader("Search")
-    
+
         search_term = st.text_input(
             "Search documents",
-            placeholder="예: Chapter 7, Protection System"
+            placeholder="예: NUREG-0800 Chapter 7, Plant Protection System"
         )
-    
+   
         selected_sources = st.multiselect(
-            "Source",
+            "Source Filter",
             options=df["source"].unique(),
             default=df["source"].unique()
         )
-    
+   
         selected_categories = st.multiselect(
-            "Category",
+            "Category Filter",
             options=df["category"].unique(),
             default=df["category"].unique()
         )
-    
+   
         filtered_df = df[
             (df["source"].isin(selected_sources))
             &
             (df["category"].isin(selected_categories))
         ]
-    
+   
         if search_term:
-    
+   
             filtered_df = filtered_df[
                 filtered_df.astype(str)
                 .apply(
                     lambda x:
                     x.str.contains(
-                        search_term,
-                        case=False,
-                        na=False
-                    )
+                    search_term,
+                    case=False,
+                    na=False
                 )
-                .any(axis=1)
-            ]
-    
-        st.subheader("Documents")
-    
+            )
+            .any(axis=1)
+        ]
+   
+        st.subheader(
+            "Documents"
+        )
+   
         st.dataframe(
             filtered_df,
-            width="stretch"
+            use_container_width=True
         )
-    
-        if filtered_df.empty:
-    
-            st.warning("No document found.")
-    
-            st.stop()
-    
-        selected_doc = st.selectbox(
-    
-            "Select Document",
-    
-            filtered_df["doc_id"]
-            + " | "
-            + filtered_df["title"]
-    
-        )
-    
-        selected_doc_id = selected_doc.split(" | ")[0]
-    
-        selected_document = filtered_df[
-            filtered_df["doc_id"] == selected_doc_id
-        ].iloc[0]
-    
-        st.markdown(
-            f"""
-    # {selected_document["doc_id"]}
-    
-    ### {selected_document["title"]}
-    """
-        )
-    
-        st.info(
-            f"""
-    Source : {selected_document["source"]}
-    
-    Category : {selected_document["category"]}
-    """
-        )
-    
-        if pd.notna(selected_document["url"]):
-    
-            st.link_button(
-                "Open Original Document",
-                selected_document["url"]
-            )
-
-        selected_source = selected_document["source"]
-        
-        chapter_df = rkg_df.copy()
-        
-        if selected_source == "NRC":
-        
-            chapter_df = chapter_df[
-                chapter_df["nureg"].notna()
-            ]
-        
-        elif selected_source == "RG":
-        
-            chapter_df = chapter_df[
-                chapter_df["rg"].notna()
-            ]
-        
-        elif selected_source == "SRP":
-        
-            chapter_df = chapter_df[
-                chapter_df["srp"].notna()
-            ]
-        
-        chapters = sorted(
-            chapter_df["chapter"]
-            .dropna()
-            .unique()
-        )
-        
-        selected_chapter = st.selectbox(
-            "Select Chapter",
-            chapters
-        )
-        
-        chapter_rkg = rkg_df[
-            rkg_df["chapter"] == selected_chapter
-        ]
-
-        requirements = sorted(
-            chapter_rkg["requirement_id"]
-            .dropna()
-            .unique()
-        )
-        
-        
-        st.markdown(
-        f"""
-        # {selected_document["doc_id"]}
-        
-        ### {selected_document["title"]}
-        """
-        )
-        
-        st.info(
-        f"""
-        Source : {selected_document["source"]}
-        
-        Category : {selected_document["category"]}
-        """
-        )
-        
-        if pd.notna(selected_document["url"]):
-        
-            st.link_button(
-                "Open Original Document",
-                selected_document["url"]
-            )
-
-        
-        selected_requirement = st.selectbox(
-            "Requirement",
-            requirements
-        )
-
-        requirement_rkg = chapter_rkg[
-            chapter_rkg["requirement_id"] == selected_requirement
-        ]
-
-        selected_row = requirement_rkg.iloc[0]
-        
-
-        st.subheader("Requirement Detail")
-        
-        c1,c2 = st.columns(2)
-        
-        with c1:
-        
-            st.metric(
-                "Requirement",
-                selected_row["requirement_id"]
-            )
-        
-        with c2:
-        
-            st.metric(
-                "Verification",
-                selected_row["verification_id"]
-            )
-        
-        st.write(selected_row["requirement"])
-    
-        st.subheader("Requirement Trace")
-        
-        st.dataframe(
-        
-            requirement_rkg[
-                [
-                    "requirement_id",
-                    "verification_id",
-                    "test_id",
-                    "failure_id"
-                ]
-            ],
-        
-            width="stretch"
-        )
-    
-
-    
-        st.subheader("Failure Information")
-        
-        if pd.notna(selected_row["failure_id"]):
-        
-            st.error(selected_row["failure_mode"])
-        
-            st.write(
-                selected_row["failure_consequence"]
-            )
-        
-            st.success(
-                selected_row["mitigation"]
-            )
-        
-        else:
-        
-            st.success("No Failure Linked")
-
-        
-
-        change_id = selected_row["change_id"]
-
-        if pd.notna(change_id):
-           
-            G = engine.build_change_graph(change_id)
-    
-            impact = ImpactEngine(G)
-           
-            summary = impact.summary()
-
-            c1, c2, c3, c4 = st.columns(4)
-    
-            c1.metric("REQ",summary["requirements"])
-            c2.metric("VER",summary["verifications"])
-            c3.metric("TEST",summary["tests"])
-            c4.metric("FAIL",summary["failures"])
-            
-    
-            impact_net = GraphVisualizer.build_network(G)
-           
-            impact_html = GraphVisualizer.save_html(
-                impact_net
-            )
-           
-            components.html(
-                impact_html,
-                height=700
-            )
-    
-            if pd.notna(selected_row.get("failure_mode")):
-    
-                st.error(
-                    selected_row["failure_mode"]
-                )
-           
-            if pd.notna(selected_row.get("failure_consequence")):
-           
-                st.write(
-                    selected_row["failure_consequence"]
-                )
-
-
-            G = engine.build_change_graph(
-                selected_row["change_id"]
-            )
-           
-            st.write("Impact Nodes:", list(G.nodes()))
-            st.write("Impact Edges:", list(G.edges()))
-           
+   
+        for _, row in filtered_df.iterrows():
    
             with st.expander(
-                selected_document["title"]
+                row["title"]
             ):
    
                 st.write(
-                    f"Source: {selected_document['source']}"
+                    f"Source: {row['source']}"
                 )
    
                 st.write(
-                    f"Category: {selected_document['category']}"
+                    f"Category: {row.get('category','')}"
                 )
    
-                if pd.notna(selected_document.get("url")):
-            
+                if row.get("url"):
+   
                     st.link_button(
                         "Open Document",
-                        selected_document["url"]
+                        row["url"]
                     )
-                    
-        st.markdown(
-            f"""
-        ## {selected_document["doc_id"]}
-        
-        {selected_document["title"]}
-        """
-        )
-        
+   
 
         # ===========================
         # v1.4 Impact Propagation Graph
@@ -670,15 +396,15 @@ with tab3:
         st.subheader(
             "Ask GNDO"
         )
-       
+
         G = nx.DiGraph()
        
         for _, r in rkg_df.iterrows():
        
             change_id = r.get("change_id")
-            req_id = r.get("impact.requirement")
-            ver_id = r.get("impact.verification")
-            test_id = r.get("impact.test")
+            req_id = r.get("affected_requirement")
+            ver_id = r.get("affected_verification")
+            test_id = r.get("affected_test")
             fail_id = r.get("failure_id")
        
             if pd.notna(change_id) and pd.notna(req_id):
@@ -816,16 +542,17 @@ with tab3:
        
                 row = result.iloc[0]
 
-                impact = ImpactEngine(G)
-               
-                summary = impact.summary()
+                affected_requirements = []
+                affected_verifications = []
+                affected_tests = []
+                affected_failures = []
 
                 change_row = row
 
                 if change_row.get("change_id"):
                
                     affected_req = change_row.get(
-                        "impact.requirement"
+                        "affected_requirement"
                     )
                
                     affected_rows = rkg_df[
@@ -922,37 +649,37 @@ with tab3:
                         st.write(impact_nodes)
                        
                         st.write("Affected Requirements")
-                        st.write(impact.requirements)
+                        st.write(affected_requirements)
                        
                         st.write("Affected Verifications")
-                        st.write(impact.verifications)
+                        st.write(affected_verifications)
                        
                         st.write("Affected Tests")
-                        st.write(impact.tests)
+                        st.write(affected_tests)
                        
                         st.write("Affected Failures")
-                        st.write(impact.failures)
+                        st.write(affected_failures)
                        
    
-                        impact.requirements = [
+                        affected_requirements = [
                             n
                             for n in impact_nodes
                             if str(n).startswith("REQ-")
                         ]
                        
-                        impact.verifications = [
+                        affected_verifications = [
                             n
                             for n in impact_nodes
                             if str(n).startswith("VER-")
                         ]
                        
-                        impact.tests = [
+                        affected_tests = [
                             n
                             for n in impact_nodes
                             if str(n).startswith("TEST-")
                         ]
                        
-                        impact.failures = [
+                        affected_failures = [
                             n
                             for n in impact_nodes
                             if str(n).startswith("FAIL-")
@@ -968,22 +695,22 @@ with tab3:
                    
                         st.metric(
                             "Requirements",
-                            summary["requirements"]
+                            len(affected_requirements)
                         )
                        
                         st.metric(
                             "Verifications",
-                            summary["verifications"]
+                            len(affected_verifications)
                         )
                        
                         st.metric(
                             "Tests",
-                            summary["tests"]
+                            len(affected_tests)
                         )
                        
                         st.metric(
                             "Failures",
-                            summary["failures"]
+                            len(affected_failures)
                         )
        
                         change_id = row.get(
@@ -991,27 +718,131 @@ with tab3:
                         )
                    
                         req_id = row.get(
-                            "impact.requirement"
+                            "affected_requirement"
                         )
                    
                         ver_id = row.get(
-                            "impact.verification"
+                            "affected_verification"
                         )
                    
                         test_id = row.get(
-                            "impact.test"
+                            "affected_test"
                         )
        
                         failure_id = row.get(
                             "failure_id"
                         )
        
-                        from gndo_engine.graph_builder_v3 import GraphBuilderV3
+                        G = nx.DiGraph()
+       
+                        if change_id:
+                   
+                            G.add_node(
+                                change_id,
+                                group="CHANGE"
+                            )
+                   
+                        if req_id:
+                   
+                            G.add_node(
+                                req_id,
+                                group="REQUIREMENT"
+                            )
+                   
+                        if ver_id:
+                   
+                            G.add_node(
+                                ver_id,
+                                group="VERIFICATION"
+                            )
+                   
+                        if test_id:
+                   
+                            G.add_node(
+                                test_id,
+                                group="TEST"
+                            )
+                   
+                        if change_id and req_id:
+                   
+                            G.add_edge(
+                                change_id,
+                                req_id
+                            )
+                   
+                        if req_id and ver_id:
+                   
+                            G.add_edge(
+                                req_id,
+                                ver_id
+                            )
+                   
+                        if ver_id and test_id:
+                   
+                            G.add_edge(
+                                ver_id,
+                                test_id
+                            )
+       
+                        if failure_id:
+       
+                            G.add_edge(
+                                test_id,
+                                failure_id
+                            )
+       
+                            net = Network(
+                                height="500px",
+                                width="100%",
+                                directed=True
+                            )
                        
-                        engine = TraceabilityEngine(rkg_df)
+                            net.from_nx(G)
 
+                    for node in net.nodes:
 
+                        if node["id"].startswith(
+                            "CHG"
+                        ):
                
+                            node["color"] = "#ff0000"
+               
+                        elif node["id"].startswith(
+                            "REQ"
+                        ):
+               
+                            node["color"] = "#00cc66"
+               
+                        elif node["id"].startswith(
+                            "VER"
+                        ):
+               
+                            node["color"] = "#ffcc00"
+               
+                        elif node["id"].startswith(
+                            "TEST"
+                        ):
+               
+                            node["color"] = "#0099ff"
+
+                    with tempfile.NamedTemporaryFile(
+                        delete=False,
+                        suffix=".html"
+                    ) as tmp:
+               
+                        net.save_graph(
+                            tmp.name
+                        )
+               
+                        html = open(
+                            tmp.name,
+                            encoding="utf-8"
+                        ).read()
+               
+                    st.components.v1.html(
+                        html,
+                        height=550
+                    )
                        
                 elif (
                     target_id
@@ -1231,15 +1062,15 @@ with tab3:
 
                 ### Affected Requirement
 
-                {row.get('impact.requirement')}
+                {row.get('affected_requirement')}
                
                 ### Affected Verification
                
-                {row.get('impact.verification')}
+                {row.get('affected_verification')}
                
                 ### Affected Test
                
-                {row.get('impact.test')}
+                {row.get('affected_test')}
                 """
                 )
                        
@@ -1700,57 +1531,114 @@ with tab4:
             len(G.edges)
         )
    
-        from gndo_engine.graph_visualizer import GraphVisualizer
-       
-        full_net = GraphVisualizer.build_network(G)
-       
-        html = GraphVisualizer.save_html(full_net)
-       
-        components.html(
-            html,
-            height=850
+        net = Network(
+            height="800px",
+            width="100%",
+            bgcolor="#ffffff",
+            font_color="black"
         )
 
-        import math
+        net.from_nx(G)
+
+        for edge in net.edges:
        
-        print("========== NODE CHECK ==========")
+            edge["font"] = {
+                "size": 14,
+                "align": "middle"
+            }
        
-        for node in G.nodes():
+            edge["width"] = 3
        
-            if not isinstance(node, (str, int)):
-                print(
-                    "INVALID NODE:",
-                    repr(node),
-                    type(node)
-                )
+            edge["arrows"] = "to"
        
-        print("========== EDGE CHECK ==========")
+            edge["smooth"] = {
+                "type": "dynamic"
+            }
+   
+        for node in net.nodes:
        
-        for u, v in G.edges():
+            if node["id"].startswith("CFR"):
+                node["size"] = 40
        
-            if (
-                not isinstance(u, (str, int))
-                or
-                not isinstance(v, (str, int))
-            ):
+            elif node["id"].startswith("RG"):
+                node["size"] = 35
        
-                print(
-                    "INVALID EDGE:",
-                    repr(u),
-                    repr(v)
-                )
+            elif node["id"].startswith("NUREG"):
+                node["size"] = 30
+       
+            elif node["id"].startswith("SRP"):
+                node["size"] = 25
+
+            elif node["group"] == "REQUIREMENT":
+
+                node["color"] = "#e377c2"
+                node["size"] = 28
+
+            elif node["group"] == "VERIFICATION":
+
+                node["color"] = "#bc5090"
+                node["size"] = 26
+
+            elif node["group"] == "TEST":
+
+                node["color"] = "#ff7f0e"
+                node["size"] = 24
                
-        print("============== NODE ATTRIBUTES ==============")
+            elif node["group"] == "SYSTEM":
+                node["size"] = 22
+                node["color"] = "#17becf"
+               
+            elif node["group"] == "DOC":
+                node["size"] = 24
+                node["color"] = "#bcbd22"
+   
+            elif node["group"] == "COMPONENT":
+                node["size"] = 18
+                node["color"] = "#8c564b"
 
-        for n, attrs in G.nodes(data=True):
+            elif node["id"].startswith("AP1000"):
+                node["size"] = 20
+                node["color"] = "#ffbf00"
        
-            print(n)
-       
-            print(attrs)
-       
-            break
+            elif node["id"].startswith("APR1400"):
+                node["size"] = 20
+                node["color"] = "#d62728"
+
+        for edge in net.edges:
+
+            edge["font"] = {
+                "size": 12
+            }
            
+        net.repulsion(
+            node_distance=350,
+            central_gravity=0.15,
+            spring_length=350,
+            spring_strength=0.02
+        )
 
+        tmp_file = tempfile.NamedTemporaryFile(
+            delete=False,
+            suffix=".html"
+        )
+
+        net.save_graph(
+            tmp_file.name
+        )
+
+        with open(
+            tmp_file.name,
+            "r",
+            encoding="utf-8"
+        ) as f:
+
+            html = f.read()
+
+        components.html(
+            html,
+            height=850,
+            scrolling=True
+        )
 
     else:
 
