@@ -280,7 +280,7 @@ with tab3:
 
         search_term = st.text_input(
             "Search documents",
-            placeholder="예: NUREG-0800 Chapter 7, Plant Protection System"
+            placeholder="예: NUREG-0800, Plant Protection, Human Factors, Emergency Response"
         )
    
         selected_sources = st.multiselect(
