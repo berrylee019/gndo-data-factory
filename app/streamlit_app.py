@@ -410,29 +410,31 @@ with tab3:
    
            
        
-            st.markdown(
-                f"""
-            ## {selected_document["doc_id"]}
-            
-            {selected_document["title"]}
-            """
-            )
+        st.markdown(
+            f"""
+        ## {selected_document["doc_id"]}
+        
+        {selected_document["title"]}
+        """
+        )
 
-            change_id = selected_row["change_id"]
+        selected_row = chapter_rkg.iloc[0]
 
-            if pd.notna(change_id):
+        change_id = selected_row["change_id"]
+
+        if pd.notna(change_id):
            
-                G = engine.build_change_graph(change_id)
+            G = engine.build_change_graph(change_id)
 
             from gndo_engine.impact_engine import ImpactEngine
-
+    
             impact = ImpactEngine(G)
            
             summary = impact.summary()
            
-
+    
             c1, c2, c3, c4 = st.columns(4)
-
+    
             c1.metric(
                 "REQ",
                 summary["requirements"]
@@ -452,9 +454,9 @@ with tab3:
                 "FAIL",
                 summary["failures"]
             )
-
+    
             from gndo_engine.graph_visualizer import GraphVisualizer
-
+    
             impact_net = GraphVisualizer.build_network(G)
            
             impact_html = GraphVisualizer.save_html(
@@ -465,11 +467,11 @@ with tab3:
                 impact_html,
                 height=650
             )
-
-            if pd.notna(row.get("failure_name")):
-
+    
+            if pd.notna(selected_row.get("failure_mode")):
+    
                 st.error(
-                    row["failure_name"]
+                    selected_row["failure_mode"]
                 )
            
             if pd.notna(row.get("failure_description")):
