@@ -336,44 +336,28 @@ with tab3:
             filtered_df["doc_id"] == selected_doc_id
         ].iloc[0]
 
-        st.info(
-            f"""
-        Document
+        st.markdown(
+        f"""
+        # {selected_document["doc_id"]}
         
-        ID : {selected_document['doc_id']}
-        
-        Title : {selected_document['title']}
-        
-        Source : {selected_document['source']}
+        ### {selected_document["title"]}
         """
         )
-
-        selected_source = selected_document["source"]
-        chapter_df = rkg_df.copy()
-
-        if selected_source == "NRC":
-
-            chapter_df = chapter_df[
-                chapter_df["nureg"].notna()
-            ]
-            
-        elif selected_source == "RG":
         
-            chapter_df = chapter_df[
-                chapter_df["rg"].notna()
-            ]
-
-        elif selected_source == "SRP":
-
-            chapter_df = chapter_df[
-                chapter_df["srp"].notna()
-            ]
-
-        chapters = sorted(
-            chapter_df["chapter"]
-            .dropna()
-            .unique()
+        st.info(
+        f"""
+        Source : {selected_document["source"]}
+        
+        Category : {selected_document["category"]}
+        """
         )
+        
+        if pd.notna(selected_document["url"]):
+        
+            st.link_button(
+                "Open Original Document",
+                selected_document["url"]
+            )
 
         selected_chapter = st.selectbox(
 
@@ -382,21 +366,10 @@ with tab3:
             chapters
         
         )
-
-        chapter_rkg = rkg_df[
-            rkg_df["chapter"] == selected_chapter
-        ]
         
-        st.subheader("Chapter Preview")
-
-        requirements = sorted(
-            chapter_rkg["requirement_id"]
-            .dropna()
-            .unique()
-        )
         
         selected_requirement = st.selectbox(
-            "Select Requirement",
+            "Requirement",
             requirements
         )
 
@@ -405,35 +378,43 @@ with tab3:
         ]
 
         selected_row = requirement_rkg.iloc[0]
+        
 
         st.subheader("Requirement Detail")
-
-        col1, col2 = st.columns(2)
         
-        with col1:
+        c1,c2 = st.columns(2)
         
-            st.write("Requirement")
+        with c1:
         
-            st.success(selected_row["requirement_id"])
+            st.metric(
+                "Requirement",
+                selected_row["requirement_id"]
+            )
         
-            st.write(selected_row["requirement"])
+        with c2:
         
-        with col2:
+            st.metric(
+                "Verification",
+                selected_row["verification_id"]
+            )
         
-            st.write("Verification")
-        
-            st.info(selected_row["verification_id"])
+        st.write(selected_row["requirement"])
     
-
-        st.write("Test")
-
-        if pd.notna(selected_row["test_id"]):
+        st.subheader("Requirement Trace")
         
-            st.success(selected_row["test_id"])
+        st.dataframe(
         
-        else:
+            requirement_rkg[
+                [
+                    "requirement_id",
+                    "verification_id",
+                    "test_id",
+                    "failure_id"
+                ]
+            ],
         
-            st.warning("No Test Defined")
+            width="stretch"
+        )
     
 
     
@@ -455,27 +436,6 @@ with tab3:
         
             st.success("No Failure Linked")
 
-
-        from gndo_engine.traceability_engine import TraceabilityEngine
-
-        engine = TraceabilityEngine(rkg_df)
-
-
-        st.subheader("Requirement Trace")
-
-        st.dataframe(
-        
-            requirement_rkg[
-                [
-                    "requirement_id",
-                    "verification_id",
-                    "test_id",
-                    "failure_id"
-                ]
-            ],
-        
-            width="stretch"
-        )
         
 
         change_id = selected_row["change_id"]
@@ -483,37 +443,18 @@ with tab3:
         if pd.notna(change_id):
            
             G = engine.build_change_graph(change_id)
-
-            from gndo_engine.impact_engine import ImpactEngine
     
             impact = ImpactEngine(G)
            
             summary = impact.summary()
-           
-    
+
             c1, c2, c3, c4 = st.columns(4)
     
-            c1.metric(
-                "REQ",
-                summary["requirements"]
-            )
-           
-            c2.metric(
-                "VER",
-                summary["verifications"]
-            )
-           
-            c3.metric(
-                "TEST",
-                summary["tests"]
-            )
-           
-            c4.metric(
-                "FAIL",
-                summary["failures"]
-            )
-    
-            from gndo_engine.graph_visualizer import GraphVisualizer
+            c1.metric("REQ",summary["requirements"])
+            c2.metric("VER",summary["verifications"])
+            c3.metric("TEST",summary["tests"])
+            c4.metric("FAIL",summary["failures"])
+            
     
             impact_net = GraphVisualizer.build_network(G)
            
@@ -523,7 +464,7 @@ with tab3:
            
             components.html(
                 impact_html,
-                height=650
+                height=700
             )
     
             if pd.notna(selected_row.get("failure_mode")):
