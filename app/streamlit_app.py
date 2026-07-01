@@ -474,10 +474,10 @@ with tab3:
                     selected_row["failure_mode"]
                 )
            
-            if pd.notna(selected_row.get("failure_description")):
+            if pd.notna(selected_row.get("failure_consequence")):
            
                 st.write(
-                    selected_row["failure_description"]
+                    selected_row["failure_consequence"]
                 )
 
 
@@ -490,7 +490,7 @@ with tab3:
            
    
             with st.expander(
-                row["title"]
+                selected_row["title"]
             ):
    
                 st.write(
