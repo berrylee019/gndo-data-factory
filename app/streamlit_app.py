@@ -408,19 +408,17 @@ with tab3:
 
         engine = TraceabilityEngine(rkg_df)
    
-        for _, row in filtered_df.iterrows():
-
-            st.write(df.columns.tolist())
-
-            st.write(rkg_df.columns.tolist())
            
             st.divider()
        
             st.markdown(
-                f"## {row['document_id']}"
+                f"""
+            ## {selected_document["doc_id"]}
+            
+            {selected_document["title"]}
+            """
             )
 
-            selected_row = chapter_rkg.iloc[0]
             change_id = selected_row["change_id"]
 
             if pd.notna(change_id):
