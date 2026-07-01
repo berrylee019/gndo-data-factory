@@ -273,68 +273,100 @@ with tab3:
             engine="python"
         )
     )
-   
+
     with search_tab:
-
+    
         st.subheader("Search")
-
+    
         search_term = st.text_input(
             "Search documents",
-            placeholder="예: NUREG-0800, Plant Protection, Human Factors, Emergency Response"
+            placeholder="예: Chapter 7, Protection System"
         )
-   
+    
         selected_sources = st.multiselect(
-            "Source Filter",
+            "Source",
             options=df["source"].unique(),
             default=df["source"].unique()
         )
-   
+    
         selected_categories = st.multiselect(
-            "Category Filter",
+            "Category",
             options=df["category"].unique(),
             default=df["category"].unique()
         )
-   
+    
         filtered_df = df[
             (df["source"].isin(selected_sources))
             &
             (df["category"].isin(selected_categories))
         ]
-   
+    
         if search_term:
-   
+    
             filtered_df = filtered_df[
                 filtered_df.astype(str)
                 .apply(
                     lambda x:
                     x.str.contains(
-                    search_term,
-                    case=False,
-                    na=False
+                        search_term,
+                        case=False,
+                        na=False
+                    )
                 )
-            )
-            .any(axis=1)
-        ]
-   
-        st.subheader(
-            "Documents"
-        )
-   
+                .any(axis=1)
+            ]
+    
+        st.subheader("Documents")
+    
         st.dataframe(
             filtered_df,
             width="stretch"
         )
-        
+    
+        if filtered_df.empty:
+    
+            st.warning("No document found.")
+    
+            st.stop()
+    
         selected_doc = st.selectbox(
+    
             "Select Document",
-            filtered_df["doc_id"] + " | " + filtered_df["title"]
+    
+            filtered_df["doc_id"]
+            + " | "
+            + filtered_df["title"]
+    
         )
-
+    
         selected_doc_id = selected_doc.split(" | ")[0]
-
+    
         selected_document = filtered_df[
             filtered_df["doc_id"] == selected_doc_id
         ].iloc[0]
+    
+        st.markdown(
+            f"""
+    # {selected_document["doc_id"]}
+    
+    ### {selected_document["title"]}
+    """
+        )
+    
+        st.info(
+            f"""
+    Source : {selected_document["source"]}
+    
+    Category : {selected_document["category"]}
+    """
+        )
+    
+        if pd.notna(selected_document["url"]):
+    
+            st.link_button(
+                "Open Original Document",
+                selected_document["url"]
+            )
 
         selected_source = selected_document["source"]
         
