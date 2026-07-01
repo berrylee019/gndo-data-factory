@@ -490,15 +490,15 @@ with tab3:
            
    
             with st.expander(
-                selected_row["title"]
+                selected_document["title"]
             ):
    
                 st.write(
-                    f"Source: {row['source']}"
+                    f"Source: {selected_document['source']}"
                 )
    
                 st.write(
-                    f"Category: {row.get('category','')}"
+                    f"Category: {selected_document['category']}"
                 )
    
                 if row.get("url"):
