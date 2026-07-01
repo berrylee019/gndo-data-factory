@@ -442,19 +442,20 @@ with tab3:
             selected_test
         ]
 
-        st.write("Requirement :", selected_requirement)
-        st.write("Verification :", selected_verification)
-        st.write("Test :", selected_test)
-        
-        st.write("requirement_rkg")
-        st.dataframe(requirement_rkg)
-        
-        st.write("verification_rkg")
-        st.dataframe(verification_rkg)
-        
-        st.write("test_rkg")
-        st.dataframe(test_rkg)
+        st.write(
+            verification_rkg[
+                [
+                    "verification_id",
+                    "test_id",
+                    "failure_id"
+                ]
+            ]
+        )
 
+        st.write(
+            verification_rkg["test_id"].unique()
+        )
+        
         selected_row = test_rkg.iloc[0]
 
         st.subheader("Failure")
