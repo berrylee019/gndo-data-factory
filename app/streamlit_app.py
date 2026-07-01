@@ -405,6 +405,16 @@ with tab3:
             rkg_df["chapter"] == selected_chapter
         ]
 
+        requirements = sorted(
+            chapter_rkg["requirement_id"]
+            .dropna()
+            .unique()
+        )
+        
+        selected_requirement = st.selectbox(
+            "Requirement",
+            requirements
+        )
         
         st.markdown(
         f"""
