@@ -14,14 +14,17 @@ import streamlit.components.v1 as components
 import tempfile
 from pathlib import Path
 
+try:
+    from gndo_engine.graph_builder_v3 import GraphBuilderV3
+    st.write("GraphBuilderV3 import success")
+except Exception as e:
+    st.exception(e)
+    st.stop()
 ############################################################
 # GNDO Engine
 ############################################################
 
 from gndo_engine.graph_builder_v3 import GraphBuilderV3
-import gndo_engine.graph_builder_v3
-
-st.write("IMPORT OK")
 from gndo_engine.graph_visualizer import GraphVisualizer
 from gndo_engine.traceability_engine import TraceabilityEngine
 from gndo_engine.impact_engine import ImpactEngine
