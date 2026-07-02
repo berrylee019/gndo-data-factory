@@ -27,14 +27,14 @@ from gndo_engine.impact_engine import ImpactEngine
 # Agents
 ############################################################
 
-from agents.nureg_agent import NuregAgent
-from agents.rg_agent import RGAgent
-from agents.srp_agent import SRPAgent
-from agents.cfr_agent import CFRAgent
-from agents.ap1000_agent import AP1000Agent
-from agents.apr1400_agent import APR1400Agent
-from agents.crosswalk_agent import CrosswalkAgent
-from agents.rkg_agent import RegulatoryKnowledgeGraphAgent
+#from agents.nureg_agent import NuregAgent
+#from agents.rg_agent import RGAgent
+#from agents.srp_agent import SRPAgent
+#from agents.cfr_agent import CFRAgent
+#from agents.ap1000_agent import AP1000Agent
+#from agents.apr1400_agent import APR1400Agent
+#from agents.crosswalk_agent import CrosswalkAgent
+#from agents.rkg_agent import RegulatoryKnowledgeGraphAgent
 
 ############################################################
 # Utility
