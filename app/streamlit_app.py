@@ -21,6 +21,14 @@ import streamlit.components.v1 as components
 import tempfile
 from pathlib import Path
 
+try:
+    from gndo_engine.graph_builder_v3 import GraphBuilderV3
+    st.success("GraphBuilderV3 imported")
+except Exception as e:
+    import traceback
+
+    st.code(traceback.format_exc())
+    st.stop()
 ############################################################
 # GNDO Engine
 ############################################################
