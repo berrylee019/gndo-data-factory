@@ -19,6 +19,9 @@ from pathlib import Path
 ############################################################
 
 from gndo_engine.graph_builder_v3 import GraphBuilderV3
+import gndo_engine.graph_builder_v3
+
+st.write("IMPORT OK")
 from gndo_engine.graph_visualizer import GraphVisualizer
 from gndo_engine.traceability_engine import TraceabilityEngine
 from gndo_engine.impact_engine import ImpactEngine
