@@ -185,11 +185,11 @@ class GraphBuilderV3:
     @staticmethod
     def build_impact_graph(row):
         
-            print("========== IMPACT ==========")
-            print(row.to_dict())
-            print("----------------------------")
-            print("failure_id =", row.get("failure_id"))
-            print("affected_test =", row.get("affected_test"))
+        print("========== IMPACT ==========")
+        print(row.to_dict())
+        print("----------------------------")
+        print("failure_id =", row.get("failure_id"))
+        print("affected_test =", row.get("affected_test"))
         
         G = nx.DiGraph()
 
