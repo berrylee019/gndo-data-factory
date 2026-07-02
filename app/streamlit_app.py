@@ -2,7 +2,14 @@
 # GNDO Data Factory v1.3
 # Streamlit Main App
 ############################################################
+import sys
+from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent
+
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+    
 import streamlit as st
 import pandas as pd
 import networkx as nx
@@ -14,12 +21,6 @@ import streamlit.components.v1 as components
 import tempfile
 from pathlib import Path
 
-try:
-    from gndo_engine.graph_builder_v3 import GraphBuilderV3
-    st.write("GraphBuilderV3 import success")
-except Exception as e:
-    st.exception(e)
-    st.stop()
 ############################################################
 # GNDO Engine
 ############################################################
