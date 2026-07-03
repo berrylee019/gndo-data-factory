@@ -140,7 +140,7 @@ apr1400 = load_json("storage/metadata/apr1400_data.json")
 crosswalk = load_json("storage/metadata/crosswalk_data.json")
 
 # v13 사용
-rkg = load_json("storage/metadata/rkg_data_v13.json")
+rkg = load_json("storage/metadata/rkg_data_v12.json")
 
 nrc = nureg + rg + srp + cfr
 
