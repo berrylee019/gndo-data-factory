@@ -119,6 +119,7 @@ def analyze_failure_impact(
            
 st.title("☢️ GNDO Document Explorer")
 
+
 def load_json(path):
 
     if not Path(path).exists():
@@ -126,45 +127,33 @@ def load_json(path):
 
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
-nureg = load_json(
-    "storage/metadata/nureg_data.json"
-)
 
-rg = load_json(
-    "storage/metadata/rg_data.json"
-)
 
-srp = load_json(
-    "storage/metadata/srp_data.json"
-)
+nureg = load_json("storage/metadata/nureg_data.json")
+rg = load_json("storage/metadata/rg_data.json")
+srp = load_json("storage/metadata/srp_data.json")
+cfr = load_json("storage/metadata/cfr_data.json")
 
-cfr = load_json(
-    "storage/metadata/cfr_data.json"
-)
+ap1000 = load_json("storage/metadata/ap1000_data.json")
+apr1400 = load_json("storage/metadata/apr1400_data.json")
 
-ap1000 = load_json(
-    "storage/metadata/ap1000_data.json"
-)
+crosswalk = load_json("storage/metadata/crosswalk_data.json")
 
-apr1400 = load_json(
-    "storage/metadata/apr1400_data.json"
-)
-
-crosswalk = load_json(
-    "storage/metadata/crosswalk_data.json"
-)
-
-rkg = load_json(
-    "storage/metadata/rkg_data_v12.json"
-)
+# v13 사용
+rkg = load_json("storage/metadata/rkg_data_v13.json")
 
 nrc = nureg + rg + srp + cfr
-all_docs = (
-    nrc
-    + ap1000
-    + apr1400
-)
+
+all_docs = nrc + ap1000 + apr1400
+
 df = pd.DataFrame(all_docs)
+
+rkg_df = pd.DataFrame(rkg)
+
+st.write(df.shape)
+st.write(rkg_df.shape)
+
+st.write(rkg_df.columns.tolist())
 
 if df.empty:
     st.warning("No documents found.")
