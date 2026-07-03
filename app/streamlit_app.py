@@ -770,7 +770,9 @@ with tab3:
                             )
        
                         if failure_id:
-       
+                            
+                            G.add_node(failure_id)
+                            
                             G.add_edge(
                                 test_id,
                                 failure_id
