@@ -150,10 +150,6 @@ df = pd.DataFrame(all_docs)
 
 rkg_df = pd.DataFrame(rkg)
 
-st.write(df.shape)
-st.write(rkg_df.shape)
-
-st.write(rkg_df.columns.tolist())
 
 if df.empty:
     st.warning("No documents found.")
