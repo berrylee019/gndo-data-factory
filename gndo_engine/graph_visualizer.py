@@ -47,6 +47,46 @@ NODE_STYLE = {
 
 }
 
+EDGE_STYLE = {
+
+    "changes": {
+        "color": "#ff3b30",
+        "width": 5
+    },
+
+    "verified_by": {
+        "color": "#34c759",
+        "width": 4
+    },
+
+    "tested_by": {
+        "color": "#007aff",
+        "width": 4
+    },
+
+    "failure_mode": {
+        "color": "#8e24aa",
+        "width": 4
+    },
+
+    "causes": {
+        "color": "#ff9500",
+        "width": 3
+    },
+
+    "reverify": {
+        "color": "#00c853",
+        "width": 3,
+        "dashes": True
+    },
+
+    "retest": {
+        "color": "#2962ff",
+        "width": 3,
+        "dashes": True
+    }
+
+}
 
 class GraphVisualizer:
 
@@ -81,13 +121,25 @@ class GraphVisualizer:
             )
 
         for u, v, attr in G.edges(data=True):
-
+        
+            relation = attr.get("relation", "")
+        
+            style = EDGE_STYLE.get(
+                relation,
+                {
+                    "color": "#888888",
+                    "width": 2
+                }
+            )
+        
             net.add_edge(
                 u,
                 v,
                 arrows="to",
-                color="#666666",
-                width=2
+                color=style["color"],
+                width=style["width"],
+                dashes=style.get("dashes", False),
+                title=relation
             )
 
         net.toggle_physics(True)
