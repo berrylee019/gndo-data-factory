@@ -7,6 +7,7 @@ import json
 import pandas as pd
 from pathlib import Path
 from gndo_engine.graph_builder_v3 import GraphBuilderV3
+from gndo_engine.graph_visualizer import GraphVisualizer
 import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
