@@ -37,9 +37,38 @@ class GraphBuilderV3:
 
                     G.add_node(
                         str(node_id),
+                    
                         type=node_type,
+                    
                         label=str(node_id),
-                        chapter=chapter
+                    
+                        chapter=row.get("chapter"),
+                    
+                        topic=row.get("topic"),
+                    
+                        system=row.get("system_name"),
+                    
+                        component=row.get("component_name"),
+                    
+                        requirement=row.get("requirement"),
+                    
+                        verification=row.get("verification_name"),
+                    
+                        verification_method=row.get("verification_method"),
+                    
+                        acceptance=row.get("acceptance_criteria"),
+                    
+                        test=row.get("test_name"),
+                    
+                        artifact=row.get("artifact_name"),
+                    
+                        failure=row.get("failure_mode"),
+                    
+                        consequence=row.get("failure_consequence"),
+                    
+                        mitigation=row.get("mitigation"),
+                    
+                        severity=row.get("severity")
                     )
         ##################################################
         # Requirement → Verification
