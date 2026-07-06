@@ -64,11 +64,11 @@ class GraphBuilderV3:
                     
                         failure=row.get("failure_mode"),
                     
+                        severity=row.get("failure_severity"),
+                    
                         consequence=row.get("failure_consequence"),
                     
                         mitigation=row.get("mitigation"),
-                    
-                        severity=row.get("severity")
                     )
         ##################################################
         # Requirement → Verification
