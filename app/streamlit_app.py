@@ -718,7 +718,7 @@ with tab3:
                             "failure_id"
                         )
        
-                        G = GraphBuilderV3.build_impact_graph(selected_row)
+                        G = GraphBuilderV3.build_impact_graph(row)
                         
                         impact_net = GraphVisualizer.build_network(G)
                         
