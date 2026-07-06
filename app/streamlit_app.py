@@ -718,7 +718,9 @@ with tab3:
                         failure_id = row.get(
                             "failure_id"
                         )
-       
+
+                        G = GraphBuilderV3.build_impact_graph(selected_row)
+                        
                         highlight = set(G.nodes())
                         
                         impact_net = GraphVisualizer.build_network(
