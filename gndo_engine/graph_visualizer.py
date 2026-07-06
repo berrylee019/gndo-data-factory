@@ -91,8 +91,14 @@ EDGE_STYLE = {
 class GraphVisualizer:
 
     @staticmethod
-    def build_network(G):
+    def build_network(
+        G,
+        highlight_nodes=None
+    ):
 
+        if highlight_nodes is None:
+            highlight_nodes = set()
+    
         net = Network(
             height="650px",
             width="100%",
@@ -112,10 +118,18 @@ class GraphVisualizer:
                 }
             )
 
+            node_color = style["color"]
+            
+            if highlight_nodes:
+            
+                if node not in highlight_nodes:
+            
+                    node_color = "#d9d9d9"
+            
             net.add_node(
                 node,
                 label=node,
-                color=style["color"],
+                color=node_color,
                 size=style["size"],
                 shape=style["shape"]
             )
@@ -132,11 +146,23 @@ class GraphVisualizer:
                 }
             )
         
+            edge_color = style["color"]
+            
+            if highlight_nodes:
+            
+                if (
+                    u not in highlight_nodes
+                    or
+                    v not in highlight_nodes
+                ):
+            
+                    edge_color = "#d9d9d9"
+            
             net.add_edge(
                 u,
                 v,
                 arrows="to",
-                color=style["color"],
+                color=edge_color,
                 width=style["width"],
                 dashes=style.get("dashes", False),
                 title=relation
