@@ -184,46 +184,94 @@ class GraphBuilderV3:
 
     @staticmethod
     def build_impact_graph(row):
-        
-        print("========== IMPACT ==========")
-        print(row.to_dict())
-        print("----------------------------")
-        print("failure_id =", row.get("failure_id"))
-        print("affected_test =", row.get("affected_test"))
-        
+    
         G = nx.DiGraph()
-
-        change = row.get("change_id")
-        req = row.get("affected_requirement")
-        ver = row.get("affected_verification")
-        test = row.get("affected_test")
-        fail = row.get("failure_id")
-
-        if pd.notna(change):
-            G.add_node(str(change), type="CHANGE")
-
-        if pd.notna(req):
-            G.add_node(str(req), type="REQ")
-
-        if pd.notna(ver):
-            G.add_node(str(ver), type="VER")
-
-        if pd.notna(test):
-            G.add_node(str(test), type="TEST")
-
-        if pd.notna(fail):
-            G.add_node(str(fail), type="FAIL")
-
-        if pd.notna(change) and pd.notna(req):
-            G.add_edge(str(change), str(req))
-
-        if pd.notna(req) and pd.notna(ver):
-            G.add_edge(str(req), str(ver))
-
-        if pd.notna(ver) and pd.notna(test):
-            G.add_edge(str(ver), str(test))
-
-        if pd.notna(test) and pd.notna(fail):
-            G.add_edge(str(test), str(fail))
-
+    
+        # -------------------------
+        # Nodes
+        # -------------------------
+    
+        nodes = {
+            "cfr": row.get("cfr"),
+            "rg": row.get("rg"),
+            "nureg": row.get("nureg"),
+            "srp": row.get("srp"),
+    
+            "requirement": row.get("requirement_id"),
+            "verification": row.get("verification_id"),
+            "test": row.get("test_id"),
+            "failure": row.get("failure_id"),
+    
+            "artifact": row.get("artifact_id"),
+            "system": row.get("system_id"),
+            "component": row.get("component_id"),
+    
+            "ap1000": row.get("ap1000"),
+            "apr1400": row.get("apr1400"),
+    
+            "change": row.get("change_id")
+        }
+    
+        for node_type, node_id in nodes.items():
+    
+            if pd.notna(node_id):
+    
+                G.add_node(
+                    str(node_id),
+                    type=node_type.upper(),
+                    label=str(node_id)
+                )
+    
+        # -------------------------
+        # Regulatory Chain
+        # -------------------------
+    
+        def edge(a, b, relation):
+    
+            if pd.notna(a) and pd.notna(b):
+    
+                G.add_edge(
+                    str(a),
+                    str(b),
+                    relation=relation
+                )
+    
+        edge(nodes["cfr"], nodes["rg"], "IMPLEMENTED_BY")
+        edge(nodes["rg"], nodes["nureg"], "GUIDES")
+        edge(nodes["nureg"], nodes["srp"], "REVIEWED_BY")
+    
+        edge(nodes["srp"], nodes["requirement"], "GENERATES")
+    
+        edge(nodes["requirement"], nodes["verification"], "VERIFIED_BY")
+    
+        edge(nodes["verification"], nodes["test"], "TESTED_BY")
+    
+        edge(nodes["test"], nodes["artifact"], "DOCUMENTED_BY")
+    
+        edge(nodes["test"], nodes["system"], "VALIDATES")
+    
+        edge(nodes["system"], nodes["component"], "CONTAINS")
+    
+        edge(nodes["artifact"], nodes["system"], "IMPLEMENTS")
+    
+        edge(nodes["requirement"], nodes["failure"], "CAUSES")
+    
+        edge(nodes["change"], row.get("affected_requirement"), "CHANGES")
+    
+        edge(
+            row.get("affected_requirement"),
+            row.get("affected_verification"),
+            "REVERIFY"
+        )
+    
+        edge(
+            row.get("affected_verification"),
+            row.get("affected_test"),
+            "RETEST"
+        )
+    
+        edge(nodes["srp"], nodes["ap1000"], "APPLIED_TO")
+    
+        edge(nodes["ap1000"], nodes["apr1400"], "EQUIVALENT_TO")
+    
         return G
