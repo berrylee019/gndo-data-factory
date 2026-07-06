@@ -721,10 +721,7 @@ with tab3:
        
                         highlight = set(G.nodes())
                         
-                        impact_net = GraphVisualizer.build_network(
-                            G,
-                            highlight_nodes=highlight
-                        )
+                        impact_net = GraphVisualizer.build_network(G)
                         
                         impact_html = GraphVisualizer.save_html(impact_net)
                         
