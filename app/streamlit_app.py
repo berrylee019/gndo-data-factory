@@ -719,9 +719,12 @@ with tab3:
                             "failure_id"
                         )
        
-                        G = GraphBuilderV3.build_impact_graph(row)
+                        highlight = set(G.nodes())
                         
-                        impact_net = GraphVisualizer.build_network(G)
+                        impact_net = GraphVisualizer.build_network(
+                            G,
+                            highlight_nodes=highlight
+                        )
                         
                         impact_html = GraphVisualizer.save_html(impact_net)
                         
