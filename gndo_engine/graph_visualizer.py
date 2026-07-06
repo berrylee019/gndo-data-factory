@@ -55,13 +55,40 @@ class GraphVisualizer:
             if highlight_nodes and node not in highlight_nodes:
                 node_color = "#d9d9d9"
 
+            tooltip = f"<b>{node}</b><br><hr>"
+            
+            fields = [
+                "chapter",
+                "topic",
+                "system",
+                "component",
+                "requirement",
+                "verification",
+                "verification_method",
+                "acceptance",
+                "test",
+                "artifact",
+                "failure",
+                "severity",
+                "consequence",
+                "mitigation",
+            ]
+            
+            for field in fields:
+            
+                value = attr.get(field)
+            
+                if value not in [None, "", "nan"]:
+            
+                    tooltip += f"<b>{field}</b> : {value}<br>"
+            
             net.add_node(
                 str(node),
                 label=str(attr.get("label", node)),
-                color=node_color,
+                color=style["color"],
                 size=style["size"],
                 shape=style["shape"],
-                title=f'{attr.get("type","")} : {node}',
+                title=tooltip
             )
 
         # ---------- Edges ----------
