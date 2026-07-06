@@ -719,6 +719,7 @@ with tab3:
                             "failure_id"
                         )
 
+                        G = GraphBuilderV3.build_impact_graph(row)
                         
                         highlight = set(G.nodes())
                         
