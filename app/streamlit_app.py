@@ -730,50 +730,6 @@ with tab3:
                         )
 
                     
-                    for node in net.nodes:
-
-                        if node["id"].startswith(
-                            "CHG"
-                        ):
-               
-                            node["color"] = "#ff0000"
-               
-                        elif node["id"].startswith(
-                            "REQ"
-                        ):
-               
-                            node["color"] = "#00cc66"
-               
-                        elif node["id"].startswith(
-                            "VER"
-                        ):
-               
-                            node["color"] = "#ffcc00"
-               
-                        elif node["id"].startswith(
-                            "TEST"
-                        ):
-               
-                            node["color"] = "#0099ff"
-
-                    with tempfile.NamedTemporaryFile(
-                        delete=False,
-                        suffix=".html"
-                    ) as tmp:
-               
-                        net.save_graph(
-                            tmp.name
-                        )
-               
-                        html = open(
-                            tmp.name,
-                            encoding="utf-8"
-                        ).read()
-               
-                    st.components.v1.html(
-                        html,
-                        height=550
-                    )
                        
                 elif (
                     target_id
