@@ -681,33 +681,19 @@ with tab3:
                             if str(n).startswith("FAIL-")
                         ]
                    
-                        st.subheader(
-                            "Change Impact Analysis"
-                        )
-       
-                        st.subheader(
-                            "Impact Summary"
-                        )
-                   
-                        st.metric(
-                            "Requirements",
-                            len(affected_requirements)
-                        )
-                       
-                        st.metric(
-                            "Verifications",
-                            len(affected_verifications)
-                        )
-                       
-                        st.metric(
-                            "Tests",
-                            len(affected_tests)
-                        )
-                       
-                        st.metric(
-                            "Failures",
-                            len(affected_failures)
-                        )
+                        c1, c2, c3, c4 = st.columns(4)
+                        
+                        with c1:
+                            st.metric("REQ", len(affected_requirements))
+                        
+                        with c2:
+                            st.metric("VER", len(affected_verifications))
+                        
+                        with c3:
+                            st.metric("TEST", len(affected_tests))
+                        
+                        with c4:
+                            st.metric("FAIL", len(affected_failures))
        
                         change_id = row.get(
                             "change_id"
@@ -745,11 +731,8 @@ with tab3:
                             impact_html = GraphVisualizer.save_html(
                                 impact_net
                             )
-                        
-                            components.html(
-                                impact_html,
-                                height=650
-                            )
+
+                            st.subheader("Impact Graph")
                             
                             node_list = sorted(G.nodes())
 
@@ -762,6 +745,11 @@ with tab3:
                                 key="impact_node"
                             
                             )
+                            
+                            components.html(
+                                impact_html,
+                                height=650
+                            )
                         
                         with right:
                         
@@ -773,13 +761,51 @@ with tab3:
                         
                                 st.markdown(f"### {selected_node}")
                         
-                                for k,v in attr.items():
-                        
-                                    if v not in [None,"","nan"]:
-                        
-                                        st.write(f"**{k}**")
-                        
-                                        st.write(v)
+                                st.markdown("---")
+                                
+                                st.markdown(f"## {selected_node}")
+                                
+                                st.caption(attr.get("type",""))
+                                
+                                sections = [
+                                
+                                    ("Chapter", attr.get("chapter")),
+                                
+                                    ("Topic", attr.get("topic")),
+                                
+                                    ("System", attr.get("system")),
+                                
+                                    ("Component", attr.get("component")),
+                                
+                                    ("Requirement", attr.get("requirement")),
+                                
+                                    ("Verification", attr.get("verification")),
+                                
+                                    ("Verification Method", attr.get("verification_method")),
+                                
+                                    ("Acceptance", attr.get("acceptance")),
+                                
+                                    ("Test", attr.get("test")),
+                                
+                                    ("Artifact", attr.get("artifact")),
+                                
+                                    ("Failure", attr.get("failure")),
+                                
+                                    ("Severity", attr.get("severity")),
+                                
+                                    ("Consequence", attr.get("consequence")),
+                                
+                                    ("Mitigation", attr.get("mitigation"))
+                                
+                                ]
+                                
+                                for title, value in sections:
+                                
+                                    if value not in [None, "", "nan"]:
+                                
+                                        st.markdown(f"### {title}")
+                                
+                                        st.info(value)
 
                     
                        
