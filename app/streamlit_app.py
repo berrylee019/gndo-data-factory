@@ -20,6 +20,9 @@ from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
 
+if "selected_node" not in st.session_state:
+    st.session_state.selected_node = None
+
 st.set_page_config(
     page_title="GNDO Data Factory",
     layout="wide"
@@ -735,12 +738,48 @@ with tab3:
                             highlight_nodes=highlight
                         )
                         
-                        impact_html = GraphVisualizer.save_html(impact_net)
+                        left, right = st.columns([3,2])
                         
-                        components.html(
-                            impact_html,
-                            height=650
-                        )
+                        with left:
+                        
+                            impact_html = GraphVisualizer.save_html(
+                                impact_net
+                            )
+                        
+                            components.html(
+                                impact_html,
+                                height=650
+                            )
+                            
+                            node_list = sorted(G.nodes())
+
+                            selected_node = st.selectbox(
+                            
+                                "Select Node",
+                            
+                                node_list,
+                            
+                                key="impact_node"
+                            
+                            )
+                        
+                        with right:
+                        
+                            st.subheader("📄 Node Detail")
+                        
+                            if selected_node:
+                        
+                                attr = G.nodes[selected_node]
+                        
+                                st.markdown(f"### {selected_node}")
+                        
+                                for k,v in attr.items():
+                        
+                                    if v not in [None,"","nan"]:
+                        
+                                        st.write(f"**{k}**")
+                        
+                                        st.write(v)
 
                     
                        
