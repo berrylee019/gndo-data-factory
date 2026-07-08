@@ -6,6 +6,71 @@ print("GraphBuilderV3 VERSION = 2026-06-29 V3")
 class GraphBuilderV3:
 
     @staticmethod
+    def add_rkg_node(
+        G,
+        node_id,
+        node_type,
+        row,
+    ):
+    
+        if pd.isna(node_id):
+            return
+    
+        G.add_node(
+    
+            str(node_id),
+    
+            type=node_type,
+    
+            label=str(node_id),
+    
+            chapter=row.get("chapter"),
+    
+            topic=row.get("topic"),
+    
+            system=row.get("system_name"),
+    
+            component=row.get("component_name"),
+    
+            requirement=row.get("requirement"),
+    
+            verification=row.get("verification_name"),
+    
+            verification_method=row.get("verification_method"),
+    
+            acceptance=row.get("acceptance_criteria"),
+    
+            test=row.get("test_name"),
+    
+            artifact=row.get("artifact_name"),
+    
+            failure=row.get("failure_mode"),
+    
+            severity=row.get("severity"),
+    
+            consequence=row.get("consequence"),
+    
+            mitigation=row.get("mitigation"),
+    
+            change_type=row.get("change_type"),
+    
+            impact_scope=row.get("impact_scope"),
+    
+            cfr=row.get("cfr"),
+    
+            rg=row.get("rg"),
+    
+            nureg=row.get("nureg"),
+    
+            srp=row.get("srp"),
+    
+            ap1000=row.get("ap1000"),
+    
+            apr1400=row.get("apr1400")
+    
+        )
+
+    @staticmethod
     def build(rkg_df):
 
         print("======================================")
@@ -30,46 +95,18 @@ class GraphBuilderV3:
             chapter = row.get("chapter")
 
             for column, node_type in node_types.items():
-
-                node_id = row.get(column)
-
-                if pd.notna(node_id):
-
-                    G.add_node(
-                        str(node_id),
-                    
-                        type=node_type,
-                    
-                        label=str(node_id),
-                    
-                        chapter=row.get("chapter"),
-                    
-                        topic=row.get("topic"),
-                    
-                        system=row.get("system_name"),
-                    
-                        component=row.get("component_name"),
-                    
-                        requirement=row.get("requirement"),
-                    
-                        verification=row.get("verification_name"),
-                    
-                        verification_method=row.get("verification_method"),
-                    
-                        acceptance=row.get("acceptance_criteria"),
-                    
-                        test=row.get("test_name"),
-                    
-                        artifact=row.get("artifact_name"),
-                    
-                        failure=row.get("failure_mode"),
-                    
-                        severity=row.get("failure_severity"),
-                    
-                        consequence=row.get("failure_consequence"),
-                    
-                        mitigation=row.get("mitigation"),
-                    )
+            
+                GraphBuilderV3.add_rkg_node(
+            
+                    G,
+            
+                    row.get(column),
+            
+                    node_type,
+            
+                    row
+            
+                )
         ##################################################
         # Requirement → Verification
         ##################################################
@@ -243,13 +280,65 @@ class GraphBuilderV3:
     
         for node_type, node_id in nodes.items():
     
-            if pd.notna(node_id):
-    
-                G.add_node(
-                    str(node_id),
-                    type=node_type.upper(),
-                    label=str(node_id)
-                )
+            GraphBuilderV3.add_rkg_node(
+            
+                G,
+            
+                change,
+            
+                "CHANGE",
+            
+                row
+            
+            )
+            
+            GraphBuilderV3.add_rkg_node(
+            
+                G,
+            
+                req,
+            
+                "REQ",
+            
+                row
+            
+            )
+            
+            GraphBuilderV3.add_rkg_node(
+            
+                G,
+            
+                ver,
+            
+                "VER",
+            
+                row
+            
+            )
+            
+            GraphBuilderV3.add_rkg_node(
+            
+                G,
+            
+                test,
+            
+                "TEST",
+            
+                row
+            
+            )
+            
+            GraphBuilderV3.add_rkg_node(
+            
+                G,
+            
+                fail,
+            
+                "FAIL",
+            
+                row
+            
+            )
     
         # -------------------------
         # Regulatory Chain
