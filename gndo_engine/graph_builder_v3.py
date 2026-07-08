@@ -281,63 +281,38 @@ class GraphBuilderV3:
         for node_type, node_id in nodes.items():
     
             GraphBuilderV3.add_rkg_node(
-            
                 G,
-            
                 change,
-            
                 "CHANGE",
-            
                 row
-            
             )
             
             GraphBuilderV3.add_rkg_node(
-            
                 G,
-            
                 req,
-            
                 "REQ",
-            
                 row
-            
             )
             
             GraphBuilderV3.add_rkg_node(
-            
                 G,
-            
                 ver,
-            
                 "VER",
-            
                 row
-            
             )
             
             GraphBuilderV3.add_rkg_node(
-            
                 G,
-            
                 test,
-            
                 "TEST",
-            
                 row
-            
             )
             
             GraphBuilderV3.add_rkg_node(
-            
                 G,
-            
                 fail,
-            
                 "FAIL",
-            
                 row
-            
             )
     
         # -------------------------
