@@ -318,6 +318,9 @@ with tab3:
    
    
         selected_row = render_gndo_search(rkg)
+
+        if selected_row is None:
+            st.stop()
         
 
                         # ==========================
