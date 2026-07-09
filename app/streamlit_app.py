@@ -315,8 +315,28 @@ with tab3:
        
     with gndo_tab:
    
-        st.subheader(
-            "GNDO Search"
+        st.header("GNDO Search")
+   
+        selected_chapter = st.selectbox(
+   
+            "Select Chapter",
+   
+            sorted(
+                rkg_df["chapter"]
+                .dropna()
+                .unique()
+            ),
+   
+            key="chapter_selector"
+   
+        )
+   
+        chapter_df = rkg_df[
+            rkg_df["chapter"] == selected_chapter
+        ].copy()
+   
+        st.caption(
+            f"{selected_chapter} : {len(chapter_df)} records"
         )
    
         gndo_search = st.text_input(
@@ -328,7 +348,7 @@ with tab3:
    
         if gndo_search:
    
-            gndo_result = rkg_df[
+            gndo_result = chapter_df[
                 rkg_df.astype(str)
                 .apply(
                     lambda x:
@@ -395,7 +415,7 @@ with tab3:
 
         G = nx.DiGraph()
        
-        for _, r in rkg_df.iterrows():
+        for _, r in chapter_df.iterrows():
        
             change_id = r.get("change_id")
             req_id = r.get("affected_requirement")
@@ -472,42 +492,42 @@ with tab3:
             if req_match:
                 target_id = req_match.group(1)
        
-                result = rkg_df[
-                    rkg_df["requirement_id"] == target_id
+                result = chapter_df[
+                    chapter_df["requirement_id"] == target_id
                 ]
        
             elif ver_match:
                 target_id = ver_match.group(1)
        
-                result = rkg_df[
-                    rkg_df["verification_id"] == target_id
+                result = chapter_df[
+                    chapter_df["verification_id"] == target_id
                 ]
        
             elif test_match:
                 target_id = test_match.group(1)
        
-                result = rkg_df[
-                    rkg_df["test_id"] == target_id
+                result = chapter_df[
+                    chapter_df["test_id"] == target_id
                 ]
        
             elif fail_match:
                 target_id = fail_match.group(1)
        
-                result = rkg_df[
-                    rkg_df["failure_id"] == target_id
+                result = chapter_df[
+                    chapter_df["failure_id"] == target_id
                 ]
 
             elif chg_match:
                 target_id = chg_match.group(1)
        
-                result = rkg_df[
-                    rkg_df["change_id"] == target_id
+                result = chapter_df[
+                    chapter_df["change_id"] == target_id
                 ]
        
             else:
        
-                result = rkg_df[
-                    rkg_df.astype(str)
+                result = chapter_df[
+                    chapter_df.astype(str)
                     .apply(
                         lambda x:
                         x.str.contains(
@@ -551,8 +571,8 @@ with tab3:
                         "affected_requirement"
                     )
                
-                    affected_rows = rkg_df[
-                        rkg_df["requirement_id"]
+                    affected_rows = chapter_df[
+                        chapter_df["requirement_id"]
                         == affected_req
                     ]
                
@@ -681,33 +701,19 @@ with tab3:
                             if str(n).startswith("FAIL-")
                         ]
                    
-                        st.subheader(
-                            "Change Impact Analysis"
-                        )
-       
-                        st.subheader(
-                            "Impact Summary"
-                        )
-                   
-                        st.metric(
-                            "Requirements",
-                            len(affected_requirements)
-                        )
+                        c1, c2, c3, c4 = st.columns(4)
                        
-                        st.metric(
-                            "Verifications",
-                            len(affected_verifications)
-                        )
+                        with c1:
+                            st.metric("REQ", len(affected_requirements))
                        
-                        st.metric(
-                            "Tests",
-                            len(affected_tests)
-                        )
+                        with c2:
+                            st.metric("VER", len(affected_verifications))
                        
-                        st.metric(
-                            "Failures",
-                            len(affected_failures)
-                        )
+                        with c3:
+                            st.metric("TEST", len(affected_tests))
+                       
+                        with c4:
+                            st.metric("FAIL", len(affected_failures))
        
                         change_id = row.get(
                             "change_id"
@@ -730,22 +736,98 @@ with tab3:
                         )
 
                         G = GraphBuilderV3.build_impact_graph(row)
-                        
+                       
                         highlight = set(G.nodes())
-                        
+                       
                         impact_net = GraphVisualizer.build_network(
                             G,
                             highlight_nodes=highlight
                         )
-                        
-                        impact_html = GraphVisualizer.save_html(impact_net)
-                        
-                        components.html(
-                            impact_html,
-                            height=650
-                        )
+                       
+                        left, right = st.columns([3,2])
+                       
+                        with left:
+                       
+                            impact_html = GraphVisualizer.save_html(
+                                impact_net
+                            )
 
-                    
+                            st.subheader("Impact Graph")
+                           
+                            node_list = sorted(G.nodes())
+
+                            selected_node = st.selectbox(
+                           
+                                "Select Node",
+                           
+                                node_list,
+                           
+                                key="impact_node"
+                           
+                            )
+                           
+                            components.html(
+                                impact_html,
+                                height=650
+                            )
+                       
+                        with right:
+                       
+                            st.subheader("📄 Node Detail")
+                       
+                            if selected_node:
+                       
+                                attr = G.nodes[selected_node]
+                       
+                                st.markdown(f"### {selected_node}")
+                       
+                                st.markdown("---")
+                               
+                                st.markdown(f"## {selected_node}")
+                               
+                                st.caption(attr.get("type",""))
+                               
+                                sections = [
+                               
+                                    ("Chapter", attr.get("chapter")),
+                               
+                                    ("Topic", attr.get("topic")),
+                               
+                                    ("System", attr.get("system")),
+                               
+                                    ("Component", attr.get("component")),
+                               
+                                    ("Requirement", attr.get("requirement")),
+                               
+                                    ("Verification", attr.get("verification")),
+                               
+                                    ("Verification Method", attr.get("verification_method")),
+                               
+                                    ("Acceptance", attr.get("acceptance")),
+                               
+                                    ("Test", attr.get("test")),
+                               
+                                    ("Artifact", attr.get("artifact")),
+                               
+                                    ("Failure", attr.get("failure")),
+                               
+                                    ("Severity", attr.get("severity")),
+                               
+                                    ("Consequence", attr.get("consequence")),
+                               
+                                    ("Mitigation", attr.get("mitigation"))
+                               
+                                ]
+                               
+                                for title, value in sections:
+                               
+                                    if value not in [None, "", "nan"]:
+                               
+                                        st.markdown(f"### {title}")
+                               
+                                        st.info(value)
+
+                   
                        
                 elif (
                     target_id
