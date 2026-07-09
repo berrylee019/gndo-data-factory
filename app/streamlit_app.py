@@ -386,50 +386,73 @@ with tab3:
                     )
                 )
        
-        impact_nodes = list(expanded_nodes)
+        ####################################################
+        # Semantic Expansion
+        ####################################################
+        
+        expanded_nodes = set()
+        
+        for value in selected_row.values:
+        
+            if pd.notna(value):
+        
+                expanded_nodes.add(str(value))
+        
+        impact_nodes = sorted(expanded_nodes)
+        
+        affected_requirements = [
+            n for n in impact_nodes
+            if n.startswith("REQ-")
+        ]
+        
+        affected_verifications = [
+            n for n in impact_nodes
+            if n.startswith("VER-")
+        ]
+        
+        affected_tests = [
+            n for n in impact_nodes
+            if n.startswith("TEST-")
+        ]
+        
+        affected_failures = [
+            n for n in impact_nodes
+            if n.startswith("FAIL-")
+        ]
 
         st.subheader("Semantic Expansion")
 
-        st.write("Impact Nodes")
-        st.write(impact_nodes)
-       
-        st.write("Affected Requirements")
-        st.write(affected_requirements)
-       
-        st.write("Affected Verifications")
-        st.write(affected_verifications)
-       
-        st.write("Affected Tests")
-        st.write(affected_tests)
-       
-        st.write("Affected Failures")
-        st.write(affected_failures)
-       
-
-        affected_requirements = [
-            n
-            for n in impact_nodes
-            if str(n).startswith("REQ-")
-        ]
-       
-        affected_verifications = [
-            n
-            for n in impact_nodes
-            if str(n).startswith("VER-")
-        ]
-       
-        affected_tests = [
-            n
-            for n in impact_nodes
-            if str(n).startswith("TEST-")
-        ]
-       
-        affected_failures = [
-            n
-            for n in impact_nodes
-            if str(n).startswith("FAIL-")
-        ]
-   
+        left, right = st.columns(2)
+        
+        with left:
+        
+            st.metric(
+                "Expanded Nodes",
+                len(impact_nodes)
+            )
+        
+            st.metric(
+                "Requirements",
+                len(affected_requirements)
+            )
+        
+            st.metric(
+                "Verifications",
+                len(affected_verifications)
+            )
+        
+        with right:
+        
+            st.metric(
+                "Tests",
+                len(affected_tests)
+            )
+        
+            st.metric(
+                "Failures",
+                len(affected_failures)
+            )
+        
         c1, c2, c3, c4 = st.columns(4)
        
         with c1:
