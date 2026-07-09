@@ -548,253 +548,253 @@ with tab3:
 
                    
                        
-                elif (
-                    target_id
-                    and target_id.startswith("REQ-")
-                ):
-                    st.subheader(
-                        "Requirement Impact Analysis"
-                    )
-   
-                elif (
-                    target_id
-                    and target_id.startswith("VER-")
-                ):
-                    st.subheader(
-                        "Verification Impact Analysis"
-                    )
-   
-                elif (
-                    target_id
-                    and target_id.startswith("TEST-")
-                ):
-                    st.subheader(
-                        "Test Impact Analysis"
-                    )
-               
-               
-                    impact_cols = [
-                        "requirement_id",
-                        "verification_id",
-                        "test_id",
-                        "artifact_id",
-                        "system_id",
-                        "component_id"
-                    ]
-               
-                    impact_df = result[
-                        [
-                            c
-                            for c in impact_cols
-                            if c in result.columns
+                    elif (
+                        target_id
+                        and target_id.startswith("REQ-")
+                    ):
+                        st.subheader(
+                            "Requirement Impact Analysis"
+                        )
+       
+                    elif (
+                        target_id
+                        and target_id.startswith("VER-")
+                    ):
+                        st.subheader(
+                            "Verification Impact Analysis"
+                        )
+       
+                    elif (
+                        target_id
+                        and target_id.startswith("TEST-")
+                    ):
+                        st.subheader(
+                            "Test Impact Analysis"
+                        )
+                   
+                   
+                        impact_cols = [
+                            "requirement_id",
+                            "verification_id",
+                            "test_id",
+                            "artifact_id",
+                            "system_id",
+                            "component_id"
                         ]
-                    ]
-               
-                    st.dataframe(
-                        impact_df,
-                        use_container_width=True
-                    )
-
-                impact_level = row.get(
-                    "impact_level"
-                )
-               
-                retest_required = row.get(
-                    "retest_required"
-                )
-               
-                safety_significant = row.get(
-                    "safety_significant"
-                )
-
-                st.success(
-                    f"Traceability Found"
-                )
-
-                if impact_level == "HIGH":
-   
-                    st.error(
-                        "Impact Level : HIGH"
-                    )
-               
-                elif impact_level == "MEDIUM":
-               
-                    st.warning(
-                        "Impact Level : MEDIUM"
-                    )
-               
-                elif impact_level == "LOW":
-               
-                    st.success(
-                        "Impact Level : LOW"
-                    )
-   
-                if safety_significant:
-   
-                    st.error(
-                        "Safety Significant : YES"
-                    )
-               
-                else:
-               
-                    st.success(
-                        "Safety Significant : NO"
-                    )
-
-                if retest_required:
-   
-                    st.warning(
-                        "Retest Required : YES"
-                    )
-               
-                else:
-               
-                    st.success(
-                        "Retest Required : NO"
+                   
+                        impact_df = result[
+                            [
+                                c
+                                for c in impact_cols
+                                if c in result.columns
+                            ]
+                        ]
+                   
+                        st.dataframe(
+                            impact_df,
+                            use_container_width=True
+                        )
+    
+                    impact_level = row.get(
+                        "impact_level"
                     )
                    
-                recommendations = []
-
-                if retest_required:
-               
-                    recommendations.append(
-                        f"Re-execute {row.get('test_id')}"
+                    retest_required = row.get(
+                        "retest_required"
                     )
-               
-                if row.get("artifact_id"):
-               
-                    recommendations.append(
-                        f"Review {row.get('artifact_id')}"
+                   
+                    safety_significant = row.get(
+                        "safety_significant"
                     )
-               
-                if row.get("system_id"):
-               
-                    recommendations.append(
-                        f"Verify {row.get('system_id')}"
+    
+                    st.success(
+                        f"Traceability Found"
                     )
-               
-                if row.get("component_id"):
-               
-                    recommendations.append(
-                        f"Inspect {row.get('component_id')}"
-                    )
-               
-                if safety_significant:
-               
-                    recommendations.append(
-                        "Engineering Review Required"
-                    )
-                if (
-                    target_id
-                    and target_id.startswith("FAIL-")
-                ):
-               
-               
+    
+                    if impact_level == "HIGH":
+       
+                        st.error(
+                            "Impact Level : HIGH"
+                        )
+                   
+                    elif impact_level == "MEDIUM":
+                   
+                        st.warning(
+                            "Impact Level : MEDIUM"
+                        )
+                   
+                    elif impact_level == "LOW":
+                   
+                        st.success(
+                            "Impact Level : LOW"
+                        )
+       
+                    if safety_significant:
+       
+                        st.error(
+                            "Safety Significant : YES"
+                        )
+                   
+                    else:
+                   
+                        st.success(
+                            "Safety Significant : NO"
+                        )
+    
+                    if retest_required:
+       
+                        st.warning(
+                            "Retest Required : YES"
+                        )
+                   
+                    else:
+                   
+                        st.success(
+                            "Retest Required : NO"
+                        )
+                       
+                    recommendations = []
+    
+                    if retest_required:
+                   
+                        recommendations.append(
+                            f"Re-execute {row.get('test_id')}"
+                        )
+                   
+                    if row.get("artifact_id"):
+                   
+                        recommendations.append(
+                            f"Review {row.get('artifact_id')}"
+                        )
+                   
+                    if row.get("system_id"):
+                   
+                        recommendations.append(
+                            f"Verify {row.get('system_id')}"
+                        )
+                   
+                    if row.get("component_id"):
+                   
+                        recommendations.append(
+                            f"Inspect {row.get('component_id')}"
+                        )
+                   
+                    if safety_significant:
+                   
+                        recommendations.append(
+                            "Engineering Review Required"
+                        )
+                    if (
+                        target_id
+                        and target_id.startswith("FAIL-")
+                    ):
+                   
+                   
+                            st.markdown(
+                                f"""
+                        ### Failure
+                       
+                        {row.get('failure_id')}
+                       
+                        {row.get('failure_mode')}
+                       
+                        ---
+                       
+                        ### Affected Requirement
+                       
+                        {row.get('requirement_id')}
+                       
+                        ---
+                       
+                        ### Verification
+                       
+                        {row.get('verification_id')}
+                       
+                        ---
+                       
+                        ### Test
+                       
+                        {row.get('test_id')}
+                       
+                        ---
+                       
+                        ### Design Artifact
+                       
+                        {row.get('artifact_id')}
+                       
+                        ---
+                       
+                        ### System
+                       
+                        {row.get('system_id')}
+                       
+                        ---
+                       
+                        ### Component
+                       
+                        {row.get('component_id')}
+                        """
+                            )
+    
+                    if (
+                        target_id
+                        and target_id.startswith("CHG-")
+                    ):
+                       
+                   
                         st.markdown(
                             f"""
-                    ### Failure
+                    ### Change
                    
-                    {row.get('failure_id')}
+                    {row.get('change_id')}
                    
-                    {row.get('failure_mode')}
+                    ### Change Type
                    
-                    ---
+                    {row.get('change_type')}
                    
+                    ### Impact Scope
+                   
+                    {row.get('impact_scope')}
+                   
+                    ### Requires Reverification
+                   
+                    {row.get('requires_reverification')}
+                   
+                    ### Requires Retest
+                   
+                    {row.get('requires_retest')}
+    
                     ### Affected Requirement
+    
+                    {row.get('affected_requirement')}
                    
-                    {row.get('requirement_id')}
+                    ### Affected Verification
                    
-                    ---
+                    {row.get('affected_verification')}
                    
-                    ### Verification
+                    ### Affected Test
                    
-                    {row.get('verification_id')}
-                   
-                    ---
-                   
-                    ### Test
-                   
-                    {row.get('test_id')}
-                   
-                    ---
-                   
-                    ### Design Artifact
-                   
-                    {row.get('artifact_id')}
-                   
-                    ---
-                   
-                    ### System
-                   
-                    {row.get('system_id')}
-                   
-                    ---
-                   
-                    ### Component
-                   
-                    {row.get('component_id')}
+                    {row.get('affected_test')}
                     """
+                    )
+                           
+                    if recommendations:
+    
+                        st.subheader(
+                            "Recommended Actions"
                         )
-
-                if (
-                    target_id
-                    and target_id.startswith("CHG-")
-                ):
                    
-               
-                    st.markdown(
-                        f"""
-                ### Change
-               
-                {row.get('change_id')}
-               
-                ### Change Type
-               
-                {row.get('change_type')}
-               
-                ### Impact Scope
-               
-                {row.get('impact_scope')}
-               
-                ### Requires Reverification
-               
-                {row.get('requires_reverification')}
-               
-                ### Requires Retest
-               
-                {row.get('requires_retest')}
-
-                ### Affected Requirement
-
-                {row.get('affected_requirement')}
-               
-                ### Affected Verification
-               
-                {row.get('affected_verification')}
-               
-                ### Affected Test
-               
-                {row.get('affected_test')}
-                """
-                )
-                       
-                if recommendations:
-
-                    st.subheader(
-                        "Recommended Actions"
-                    )
-               
-                    for rec in recommendations:
-               
-                        st.info(rec)
-       
-                with st.expander(
-                    "Raw Record"
-                ):
-       
-                    st.json(
-                        row.to_dict()
-                    )
+                        for rec in recommendations:
+                   
+                            st.info(rec)
+           
+                    with st.expander(
+                        "Raw Record"
+                    ):
+           
+                        st.json(
+                            row.to_dict()
+                        )
 
 
 
