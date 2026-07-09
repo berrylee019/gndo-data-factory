@@ -323,228 +323,228 @@ with tab3:
             st.stop()
         
 
-                        # ==========================
-                        # Semantic Expansion
-                        # Same System
-                        # ==========================
-                       
-                        semantic_nodes = set()
-                       
-                        for node in impact_nodes:
-                       
-                            if not str(node).startswith("REQ-"):
-                                continue
-                       
-                            req_rows = rkg_df[
-                                rkg_df["requirement_id"] == node
-                            ]
-                       
-                            if req_rows.empty:
-                                continue
-                       
-                            system_id = req_rows.iloc[0].get("system_id")
-                       
-                            if pd.isna(system_id):
-                                continue
-                       
-                            same_system = rkg_df[
-                                rkg_df["system_id"] == system_id
-                            ]
-                       
-                            semantic_nodes.update(
-                                same_system["requirement_id"]
-                                .dropna()
-                                .tolist()
-                            )
+        # ==========================
+        # Semantic Expansion
+        # Same System
+        # ==========================
+       
+        semantic_nodes = set()
+       
+        for node in impact_nodes:
+       
+            if not str(node).startswith("REQ-"):
+                continue
+       
+            req_rows = rkg_df[
+                rkg_df["requirement_id"] == node
+            ]
+       
+            if req_rows.empty:
+                continue
+       
+            system_id = req_rows.iloc[0].get("system_id")
+       
+            if pd.isna(system_id):
+                continue
+       
+            same_system = rkg_df[
+                rkg_df["system_id"] == system_id
+            ]
+       
+            semantic_nodes.update(
+                same_system["requirement_id"]
+                .dropna()
+                .tolist()
+            )
 
-                        impact_nodes = list(
-                            set(impact_nodes)
-                            |
-                            semantic_nodes
-                        )
-                       
-                        expanded_nodes = set(impact_nodes)
+        impact_nodes = list(
+            set(impact_nodes)
+            |
+            semantic_nodes
+        )
+       
+        expanded_nodes = set(impact_nodes)
 
-                        for req in semantic_nodes:
-                       
-                            if req in G:
-                       
-                                expanded_nodes.update(
-                                    nx.descendants(
-                                        G,
-                                        req
-                                    )
-                                )
-                       
-                        impact_nodes = list(expanded_nodes)
+        for req in semantic_nodes:
+       
+            if req in G:
+       
+                expanded_nodes.update(
+                    nx.descendants(
+                        G,
+                        req
+                    )
+                )
+       
+        impact_nodes = list(expanded_nodes)
 
-                        st.subheader("Semantic Expansion")
+        st.subheader("Semantic Expansion")
 
-                        st.write("Impact Nodes")
-                        st.write(impact_nodes)
-                       
-                        st.write("Affected Requirements")
-                        st.write(affected_requirements)
-                       
-                        st.write("Affected Verifications")
-                        st.write(affected_verifications)
-                       
-                        st.write("Affected Tests")
-                        st.write(affected_tests)
-                       
-                        st.write("Affected Failures")
-                        st.write(affected_failures)
-                       
+        st.write("Impact Nodes")
+        st.write(impact_nodes)
+       
+        st.write("Affected Requirements")
+        st.write(affected_requirements)
+       
+        st.write("Affected Verifications")
+        st.write(affected_verifications)
+       
+        st.write("Affected Tests")
+        st.write(affected_tests)
+       
+        st.write("Affected Failures")
+        st.write(affected_failures)
+       
+
+        affected_requirements = [
+            n
+            for n in impact_nodes
+            if str(n).startswith("REQ-")
+        ]
+       
+        affected_verifications = [
+            n
+            for n in impact_nodes
+            if str(n).startswith("VER-")
+        ]
+       
+        affected_tests = [
+            n
+            for n in impact_nodes
+            if str(n).startswith("TEST-")
+        ]
+       
+        affected_failures = [
+            n
+            for n in impact_nodes
+            if str(n).startswith("FAIL-")
+        ]
    
-                        affected_requirements = [
-                            n
-                            for n in impact_nodes
-                            if str(n).startswith("REQ-")
-                        ]
-                       
-                        affected_verifications = [
-                            n
-                            for n in impact_nodes
-                            if str(n).startswith("VER-")
-                        ]
-                       
-                        affected_tests = [
-                            n
-                            for n in impact_nodes
-                            if str(n).startswith("TEST-")
-                        ]
-                       
-                        affected_failures = [
-                            n
-                            for n in impact_nodes
-                            if str(n).startswith("FAIL-")
-                        ]
-                   
-                        c1, c2, c3, c4 = st.columns(4)
-                       
-                        with c1:
-                            st.metric("REQ", len(affected_requirements))
-                       
-                        with c2:
-                            st.metric("VER", len(affected_verifications))
-                       
-                        with c3:
-                            st.metric("TEST", len(affected_tests))
-                       
-                        with c4:
-                            st.metric("FAIL", len(affected_failures))
+        c1, c2, c3, c4 = st.columns(4)
        
-                        change_id = selected_row.get(
-                            "change_id"
-                        )
-                   
-                        req_id = selected_row.get(
-                            "affected_requirement"
-                        )
-                   
-                        ver_id = selected_row.get(
-                            "affected_verification"
-                        )
-                   
-                        test_id = row.get(
-                            "affected_test"
-                        )
+        with c1:
+            st.metric("REQ", len(affected_requirements))
        
-                        failure_id = row.get(
-                            "failure_id"
-                        )
+        with c2:
+            st.metric("VER", len(affected_verifications))
+       
+        with c3:
+            st.metric("TEST", len(affected_tests))
+       
+        with c4:
+            st.metric("FAIL", len(affected_failures))
 
-                        G = GraphBuilderV3.build_impact_graph(selected_row)
-                       
-                        highlight = set(G.nodes())
-                       
-                        impact_net = GraphVisualizer.build_network(
-                            G,
-                            highlight_nodes=highlight
-                        )
-                       
-                        left, right = st.columns([3,2])
-                       
-                        with left:
-                       
-                            impact_html = GraphVisualizer.save_html(
-                                impact_net
-                            )
+        change_id = selected_row.get(
+            "change_id"
+        )
+   
+        req_id = selected_row.get(
+            "affected_requirement"
+        )
+   
+        ver_id = selected_row.get(
+            "affected_verification"
+        )
+   
+        test_id = row.get(
+            "affected_test"
+        )
 
-                            st.subheader("Impact Graph")
-                           
-                            node_list = sorted(G.nodes())
+        failure_id = row.get(
+            "failure_id"
+        )
 
-                            selected_node = st.selectbox(
-                           
-                                "Select Node",
-                           
-                                node_list,
-                           
-                                key="impact_node"
-                           
-                            )
-                           
-                            components.html(
-                                impact_html,
-                                height=650
-                            )
-                       
-                        with right:
-                       
-                            st.subheader("📄 Node Detail")
-                       
-                            if selected_node:
-                       
-                                attr = G.nodes[selected_node]
-                       
-                                st.markdown(f"### {selected_node}")
-                       
-                                st.markdown("---")
-                               
-                                st.markdown(f"## {selected_node}")
-                               
-                                st.caption(attr.get("type",""))
-                               
-                                sections = [
-                               
-                                    ("Chapter", attr.get("chapter")),
-                               
-                                    ("Topic", attr.get("topic")),
-                               
-                                    ("System", attr.get("system")),
-                               
-                                    ("Component", attr.get("component")),
-                               
-                                    ("Requirement", attr.get("requirement")),
-                               
-                                    ("Verification", attr.get("verification")),
-                               
-                                    ("Verification Method", attr.get("verification_method")),
-                               
-                                    ("Acceptance", attr.get("acceptance")),
-                               
-                                    ("Test", attr.get("test")),
-                               
-                                    ("Artifact", attr.get("artifact")),
-                               
-                                    ("Failure", attr.get("failure")),
-                               
-                                    ("Severity", attr.get("severity")),
-                               
-                                    ("Consequence", attr.get("consequence")),
-                               
-                                    ("Mitigation", attr.get("mitigation"))
-                               
-                                ]
-                               
-                                for title, value in sections:
-                               
-                                    if value not in [None, "", "nan"]:
-                               
-                                        st.markdown(f"### {title}")
-                               
-                                        st.info(value)
+        G = GraphBuilderV3.build_impact_graph(selected_row)
+       
+        highlight = set(G.nodes())
+       
+        impact_net = GraphVisualizer.build_network(
+            G,
+            highlight_nodes=highlight
+        )
+       
+        left, right = st.columns([3,2])
+       
+        with left:
+       
+            impact_html = GraphVisualizer.save_html(
+                impact_net
+            )
+
+            st.subheader("Impact Graph")
+           
+            node_list = sorted(G.nodes())
+
+            selected_node = st.selectbox(
+           
+                "Select Node",
+           
+                node_list,
+           
+                key="impact_node"
+           
+            )
+           
+            components.html(
+                impact_html,
+                height=650
+            )
+       
+        with right:
+       
+            st.subheader("📄 Node Detail")
+       
+            if selected_node:
+       
+                attr = G.nodes[selected_node]
+       
+                st.markdown(f"### {selected_node}")
+       
+                st.markdown("---")
+               
+                st.markdown(f"## {selected_node}")
+               
+                st.caption(attr.get("type",""))
+               
+                sections = [
+               
+                    ("Chapter", attr.get("chapter")),
+               
+                    ("Topic", attr.get("topic")),
+               
+                    ("System", attr.get("system")),
+               
+                    ("Component", attr.get("component")),
+               
+                    ("Requirement", attr.get("requirement")),
+               
+                    ("Verification", attr.get("verification")),
+               
+                    ("Verification Method", attr.get("verification_method")),
+               
+                    ("Acceptance", attr.get("acceptance")),
+               
+                    ("Test", attr.get("test")),
+               
+                    ("Artifact", attr.get("artifact")),
+               
+                    ("Failure", attr.get("failure")),
+               
+                    ("Severity", attr.get("severity")),
+               
+                    ("Consequence", attr.get("consequence")),
+               
+                    ("Mitigation", attr.get("mitigation"))
+               
+                ]
+               
+                for title, value in sections:
+               
+                    if value not in [None, "", "nan"]:
+               
+                        st.markdown(f"### {title}")
+               
+                        st.info(value)
 
                    
                        
