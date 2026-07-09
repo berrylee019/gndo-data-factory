@@ -19,7 +19,6 @@ import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
 import tempfile
-from app.components.gndo_search import render_gndo_search
 
 if "selected_node" not in st.session_state:
     st.session_state.selected_node = None
@@ -316,518 +315,685 @@ with tab3:
        
     with gndo_tab:
    
-   
-        ####################################################
-        # GNDO Search
-        ####################################################
-        
-        selected_row = render_gndo_search(rkg_df)
-        
-        if selected_row is None:
-            st.info("검색 결과가 없습니다.")
-            st.stop()
-        
-        #impact_nodes = []
-        #affected_requirements = []
-        #affected_verifications = []
-        #affected_tests = []
-        #affected_failures = []
-
-        # ==========================
-        # Semantic Expansion
-        # Same System
-        # ==========================
-       
-        semantic_nodes = set()
-       
-        for node in impact_nodes:
-       
-            if not str(node).startswith("REQ-"):
-                continue
-       
-            req_rows = rkg_df[
-                rkg_df["requirement_id"] == node
-            ]
-       
-            if req_rows.empty:
-                continue
-       
-            system_id = req_rows.iloc[0].get("system_id")
-       
-            if pd.isna(system_id):
-                continue
-       
-            same_system = rkg_df[
-                rkg_df["system_id"] == system_id
-            ]
-       
-            semantic_nodes.update(
-                same_system["requirement_id"]
-                .dropna()
-                .tolist()
-            )
-
-        impact_nodes = list(
-            set(impact_nodes)
-            |
-            semantic_nodes
+        st.subheader(
+            "GNDO Search"
         )
-       
-        expanded_nodes = set(impact_nodes)
-
-        for req in semantic_nodes:
-       
-            if req in G:
-       
-                expanded_nodes.update(
-                    nx.descendants(
-                        G,
-                        req
+   
+        gndo_search = st.text_input(
+            "Search GNDO Objects",
+            placeholder="예: REQ-CH07-001, VER-CH07-001, TEST-CH07-001"
+        )
+   
+        gndo_result = pd.DataFrame()
+   
+        if gndo_search:
+   
+            gndo_result = rkg_df[
+                rkg_df.astype(str)
+                .apply(
+                    lambda x:
+                    x.str.contains(
+                        gndo_search,
+                        case=False,
+                        na=False
                     )
                 )
+                .any(axis=1)
+            ]
        
-        ####################################################
-        # Semantic Expansion
-        ####################################################
-        
-        expanded_nodes = set()
-        
-        for value in selected_row.values:
-        
-            if pd.notna(value):
-        
-                expanded_nodes.add(str(value))
-        
-        impact_nodes = sorted(expanded_nodes)
-        
-        affected_requirements = [
-            n for n in impact_nodes
-            if n.startswith("REQ-")
-        ]
-        
-        affected_verifications = [
-            n for n in impact_nodes
-            if n.startswith("VER-")
-        ]
-        
-        affected_tests = [
-            n for n in impact_nodes
-            if n.startswith("TEST-")
-        ]
-        
-        affected_failures = [
-            n for n in impact_nodes
-            if n.startswith("FAIL-")
-        ]
-
-        st.subheader("Semantic Expansion")
-
-        left, right = st.columns(2)
-        
-        with left:
-        
-            st.metric(
-                "Expanded Nodes",
-                len(impact_nodes)
+            st.success(
+                f"{len(gndo_result)} records found"
             )
-        
-            st.metric(
-                "Requirements",
-                len(affected_requirements)
-            )
-        
-            st.metric(
-                "Verifications",
-                len(affected_verifications)
-            )
-        
-        with right:
-        
-            st.metric(
-                "Tests",
-                len(affected_tests)
-            )
-        
-            st.metric(
-                "Failures",
-                len(affected_failures)
-            )
-        
-        c1, c2, c3, c4 = st.columns(4)
        
-        with c1:
-            st.metric("REQ", len(affected_requirements))
-       
-        with c2:
-            st.metric("VER", len(affected_verifications))
-       
-        with c3:
-            st.metric("TEST", len(affected_tests))
-       
-        with c4:
-            st.metric("FAIL", len(affected_failures))
-
-        change_id = selected_row.get(
-            "change_id"
-        )
+            display_cols = [
+                "chapter",
+                "requirement_id",
+                "failure_id",
+                "verification_id",
+                "test_id",
+                "artifact_id",
+                "system_id",
+                "component_id"
+            ]
+           
+            display_cols = [
+                c
+                for c in display_cols
+                if c in gndo_result.columns
+            ]
+           
+            st.dataframe(
+                gndo_result[display_cols],
+                use_container_width=True
+            )
    
-        req_id = selected_row.get(
-            "affected_requirement"
-        )
-   
-        ver_id = selected_row.get(
-            "affected_verification"
-        )
-   
-        test_id = row.get(
-            "affected_test"
+            for _, row in gndo_result.iterrows():
+       
+                with st.expander(
+           
+                    f"{row.get('chapter')} | "
+                    f"{row.get('topic')}"
+           
+                ):
+           
+                    st.json(
+                        row.to_dict()
+                    )
+           
+        selected_chapter = st.selectbox(
+            "Select Chapter",
+            sorted(
+                [x["chapter"] for x in rkg]
+            )
         )
 
-        failure_id = row.get(
-            "failure_id"
+    with ask_tab:
+       
+        st.subheader(
+            "Ask GNDO"
         )
 
-        G = GraphBuilderV3.build_impact_graph(selected_row)
+        G = nx.DiGraph()
        
-        highlight = set(G.nodes())
+        for _, r in rkg_df.iterrows():
        
-        impact_net = GraphVisualizer.build_network(
-            G,
-            highlight_nodes=highlight
+            change_id = r.get("change_id")
+            req_id = r.get("affected_requirement")
+            ver_id = r.get("affected_verification")
+            test_id = r.get("affected_test")
+            fail_id = r.get("failure_id")
+       
+            if pd.notna(change_id) and pd.notna(req_id):
+       
+                G.add_edge(
+                    change_id,
+                    req_id
+                )
+       
+            if pd.notna(req_id) and pd.notna(ver_id):
+       
+                G.add_edge(
+                    req_id,
+                    ver_id
+                )
+       
+            if pd.notna(ver_id) and pd.notna(test_id):
+       
+                G.add_edge(
+                    ver_id,
+                    test_id
+                )
+       
+            if pd.notna(req_id) and pd.notna(fail_id):
+       
+                G.add_edge(
+                    req_id,
+                    fail_id
+                )
+               
+        ask_gndo = st.text_input(
+            "Ask GNDO Question",
+            placeholder="예: FAIL-CH07-001의 영향은?"
         )
        
-        left, right = st.columns([3,2])
+        if ask_gndo:
        
-        with left:
+            import re
        
-            impact_html = GraphVisualizer.save_html(
-                impact_net
+            query = ask_gndo.upper()
+       
+            req_match = re.search(
+                r"(REQ-CH\d{2}-\d{3})",
+                query
+            )
+       
+            ver_match = re.search(
+                r"(VER-CH\d{2}-\d{3})",
+                query
+            )
+       
+            test_match = re.search(
+                r"(TEST-CH\d{2}-\d{3})",
+                query
+            )
+       
+            fail_match = re.search(
+                r"(FAIL-CH\d{2}-\d{3})",
+                query
             )
 
-            st.subheader("Impact Graph")
-           
-            node_list = sorted(G.nodes())
-
-            selected_node = st.selectbox(
-           
-                "Select Node",
-           
-                node_list,
-           
-                key="impact_node"
-           
+            chg_match = re.search(
+                r"(CHG-CH\d{2}-\d{3})",
+                query
             )
            
-            components.html(
-                impact_html,
-                height=650
-            )
+            target_id = None
        
-        with right:
+            if req_match:
+                target_id = req_match.group(1)
        
-            st.subheader("📄 Node Detail")
-       
-            if selected_node:
-       
-                attr = G.nodes[selected_node]
-       
-                st.markdown(f"### {selected_node}")
-       
-                st.markdown("---")
-               
-                st.markdown(f"## {selected_node}")
-               
-                st.caption(attr.get("type",""))
-               
-                sections = [
-               
-                    ("Chapter", attr.get("chapter")),
-               
-                    ("Topic", attr.get("topic")),
-               
-                    ("System", attr.get("system")),
-               
-                    ("Component", attr.get("component")),
-               
-                    ("Requirement", attr.get("requirement")),
-               
-                    ("Verification", attr.get("verification")),
-               
-                    ("Verification Method", attr.get("verification_method")),
-               
-                    ("Acceptance", attr.get("acceptance")),
-               
-                    ("Test", attr.get("test")),
-               
-                    ("Artifact", attr.get("artifact")),
-               
-                    ("Failure", attr.get("failure")),
-               
-                    ("Severity", attr.get("severity")),
-               
-                    ("Consequence", attr.get("consequence")),
-               
-                    ("Mitigation", attr.get("mitigation"))
-               
+                result = rkg_df[
+                    rkg_df["requirement_id"] == target_id
                 ]
-               
-                for title, value in sections:
-               
-                    if value not in [None, "", "nan"]:
-               
-                        st.markdown(f"### {title}")
-               
-                        st.info(value)
+       
+            elif ver_match:
+                target_id = ver_match.group(1)
+       
+                result = rkg_df[
+                    rkg_df["verification_id"] == target_id
+                ]
+       
+            elif test_match:
+                target_id = test_match.group(1)
+       
+                result = rkg_df[
+                    rkg_df["test_id"] == target_id
+                ]
+       
+            elif fail_match:
+                target_id = fail_match.group(1)
+       
+                result = rkg_df[
+                    rkg_df["failure_id"] == target_id
+                ]
 
-                   
-                       
-                    elif (
-                        target_id
-                        and target_id.startswith("REQ-")
-                    ):
-                        st.subheader(
-                            "Requirement Impact Analysis"
-                        )
+            elif chg_match:
+                target_id = chg_match.group(1)
        
-                    elif (
-                        target_id
-                        and target_id.startswith("VER-")
-                    ):
-                        st.subheader(
-                            "Verification Impact Analysis"
-                        )
+                result = rkg_df[
+                    rkg_df["change_id"] == target_id
+                ]
        
-                    elif (
-                        target_id
-                        and target_id.startswith("TEST-")
-                    ):
-                        st.subheader(
-                            "Test Impact Analysis"
+            else:
+       
+                result = rkg_df[
+                    rkg_df.astype(str)
+                    .apply(
+                        lambda x:
+                        x.str.contains(
+                            ask_gndo,
+                            case=False,
+                            na=False
                         )
-                   
-                   
-                        impact_cols = [
-                            "requirement_id",
-                            "verification_id",
-                            "test_id",
-                            "artifact_id",
-                            "system_id",
-                            "component_id"
-                        ]
-                   
-                        impact_df = result[
-                            [
-                                c
-                                for c in impact_cols
-                                if c in result.columns
-                            ]
-                        ]
-                   
-                        st.dataframe(
-                            impact_df,
-                            use_container_width=True
-                        )
-    
-                    impact_level = row.get(
-                        "impact_level"
                     )
-                   
-                    retest_required = row.get(
-                        "retest_required"
+                    .any(axis=1)
+                ]
+       
+            if result.empty:
+       
+                st.warning(
+                    "No Traceability Found"
+                )
+       
+            else:
+
+                st.write(result[
+                    [
+                        "change_id",
+                        "requirement_id",
+                        "verification_id",
+                        "artifact_id"
+                    ]
+                ].head(20))
+       
+                row = result.iloc[0]
+
+                affected_requirements = []
+                affected_verifications = []
+                affected_tests = []
+                affected_failures = []
+
+                change_row = row
+
+                if change_row.get("change_id"):
+               
+                    affected_req = change_row.get(
+                        "affected_requirement"
                     )
-                   
-                    safety_significant = row.get(
-                        "safety_significant"
+               
+                    affected_rows = rkg_df[
+                        rkg_df["requirement_id"]
+                        == affected_req
+                    ]
+               
+                    if not affected_rows.empty:
+               
+                        requirement_row = affected_rows.iloc[0]
+
+                if (
+                    target_id
+                    and target_id.startswith("FAIL-")
+                ):
+                    st.subheader(
+                        "Failure Impact Analysis"
                     )
-    
-                    st.success(
-                        f"Traceability Found"
-                    )
-    
-                    if impact_level == "HIGH":
-       
-                        st.error(
-                            "Impact Level : HIGH"
-                        )
-                   
-                    elif impact_level == "MEDIUM":
-                   
-                        st.warning(
-                            "Impact Level : MEDIUM"
-                        )
-                   
-                    elif impact_level == "LOW":
-                   
-                        st.success(
-                            "Impact Level : LOW"
-                        )
-       
-                    if safety_significant:
-       
-                        st.error(
-                            "Safety Significant : YES"
-                        )
-                   
-                    else:
-                   
-                        st.success(
-                            "Safety Significant : NO"
-                        )
-    
-                    if retest_required:
-       
-                        st.warning(
-                            "Retest Required : YES"
-                        )
-                   
-                    else:
-                   
-                        st.success(
-                            "Retest Required : NO"
-                        )
+
+                elif (
+                    target_id
+                    and target_id.startswith("CHG-")
+                ):
+
+                    impact_nodes = []
+   
+                    if target_id in G:
                        
-                    recommendations = []
-    
-                    if retest_required:
-                   
-                        recommendations.append(
-                            f"Re-execute {row.get('test_id')}"
-                        )
-                   
-                    if row.get("artifact_id"):
-                   
-                        recommendations.append(
-                            f"Review {row.get('artifact_id')}"
-                        )
-                   
-                    if row.get("system_id"):
-                   
-                        recommendations.append(
-                            f"Verify {row.get('system_id')}"
-                        )
-                   
-                    if row.get("component_id"):
-                   
-                        recommendations.append(
-                            f"Inspect {row.get('component_id')}"
-                        )
-                   
-                    if safety_significant:
-                   
-                        recommendations.append(
-                            "Engineering Review Required"
-                        )
-                    if (
-                        target_id
-                        and target_id.startswith("FAIL-")
-                    ):
-                   
-                   
-                            st.markdown(
-                                f"""
-                        ### Failure
-                       
-                        {row.get('failure_id')}
-                       
-                        {row.get('failure_mode')}
-                       
-                        ---
-                       
-                        ### Affected Requirement
-                       
-                        {row.get('requirement_id')}
-                       
-                        ---
-                       
-                        ### Verification
-                       
-                        {row.get('verification_id')}
-                       
-                        ---
-                       
-                        ### Test
-                       
-                        {row.get('test_id')}
-                       
-                        ---
-                       
-                        ### Design Artifact
-                       
-                        {row.get('artifact_id')}
-                       
-                        ---
-                       
-                        ### System
-                       
-                        {row.get('system_id')}
-                       
-                        ---
-                       
-                        ### Component
-                       
-                        {row.get('component_id')}
-                        """
+                        impact_nodes = list(
+                            nx.descendants(
+                                G,
+                                target_id
                             )
-    
-                    if (
-                        target_id
-                        and target_id.startswith("CHG-")
-                    ):
+                        )
+
+                        # ==========================
+                        # Semantic Expansion
+                        # Same System
+                        # ==========================
                        
+                        semantic_nodes = set()
+                       
+                        for node in impact_nodes:
+                       
+                            if not str(node).startswith("REQ-"):
+                                continue
+                       
+                            req_rows = rkg_df[
+                                rkg_df["requirement_id"] == node
+                            ]
+                       
+                            if req_rows.empty:
+                                continue
+                       
+                            system_id = req_rows.iloc[0].get("system_id")
+                       
+                            if pd.isna(system_id):
+                                continue
+                       
+                            same_system = rkg_df[
+                                rkg_df["system_id"] == system_id
+                            ]
+                       
+                            semantic_nodes.update(
+                                same_system["requirement_id"]
+                                .dropna()
+                                .tolist()
+                            )
+
+                        impact_nodes = list(
+                            set(impact_nodes)
+                            |
+                            semantic_nodes
+                        )
+                       
+                        expanded_nodes = set(impact_nodes)
+
+                        for req in semantic_nodes:
+                       
+                            if req in G:
+                       
+                                expanded_nodes.update(
+                                    nx.descendants(
+                                        G,
+                                        req
+                                    )
+                                )
+                       
+                        impact_nodes = list(expanded_nodes)
+
+                        st.subheader("Semantic Expansion")
+
+                        st.write("Impact Nodes")
+                        st.write(impact_nodes)
+                       
+                        st.write("Affected Requirements")
+                        st.write(affected_requirements)
+                       
+                        st.write("Affected Verifications")
+                        st.write(affected_verifications)
+                       
+                        st.write("Affected Tests")
+                        st.write(affected_tests)
+                       
+                        st.write("Affected Failures")
+                        st.write(affected_failures)
+                       
+   
+                        affected_requirements = [
+                            n
+                            for n in impact_nodes
+                            if str(n).startswith("REQ-")
+                        ]
+                       
+                        affected_verifications = [
+                            n
+                            for n in impact_nodes
+                            if str(n).startswith("VER-")
+                        ]
+                       
+                        affected_tests = [
+                            n
+                            for n in impact_nodes
+                            if str(n).startswith("TEST-")
+                        ]
+                       
+                        affected_failures = [
+                            n
+                            for n in impact_nodes
+                            if str(n).startswith("FAIL-")
+                        ]
                    
+                        st.subheader(
+                            "Change Impact Analysis"
+                        )
+       
+                        st.subheader(
+                            "Impact Summary"
+                        )
+                   
+                        st.metric(
+                            "Requirements",
+                            len(affected_requirements)
+                        )
+                       
+                        st.metric(
+                            "Verifications",
+                            len(affected_verifications)
+                        )
+                       
+                        st.metric(
+                            "Tests",
+                            len(affected_tests)
+                        )
+                       
+                        st.metric(
+                            "Failures",
+                            len(affected_failures)
+                        )
+       
+                        change_id = row.get(
+                            "change_id"
+                        )
+                   
+                        req_id = row.get(
+                            "affected_requirement"
+                        )
+                   
+                        ver_id = row.get(
+                            "affected_verification"
+                        )
+                   
+                        test_id = row.get(
+                            "affected_test"
+                        )
+       
+                        failure_id = row.get(
+                            "failure_id"
+                        )
+
+                        G = GraphBuilderV3.build_impact_graph(row)
+                        
+                        highlight = set(G.nodes())
+                        
+                        impact_net = GraphVisualizer.build_network(
+                            G,
+                            highlight_nodes=highlight
+                        )
+                        
+                        impact_html = GraphVisualizer.save_html(impact_net)
+                        
+                        components.html(
+                            impact_html,
+                            height=650
+                        )
+
+                    
+                       
+                elif (
+                    target_id
+                    and target_id.startswith("REQ-")
+                ):
+                    st.subheader(
+                        "Requirement Impact Analysis"
+                    )
+   
+                elif (
+                    target_id
+                    and target_id.startswith("VER-")
+                ):
+                    st.subheader(
+                        "Verification Impact Analysis"
+                    )
+   
+                elif (
+                    target_id
+                    and target_id.startswith("TEST-")
+                ):
+                    st.subheader(
+                        "Test Impact Analysis"
+                    )
+               
+               
+                    impact_cols = [
+                        "requirement_id",
+                        "verification_id",
+                        "test_id",
+                        "artifact_id",
+                        "system_id",
+                        "component_id"
+                    ]
+               
+                    impact_df = result[
+                        [
+                            c
+                            for c in impact_cols
+                            if c in result.columns
+                        ]
+                    ]
+               
+                    st.dataframe(
+                        impact_df,
+                        use_container_width=True
+                    )
+
+                impact_level = row.get(
+                    "impact_level"
+                )
+               
+                retest_required = row.get(
+                    "retest_required"
+                )
+               
+                safety_significant = row.get(
+                    "safety_significant"
+                )
+
+                st.success(
+                    f"Traceability Found"
+                )
+
+                if impact_level == "HIGH":
+   
+                    st.error(
+                        "Impact Level : HIGH"
+                    )
+               
+                elif impact_level == "MEDIUM":
+               
+                    st.warning(
+                        "Impact Level : MEDIUM"
+                    )
+               
+                elif impact_level == "LOW":
+               
+                    st.success(
+                        "Impact Level : LOW"
+                    )
+   
+                if safety_significant:
+   
+                    st.error(
+                        "Safety Significant : YES"
+                    )
+               
+                else:
+               
+                    st.success(
+                        "Safety Significant : NO"
+                    )
+
+                if retest_required:
+   
+                    st.warning(
+                        "Retest Required : YES"
+                    )
+               
+                else:
+               
+                    st.success(
+                        "Retest Required : NO"
+                    )
+                   
+                recommendations = []
+
+                if retest_required:
+               
+                    recommendations.append(
+                        f"Re-execute {row.get('test_id')}"
+                    )
+               
+                if row.get("artifact_id"):
+               
+                    recommendations.append(
+                        f"Review {row.get('artifact_id')}"
+                    )
+               
+                if row.get("system_id"):
+               
+                    recommendations.append(
+                        f"Verify {row.get('system_id')}"
+                    )
+               
+                if row.get("component_id"):
+               
+                    recommendations.append(
+                        f"Inspect {row.get('component_id')}"
+                    )
+               
+                if safety_significant:
+               
+                    recommendations.append(
+                        "Engineering Review Required"
+                    )
+                if (
+                    target_id
+                    and target_id.startswith("FAIL-")
+                ):
+               
+               
                         st.markdown(
                             f"""
-                    ### Change
+                    ### Failure
                    
-                    {row.get('change_id')}
+                    {row.get('failure_id')}
                    
-                    ### Change Type
+                    {row.get('failure_mode')}
                    
-                    {row.get('change_type')}
+                    ---
                    
-                    ### Impact Scope
-                   
-                    {row.get('impact_scope')}
-                   
-                    ### Requires Reverification
-                   
-                    {row.get('requires_reverification')}
-                   
-                    ### Requires Retest
-                   
-                    {row.get('requires_retest')}
-    
                     ### Affected Requirement
-    
-                    {row.get('affected_requirement')}
                    
-                    ### Affected Verification
+                    {row.get('requirement_id')}
                    
-                    {row.get('affected_verification')}
+                    ---
                    
-                    ### Affected Test
+                    ### Verification
                    
-                    {row.get('affected_test')}
+                    {row.get('verification_id')}
+                   
+                    ---
+                   
+                    ### Test
+                   
+                    {row.get('test_id')}
+                   
+                    ---
+                   
+                    ### Design Artifact
+                   
+                    {row.get('artifact_id')}
+                   
+                    ---
+                   
+                    ### System
+                   
+                    {row.get('system_id')}
+                   
+                    ---
+                   
+                    ### Component
+                   
+                    {row.get('component_id')}
                     """
+                        )
+
+                if (
+                    target_id
+                    and target_id.startswith("CHG-")
+                ):
+                   
+               
+                    st.markdown(
+                        f"""
+                ### Change
+               
+                {row.get('change_id')}
+               
+                ### Change Type
+               
+                {row.get('change_type')}
+               
+                ### Impact Scope
+               
+                {row.get('impact_scope')}
+               
+                ### Requires Reverification
+               
+                {row.get('requires_reverification')}
+               
+                ### Requires Retest
+               
+                {row.get('requires_retest')}
+
+                ### Affected Requirement
+
+                {row.get('affected_requirement')}
+               
+                ### Affected Verification
+               
+                {row.get('affected_verification')}
+               
+                ### Affected Test
+               
+                {row.get('affected_test')}
+                """
+                )
+                       
+                if recommendations:
+
+                    st.subheader(
+                        "Recommended Actions"
                     )
-                           
-                    if recommendations:
-    
-                        st.subheader(
-                            "Recommended Actions"
-                        )
-                   
-                        for rec in recommendations:
-                   
-                            st.info(rec)
-           
-                    with st.expander(
-                        "Raw Record"
-                    ):
-           
-                        st.json(
-                            row.to_dict()
-                        )
+               
+                    for rec in recommendations:
+               
+                        st.info(rec)
+       
+                with st.expander(
+                    "Raw Record"
+                ):
+       
+                    st.json(
+                        row.to_dict()
+                    )
 
 
 
