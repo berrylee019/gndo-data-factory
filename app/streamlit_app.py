@@ -327,6 +327,11 @@ with tab3:
             st.info("검색 결과가 없습니다.")
             st.stop()
         
+        impact_nodes = []
+        affected_requirements = []
+        affected_verifications = []
+        affected_tests = []
+        affected_failures = []
 
         # ==========================
         # Semantic Expansion
