@@ -317,9 +317,14 @@ with tab3:
     with gndo_tab:
    
    
+        ####################################################
+        # GNDO Search
+        ####################################################
+        
         selected_row = render_gndo_search(rkg_df)
-
+        
         if selected_row is None:
+            st.info("검색 결과가 없습니다.")
             st.stop()
         
 
