@@ -317,7 +317,7 @@ with tab3:
     with gndo_tab:
    
    
-        selected_row = render_gndo_search(rkg)
+        selected_row = render_gndo_search(rkg_df)
 
         if selected_row is None:
             st.stop()
