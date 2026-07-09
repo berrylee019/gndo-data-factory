@@ -349,7 +349,7 @@ with tab3:
         if gndo_search:
    
             gndo_result = chapter_df[
-                rkg_df.astype(str)
+                chapter_df.astype(str)
                 .apply(
                     lambda x:
                     x.str.contains(
@@ -360,7 +360,19 @@ with tab3:
                 )
                 .any(axis=1)
             ]
-       
+
+            if gndo_result.empty:
+                st.warning("검색 결과가 없습니다.")
+                st.stop()
+            
+            selected_index = st.selectbox(
+                "Select Result",
+                gndo_result.index,
+                format_func=lambda i: f"{gndo_result.loc[i, 'requirement_id']} | {gndo_result.loc[i, 'topic']}"
+            )
+            
+            selected_row = gndo_result.loc[selected_index]
+
             st.success(
                 f"{len(gndo_result)} records found"
             )
@@ -384,9 +396,11 @@ with tab3:
            
             st.dataframe(
                 gndo_result[display_cols],
-                use_container_width=True
+                width="stretch"
             )
-   
+
+            st.write(selected_row["chapter"])
+            
             for _, row in gndo_result.iterrows():
        
                 with st.expander(
