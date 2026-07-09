@@ -4,68 +4,30 @@ import streamlit as st
 
 def render_gndo_search(rkg_df):
 
-            st.header("GNDO Search")
-   
-            selected_chapter = st.selectbox(
-       
-                "Select Chapter",
-       
-                sorted(
-                    rkg_df["chapter"]
-                    .dropna()
-                    .unique()
-                ),
-       
-                key="chapter_selector"
-       
-            )
-       
-            chapter_df = rkg_df[
-                rkg_df["chapter"] == selected_chapter
-            ].copy()
-       
-            st.caption(
-                f"{selected_chapter} : {len(chapter_df)} records"
-            )
-       
-            gndo_search = st.text_input(
-                "Search GNDO Objects",
-                placeholder="예: REQ-CH07-001, VER-CH07-001, TEST-CH07-001"
-            )
-
-    ##########################################
-    # Chapter
-    ##########################################
+    st.header("GNDO Search")
 
     chapters = sorted(
         rkg_df["chapter"].dropna().unique()
     )
 
     selected_chapter = st.selectbox(
-
         "Select Chapter",
-
         chapters,
-
-        key="chapter"
-
+        key="chapter_selector"
     )
 
     chapter_df = rkg_df[
         rkg_df["chapter"] == selected_chapter
-    ]
+    ].copy()
 
-    ##########################################
-    # Search
-    ##########################################
-
-    keyword = st.text_input(
-        "Search"
+    st.caption(
+        f"{selected_chapter} : {len(chapter_df)} records"
     )
 
-    ##########################################
-    # Filter
-    ##########################################
+    keyword = st.text_input(
+        "Search GNDO Objects",
+        placeholder="예: REQ-CH07-001"
+    )
 
     if keyword:
 
@@ -86,32 +48,19 @@ def render_gndo_search(rkg_df):
 
         result = chapter_df
 
-    ##########################################
-    # DataFrame
-    ##########################################
-
     st.dataframe(
         result,
         width="stretch"
     )
 
-    ##########################################
-    # Row Selection
-    ##########################################
-
     if result.empty:
-
         return None
 
     idx = st.selectbox(
-
         "Select Result",
-
         result.index,
-
         format_func=lambda i:
-        f"{result.loc[i,'requirement_id']}"
-
+            f"{result.loc[i,'requirement_id']} | {result.loc[i,'topic']}"
     )
 
     return result.loc[idx]
