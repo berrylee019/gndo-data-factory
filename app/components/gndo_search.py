@@ -4,7 +4,34 @@ import streamlit as st
 
 def render_gndo_search(rkg_df):
 
-    st.subheader("GNDO Search")
+            st.header("GNDO Search")
+   
+            selected_chapter = st.selectbox(
+       
+                "Select Chapter",
+       
+                sorted(
+                    rkg_df["chapter"]
+                    .dropna()
+                    .unique()
+                ),
+       
+                key="chapter_selector"
+       
+            )
+       
+            chapter_df = rkg_df[
+                rkg_df["chapter"] == selected_chapter
+            ].copy()
+       
+            st.caption(
+                f"{selected_chapter} : {len(chapter_df)} records"
+            )
+       
+            gndo_search = st.text_input(
+                "Search GNDO Objects",
+                placeholder="예: REQ-CH07-001, VER-CH07-001, TEST-CH07-001"
+            )
 
     ##########################################
     # Chapter
