@@ -715,15 +715,15 @@ with tab3:
                         with c4:
                             st.metric("FAIL", len(affected_failures))
        
-                        change_id = row.get(
+                        change_id = selected_row.get(
                             "change_id"
                         )
                    
-                        req_id = row.get(
+                        req_id = selected_row.get(
                             "affected_requirement"
                         )
                    
-                        ver_id = row.get(
+                        ver_id = selected_row.get(
                             "affected_verification"
                         )
                    
@@ -735,7 +735,7 @@ with tab3:
                             "failure_id"
                         )
 
-                        G = GraphBuilderV3.build_impact_graph(row)
+                        G = GraphBuilderV3.build_impact_graph(selected_row)
                        
                         highlight = set(G.nodes())
                        
